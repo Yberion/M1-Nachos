@@ -1,5 +1,5 @@
-/* \file drvACIA.cpp
-   \brief Routines of the ACIA device driver
+/*! \file drvACIA.cpp
+//  \brief Routines of the ACIA device driver
 //
 //      The ACIA is an asynchronous device (requests return 
 //      immediately, and an interrupt happens later on).  

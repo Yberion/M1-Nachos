@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------
-/*! \file mem.cpp
+/*! \file physMem.cpp
 //  \brief Routines for the physical page management
 */
 //

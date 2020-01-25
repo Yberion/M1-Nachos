@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------
-/*! \file mem.hpp 
+/*! \file physMem.hpp 
     \brief Data structures for the physical page management
   
     Copyright (c) 1999-2000 INSA de Rennes.
