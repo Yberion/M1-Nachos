@@ -15,7 +15,7 @@
 
 #include <cstdarg>
 
-static char *enableFlags = NULL; // controls which DEBUG messages are printed
+static const char *enableFlags = NULL; // controls which DEBUG messages are printed
 
 //----------------------------------------------------------------------
 // DumpMem
@@ -58,7 +58,7 @@ void DumpMem(char *addr, int len)
  //		to be enabled.
  */
 //----------------------------------------------------------------------
-void DebugInit(char *flagList)
+void DebugInit(const char *flagList)
 {
     enableFlags = flagList;
 }
@@ -82,7 +82,7 @@ bool DebugIsEnabled(char flag)
  //	only with an extra argument on the front.
  */
 //----------------------------------------------------------------------
-void DEBUG(char flag, char *format, ...)
+void DEBUG(char flag, const char *format, ...)
 {
     va_list ap;
     va_start(ap, format);

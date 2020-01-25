@@ -95,7 +95,7 @@ extern char host_endianess;
 #define IS_LITTLE_ENDIAN 1
 
 // Name of files used to emulate the Nachos disk
-#define DISK_FILE_NAME (char*)"DISK"
-#define DISK_SWAP_NAME (char*)"SWAPDISK"
+#define DISK_FILE_NAME "DISK"
+#define DISK_SWAP_NAME "SWAPDISK"
 
 #endif // SYSTEM_H

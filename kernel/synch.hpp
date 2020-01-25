@@ -41,7 +41,7 @@ class Semaphore
 {
 public:
     //! Create and set initial value
-    Semaphore(char *debugName, int initialValue);
+    Semaphore(const char *debugName, int initialValue);
 
     //! Delete semaphore
     ~Semaphore();
@@ -83,7 +83,7 @@ class Lock
 {
 public:
     //! Lock creation
-    Lock(char *debugName);
+    Lock(const char *debugName);
 
     //! Delete a lock
     ~Lock();

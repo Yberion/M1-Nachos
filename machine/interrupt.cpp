@@ -25,9 +25,9 @@
 #include "utility/stats.hpp"
 
 //! String definition for debugging messages
-static char *intLevelNames[] = { (char*)"off", (char*)"on" };
+static const char *intLevelNames[] = { "off", "on" };
 //! String definition for debugging messages
-static char *intTypeNames[] = { (char*)"timer", (char*)"disk", (char*)"console write", (char*)"console read", (char*)"ACIA receive", (char*)"ACIA send" };
+static const char *intTypeNames[] = { "timer", "disk", "console write", "console read", "ACIA receive", "ACIA send" };
 
 //----------------------------------------------------------------------
 // PendingInterrupt::PendingInterrupt
@@ -88,7 +88,7 @@ Interrupt::~Interrupt()
 void Interrupt::ChangeLevel(IntStatus old, IntStatus now)
 {
     level = now;
-    DEBUG('i', (char*)"\tinterrupts: %s -> %s\n", intLevelNames[old], intLevelNames[now]);
+    DEBUG('i', "\tinterrupts: %s -> %s\n", intLevelNames[old], intLevelNames[now]);
 }
 
 //----------------------------------------------------------------------
@@ -193,7 +193,7 @@ void Interrupt::YieldOnReturn()
 //----------------------------------------------------------------------
 void Interrupt::Idle()
 {
-    DEBUG('i', (char*)"Machine idling; checking for interrupts.\n");
+    DEBUG('i', "Machine idling; checking for interrupts.\n");
     g_machine->SetStatus(IDLE_MODE);
     if (CheckIfDue(true))
     { // check for any pending interrupts
@@ -212,7 +212,7 @@ void Interrupt::Idle()
     // operating, there are *always* pending interrupts, so this code
     // is not reached.  Instead, the halt must be invoked by the user program.
 
-    DEBUG('i', (char*)"Machine idle.  No interrupts to do.\n");
+    DEBUG('i', "Machine idle.  No interrupts to do.\n");
     printf("No threads ready or runnable, and no pending interrupts.\n");
     printf("Assuming the program completed.\n");
     Halt(0);
@@ -256,7 +256,7 @@ void Interrupt::Schedule(VoidFunctionPtr handler, int64_t arg, int fromNow, IntT
 
     ASSERT(toOccur != NULL);
 
-    DEBUG('i', (char*)"Scheduling interrupt handler %s at time = %llu\n", intTypeNames[type], when);
+    DEBUG('i', "Scheduling interrupt handler %s at time = %llu\n", intTypeNames[type], when);
     ASSERT(fromNow > 0);
     pending->SortedInsert(toOccur, when);
 }

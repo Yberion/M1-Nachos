@@ -41,12 +41,12 @@ static void DiskDone(int64_t arg)
  //	\param callArg argument to pass the interrupt handler
  */
 //----------------------------------------------------------------------
-Disk::Disk(char *name, VoidNoArgFunctionPtr callWhenDone)
+Disk::Disk(const char *name, VoidNoArgFunctionPtr callWhenDone)
 {
     int magicNum;
     int tmp = 0;
 
-    DEBUG('h', (char*)"Initializing the disk, 0x%x\n", callWhenDone);
+    DEBUG('h', "Initializing the disk, 0x%x\n", callWhenDone);
     handler = callWhenDone;
     lastSector = 0;
     bufferInit = 0;
@@ -68,7 +68,7 @@ Disk::Disk(char *name, VoidNoArgFunctionPtr callWhenDone)
         Lseek(fileno, g_cfg->DiskSize - sizeof(int), 0);
         WriteFile(fileno, (char*)&tmp, sizeof(int));
     }
-    DEBUG('h', (char*)"[ctor] Clear active\n");
+    DEBUG('h', "[ctor] Clear active\n");
     active = false;
 }
 
@@ -129,7 +129,7 @@ void Disk::ReadRequest(int sectorNumber, char *data)
     // Sanity check of the sector number
     ASSERT((sectorNumber >= 0) && (sectorNumber < NUM_SECTORS))
 
-    DEBUG('h', (char*)"Reading from sector %d\n", sectorNumber);
+    DEBUG('h', "Reading from sector %d\n", sectorNumber);
 
     // Read in the UNIX file
     Lseek(fileno, g_cfg->SectorSize * sectorNumber + g_cfg->MagicSize, 0);
@@ -137,7 +137,7 @@ void Disk::ReadRequest(int sectorNumber, char *data)
     if (DebugIsEnabled('h'))
         PrintSector(false, sectorNumber, data);
 
-    DEBUG('h', (char*)"[rdrq] Set active\n");
+    DEBUG('h', "[rdrq] Set active\n");
     active = true;
     UpdateLast(sectorNumber);
 
@@ -173,7 +173,7 @@ void Disk::WriteRequest(int sectorNumber, char *data)
     // Sanity check of the sector number
     ASSERT((sectorNumber >= 0) && (sectorNumber < NUM_SECTORS));
 
-    DEBUG('h', (char*)"Writing to sector %d\n", sectorNumber);
+    DEBUG('h', "Writing to sector %d\n", sectorNumber);
 
     // Write in the UNIX file
     Lseek(fileno, g_cfg->SectorSize * sectorNumber + g_cfg->MagicSize, 0);
@@ -181,7 +181,7 @@ void Disk::WriteRequest(int sectorNumber, char *data)
     if (DebugIsEnabled('h'))
         PrintSector(true, sectorNumber, data);
 
-    DEBUG('h', (char*)"[wrrq] Set active\n");
+    DEBUG('h', "[wrrq] Set active\n");
     active = true;
     UpdateLast(sectorNumber);
 
@@ -200,7 +200,7 @@ void Disk::WriteRequest(int sectorNumber, char *data)
 //----------------------------------------------------------------------
 void Disk::HandleInterrupt()
 {
-    DEBUG('h', (char*)"[isr] Clear active\n");
+    DEBUG('h', "[isr] Clear active\n");
     active = false;
 
     // Call the disk interrupt handler
@@ -281,14 +281,14 @@ int Disk::ComputeLatency(int newSector, bool writing)
     // check if track buffer applies
     if ((writing == false) && (seek == 0) && ((Time)((timeAfter - bufferInit) / rot_time) > (Time)ModuloDiff(newSector, bufferInit / rot_time)))
     {
-        DEBUG('h', (char*)"Request latency = %d\n", rot_time);
+        DEBUG('h', "Request latency = %d\n", rot_time);
         return rot_time; // time to transfer sector from the track buffer
     }
 #endif // NOTRACKBUF
 
     rotation += ModuloDiff(newSector, timeAfter / rot_time) * rot_time;
 
-    DEBUG('h', (char*)"Request latency = %d\n", seek + rotation + rot_time);
+    DEBUG('h', "Request latency = %d\n", seek + rotation + rot_time);
     return (seek + rotation + rot_time);
 }
 

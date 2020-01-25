@@ -71,7 +71,7 @@ bool FileHeader::Allocate(BitMap *freeMap, int fileSize)
     // Check if there is enough free sectors for both of them
     if (freeMap->NumClear() < numSectors + numHeaderSectors)
         return false; // not enough space
-    DEBUG('f', (char*)"Allocate:\n%d DATA sector(s)\n%d HEADER sector(s)\n", numSectors, numHeaderSectors);
+    DEBUG('f', "Allocate:\n%d DATA sector(s)\n%d HEADER sector(s)\n", numSectors, numHeaderSectors);
     // allocate all the necessary sectors and put them in their respective table
     for (i = 0; i < numHeaderSectors; i++)
         headerSectors[i] = freeMap->Find();
@@ -111,7 +111,7 @@ bool FileHeader::reAllocate(BitMap *freeMap, int oldFileSize, int newFileSize)
     // Check if there is enough free space on disk
     if (freeMap->NumClear() < (newnumSectors + newnumHeaderSectors))
         return false; // not enough space on disk
-    DEBUG('f', (char*)"Reallocate :\n%d DATA sector(s)\n%d HEADER sector(s)\n", newnumSectors, newnumHeaderSectors);
+    DEBUG('f', "Reallocate :\n%d DATA sector(s)\n%d HEADER sector(s)\n", newnumSectors, newnumHeaderSectors);
 
     // allocate the new sectors
     for (i = 0; i < newnumHeaderSectors; i++)

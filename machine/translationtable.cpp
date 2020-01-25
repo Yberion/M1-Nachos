@@ -26,7 +26,7 @@ TranslationTable::TranslationTable()
     // Init private fields
     maxNumPages = g_cfg->MaxVirtPages;
 
-    DEBUG('h', (char*)"Allocationg translation table for %d pages (%ld kB)\n", maxNumPages, ((long long)maxNumPages * g_cfg->PageSize) >> 10);
+    DEBUG('h', "Allocationg translation table for %d pages (%ld kB)\n", maxNumPages, ((long long)maxNumPages * g_cfg->PageSize) >> 10);
     pageTable = new PageTableEntry[maxNumPages];
 
 }
@@ -39,7 +39,7 @@ TranslationTable::TranslationTable()
 TranslationTable::~TranslationTable()
 {
     delete[] pageTable;
-    DEBUG('h', (char*)"Translation table destroyed");
+    DEBUG('h', "Translation table destroyed");
 
 }
 

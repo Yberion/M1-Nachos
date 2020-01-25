@@ -61,7 +61,7 @@ Config::Config(char *configname)
 
     int nblignes = 0;
 
-    DEBUG('u', (char*)"Reading the configuration file\n");
+    DEBUG('u', "Reading the configuration file\n");
     char ligne[LINE_LENGTH];
     char commande[COMMAND_LENGTH];
 
@@ -328,7 +328,7 @@ Config::Config(char *configname)
     MagicSize = sizeof(int);
     DiskSize = (MagicSize + (NUM_SECTORS * SectorSize));
     DirectoryFileSize = (sizeof(DirectoryEntry) * NumDirEntries);
-    DEBUG('u', (char*)"End of reading of configuration file\n");
+    DEBUG('u', "End of reading of configuration file\n");
 }
 
 #endif // CONFIG_CPP

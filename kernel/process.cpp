@@ -22,10 +22,10 @@ Process::Process(char *filename, int *err)
     *err = NO_ERROR;
     if (filename == NULL)
     {
-        DEBUG('t', (char*)"Create empty process\n");
+        DEBUG('t', "Create empty process\n");
 
         // Create a statistics object for the program
-        stat = g_stats->NewProcStat((char*)"BOOT");
+        stat = g_stats->NewProcStat("BOOT");
 
         // Fake process Name
         name = new char[strlen("BOOT") + 1];
@@ -36,7 +36,7 @@ Process::Process(char *filename, int *err)
     }
     else
     {
-        DEBUG('t', (char*)"Create named process %s\n", filename);
+        DEBUG('t', "Create named process %s\n", filename);
 
         // Create a statistics object for the program
         stat = g_stats->NewProcStat(filename);

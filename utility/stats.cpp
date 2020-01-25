@@ -56,7 +56,7 @@ void Statistics::Print()
 }
 
 ProcessStat*
-Statistics::NewProcStat(char *name)
+Statistics::NewProcStat(const char *name)
 {
     ProcessStat *procstat = new ProcessStat(name);
     allStatistics->Append((void*)procstat);
@@ -89,7 +89,7 @@ Statistics::~Statistics()
  //      \param name name of the process
  */
 //----------------------------------------------------------------------               
-ProcessStat::ProcessStat(char *processName)
+ProcessStat::ProcessStat(const char *processName)
 {
     strcpy(name, processName);
     numInstruction = numDiskReads = numDiskWrites = 0;

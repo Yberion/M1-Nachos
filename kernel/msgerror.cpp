@@ -20,30 +20,30 @@ SyscallError::SyscallError()
     lastError = NO_ERROR;
     errorAbout = NULL;
 
-    msgs[NO_ERROR] = (char*)"no error %s \n";
-    msgs[INC_ERROR] = (char*)"incorrect error type %s \n";
+    msgs[NO_ERROR] = "no error %s \n";
+    msgs[INC_ERROR] = "incorrect error type %s \n";
 
-    msgs[OPENFILE_ERROR] = (char*)"unable to open file %s \n";
-    msgs[EXEC_FILE_FORMAT_ERROR] = (char*)"file %s is not a valid executable file (not in ELF format)\n";
-    msgs[OUT_OF_MEMORY] = (char*)"out of memory %s\n";
+    msgs[OPENFILE_ERROR] = "unable to open file %s \n";
+    msgs[EXEC_FILE_FORMAT_ERROR] = "file %s is not a valid executable file (not in ELF format)\n";
+    msgs[OUT_OF_MEMORY] = "out of memory %s\n";
 
-    msgs[OUT_OF_DISK] = (char*)"out of disk space %s\n";
-    msgs[ALREADY_IN_DIRECTORY] = (char*)"file or directory %s already exists\n";
-    msgs[INEXIST_FILE_ERROR] = (char*)"file %s does not exist or is a directory\n";
-    msgs[INEXIST_DIRECTORY_ERROR] = (char*)"directory %s does not exist or is a file\n";
-    msgs[NOSPACE_IN_DIRECTORY] = (char*)"maximum number of entries in directory %s reached\n";
-    msgs[NOT_A_FILE] = (char*)"%s is not a file\n";
-    msgs[NOT_A_DIRECTORY] = (char*)"%s is not a directory\n";
-    msgs[DIRECTORY_NOT_EMPTY] = (char*)"directory %s is not empty\n";
-    msgs[INVALID_COUNTER] = (char*)"negative semaphore counter\n";
+    msgs[OUT_OF_DISK] = "out of disk space %s\n";
+    msgs[ALREADY_IN_DIRECTORY] = "file or directory %s already exists\n";
+    msgs[INEXIST_FILE_ERROR] = "file %s does not exist or is a directory\n";
+    msgs[INEXIST_DIRECTORY_ERROR] = "directory %s does not exist or is a file\n";
+    msgs[NOSPACE_IN_DIRECTORY] = "maximum number of entries in directory %s reached\n";
+    msgs[NOT_A_FILE] = "%s is not a file\n";
+    msgs[NOT_A_DIRECTORY] = "%s is not a directory\n";
+    msgs[DIRECTORY_NOT_EMPTY] = "directory %s is not empty\n";
+    msgs[INVALID_COUNTER] = "negative semaphore counter\n";
 
-    msgs[INVALID_SEMAPHORE_ID] = (char*)"invalid semaphore identifier %s\n";
-    msgs[INVALID_LOCK_ID] = (char*)"invalid lock identifier %s\n";
-    msgs[INVALID_CONDITION_ID] = (char*)"invalid condition identifier %s\n";
-    msgs[INVALID_FILE_ID] = (char*)"invalid file identifier %s\n";
-    msgs[INVALID_THREAD_ID] = (char*)"invalid thread identifier %s\n";
+    msgs[INVALID_SEMAPHORE_ID] = "invalid semaphore identifier %s\n";
+    msgs[INVALID_LOCK_ID] = "invalid lock identifier %s\n";
+    msgs[INVALID_CONDITION_ID] = "invalid condition identifier %s\n";
+    msgs[INVALID_FILE_ID] = "invalid file identifier %s\n";
+    msgs[INVALID_THREAD_ID] = "invalid thread identifier %s\n";
 
-    msgs[NO_ACIA] = (char*)"no ACIA driver installed %s\n";
+    msgs[NO_ACIA] = "no ACIA driver installed %s\n";
 }
 
 //-----------------------------------------------------------------
@@ -66,7 +66,7 @@ SyscallError::~SyscallError()
  //       \param num is the number associated with the error msg
  */
 //-----------------------------------------------------------------
-void SyscallError::SetMsg(char *about, int num)
+void SyscallError::SetMsg(const char *about, int num)
 {
 
     // Delete old "about" string
@@ -119,14 +119,13 @@ const char* SyscallError::GetFormat(int num)
  //         error message
  */
 //-----------------------------------------------------------------
-void SyscallError::PrintLastMsg(DriverConsole *cons, char *ch)
+void SyscallError::PrintLastMsg(DriverConsole *cons, const char *ch)
 {
-
     int size = strlen(msgs[lastError]) + strlen(errorAbout) + 1;
     char *msg = new char[size];
     sprintf(msg, msgs[lastError], errorAbout);
 
     cons->PutString(ch, strlen(ch));
-    cons->PutString((char*)" : ", 3);
+    cons->PutString(" : ", 3);
     cons->PutString(msg, strlen(msg));
 }

@@ -29,7 +29,7 @@ OpenFileTableEntry::OpenFileTableEntry()
     name = new char[g_cfg->MaxFileNameSize];
     numthread = 1;
     ToBeDeleted = false;
-    lock = new Lock((char*)"File Synchronisation");
+    lock = new Lock("File Synchronisation");
     file = NULL;
     sector = -1;
 }
@@ -67,7 +67,7 @@ OpenFileTableEntry::~OpenFileTableEntry()
 //----------------------------------------------------------
 OpenFileTable::OpenFileTable()
 {
-    createLock = new Lock((char*)"Creation Synch");
+    createLock = new Lock("Creation Synch");
     for (int i = 0; i < NBOFTENTRY; i++)
         table[i] = NULL;
     nbentry = 0;
@@ -101,7 +101,7 @@ OpenFile* OpenFileTable::Open(char *name)
 
     // Find the file in the open file table
     num = findl(name);
-    DEBUG('f', (char*)"opening file %s\n", name);
+    DEBUG('f', "opening file %s\n", name);
     if (num != -1)
     {
         // The file is opened by another thread
@@ -111,7 +111,7 @@ OpenFile* OpenFileTable::Open(char *name)
             table[num]->numthread++;
             newfile = new OpenFile(table[num]->sector);
             newfile->SetName(name);
-            DEBUG('f', (char*)"File %s was in the table\n", name);
+            DEBUG('f', "File %s was in the table\n", name);
             return newfile;
         }
         else
@@ -162,7 +162,7 @@ OpenFile* OpenFileTable::Open(char *name)
             table[nbentry] = entry;
             nbentry = next_entry();
 
-            DEBUG('f', (char*)"File %s has been opened successfully\n", name);
+            DEBUG('f', "File %s has been opened successfully\n", name);
             return newfile;
         }
         else
@@ -184,18 +184,18 @@ OpenFile* OpenFileTable::Open(char *name)
 void OpenFileTable::Close(char *name)
 {
     int num;
-    DEBUG('f', (char*)"Closing File %s \n", name);
+    DEBUG('f', "Closing File %s \n", name);
     num = findl(name);
     if (num != -1) // the file is in the table
     {
         table[num]->numthread--; // the thread has no longer this file opened
         if (table[num]->numthread <= 0) // if no threads has this file opened
         {
-            DEBUG('f', (char*)"File %s is no more in the table\n", name);
+            DEBUG('f', "File %s is no more in the table\n", name);
             delete table[num]; // then remove it from the table
             table[num] = NULL;
         }
-        DEBUG('f', (char*)"File %s has been closed successfully\n", name);
+        DEBUG('f', "File %s has been closed successfully\n", name);
     }
 }
 
@@ -214,7 +214,7 @@ void OpenFileTable::FileLock(char *name)
     if (num != -1)
     {
         table[num]->lock->Acquire();
-        DEBUG('f', (char*)"File %s has been locked\n", name);
+        DEBUG('f', "File %s has been locked\n", name);
     }
 }
 
@@ -232,7 +232,7 @@ void OpenFileTable::FileRelease(char *name)
     if (num != -1)
     {
         table[num]->lock->Release();
-        DEBUG('f', (char*)"File %s has been released\n", name);
+        DEBUG('f', "File %s has been released\n", name);
     }
 }
 //----------------------------------------------------------
@@ -275,7 +275,7 @@ int OpenFileTable::Remove(char *name)
     int num, sector, dirsector;
     char filename[g_cfg->MaxFileNameSize];
 
-    DEBUG('f', (char*)"Removing file %s\n", name);
+    DEBUG('f', "Removing file %s\n", name);
     strcpy(filename, name);
 
     // Find the directory containing the file

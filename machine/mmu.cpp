@@ -65,7 +65,7 @@ bool MMU::ReadMem(uint32_t virtAddr, int size, uint32_t *value, bool is_instruct
     uint32_t physAddr;
     uint32_t physAddrEnd;
 
-    DEBUG('h', (char*)"Reading VA 0x%x, size %d\n", virtAddr, size);
+    DEBUG('h', "Reading VA 0x%x, size %d\n", virtAddr, size);
 
     // Update statistics
     g_current_thread->GetProcessOwner()->stat->incrMemoryAccess();
@@ -106,7 +106,7 @@ bool MMU::ReadMem(uint32_t virtAddr, int size, uint32_t *value, bool is_instruct
             ;
     }
 
-    DEBUG('h', (char*)"\tValue read = %8.8x\n", *value);
+    DEBUG('h', "\tValue read = %8.8x\n", *value);
 
     return (true);
 }
@@ -130,7 +130,7 @@ bool MMU::WriteMem(uint32_t addr, int size, uint32_t value)
     uint32_t physicalAddress;
     uint32_t physAddrEnd;
 
-    DEBUG('h', (char*)"Writing VA 0x%x, size %d, value 0x%x\n", addr, size, value);
+    DEBUG('h', "Writing VA 0x%x, size %d, value 0x%x\n", addr, size, value);
 
     // Update statistics
     g_current_thread->GetProcessOwner()->stat->incrMemoryAccess();
@@ -165,7 +165,7 @@ bool MMU::WriteMem(uint32_t addr, int size, uint32_t value)
             ASSERT(false)
             ;
     }
-    DEBUG('h', (char*)"\tValue written");
+    DEBUG('h', "\tValue written");
 
     return true;
 }
@@ -197,7 +197,7 @@ bool MMU::WriteMem(uint32_t addr, int size, uint32_t value)
  */
 ExceptionType MMU::Translate(uint32_t virtAddr, uint32_t *physAddr, int size, bool writing)
 {
-    DEBUG('h', (char*)"\tTranslate 0x%x, %s: ", virtAddr, writing ? "write" : "read");
+    DEBUG('h', "\tTranslate 0x%x, %s: ", virtAddr, writing ? "write" : "read");
 
     // check for alignment errors
     /*
@@ -219,21 +219,21 @@ ExceptionType MMU::Translate(uint32_t virtAddr, uint32_t *physAddr, int size, bo
     // check the virtual page number
     if (vpn >= translationTable->getMaxNumPages())
     {
-        DEBUG('h', (char*)"virtual page # %d too large for page table size %d!\n", vpn, translationTable->getMaxNumPages());
+        DEBUG('h', "virtual page # %d too large for page table size %d!\n", vpn, translationTable->getMaxNumPages());
         return ADDRESSERROR_EXCEPTION;
     }
 
     // is the page correctly mapped ?
     if (!translationTable->getBitReadAllowed(vpn) && !translationTable->getBitWriteAllowed(vpn))
     {
-        DEBUG('h', (char*)"virtual page # %d not mapped !\n", vpn);
+        DEBUG('h', "virtual page # %d not mapped !\n", vpn);
         return ADDRESSERROR_EXCEPTION;
     }
 
     // Check access rights
     if (writing && !translationTable->getBitWriteAllowed(vpn))
     {
-        DEBUG('h', (char*)"write access on read-only virtual page # %d !\n", vpn);
+        DEBUG('h', "write access on read-only virtual page # %d !\n", vpn);
         return READONLY_EXCEPTION;
     }
 
@@ -242,7 +242,7 @@ ExceptionType MMU::Translate(uint32_t virtAddr, uint32_t *physAddr, int size, bo
     {
         // Update statistics
         g_current_thread->GetProcessOwner()->stat->incrPageFault();
-        DEBUG('h', (char*)"Raising page fault exception for page number %i\n", vpn);
+        DEBUG('h', "Raising page fault exception for page number %i\n", vpn);
 
         // call the page fault manager
         g_machine->RaiseException(PAGEFAULT_EXCEPTION, virtAddr);
@@ -257,7 +257,7 @@ ExceptionType MMU::Translate(uint32_t virtAddr, uint32_t *physAddr, int size, bo
     // Make sure physical address is correct
     if ((translationTable->getPhysicalPage(vpn) < 0) || (translationTable->getPhysicalPage(vpn) >= g_cfg->NumPhysPages))
     {
-        DEBUG('h', (char*)"MMU: Translated physical page out of bounds (0x%x)\n", translationTable->getPhysicalPage(vpn));
+        DEBUG('h', "MMU: Translated physical page out of bounds (0x%x)\n", translationTable->getPhysicalPage(vpn));
         return BUSERROR_EXCEPTION;
     }
 
@@ -270,6 +270,6 @@ ExceptionType MMU::Translate(uint32_t virtAddr, uint32_t *physAddr, int size, bo
     g_current_thread->GetProcessOwner()->stat->incrMemoryAccess();
 
     *physAddr = translationTable->getPhysicalPage(vpn) * g_cfg->PageSize + offset;
-    DEBUG('h', (char*)"phys addr = 0x%x\n", *physAddr);
+    DEBUG('h', "phys addr = 0x%x\n", *physAddr);
     return NO_EXCEPTION;
 }

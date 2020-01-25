@@ -64,10 +64,10 @@ public:
     SyscallError(); // Initialize the structure
     ~SyscallError(); // De-allocate the structure
 
-    void SetMsg(char *about, int num);
+    void SetMsg(const char *about, int num);
     //!< Set the current error message
 
-    void PrintLastMsg(DriverConsole *cons, char *ch);
+    void PrintLastMsg(DriverConsole *cons, const char *ch);
     //!< Print the error message with a user defined
     //!< string
 
@@ -77,7 +77,7 @@ public:
 private:
     int lastError; //!< last error's ident
     char *errorAbout; //!< context string
-    char *msgs[NUMMSGERROR]; //!< The array of strings for the error messages
+    const char *msgs[NUMMSGERROR]; //!< The array of strings for the error messages
 };
 
 #endif // MSGERROR_H

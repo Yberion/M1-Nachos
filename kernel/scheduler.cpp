@@ -51,7 +51,7 @@ Scheduler::~Scheduler()
 //----------------------------------------------------------------------
 void Scheduler::ReadyToRun(Thread *thread)
 {
-    DEBUG('t', (char*)"Putting thread %s in ready list.\n", thread->GetName());
+    DEBUG('t', "Putting thread %s in ready list.\n", thread->GetName());
     readyList->Append((void*)thread);
 }
 
@@ -91,7 +91,7 @@ void Scheduler::SwitchTo(Thread *nextThread)
     g_current_thread->CheckOverflow(); // check if the old thread
     // had an undetected stack overflow
 
-    DEBUG('t', (char*)"Switching from thread \"%s\" to thread \"%s\" time %llu\n", g_current_thread->GetName(), nextThread->GetName(),
+    DEBUG('t', "Switching from thread \"%s\" to thread \"%s\" time %llu\n", g_current_thread->GetName(), nextThread->GetName(),
             g_stats->getTotalTicks());
 
     // Modify the current thread
@@ -111,7 +111,7 @@ void Scheduler::SwitchTo(Thread *nextThread)
         nextThread->RestoreSimulatorState();
     }
 
-    DEBUG('t', (char*)"Now in thread \"%s\" time %llu\n", g_current_thread->GetName(), g_stats->getTotalTicks());
+    DEBUG('t', "Now in thread \"%s\" time %llu\n", g_current_thread->GetName(), g_stats->getTotalTicks());
 
     // If the old thread gave up the processor because it was finishing,
     // we need to delete its carcass.  Note we cannot delete the thread

@@ -32,7 +32,7 @@
  //	\param threadName is an arbitrary string, used for debugging.
  */
 //----------------------------------------------------------------------
-Thread::Thread(char *threadName)
+Thread::Thread(const char *threadName)
 {
     name = new char[strlen(threadName) + 1];
     strcpy(name, threadName);
@@ -55,7 +55,7 @@ Thread::Thread(char *threadName)
 //----------------------------------------------------------------------
 Thread::~Thread()
 {
-    DEBUG('t', (char*)"Deleting thread \"%s\"\n", name);
+    DEBUG('t', "Deleting thread \"%s\"\n", name);
     type = INVALID_TYPE;
 
     //CheckOverflow();
@@ -170,7 +170,7 @@ void StartThreadExecution(void)
  */
 void Thread::InitSimulatorContext(int8_t *base_stack_addr, unsigned long int stack_size)
 {
-    DEBUG('t', (char*)"Init simulator context \"%s\" with stack=%p\n", name, base_stack_addr);
+    DEBUG('t', "Init simulator context \"%s\" with stack=%p\n", name, base_stack_addr);
 
     ASSERT(base_stack_addr != NULL);
 
@@ -246,7 +246,7 @@ void Thread::CheckOverflow()
 void Thread::Finish()
 {
 
-    DEBUG('t', (char*)"Finishing thread \"%s\"\n", GetName());
+    DEBUG('t', "Finishing thread \"%s\"\n", GetName());
 
     printf("**** Warning: method Thread::Finish is not fully implemented yet\n");
 
@@ -278,7 +278,7 @@ void Thread::Yield()
 
     ASSERT(this == g_current_thread);
 
-    DEBUG('t', (char*)"Yielding thread \"%s\"\n", GetName());
+    DEBUG('t', "Yielding thread \"%s\"\n", GetName());
 
     nextThread = g_scheduler->FindNextToRun();
     if (nextThread != NULL)
@@ -316,7 +316,7 @@ void Thread::Sleep()
     ASSERT(this == g_current_thread);
     ASSERT(g_machine->interrupt->GetStatus() == INTERRUPTS_OFF);
 
-    DEBUG('t', (char*)"Sleeping thread \"%s\"\n", GetName());
+    DEBUG('t', "Sleeping thread \"%s\"\n", GetName());
 
     // In case, there is nobody else to execute, we wait for an
     // interrupt In case there is no interrupt to come in the future,
@@ -327,7 +327,7 @@ void Thread::Sleep()
     // would need to be fixed
     while ((nextThread = g_scheduler->FindNextToRun()) == NULL)
     {
-        DEBUG('t', (char*)"Nobody to run => idle\n");
+        DEBUG('t', "Nobody to run => idle\n");
         g_machine->interrupt->Idle(); // no one to run, wait for an interrupt
     }
 

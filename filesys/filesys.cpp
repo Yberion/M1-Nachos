@@ -127,7 +127,7 @@ bool decompname(const char *orig_path, char *head, char *tail)
 //----------------------------------------------------------------------
 int FindDir(char *name)
 {
-    DEBUG('f', (char*)"FindDir [%s]\n", name);
+    DEBUG('f', "FindDir [%s]\n", name);
 
     // Fetch the root directory from disk
     Directory directory(g_cfg->NumDirEntries);
@@ -152,7 +152,7 @@ int FindDir(char *name)
             return -1;
     }
 
-    DEBUG('f', (char*)"FindDir done => [%s] @%d\n", name, sector);
+    DEBUG('f', "FindDir done => [%s] @%d\n", name, sector);
     return sector;
 }
 
@@ -171,14 +171,14 @@ int FindDir(char *name)
 //----------------------------------------------------------------------
 FileSystem::FileSystem(bool format)
 {
-    DEBUG('f', (char*)"Initializing the file system.\n");
+    DEBUG('f', "Initializing the file system.\n");
     if (format)
     {
         BitMap freeMap(NUM_SECTORS);
         Directory directory(g_cfg->NumDirEntries);
         FileHeader mapHdr, dirHdr;
 
-        DEBUG('f', (char*)"Formatting the file system.\n");
+        DEBUG('f', "Formatting the file system.\n");
 
         // First, allocate space for FileHeaders for the directory and bitmap
         // (make sure no one else grabs these!)
@@ -199,7 +199,7 @@ FileSystem::FileSystem(bool format)
         // reads the file header off of disk (and currently the disk has
         // garbage on it!).
 
-        DEBUG('f', (char*)"Writing headers back to disk.\n");
+        DEBUG('f', "Writing headers back to disk.\n");
         mapHdr.WriteBack(FreeMapSector);
         dirHdr.WriteBack(DirectorySector);
 
@@ -216,7 +216,7 @@ FileSystem::FileSystem(bool format)
         // sectors on the disk have been allocated for the file headers and
         // to hold the file data for the directory and bitmap.
 
-        DEBUG('f', (char*)"Writing bitmap and directory back to disk.\n");
+        DEBUG('f', "Writing bitmap and directory back to disk.\n");
         freeMap.WriteBack(freeMapFile); // flush changes to disk
         directory.WriteBack(directoryFile);
 
@@ -282,7 +282,7 @@ int FileSystem::Create(char *name, int initialSize)
 
     g_open_file_table->createLock->Acquire();
     strcpy(dirname, name);
-    DEBUG('f', (char*)"Creating file %s, size %d\n", name, initialSize);
+    DEBUG('f', "Creating file %s, size %d\n", name, initialSize);
 
     dirsector = FindDir(dirname);
     if (dirsector == -1)
@@ -337,7 +337,7 @@ int FileSystem::Create(char *name, int initialSize)
     directory.WriteBack(&dirfile); // Directory
     freeMap.WriteBack(freeMapFile); // Freemap
 
-    DEBUG('f', (char*)"END Creating file %s, size %d\n", name, initialSize);
+    DEBUG('f', "END Creating file %s, size %d\n", name, initialSize);
     g_open_file_table->createLock->Release();
     return NO_ERROR;
 }
@@ -366,7 +366,7 @@ OpenFile* FileSystem::Open(char *name)
 
     // Read the directory from disk
     OpenFile dirfile(dirsector);
-    DEBUG('f', (char*)"Opening file %s\n", name);
+    DEBUG('f', "Opening file %s\n", name);
     Directory directory(g_cfg->NumDirEntries);
     directory.FetchFrom(&dirfile);
 
@@ -422,7 +422,7 @@ int FileSystem::Remove(char *name)
     directory.FetchFrom(&dirfile);
 
     // Look for the file in the directory
-    DEBUG('f', (char*)"looking for %s in the drectory\n", name);
+    DEBUG('f', "looking for %s in the drectory\n", name);
     sector = directory.Find(dirname);
 
     // Look if we find the file in the directory
@@ -554,7 +554,7 @@ int FileSystem::Mkdir(char *dirname)
 {
     char name[g_cfg->MaxFileNameSize];
     strcpy(name, dirname);
-    DEBUG('f', (char*)"Mkdir %s\n", name);
+    DEBUG('f', "Mkdir %s\n", name);
 
     // Lokk for the sector number of the parent directory
     int parentsect = FindDir(name); // => modifie name
@@ -630,7 +630,7 @@ int FileSystem::Rmdir(char *dirname)
     char name[g_cfg->MaxFileNameSize];
     strcpy(name, dirname);
 
-    DEBUG('f', (char*)"Rmdir %s", name);
+    DEBUG('f', "Rmdir %s", name);
 
     // Get the sector number of the parent directory
     int parentsect = FindDir(name); // => modifie name

@@ -120,7 +120,7 @@ AddrSpace::AddrSpace(OpenFile *exec_file, Process *p, int *err)
     // Make sure this region really starts at virtual address 0
     ASSERT(base_addr == 0);
 
-    DEBUG('a', (char*)"Allocated virtual area [0x0,0x%x[ for program\n", mem_topaddr);
+    DEBUG('a', "Allocated virtual area [0x0,0x%x[ for program\n", mem_topaddr);
 
     // Loading of all sections
     for (i = 0; i < elfHdr.e_shnum; i++)
@@ -128,7 +128,7 @@ AddrSpace::AddrSpace(OpenFile *exec_file, Process *p, int *err)
         // Retrieve the section name
         const char *section_name = shnames + section_table[i].sh_name;
 
-        DEBUG('a', (char*)"Section %d : size=0x%x name=\"%s\"\n", i, section_table[i].sh_size, section_name);
+        DEBUG('a', "Section %d : size=0x%x name=\"%s\"\n", i, section_table[i].sh_size, section_name);
 
         // Ignore empty sections
         if (section_table[i].sh_size <= 0)
@@ -261,7 +261,7 @@ int AddrSpace::StackAllocate(void)
     // detect stack overflows
 #define STACK_BLANK_LEN 4 // in pages
     int blankaddr = this->Alloc(STACK_BLANK_LEN);
-    DEBUG('a', (char*)"Allocated unmapped virtual area [0x%x,0x%x[ for stack overflow detection\n", blankaddr * g_cfg->PageSize,
+    DEBUG('a', "Allocated unmapped virtual area [0x%x,0x%x[ for stack overflow detection\n", blankaddr * g_cfg->PageSize,
             (blankaddr + STACK_BLANK_LEN) * g_cfg->PageSize);
 
     // The new stack parameters
@@ -274,7 +274,7 @@ int AddrSpace::StackAllocate(void)
     // Print address range for stack even in non debug mode to help debugging
     // in case of stack overflow
     printf("****  Stack: allocated virtual area [0x%x,0x%x[ for thread\n", stackBasePage * g_cfg->PageSize, (stackBasePage + numPages) * g_cfg->PageSize);
-    DEBUG('a', (char*)"Allocated virtual area [0x%x,0x%x[ for stack\n", stackBasePage * g_cfg->PageSize, (stackBasePage + numPages) * g_cfg->PageSize);
+    DEBUG('a', "Allocated virtual area [0x%x,0x%x[ for stack\n", stackBasePage * g_cfg->PageSize, (stackBasePage + numPages) * g_cfg->PageSize);
 
     for (int i = stackBasePage; i < (stackBasePage + numPages); i++)
     {
@@ -319,7 +319,7 @@ int AddrSpace::Alloc(int numPages)
 {
     int result = freePageId;
 
-    DEBUG('a', (char*)"Virtual space alloc request for %d pages\n", numPages);
+    DEBUG('a', "Virtual space alloc request for %d pages\n", numPages);
 
     // Check if the translation table is big enough for the allocation
     // to succeed

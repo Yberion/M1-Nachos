@@ -46,10 +46,10 @@ void DiskSwapRequestDone()
  //	initializing the physical disk.
  */
 //----------------------------------------------------------------------
-DriverDisk::DriverDisk(char *sem_name, char *lock_name, Disk *theDisk)
+DriverDisk::DriverDisk(const char *sem_name, const char *lock_name, Disk *theDisk)
 {
-    semaphore = new Semaphore((char*)sem_name, 0);
-    lock = new Lock((char*)lock_name);
+    semaphore = new Semaphore(sem_name, 0);
+    lock = new Lock(lock_name);
     disk = theDisk;
 }
 
@@ -76,12 +76,12 @@ DriverDisk::~DriverDisk()
 //----------------------------------------------------------------------
 void DriverDisk::ReadSector(int sectorNumber, char *data)
 {
-    DEBUG('d', (char*)"[sdisk] rd req\n");
+    DEBUG('d', "[sdisk] rd req\n");
     lock->Acquire(); // only one disk I/O at a time
     disk->ReadRequest(sectorNumber, data);
-    DEBUG('d', (char*)"[sdisk] rd req: wait irq\n");
+    DEBUG('d', "[sdisk] rd req: wait irq\n");
     semaphore->P(); // wait for interrupt
-    DEBUG('d', (char*)"[sdisk] rd req: wait irq OK\n");
+    DEBUG('d', "[sdisk] rd req: wait irq OK\n");
     lock->Release();
 }
 
@@ -96,12 +96,12 @@ void DriverDisk::ReadSector(int sectorNumber, char *data)
 //----------------------------------------------------------------------
 void DriverDisk::WriteSector(int sectorNumber, char *data)
 {
-    DEBUG('d', (char*)"[sdisk] wr req\n");
+    DEBUG('d', "[sdisk] wr req\n");
     lock->Acquire(); // only one disk I/O at a time
     disk->WriteRequest(sectorNumber, data);
-    DEBUG('d', (char*)"[sdisk] wr req: wait irq...\n");
+    DEBUG('d', "[sdisk] wr req: wait irq...\n");
     semaphore->P(); // wait for interrupt
-    DEBUG('d', (char*)"[sdisk] wr req: wait irq OK\n");
+    DEBUG('d', "[sdisk] wr req: wait irq OK\n");
     lock->Release();
 }
 
@@ -113,6 +113,6 @@ void DriverDisk::WriteSector(int sectorNumber, char *data)
 //----------------------------------------------------------------------
 void DriverDisk::RequestDone()
 {
-    DEBUG('d', (char*)"[sdisk] req done\n");
+    DEBUG('d', "[sdisk] req done\n");
     semaphore->V();
 }

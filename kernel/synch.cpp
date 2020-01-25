@@ -33,7 +33,7 @@
  // \param initialValue is the initial value of the semaphore.
  */
 //----------------------------------------------------------------------
-Semaphore::Semaphore(char *debugName, int initialValue)
+Semaphore::Semaphore(const char *debugName, int initialValue)
 {
     name = new char[strlen(debugName) + 1];
     strcpy(name, debugName);
@@ -53,9 +53,9 @@ Semaphore::~Semaphore()
     type = INVALID_TYPE;
     if (!queue->IsEmpty())
     {
-        DEBUG('s', (char*)"Destructor of semaphore \"%s\", queue is not empty!!\n", name);
+        DEBUG('s', "Destructor of semaphore \"%s\", queue is not empty!!\n", name);
         Thread *t = (Thread*)queue->Remove();
-        DEBUG('s', (char*)"Queue contents %s\n", t->GetName());
+        DEBUG('s', "Queue contents %s\n", t->GetName());
         queue->Append((void*)t);
     }
     ASSERT(queue->IsEmpty());
@@ -101,7 +101,7 @@ void Semaphore::V()
  //  \param "debugName" is an arbitrary name, useful for debugging.
  */
 //----------------------------------------------------------------------
-Lock::Lock(char *debugName)
+Lock::Lock(const char *debugName)
 {
     name = new char[strlen(debugName) + 1];
     strcpy(name, debugName);

@@ -290,59 +290,59 @@ enum RegType
 //! Textual representation of Mips instructions and their operands
 struct OpString
 {
-    char *string; //!< Printed version of instruction
+    const char *string; //!< Printed version of instruction
     RegType args[3];
 };
 
 //! Textual form of instructions
-static struct OpString opStrings[] = { { (char*)"Shouldn't happen", { NONE, NONE, NONE } }, { (char*)"ADD r%d,r%d,r%d", { RD, RS, RT } }, {
-        (char*)"ADDI r%d,r%d,%d", { RT, RS, EXTRA } }, { (char*)"ADDIU r%d,r%d,%d", { RT, RS, EXTRA } }, { (char*)"ADDU r%d,r%d,r%d", { RD, RS, RT } }, {
-        (char*)"AND r%d,r%d,r%d", { RD, RS, RT } }, { (char*)"ANDI r%d,r%d,%d", { RT, RS, EXTRA } }, { (char*)"BEQ r%d,r%d,%d", { RS, RT, EXTRA } }, {
-        (char*)"BGEZ r%d,%d", { RS, EXTRA, NONE } }, { (char*)"BGEZAL r%d,%d", { RS, EXTRA, NONE } }, { (char*)"BGTZ r%d,%d", { RS, EXTRA, NONE } }, {
-        (char*)"BLEZ r%d,%d", { RS, EXTRA, NONE } }, { (char*)"BLTZ r%d,%d", { RS, EXTRA, NONE } }, { (char*)"BLTZAL r%d,%d", { RS, EXTRA, NONE } }, {
-        (char*)"BNE r%d,r%d,%d", { RS, RT, EXTRA } }, { (char*)"Shouldn't happen", { NONE, NONE, NONE } }, { (char*)"DIV r%d,r%d", { RS, RT, NONE } }, {
-        (char*)"DIVU r%d,r%d", { RS, RT, NONE } }, { (char*)"J 0x%x", { EXTRA, NONE, NONE } }, { (char*)"JAL 0x%x", { EXTRA, NONE, NONE } }, {
-        (char*)"JALR r%d,r%d", { RD, RS, NONE } }, { (char*)"JR r%d,r%d", { RD, RS, NONE } }, { (char*)"LB r%d,%d(r%d)", { RT, EXTRA, RS } }, {
-        (char*)"LBU r%d,%d(r%d)", { RT, EXTRA, RS } }, { (char*)"LH r%d,%d(r%d)", { RT, EXTRA, RS } }, { (char*)"LHU r%d,%d(r%d)", { RT, EXTRA, RS } }, {
-        (char*)"LUI r%d,%d", { RT, EXTRA, NONE } }, { (char*)"LW r%d,%d(r%d)", { RT, EXTRA, RS } }, { (char*)"LWL r%d,%d(r%d)", { RT, EXTRA, RS } }, {
-        (char*)"LWR r%d,%d(r%d)", { RT, EXTRA, RS } }, { (char*)"Shouldn't happen", { NONE, NONE, NONE } }, { (char*)"MFHI r%d", { RD, NONE, NONE } }, {
-        (char*)"MFLO r%d", { RD, NONE, NONE } }, { (char*)"Shouldn't happen", { NONE, NONE, NONE } }, { (char*)"MTHI r%d", { RS, NONE, NONE } }, {
-        (char*)"MTLO r%d", { RS, NONE, NONE } }, { (char*)"MULT r%d,r%d", { RS, RT, NONE } }, { (char*)"MULTU r%d,r%d", { RS, RT, NONE } }, {
-        (char*)"NOR r%d,r%d,r%d", { RD, RS, RT } }, { (char*)"OR r%d,r%d,r%d", { RD, RS, RT } }, { (char*)"ORI r%d,r%d,%d", { RT, RS, EXTRA } }, { (char*)"RFE",
-        { NONE, NONE, NONE } }, { (char*)"SB r%d,%d(r%d)", { RT, EXTRA, RS } }, { (char*)"SH r%d,%d(r%d)", { RT, EXTRA, RS } }, { (char*)"SLL r%d,r%d,%d", { RD,
-        RT, EXTRA } }, { (char*)"SLLV r%d,r%d,r%d", { RD, RT, RS } }, { (char*)"SLT r%d,r%d,r%d", { RD, RS, RT } }, { (char*)"SLTI r%d,r%d,%d",
-        { RT, RS, EXTRA } }, { (char*)"SLTIU r%d,r%d,%d", { RT, RS, EXTRA } }, { (char*)"SLTU r%d,r%d,r%d", { RD, RS, RT } }, { (char*)"SRA r%d,r%d,%d", { RD,
-        RT, EXTRA } }, { (char*)"SRAV r%d,r%d,r%d", { RD, RT, RS } }, { (char*)"SRL r%d,r%d,%d", { RD, RT, EXTRA } }, { (char*)"SRLV r%d,r%d,r%d",
-        { RD, RT, RS } }, { (char*)"SUB r%d,r%d,r%d", { RD, RS, RT } }, { (char*)"SUBU r%d,r%d,r%d", { RD, RS, RT } }, { (char*)"SW r%d,%d(r%d)", { RT, EXTRA,
-        RS } }, { (char*)"SWL r%d,%d(r%d)", { RT, EXTRA, RS } }, { (char*)"SWR r%d,%d(r%d)", { RT, EXTRA, RS } }, { (char*)"XOR r%d,r%d,r%d", { RD, RS, RT } },
-        { (char*)"XORI r%d,r%d,%d", { RT, RS, EXTRA } }, { (char*)"SYSCALL", { NONE, NONE, NONE } },
+static struct OpString opStrings[] = { { "Shouldn't happen", { NONE, NONE, NONE } }, { "ADD r%d,r%d,r%d", { RD, RS, RT } }, {
+        "ADDI r%d,r%d,%d", { RT, RS, EXTRA } }, { "ADDIU r%d,r%d,%d", { RT, RS, EXTRA } }, { "ADDU r%d,r%d,r%d", { RD, RS, RT } }, {
+        "AND r%d,r%d,r%d", { RD, RS, RT } }, { "ANDI r%d,r%d,%d", { RT, RS, EXTRA } }, { "BEQ r%d,r%d,%d", { RS, RT, EXTRA } }, {
+        "BGEZ r%d,%d", { RS, EXTRA, NONE } }, { "BGEZAL r%d,%d", { RS, EXTRA, NONE } }, { "BGTZ r%d,%d", { RS, EXTRA, NONE } }, {
+        "BLEZ r%d,%d", { RS, EXTRA, NONE } }, { "BLTZ r%d,%d", { RS, EXTRA, NONE } }, { "BLTZAL r%d,%d", { RS, EXTRA, NONE } }, {
+        "BNE r%d,r%d,%d", { RS, RT, EXTRA } }, { "Shouldn't happen", { NONE, NONE, NONE } }, { "DIV r%d,r%d", { RS, RT, NONE } }, {
+        "DIVU r%d,r%d", { RS, RT, NONE } }, { "J 0x%x", { EXTRA, NONE, NONE } }, { "JAL 0x%x", { EXTRA, NONE, NONE } }, {
+        "JALR r%d,r%d", { RD, RS, NONE } }, { "JR r%d,r%d", { RD, RS, NONE } }, { "LB r%d,%d(r%d)", { RT, EXTRA, RS } }, {
+        "LBU r%d,%d(r%d)", { RT, EXTRA, RS } }, { "LH r%d,%d(r%d)", { RT, EXTRA, RS } }, { "LHU r%d,%d(r%d)", { RT, EXTRA, RS } }, {
+        "LUI r%d,%d", { RT, EXTRA, NONE } }, { "LW r%d,%d(r%d)", { RT, EXTRA, RS } }, { "LWL r%d,%d(r%d)", { RT, EXTRA, RS } }, {
+        "LWR r%d,%d(r%d)", { RT, EXTRA, RS } }, { "Shouldn't happen", { NONE, NONE, NONE } }, { "MFHI r%d", { RD, NONE, NONE } }, {
+        "MFLO r%d", { RD, NONE, NONE } }, { "Shouldn't happen", { NONE, NONE, NONE } }, { "MTHI r%d", { RS, NONE, NONE } }, {
+        "MTLO r%d", { RS, NONE, NONE } }, { "MULT r%d,r%d", { RS, RT, NONE } }, { "MULTU r%d,r%d", { RS, RT, NONE } }, {
+        "NOR r%d,r%d,r%d", { RD, RS, RT } }, { "OR r%d,r%d,r%d", { RD, RS, RT } }, { "ORI r%d,r%d,%d", { RT, RS, EXTRA } }, { "RFE",
+        { NONE, NONE, NONE } }, { "SB r%d,%d(r%d)", { RT, EXTRA, RS } }, { "SH r%d,%d(r%d)", { RT, EXTRA, RS } }, { "SLL r%d,r%d,%d", { RD,
+        RT, EXTRA } }, { "SLLV r%d,r%d,r%d", { RD, RT, RS } }, { "SLT r%d,r%d,r%d", { RD, RS, RT } }, { "SLTI r%d,r%d,%d",
+        { RT, RS, EXTRA } }, { "SLTIU r%d,r%d,%d", { RT, RS, EXTRA } }, { "SLTU r%d,r%d,r%d", { RD, RS, RT } }, { "SRA r%d,r%d,%d", { RD,
+        RT, EXTRA } }, { "SRAV r%d,r%d,r%d", { RD, RT, RS } }, { "SRL r%d,r%d,%d", { RD, RT, EXTRA } }, { "SRLV r%d,r%d,r%d",
+        { RD, RT, RS } }, { "SUB r%d,r%d,r%d", { RD, RS, RT } }, { "SUBU r%d,r%d,r%d", { RD, RS, RT } }, { "SW r%d,%d(r%d)", { RT, EXTRA,
+        RS } }, { "SWL r%d,%d(r%d)", { RT, EXTRA, RS } }, { "SWR r%d,%d(r%d)", { RT, EXTRA, RS } }, { "XOR r%d,r%d,r%d", { RD, RS, RT } },
+        { "XORI r%d,r%d,%d", { RT, RS, EXTRA } }, { "SYSCALL", { NONE, NONE, NONE } },
 
         /* Some of the floating point instructions (MIPS I, no "W" instr) */
-        { (char*)"LWC1 f%d,%d(r%d)", { FT, EXTRA, RS } }, { (char*)"LDC1 f%d,%d(r%d)", { FT, EXTRA, RS } }, { (char*)"SWC1 f%d,%d(r%d)", { FT, EXTRA, RS } }, {
-                (char*)"SDC1 f%d,%d(r%d)", { FT, EXTRA, RS } }, { (char*)"ABS.S f%d,f%d", { FD, FS, NONE } }, { (char*)"ABS.D f%d,f%d", { FD, FS, NONE } }, {
-                (char*)"ADD.S f%d,f%d,f%d", { FD, FS, FT } }, { (char*)"ADD.D f%d,f%d,f%d", { FD, FS, FT } }, { (char*)"DIV.S f%d,f%d,f%d", { FD, FS, FT } }, {
-                (char*)"DIV.D f%d,f%d,f%d", { FD, FS, FT } }, { (char*)"MUL.S f%d,f%d,f%d", { FD, FS, FT } }, { (char*)"MUL.D f%d,f%d,f%d", { FD, FS, FT } }, {
-                (char*)"NEG.S f%d,f%d", { FD, FS, NONE } }, { (char*)"NEG.D f%d,f%d", { FD, FS, NONE } }, { (char*)"SUB.S f%d,f%d,f%d", { FD, FS, FT } }, {
-                (char*)"SUB.D f%d,f%d,f%d", { FD, FS, FT } }, { (char*)"CVT.S.D f%d,f%d", { FD, FS, NONE } }, { (char*)"CVT.S.W f%d,f%d", { FD, FS, NONE } }, {
-                (char*)"CVT.W.S f%d,f%d", { FD, FS, NONE } }, { (char*)"CVT.W.D f%d,f%d", { FD, FS, NONE } }, { (char*)"CVT.D.S f%d,f%d", { FD, FS, NONE } }, {
-                (char*)"CVT.D.W f%d,f%d", { FD, FS, NONE } }, { (char*)"CEIL.W.S f%d,f%d", { FD, FS, NONE } }, { (char*)"CEIL.W.D f%d,f%d", { FD, FS, NONE } },
-        { (char*)"FLOOR.W.S f%d,f%d", { FD, FS, NONE } }, { (char*)"FLOOR.W.D f%d,f%d", { FD, FS, NONE } }, { (char*)"ROUND.W.S f%d,f%d", { FD, FS, NONE } }, {
-                (char*)"ROUND.W.D f%d,f%d", { FD, FS, NONE } }, { (char*)"TRUNC.W.S f%d,f%d", { FD, FS, NONE } },
-        { (char*)"TRUNC.W.D f%d,f%d", { FD, FS, NONE } }, { (char*)"MOV.S f%d,f%d", { FD, FS, NONE } }, { (char*)"MOV.D f%d,f%d", { FD, FS, NONE } }, {
-                (char*)"BC1F %d", { EXTRA, NONE, NONE } }, { (char*)"BC1T %d", { EXTRA, NONE, NONE } }, { (char*)"BC1FL %d", { EXTRA, NONE, NONE } }, {
-                (char*)"BC1TL %d", { EXTRA, NONE, NONE } }, { (char*)"SQRT.S f%d,f%d", { FD, FS, NONE } }, { (char*)"SQRT.D f%d,f%d", { FD, FS, NONE } }, {
-                (char*)"C.F.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.UN.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.EQ.S f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.UEQ.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.OLT.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.ULT.S f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.OLE.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.ULE.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.SF.S f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.NGLE.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.SEQ.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.NGL.S f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.LT.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.NGE.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.LE.S f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.NGT.S f%d,f%d", { FS, FT, NONE } }, { (char*)"C.F.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.UN.D f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.EQ.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.UEQ.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.OLT.D f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.ULT.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.OLE.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.ULE.D f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.SF.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.NGLE.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.SEQ.D f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.NGL.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.LT.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.NGE.D f%d,f%d", { FS, FT, NONE } }, {
-                (char*)"C.LE.D f%d,f%d", { FS, FT, NONE } }, { (char*)"C.NGT.D f%d,f%d", { FS, FT, NONE } }, { (char*)"OP_MFC1 r%d,f%d", { RT, FS, NONE } }, {
-                (char*)"OP_CFC1 r%d,f%d", { RT, FS, NONE } }, { (char*)"OP_MTC1 r%d,f%d", { RT, FS, NONE } }, { (char*)"OP_CTC1 r%d,f%d", { RT, FS, NONE } }, {
-                (char*)"Unimplemented", { NONE, NONE, NONE } }, { (char*)"Reserved", { NONE, NONE, NONE } } };
+        { "LWC1 f%d,%d(r%d)", { FT, EXTRA, RS } }, { "LDC1 f%d,%d(r%d)", { FT, EXTRA, RS } }, { "SWC1 f%d,%d(r%d)", { FT, EXTRA, RS } }, {
+                "SDC1 f%d,%d(r%d)", { FT, EXTRA, RS } }, { "ABS.S f%d,f%d", { FD, FS, NONE } }, { "ABS.D f%d,f%d", { FD, FS, NONE } }, {
+                "ADD.S f%d,f%d,f%d", { FD, FS, FT } }, { "ADD.D f%d,f%d,f%d", { FD, FS, FT } }, { "DIV.S f%d,f%d,f%d", { FD, FS, FT } }, {
+                "DIV.D f%d,f%d,f%d", { FD, FS, FT } }, { "MUL.S f%d,f%d,f%d", { FD, FS, FT } }, { "MUL.D f%d,f%d,f%d", { FD, FS, FT } }, {
+                "NEG.S f%d,f%d", { FD, FS, NONE } }, { "NEG.D f%d,f%d", { FD, FS, NONE } }, { "SUB.S f%d,f%d,f%d", { FD, FS, FT } }, {
+                "SUB.D f%d,f%d,f%d", { FD, FS, FT } }, { "CVT.S.D f%d,f%d", { FD, FS, NONE } }, { "CVT.S.W f%d,f%d", { FD, FS, NONE } }, {
+                "CVT.W.S f%d,f%d", { FD, FS, NONE } }, { "CVT.W.D f%d,f%d", { FD, FS, NONE } }, { "CVT.D.S f%d,f%d", { FD, FS, NONE } }, {
+                "CVT.D.W f%d,f%d", { FD, FS, NONE } }, { "CEIL.W.S f%d,f%d", { FD, FS, NONE } }, { "CEIL.W.D f%d,f%d", { FD, FS, NONE } },
+        { "FLOOR.W.S f%d,f%d", { FD, FS, NONE } }, { "FLOOR.W.D f%d,f%d", { FD, FS, NONE } }, { "ROUND.W.S f%d,f%d", { FD, FS, NONE } }, {
+                "ROUND.W.D f%d,f%d", { FD, FS, NONE } }, { "TRUNC.W.S f%d,f%d", { FD, FS, NONE } },
+        { "TRUNC.W.D f%d,f%d", { FD, FS, NONE } }, { "MOV.S f%d,f%d", { FD, FS, NONE } }, { "MOV.D f%d,f%d", { FD, FS, NONE } }, {
+                "BC1F %d", { EXTRA, NONE, NONE } }, { "BC1T %d", { EXTRA, NONE, NONE } }, { "BC1FL %d", { EXTRA, NONE, NONE } }, {
+                "BC1TL %d", { EXTRA, NONE, NONE } }, { "SQRT.S f%d,f%d", { FD, FS, NONE } }, { "SQRT.D f%d,f%d", { FD, FS, NONE } }, {
+                "C.F.S f%d,f%d", { FS, FT, NONE } }, { "C.UN.S f%d,f%d", { FS, FT, NONE } }, { "C.EQ.S f%d,f%d", { FS, FT, NONE } }, {
+                "C.UEQ.S f%d,f%d", { FS, FT, NONE } }, { "C.OLT.S f%d,f%d", { FS, FT, NONE } }, { "C.ULT.S f%d,f%d", { FS, FT, NONE } }, {
+                "C.OLE.S f%d,f%d", { FS, FT, NONE } }, { "C.ULE.S f%d,f%d", { FS, FT, NONE } }, { "C.SF.S f%d,f%d", { FS, FT, NONE } }, {
+                "C.NGLE.S f%d,f%d", { FS, FT, NONE } }, { "C.SEQ.S f%d,f%d", { FS, FT, NONE } }, { "C.NGL.S f%d,f%d", { FS, FT, NONE } }, {
+                "C.LT.S f%d,f%d", { FS, FT, NONE } }, { "C.NGE.S f%d,f%d", { FS, FT, NONE } }, { "C.LE.S f%d,f%d", { FS, FT, NONE } }, {
+                "C.NGT.S f%d,f%d", { FS, FT, NONE } }, { "C.F.D f%d,f%d", { FS, FT, NONE } }, { "C.UN.D f%d,f%d", { FS, FT, NONE } }, {
+                "C.EQ.D f%d,f%d", { FS, FT, NONE } }, { "C.UEQ.D f%d,f%d", { FS, FT, NONE } }, { "C.OLT.D f%d,f%d", { FS, FT, NONE } }, {
+                "C.ULT.D f%d,f%d", { FS, FT, NONE } }, { "C.OLE.D f%d,f%d", { FS, FT, NONE } }, { "C.ULE.D f%d,f%d", { FS, FT, NONE } }, {
+                "C.SF.D f%d,f%d", { FS, FT, NONE } }, { "C.NGLE.D f%d,f%d", { FS, FT, NONE } }, { "C.SEQ.D f%d,f%d", { FS, FT, NONE } }, {
+                "C.NGL.D f%d,f%d", { FS, FT, NONE } }, { "C.LT.D f%d,f%d", { FS, FT, NONE } }, { "C.NGE.D f%d,f%d", { FS, FT, NONE } }, {
+                "C.LE.D f%d,f%d", { FS, FT, NONE } }, { "C.NGT.D f%d,f%d", { FS, FT, NONE } }, { "OP_MFC1 r%d,f%d", { RT, FS, NONE } }, {
+                "OP_CFC1 r%d,f%d", { RT, FS, NONE } }, { "OP_MTC1 r%d,f%d", { RT, FS, NONE } }, { "OP_CTC1 r%d,f%d", { RT, FS, NONE } }, {
+                "Unimplemented", { NONE, NONE, NONE } }, { "Reserved", { NONE, NONE, NONE } } };
 
 #endif // MIPSSIM_H

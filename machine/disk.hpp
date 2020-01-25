@@ -58,7 +58,7 @@
 class Disk
 {
 public:
-    Disk(char *name, VoidNoArgFunctionPtr callWhenDone);
+    Disk(const char *name, VoidNoArgFunctionPtr callWhenDone);
     /*!< Create a simulated disk.
      Invoke (*callWhenDone)
      every time a request completes. */

@@ -33,7 +33,7 @@ private:
 public:
     Statistics(); //! initialyses everything to zero
     ~Statistics(); //! de-allocate the list
-    ProcessStat* NewProcStat(char *name); /*! create a new ProcessStat, link it to allStatistics
+    ProcessStat* NewProcStat(const char *name); /*! create a new ProcessStat, link it to allStatistics
      and return a pointer on it. It is called by the
      method which create a new process */
 
@@ -82,7 +82,7 @@ private:
     int numMemoryAccess; //!< number of Memory accesses
     int numPageFaults; //!< number of virtual memory page faults
 public:
-    ProcessStat(char *name); //! initialises everything to zero and initialises the name of the process
+    ProcessStat(const char *name); //! initialises everything to zero and initialises the name of the process
     void incrSystemTicks(Time val);
     void incrUserTicks(Time val);
 

@@ -36,7 +36,7 @@ public:
     ~DriverConsole();
 
     //! Write a buffer on the console
-    void PutString(char *buffer, int nbcar);
+    void PutString(const char *buffer, int nbcar);
 
     //! Read characters from the console
     void GetString(char *buffer, int nbcar);

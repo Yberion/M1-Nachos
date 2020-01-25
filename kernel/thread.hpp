@@ -67,7 +67,7 @@ class Thread
 {
 public:
     //! Build an empty thread
-    Thread(char *debugName);
+    Thread(const char *debugName);
 
     //! Deallocate a Thread.
     ~Thread();

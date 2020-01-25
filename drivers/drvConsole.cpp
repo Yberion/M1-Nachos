@@ -50,10 +50,10 @@ void ConsolePut()
 //-----------------------------------------------------------------
 DriverConsole::DriverConsole()
 {
-    get = new Semaphore((char*)"get", 0);
-    put = new Semaphore((char*)"put", 0);
-    mutexget = new Lock((char*)"mutex get");
-    mutexput = new Lock((char*)"mutex put");
+    get = new Semaphore("get", 0);
+    put = new Semaphore("put", 0);
+    mutexget = new Lock("mutex get");
+    mutexput = new Lock("mutex put");
 }
 
 //-----------------------------------------------------------------
@@ -95,7 +95,7 @@ void DriverConsole::PutAChar()
  //      \param nbcar is the number of chars to send
  */
 //-----------------------------------------------------------------
-void DriverConsole::PutString(char *buffer, int nbcar)
+void DriverConsole::PutString(const char *buffer, int nbcar)
 {
 
     mutexput->Acquire();

@@ -137,7 +137,7 @@ int OpenFile::ReadAt(char *into, int numBytes, int position)
 
     if ((position + numBytes) > fileLength)
         numBytes = fileLength - position;
-    DEBUG('f', (char*)"Reading %d bytes at %d, from file of length %d.\n", numBytes, position, fileLength);
+    DEBUG('f', "Reading %d bytes at %d, from file of length %d.\n", numBytes, position, fileLength);
 
     // Compute the list of sectors to be read
     firstSector = divRoundDown(position, g_cfg->SectorSize);
@@ -206,7 +206,7 @@ int OpenFile::WriteAt(char *from, int numBytes, int position)
     else if ((position + numBytes) > fileLength)
         hdr->ChangeFileLength(position + numBytes);
 
-    DEBUG('f', (char*)"Writing %d bytes at %d, to file of length %d.\n", numBytes, position, fileLength);
+    DEBUG('f', "Writing %d bytes at %d, to file of length %d.\n", numBytes, position, fileLength);
 
     // Compute the list of sectors to be written
     firstSector = divRoundDown(position, g_cfg->SectorSize);

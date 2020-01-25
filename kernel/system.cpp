@@ -108,7 +108,7 @@ void Initialize(int argc, char **argv)
 {
     int errStatus;
     int argCount;
-    char *debugArgs = (char*)"";
+    const char *debugArgs = "";
     char filename[MAXSTRLEN];
     bool debugUserProg = false; //!< single step user program
 
@@ -118,10 +118,10 @@ void Initialize(int argc, char **argv)
     for (argc--, argv++; argc > 0; argc -= argCount, argv += argCount)
     {
         argCount = 1;
-        if (!strcmp(*argv, (char*)"-d"))
+        if (!strcmp(*argv, "-d"))
         {
             if (argc == 1)
-                debugArgs = (char*)"+"; // turn on all debug flags
+                debugArgs = "+"; // turn on all debug flags
             else
             {
                 debugArgs = *(argv + 1);
@@ -129,9 +129,9 @@ void Initialize(int argc, char **argv)
             }
         }
 
-        if (!strcmp(*argv, (char*)"-s"))
+        if (!strcmp(*argv, "-s"))
             debugUserProg = true;
-        if (!strcmp(*argv, (char*)"-f"))
+        if (!strcmp(*argv, "-f"))
         {
             strcpy(filename, *(argv + 1));
         }
@@ -150,7 +150,7 @@ void Initialize(int argc, char **argv)
     g_machine = new Machine(debugUserProg);
 
     // Create the device drivers
-    g_disk_driver = new DriverDisk((char*)"sem disk", (char*)"lock disk", g_machine->disk);
+    g_disk_driver = new DriverDisk("sem disk", "lock disk", g_machine->disk);
     if (g_cfg->ACIA)
         g_acia_driver = new DriverACIA();
     g_console_driver = new DriverConsole();
@@ -186,7 +186,7 @@ void Initialize(int argc, char **argv)
     }
 
     // Create the root thread
-    g_current_thread = new Thread((char*)"main-temp");
+    g_current_thread = new Thread("main-temp");
     errStatus = g_current_thread->Start(rootProcess, 0x0, -1);
     if (errStatus != NO_ERROR)
     {

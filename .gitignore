@@ -1,6 +1,7 @@
 DISK
 nachos
 SWAPDISK
+.vs
 .project
 .o
 .a

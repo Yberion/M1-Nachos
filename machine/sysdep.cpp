@@ -128,7 +128,7 @@ bool PollFile(int fd)
  //      \return file descriptor
  */
 //----------------------------------------------------------------------
-int OpenForWrite(char *name)
+int OpenForWrite(const char *name)
 {
     int fd = open(name, O_RDWR | O_CREAT | O_TRUNC, 0666);
 
@@ -144,7 +144,7 @@ int OpenForWrite(char *name)
  //	\param name file name
  */
 //----------------------------------------------------------------------
-int OpenForReadWrite(char *name, bool crashOnError)
+int OpenForReadWrite(const char *name, bool crashOnError)
 {
     int fd = open(name, O_RDWR, 0);
 
@@ -293,7 +293,7 @@ void AssignNameToSocket(char *socketName, int sockID)
     bind(sockID, (struct sockaddr*)(&uname), sizeof(struct sockaddr_in));
     // non blocking read
     fcntl(sockID, F_SETFL, O_NDELAY | fcntl(sockID, F_GETFL, 0));
-    DEBUG('h', (char*)"Created %s socket\n", socketName);
+    DEBUG('h', "Created %s socket\n", socketName);
 }
 
 //----------------------------------------------------------------------
