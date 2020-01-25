@@ -1,0 +1,5 @@
+<map id="OpenFileTableEntry" name="OpenFileTableEntry">
+<area shape="rect" id="node1" title="defines the structure of a record in the open file table" alt="" coords="5,95,141,121"/>
+<area shape="rect" id="node2" href="$class_lock.html" title="Defines the &quot;lock&quot; synchronization tool." alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node3" href="$class_open_file.html" title="Defines the data structure maintained when a file is opened." alt="" coords="80,5,155,32"/>
+</map>

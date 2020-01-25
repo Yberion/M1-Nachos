@@ -1,0 +1,28 @@
+var class_machine =
+[
+    [ "Machine", "class_machine.html#ad5958275a54dbc299b71ecdba7da0604", null ],
+    [ "~Machine", "class_machine.html#a7f595e09b54761f6c1e73b192067bd9c", null ],
+    [ "Debugger", "class_machine.html#a08d36bd75e689830c73e307e1c7f7e28", null ],
+    [ "DelayedLoad", "class_machine.html#a11fda0ddf1f16d8b1a06f75d1ab5b8a1", null ],
+    [ "DumpState", "class_machine.html#a4e4dee4ed66da41de9bbebb161efd06f", null ],
+    [ "OneInstruction", "class_machine.html#ad70a015685c6e4bf705e4939551774aa", null ],
+    [ "RaiseException", "class_machine.html#a0d6f63790c0568437b100171f61fd77f", null ],
+    [ "ReadCC", "class_machine.html#ae12d7f0022eadcdadb37493ebab42b0b", null ],
+    [ "ReadFPRegister", "class_machine.html#af16b6154387003b4d6a9ddfd6128284a", null ],
+    [ "ReadIntRegister", "class_machine.html#aa9c9870f67219547a61d4d2e35516d06", null ],
+    [ "Run", "class_machine.html#a83444e06eb7a7c163a1b9c87a7062d43", null ],
+    [ "SetStatus", "class_machine.html#ad9c1948a2dadfd2ddb7d432b2443e884", null ],
+    [ "WriteCC", "class_machine.html#a710c8e7507cde9d8b5e087bb8eceebd1", null ],
+    [ "WriteFPRegister", "class_machine.html#ac773aec703a24a025b6c0520c0fd5ac8", null ],
+    [ "WriteIntRegister", "class_machine.html#a0c99ef39db8a79eb9d31a462c86332ff", null ],
+    [ "acia", "class_machine.html#aa616ec44582a5910384ea1874bf9617f", null ],
+    [ "cc", "class_machine.html#a267df298f7abd06598d3b09defa3eb2c", null ],
+    [ "console", "class_machine.html#a798eb7c6240b03be493aaeb262d28d77", null ],
+    [ "disk", "class_machine.html#a68ed56cd4020a618c3681347462a92fd", null ],
+    [ "diskSwap", "class_machine.html#a9837c56d8d140ab4e30a1bf26003455a", null ],
+    [ "float_registers", "class_machine.html#ab911b70757712fc42f16e8b9c87a38b6", null ],
+    [ "int_registers", "class_machine.html#ae0da89b16ec8e098144ddb09ab9bf02c", null ],
+    [ "interrupt", "class_machine.html#a8290980871eb910ad13ace3a1b58108e", null ],
+    [ "mainMemory", "class_machine.html#a07cbf6544fe46ae72a7fc37e0db71993", null ],
+    [ "mmu", "class_machine.html#a7d27a9b68f4b10a801169190790177ea", null ]
+];

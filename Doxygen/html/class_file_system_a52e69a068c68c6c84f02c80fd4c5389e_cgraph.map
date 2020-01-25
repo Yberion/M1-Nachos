@@ -1,0 +1,10 @@
+<map id="FileSystem::Remove" name="FileSystem::Remove">
+<area shape="rect" id="node1" title="Delete a file (UNIX unlink)" alt="" coords="5,56,148,83"/>
+<area shape="rect" id="node2" href="$filesys_8cpp.html#a6aea4042690035ff4b4b4531ccca4dc1" title=" " alt="" coords="196,56,259,83"/>
+<area shape="rect" id="node3" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="725,5,793,32"/>
+<area shape="rect" id="node5" href="$class_directory.html#a36ed455b21bbd9a66ffe8ec689ff7c73" title=" " alt="" coords="311,56,457,83"/>
+<area shape="rect" id="node8" href="$class_file_system.html#a118ce47f3ef95d3e930572c20836d327" title="Get the root directory." alt="" coords="307,107,461,133"/>
+<area shape="rect" id="node4" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="883,5,999,32"/>
+<area shape="rect" id="node6" href="$class_open_file.html#a0af8cd52ec71a2ad407039cebee2ef3d" title=" " alt="" coords="509,56,635,83"/>
+<area shape="rect" id="node7" href="$class_file_header.html#a676d88bbc37d3d108625be75d637a8e6" title="in bytes" alt="" coords="683,56,835,83"/>
+</map>

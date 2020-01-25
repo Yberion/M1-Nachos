@@ -1,0 +1,15 @@
+<map id="Machine::OneInstruction" name="Machine::OneInstruction">
+<area shape="rect" id="node1" title="Return the execution time of the instr (cycle)" alt="" coords="5,93,168,120"/>
+<area shape="rect" id="node2" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="948,17,1064,44"/>
+<area shape="rect" id="node3" href="$class_instruction.html#acbdc34d695f5fa324a8418ef7a916814" title="Decode the binary representation of the instruction." alt="" coords="216,144,351,171"/>
+<area shape="rect" id="node4" href="$class_m_m_u.html#a28a50bd03688bc05aa15f93e4abf61a7" title="memory (at addr). Return FALSE if a" alt="" coords="223,93,343,120"/>
+<area shape="rect" id="node5" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="832,68,900,95"/>
+<area shape="rect" id="node6" href="$class_process_stat.html#acbaa82f6a60394aca2db1e7e179a2a71" title=" " alt="" coords="565,508,780,535"/>
+<area shape="rect" id="node7" href="$class_machine.html#a0d6f63790c0568437b100171f61fd77f" title=" " alt="" coords="587,93,758,120"/>
+<area shape="rect" id="node8" href="$class_m_m_u.html#aa2ddea5dcd1648aba21ac1a75c79dc25" title="translation couldn&#39;t be completed." alt="" coords="399,268,513,295"/>
+<area shape="rect" id="node9" href="$class_translation_table.html#a422fb5a0c18054667ce47a5025cb644c" title=" " alt="" coords="593,195,752,237"/>
+<area shape="rect" id="node10" href="$class_translation_table.html#a1314ab5a89657842d5fcb56b3ed8730f" title=" " alt="" coords="593,261,752,302"/>
+<area shape="rect" id="node11" href="$class_translation_table.html#aaea1ba12f26cb0d9849fb059f3399845" title=" " alt="" coords="593,326,752,367"/>
+<area shape="rect" id="node12" href="$class_translation_table.html#a55c89008e61112f61a5d2cec29e678dc" title=" " alt="" coords="589,391,756,433"/>
+<area shape="rect" id="node13" href="$class_translation_table.html#a4f29cbac75ad518a17d8f70e873dffef" title=" " alt="" coords="561,144,784,171"/>
+</map>

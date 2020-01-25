@@ -1,0 +1,8 @@
+<map id="userlib/libnachos.c" name="userlib/libnachos.c">
+<area shape="rect" id="node1" title="Functions of our library, for user programs." alt="" coords="112,5,243,32"/>
+<area shape="rect" id="node2" href="$libnachos_8h.html" title="Function structures for programs." alt="" coords="31,80,119,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="143,80,212,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="237,80,302,107"/>
+<area shape="rect" id="node3" href="$syscall_8h.html" title="Nachos system call interface." alt="" coords="17,155,133,181"/>
+<area shape="rect" id="node4" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="5,229,144,256"/>
+</map>

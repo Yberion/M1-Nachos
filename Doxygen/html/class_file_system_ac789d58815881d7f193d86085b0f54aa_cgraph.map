@@ -1,0 +1,12 @@
+<map id="FileSystem::Create" name="FileSystem::Create">
+<area shape="rect" id="node1" title="Create a file (UNIX creat)" alt="" coords="5,81,140,108"/>
+<area shape="rect" id="node2" href="$class_lock.html#ad4c4699fd1ab73f3927b10edc01c54db" title="Acquire a lock (atomic operation)" alt="" coords="189,5,292,32"/>
+<area shape="rect" id="node3" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="759,107,827,133"/>
+<area shape="rect" id="node5" href="$filesys_8cpp.html#a6aea4042690035ff4b4b4531ccca4dc1" title=" " alt="" coords="209,107,272,133"/>
+<area shape="rect" id="node10" href="$class_lock.html#a5ca005b84272e56c2bf447056ee9217c" title="Release a lock (atomic operation)" alt="" coords="188,157,293,184"/>
+<area shape="rect" id="node4" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="917,107,1033,133"/>
+<area shape="rect" id="node6" href="$class_directory.html#a36ed455b21bbd9a66ffe8ec689ff7c73" title=" " alt="" coords="346,157,491,184"/>
+<area shape="rect" id="node9" href="$class_file_system.html#a118ce47f3ef95d3e930572c20836d327" title="Get the root directory." alt="" coords="341,208,496,235"/>
+<area shape="rect" id="node7" href="$class_open_file.html#a0af8cd52ec71a2ad407039cebee2ef3d" title=" " alt="" coords="544,157,669,184"/>
+<area shape="rect" id="node8" href="$class_file_header.html#a676d88bbc37d3d108625be75d637a8e6" title="in bytes" alt="" coords="717,157,869,184"/>
+</map>

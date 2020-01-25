@@ -1,0 +1,6 @@
+<map id="userlib/syscall.h" name="userlib/syscall.h">
+<area shape="rect" id="node1" title="Nachos system call interface." alt="" coords="99,5,215,32"/>
+<area shape="rect" id="node2" href="$exception_8cpp.html" title="Entry point into the Nachos kernel ." alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node3" href="$libnachos_8h.html" title="Function structures for programs." alt="" coords="173,80,303,107"/>
+<area shape="rect" id="node4" href="$libnachos_8c.html" title="Functions of our library, for user programs." alt="" coords="173,155,303,181"/>
+</map>

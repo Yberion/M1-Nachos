@@ -1,0 +1,5 @@
+<map id="machine/ACIA_sysdep.hpp" name="machine/ACIA_sysdep.hpp">
+<area shape="rect" id="node1" title="Data structure to simulate an Asynchronous Communicating Interface Adapter." alt="" coords="71,5,249,32"/>
+<area shape="rect" id="node2" href="$_a_c_i_a_8cpp.html" title="Routines implementing an ACIA device." alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node3" href="$_a_c_i_a__sysdep_8cpp.html" title="Routines to simulate the system dependant part of an ACIA device." alt="" coords="160,80,339,107"/>
+</map>

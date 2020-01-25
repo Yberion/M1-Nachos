@@ -1,0 +1,14 @@
+<map id="filesys/openfile.hpp" name="filesys/openfile.hpp">
+<area shape="rect" id="node1" title="Data structures to manipulate files." alt="" coords="251,5,383,32"/>
+<area shape="rect" id="node2" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="409,453,548,480"/>
+<area shape="rect" id="node3" href="$utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="262,304,375,331"/>
+<area shape="rect" id="node9" href="$system_8hpp.html" title="Global variables used in Nachos." alt="" coords="253,80,382,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="75,453,139,480"/>
+<area shape="rect" id="node5" title=" " alt="" coords="145,379,223,405"/>
+<area shape="rect" id="node6" href="$sysdep_8hpp.html" title="System&#45;dependent interface." alt="" coords="247,379,390,405"/>
+<area shape="rect" id="node7" title=" " alt="" coords="181,453,243,480"/>
+<area shape="rect" id="node8" title=" " alt="" coords="286,453,351,480"/>
+<area shape="rect" id="node10" title=" " alt="" coords="495,229,542,256"/>
+<area shape="rect" id="node11" href="$list_8hpp.html" title="Data structures to manage LISP&#45;like lists." alt="" coords="271,229,369,256"/>
+<area shape="rect" id="node12" href="$objid_8hpp.html" title="Object identifier data structure." alt="" coords="355,155,464,181"/>
+</map>

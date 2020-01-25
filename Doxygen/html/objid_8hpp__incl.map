@@ -1,0 +1,12 @@
+<map id="utility/objid.hpp" name="utility/objid.hpp">
+<area shape="rect" id="node1" title="Object identifier data structure." alt="" coords="71,5,180,32"/>
+<area shape="rect" id="node2" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="5,304,144,331"/>
+<area shape="rect" id="node3" href="$utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="115,155,229,181"/>
+<area shape="rect" id="node9" href="$list_8hpp.html" title="Data structures to manage LISP&#45;like lists." alt="" coords="33,80,132,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="207,80,254,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="379,304,443,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="134,229,213,256"/>
+<area shape="rect" id="node6" href="$sysdep_8hpp.html" title="System&#45;dependent interface." alt="" coords="237,229,379,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="283,304,344,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="193,304,258,331"/>
+</map>

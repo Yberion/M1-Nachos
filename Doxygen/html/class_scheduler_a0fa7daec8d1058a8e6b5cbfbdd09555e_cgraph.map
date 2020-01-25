@@ -1,0 +1,4 @@
+<map id="Scheduler::FindNextToRun" name="Scheduler::FindNextToRun">
+<area shape="rect" id="node1" title="Dequeue first thread of the ready list, if any, and return thread." alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node2" href="$class_list.html#a297a131df05eba81e89f5f7d0039cb30" title=" " alt="" coords="231,5,328,32"/>
+</map>

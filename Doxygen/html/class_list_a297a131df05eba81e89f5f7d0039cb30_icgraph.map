@@ -1,0 +1,8 @@
+<map id="List::Remove" name="List::Remove">
+<area shape="rect" id="node1" title=" " alt="" coords="231,107,328,133"/>
+<area shape="rect" id="node2" href="$class_scheduler.html#a0fa7daec8d1058a8e6b5cbfbdd09555e" title="Dequeue first thread of the ready list, if any, and return thread." alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node3" href="$class_list.html#a2d311a7b72af91a0ff97712a0c552724" title=" " alt="" coords="14,56,174,83"/>
+<area shape="rect" id="node4" href="$class_interrupt.html#af33f88b80cf574d64f2fc3dae725b19b" title="de&#45;allocate data structures" alt="" coords="28,107,160,133"/>
+<area shape="rect" id="node5" href="$class_list.html#aae0622731d755a555bc5ca32982ed3ca" title=" " alt="" coords="35,157,153,184"/>
+<area shape="rect" id="node6" href="$class_physical_mem_manager.html#a6605d109b70a5aec31702c36aeeb0aa5" title="de&#45;allocate the page_flags bitmap" alt="" coords="11,209,177,250"/>
+</map>

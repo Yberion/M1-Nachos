@@ -1,0 +1,4 @@
+<map id="Instruction::Decode" name="Instruction::Decode">
+<area shape="rect" id="node1" title="Decode the binary representation of the instruction." alt="" coords="216,5,351,32"/>
+<area shape="rect" id="node2" href="$class_machine.html#ad70a015685c6e4bf705e4939551774aa" title="Return the execution time of the instr (cycle)" alt="" coords="5,5,168,32"/>
+</map>

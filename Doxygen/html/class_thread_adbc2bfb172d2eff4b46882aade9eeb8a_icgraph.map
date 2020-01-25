@@ -1,0 +1,4 @@
+<map id="Thread::Yield" name="Thread::Yield">
+<area shape="rect" id="node1" title="Relinquish the CPU if any other thread is runnable." alt="" coords="145,5,244,32"/>
+<area shape="rect" id="node2" href="$class_thread.html#a42dd69262be8fb110887085ea1f02bc3" title="Wait for another thread to finish its execution." alt="" coords="5,5,97,32"/>
+</map>

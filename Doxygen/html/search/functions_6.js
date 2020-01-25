@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['getachar_725',['GetAChar',['../class_driver_console.html#a7ca6fd9d7adf8fe0701bc96b6d2e068d',1,'DriverConsole']]],
+  ['getaddrdisk_726',['getAddrDisk',['../class_translation_table.html#a2fcfe9b5d9c81991b664970d3a052ed5',1,'TranslationTable']]],
+  ['getbitio_727',['getBitIo',['../class_translation_table.html#a2a53b9943195fe0cea5ee63c1af8c33b',1,'TranslationTable']]],
+  ['getbitreadallowed_728',['getBitReadAllowed',['../class_translation_table.html#a422fb5a0c18054667ce47a5025cb644c',1,'TranslationTable']]],
+  ['getbitswap_729',['getBitSwap',['../class_translation_table.html#a2f89216744cb7e446d7f17d517e8fefa',1,'TranslationTable']]],
+  ['getbitvalid_730',['getBitValid',['../class_translation_table.html#a1314ab5a89657842d5fcb56b3ed8730f',1,'TranslationTable']]],
+  ['getbitwriteallowed_731',['getBitWriteAllowed',['../class_translation_table.html#aaea1ba12f26cb0d9849fb059f3399845',1,'TranslationTable']]],
+  ['getchar_732',['GetChar',['../class_a_c_i_a.html#ac465f7982850d1ccf008c0ac8acb6279',1,'ACIA::GetChar()'],['../class_console.html#aee2f18e347f92c0a1f3d8a4b86b024d9',1,'Console::GetChar()']]],
+  ['getcodestartaddress_733',['getCodeStartAddress',['../class_addr_space.html#aa63198854284a9da3f41b1757b314aa1',1,'AddrSpace']]],
+  ['getdirfile_734',['GetDirFile',['../class_file_system.html#a118ce47f3ef95d3e930572c20836d327',1,'FileSystem']]],
+  ['getfileheader_735',['GetFileHeader',['../class_open_file.html#a2c9c2e3e078fc71c99e0f589493fa28e',1,'OpenFile']]],
+  ['getfirst_736',['getFirst',['../class_list.html#a6452283558c7d9901a8ab0df1e365bbf',1,'List']]],
+  ['getformat_737',['GetFormat',['../class_syscall_error.html#a77e8e2a8fa31efdd4f5be6c0992094fd',1,'SyscallError']]],
+  ['getfreemapfile_738',['GetFreeMapFile',['../class_file_system.html#a798400dbcaaef6d6dde5e63fcc500a60',1,'FileSystem']]],
+  ['getinputstatereg_739',['GetInputStateReg',['../class_a_c_i_a.html#aa4403e0ff09a5830d31b5df1e887c021',1,'ACIA']]],
+  ['getmaxnumpages_740',['getMaxNumPages',['../class_translation_table.html#a55c89008e61112f61a5d2cec29e678dc',1,'TranslationTable']]],
+  ['getname_741',['GetName',['../class_open_file.html#a99da585bad8c8e1916ca3eeaf78539b7',1,'OpenFile::GetName()'],['../class_semaphore.html#a4f7bb209b379142e8dbb41e2b2428773',1,'Semaphore::getName()'],['../class_lock.html#a99cfb639fe3cf24033eebdcc19be42f3',1,'Lock::getName()'],['../class_condition.html#aecaea65920dc0f4f723d56984dbe8e9e',1,'Condition::getName()']]],
+  ['getoutputstatereg_742',['GetOutputStateReg',['../class_a_c_i_a.html#a3ca71970fd89cff052b7e3dae8a013e5',1,'ACIA']]],
+  ['getpageswap_743',['GetPageSwap',['../class_swap_manager.html#a0934e61240a5ace841499321bf0889af',1,'SwapManager']]],
+  ['getphysicalpage_744',['getPhysicalPage',['../class_translation_table.html#a4f29cbac75ad518a17d8f70e873dffef',1,'TranslationTable']]],
+  ['getstring_745',['GetString',['../class_driver_console.html#a6e9663f1c449c24edfb77264375b03fc',1,'DriverConsole']]],
+  ['getswapdisk_746',['GetSwapDisk',['../class_swap_manager.html#adaff50c0fccb92282dd00070a8e2e32a',1,'SwapManager']]],
+  ['getworkingmode_747',['GetWorkingMode',['../class_a_c_i_a.html#a93c7fcb3000bedbd0153e8878065d1e4',1,'ACIA']]]
+];

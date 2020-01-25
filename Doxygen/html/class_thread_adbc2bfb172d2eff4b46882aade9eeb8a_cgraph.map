@@ -1,0 +1,4 @@
+<map id="Thread::Yield" name="Thread::Yield">
+<area shape="rect" id="node1" title="Relinquish the CPU if any other thread is runnable." alt="" coords="5,5,104,32"/>
+<area shape="rect" id="node2" href="$class_interrupt.html#a37cb8eeb7f715ff79ca3a7038bda3b04" title="and return previous setting." alt="" coords="152,5,287,32"/>
+</map>

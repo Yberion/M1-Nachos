@@ -1,0 +1,10 @@
+<map id="DriverConsole::GetString" name="DriverConsole::GetString">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,169,159"/>
+<area shape="rect" id="node2" href="$class_lock.html#ad4c4699fd1ab73f3927b10edc01c54db" title="Acquire a lock (atomic operation)" alt="" coords="249,5,352,32"/>
+<area shape="rect" id="node3" href="$class_console.html#ac469fd50c021374fb7a65dfd45b81ddf" title=" " alt="" coords="217,56,384,83"/>
+<area shape="rect" id="node4" href="$class_console.html#a3891b014d1b9fccab374ed3b09a28052" title=" " alt="" coords="219,107,383,133"/>
+<area shape="rect" id="node6" href="$class_console.html#aee2f18e347f92c0a1f3d8a4b86b024d9" title=" " alt="" coords="238,157,363,184"/>
+<area shape="rect" id="node7" href="$class_semaphore.html#a4fee22da0205e3c704b08beaa17e0e7a" title=" " alt="" coords="248,208,353,235"/>
+<area shape="rect" id="node8" href="$class_lock.html#a5ca005b84272e56c2bf447056ee9217c" title="Release a lock (atomic operation)" alt="" coords="248,259,353,285"/>
+<area shape="rect" id="node5" href="$class_interrupt.html#ac403a14a9e41fa2b6dbd5c6056b87389" title="by the hardware device simulators." alt="" coords="432,107,563,133"/>
+</map>

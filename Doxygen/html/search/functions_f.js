@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['raiseexception_821',['RaiseException',['../class_machine.html#a0d6f63790c0568437b100171f61fd77f',1,'Machine']]],
+  ['random_822',['Random',['../sysdep_8cpp.html#aac8c6c00a0e52489ecf8e8a6d9eba228',1,'Random():&#160;sysdep.cpp'],['../sysdep_8hpp.html#aac8c6c00a0e52489ecf8e8a6d9eba228',1,'Random():&#160;sysdep.cpp']]],
+  ['randominit_823',['RandomInit',['../sysdep_8cpp.html#ae08b1beb5fa6e506cd63a2637f34e912',1,'RandomInit(unsigned seed):&#160;sysdep.cpp'],['../sysdep_8hpp.html#ae08b1beb5fa6e506cd63a2637f34e912',1,'RandomInit(unsigned seed):&#160;sysdep.cpp']]],
+  ['read_824',['Read',['../class_open_file.html#af87bf2b0b15fa3501dada45a1a284bf4',1,'OpenFile::Read()'],['../sysdep_8cpp.html#a6140dcc97ab52a9406e6d3f5749fa43c',1,'Read(int fd, char *buffer, int nBytes):&#160;sysdep.cpp'],['../sysdep_8hpp.html#a6140dcc97ab52a9406e6d3f5749fa43c',1,'Read(int fd, char *buffer, int nBytes):&#160;sysdep.cpp']]],
+  ['readat_825',['ReadAt',['../class_open_file.html#a0af8cd52ec71a2ad407039cebee2ef3d',1,'OpenFile']]],
+  ['readcc_826',['ReadCC',['../class_machine.html#ae12d7f0022eadcdadb37493ebab42b0b',1,'Machine']]],
+  ['readfpregister_827',['ReadFPRegister',['../class_machine.html#af16b6154387003b4d6a9ddfd6128284a',1,'Machine']]],
+  ['readfromsocket_828',['ReadFromSocket',['../sysdep_8cpp.html#a66da2ce40d5d8e2448f601be6569a248',1,'ReadFromSocket(int sockID, char *buffer, int packetSize):&#160;sysdep.cpp'],['../sysdep_8hpp.html#a66da2ce40d5d8e2448f601be6569a248',1,'ReadFromSocket(int sockID, char *buffer, int packetSize):&#160;sysdep.cpp']]],
+  ['readintregister_829',['ReadIntRegister',['../class_machine.html#aa9c9870f67219547a61d4d2e35516d06',1,'Machine']]],
+  ['readmem_830',['ReadMem',['../class_m_m_u.html#a28a50bd03688bc05aa15f93e4abf61a7',1,'MMU']]],
+  ['readpartial_831',['ReadPartial',['../sysdep_8cpp.html#af39214b3fb93cfbbd141c2bfb0688a4e',1,'ReadPartial(int fd, char *buffer, int nBytes):&#160;sysdep.cpp'],['../sysdep_8hpp.html#af39214b3fb93cfbbd141c2bfb0688a4e',1,'ReadPartial(int fd, char *buffer, int nBytes):&#160;sysdep.cpp']]],
+  ['readrequest_832',['ReadRequest',['../class_disk.html#a8b51a82d4f2fd009335d0c591ae11042',1,'Disk']]],
+  ['readsector_833',['ReadSector',['../class_driver_disk.html#a2e93ba9a36bba4e8b3eeb43f877b2395',1,'DriverDisk']]],
+  ['readytorun_834',['ReadyToRun',['../class_scheduler.html#a18e89ab130a40c423da77673f12585d7',1,'Scheduler']]],
+  ['reallocate_835',['reAllocate',['../class_file_header.html#afa31f3a959a74b0134a544858021457f',1,'FileHeader']]],
+  ['release_836',['Release',['../class_lock.html#a5ca005b84272e56c2bf447056ee9217c',1,'Lock']]],
+  ['releasepageswap_837',['ReleasePageSwap',['../class_swap_manager.html#a8b6cfc56bc9db70e379f9ec3826df6d7',1,'SwapManager']]],
+  ['remove_838',['Remove',['../class_directory.html#a38cd9f677e7110bab63fb943d118e3cc',1,'Directory::Remove()'],['../class_file_system.html#a52e69a068c68c6c84f02c80fd4c5389e',1,'FileSystem::Remove()'],['../class_open_file_table.html#a004541913ef8deb24d571c20d2020175',1,'OpenFileTable::Remove()'],['../class_list.html#a297a131df05eba81e89f5f7d0039cb30',1,'List::Remove()']]],
+  ['removeitem_839',['RemoveItem',['../class_list.html#a2d311a7b72af91a0ff97712a0c552724',1,'List']]],
+  ['removephysicaltovirtualmapping_840',['RemovePhysicalToVirtualMapping',['../class_physical_mem_manager.html#a7eee399c2c1a0866cd575dc6c6b96687',1,'PhysicalMemManager']]],
+  ['requestdone_841',['RequestDone',['../class_driver_disk.html#a110084e07cf276072bf7275f22334087',1,'DriverDisk']]],
+  ['restoreprocessorstate_842',['RestoreProcessorState',['../class_thread.html#af09207adbbb541782dd8503381e8adc4',1,'Thread']]],
+  ['restoresimulatorstate_843',['RestoreSimulatorState',['../class_thread.html#ada543e25dfd39c097fef1e9301796d2a',1,'Thread']]],
+  ['rmdir_844',['Rmdir',['../class_file_system.html#ae5cbf7822080d1c9bb606b5d74dd4ee5',1,'FileSystem']]],
+  ['run_845',['Run',['../class_machine.html#a83444e06eb7a7c163a1b9c87a7062d43',1,'Machine']]]
+];

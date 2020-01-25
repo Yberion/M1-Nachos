@@ -1,0 +1,12 @@
+<map id="Interrupt::Schedule" name="Interrupt::Schedule">
+<area shape="rect" id="node1" title="by the hardware device simulators." alt="" coords="680,132,811,159"/>
+<area shape="rect" id="node2" href="$class_a_c_i_a__sysdep.html#a416e3e5806902fe006296fb5e283d9b7" title=" " alt="" coords="444,5,632,32"/>
+<area shape="rect" id="node3" href="$class_console.html#a099797597b7bd0b349518aac215fcb2f" title=" " alt="" coords="454,56,622,83"/>
+<area shape="rect" id="node4" href="$class_console.html#a3891b014d1b9fccab374ed3b09a28052" title=" " alt="" coords="456,107,620,133"/>
+<area shape="rect" id="node6" href="$class_a_c_i_a__sysdep.html#a151a309d8bbb8efb81a3b87569d33351" title=" " alt="" coords="449,157,627,184"/>
+<area shape="rect" id="node7" href="$class_console.html#af4828702d63f7f144e8d17395471b59f" title=" " alt="" coords="476,208,600,235"/>
+<area shape="rect" id="node10" href="$class_timer.html#ad0198c93d207f2f303b3c5ff5cfd8ef4" title="timer generates an interrupt" alt="" coords="469,259,607,285"/>
+<area shape="rect" id="node5" href="$class_driver_console.html#a6e9663f1c449c24edfb77264375b03fc" title=" " alt="" coords="232,107,396,133"/>
+<area shape="rect" id="node8" href="$class_driver_console.html#a7cd25307953296dea6a255c0877155cb" title=" " alt="" coords="233,208,395,235"/>
+<area shape="rect" id="node9" href="$class_syscall_error.html#a6b4121cb56f7f1a22890ba109ab2ef57" title=" " alt="" coords="5,208,184,235"/>
+</map>

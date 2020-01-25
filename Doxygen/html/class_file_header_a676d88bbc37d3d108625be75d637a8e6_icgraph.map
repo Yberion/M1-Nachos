@@ -1,0 +1,25 @@
+<map id="FileHeader::FileLength" name="FileHeader::FileLength">
+<area shape="rect" id="node1" title="in bytes" alt="" coords="967,384,1119,411"/>
+<area shape="rect" id="node2" href="$class_open_file.html#a5d5618da2388829f294c3f33017fadac" title="Return the number of bytes in the file." alt="" coords="795,333,917,360"/>
+<area shape="rect" id="node3" href="$class_open_file.html#a0af8cd52ec71a2ad407039cebee2ef3d" title=" " alt="" coords="793,384,919,411"/>
+<area shape="rect" id="node7" href="$class_open_file.html#ad4b5d26a169a7c22e6f27c1693adb1aa" title=" " alt="" coords="412,625,539,652"/>
+<area shape="rect" id="node4" href="$class_addr_space.html#acd3d2a68587b04ed5740e87895613821" title=" " alt="" coords="587,333,745,360"/>
+<area shape="rect" id="node5" href="$class_bit_map.html#ad6d12eefec9b64e903d072c83f7c29a2" title=" " alt="" coords="599,511,733,537"/>
+<area shape="rect" id="node12" href="$class_directory.html#a36ed455b21bbd9a66ffe8ec689ff7c73" title=" " alt="" coords="593,384,739,411"/>
+<area shape="rect" id="node23" href="$class_open_file.html#af87bf2b0b15fa3501dada45a1a284bf4" title=" " alt="" coords="610,283,722,309"/>
+<area shape="rect" id="node6" href="$class_file_system.html#aaf76918c6f0d24bc72aaa84625adfddf" title="List all the files in the file system." alt="" coords="226,435,343,461"/>
+<area shape="rect" id="node10" href="$class_open_file_table_entry.html#a3db43ff60517c9949bb89a499c7304a8" title=" " alt="" coords="5,579,157,621"/>
+<area shape="rect" id="node8" href="$class_open_file.html#a2de8d2d805fef3510bfd2fdf46f683fa" title=" " alt="" coords="228,587,341,613"/>
+<area shape="rect" id="node9" href="$class_bit_map.html#a19052d41ba5a654c7e478582dffba20d" title=" " alt="" coords="219,637,351,664"/>
+<area shape="rect" id="node11" href="$class_directory.html#abf5550df42587bbc604c71441a4d12fc" title=" " alt="" coords="213,688,356,715"/>
+<area shape="rect" id="node13" href="$filesys_8hpp.html#a562c4a58dde9f8b0a25dc482e23d9dc4" title=" " alt="" coords="444,183,507,209"/>
+<area shape="rect" id="node17" href="$class_file_system.html#a606ea080a2a0fe5e3be3c3f5b8f4e7bc" title="Open a file (UNIX open)" alt="" coords="221,259,348,285"/>
+<area shape="rect" id="node18" href="$class_open_file_table.html#ab0519dd960600e61b98d524281aaa882" title=" " alt="" coords="213,309,357,336"/>
+<area shape="rect" id="node22" href="$class_directory.html#a2525a4455b80a1ee2648319ab257037c" title=" " alt="" coords="424,384,527,411"/>
+<area shape="rect" id="node14" href="$class_file_system.html#ac789d58815881d7f193d86085b0f54aa" title="Create a file (UNIX creat)" alt="" coords="217,107,352,133"/>
+<area shape="rect" id="node15" href="$class_file_system.html#a9b4f11a12aed939e691edd6d591a8fcf" title="Create a new directory." alt="" coords="221,157,349,184"/>
+<area shape="rect" id="node19" href="$class_file_system.html#a52e69a068c68c6c84f02c80fd4c5389e" title="Delete a file (UNIX unlink)" alt="" coords="213,208,356,235"/>
+<area shape="rect" id="node20" href="$class_open_file_table.html#a004541913ef8deb24d571c20d2020175" title="remove the file from the file system" alt="" coords="205,56,364,83"/>
+<area shape="rect" id="node21" href="$class_file_system.html#ae5cbf7822080d1c9bb606b5d74dd4ee5" title="Delete a directory." alt="" coords="219,5,350,32"/>
+<area shape="rect" id="node16" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="56,157,107,184"/>
+</map>

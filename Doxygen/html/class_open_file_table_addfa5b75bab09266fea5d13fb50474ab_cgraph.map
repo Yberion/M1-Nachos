@@ -1,0 +1,6 @@
+<map id="OpenFileTable::FileRelease" name="OpenFileTable::FileRelease">
+<area shape="rect" id="node1" title="release the lock after the disk operation." alt="" coords="5,31,187,57"/>
+<area shape="rect" id="node2" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="253,5,321,32"/>
+<area shape="rect" id="node4" href="$class_lock.html#a5ca005b84272e56c2bf447056ee9217c" title="Release a lock (atomic operation)" alt="" coords="235,56,340,83"/>
+<area shape="rect" id="node3" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="388,5,504,32"/>
+</map>

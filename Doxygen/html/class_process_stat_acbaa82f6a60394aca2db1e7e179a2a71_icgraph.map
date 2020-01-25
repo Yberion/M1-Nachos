@@ -1,0 +1,8 @@
+<map id="ProcessStat::incrMemoryAccess" name="ProcessStat::incrMemoryAccess">
+<area shape="rect" id="node1" title=" " alt="" coords="584,97,799,123"/>
+<area shape="rect" id="node2" href="$class_physical_mem_manager.html#a4f3468cba311669ca2721fa9d80b2a26" title="Change the page owner." alt="" coords="385,5,536,47"/>
+<area shape="rect" id="node3" href="$class_m_m_u.html#a28a50bd03688bc05aa15f93e4abf61a7" title="memory (at addr). Return FALSE if a" alt="" coords="217,97,337,123"/>
+<area shape="rect" id="node5" href="$class_m_m_u.html#aa2ddea5dcd1648aba21ac1a75c79dc25" title="translation couldn&#39;t be completed." alt="" coords="403,122,518,149"/>
+<area shape="rect" id="node6" href="$class_m_m_u.html#a60227cf48e6778a4c66d8a13fd2f1539" title=" " alt="" coords="216,159,337,186"/>
+<area shape="rect" id="node4" href="$class_machine.html#ad70a015685c6e4bf705e4939551774aa" title="Return the execution time of the instr (cycle)" alt="" coords="5,97,168,123"/>
+</map>

@@ -1,0 +1,26 @@
+var msgerror_8hpp =
+[
+    [ "SyscallError", "class_syscall_error.html", "class_syscall_error" ],
+    [ "ERROR", "msgerror_8hpp.html#a8fe83ac76edc595f6b98cd4a4127aed5", null ],
+    [ "NO_ERROR", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55babf350750d0d4fabd8954c0f1e9bbae94", null ],
+    [ "INC_ERROR", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55baf7c8308349c38c092e85f6c8fad6c97c", null ],
+    [ "OPENFILE_ERROR", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bab372d42bd9d4b67815c1921788016e9c", null ],
+    [ "EXEC_FILE_FORMAT_ERROR", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bafca494167d62eafcbc6d37c1d75fcad6", null ],
+    [ "OUT_OF_MEMORY", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bac9a7e95f8dd5507c2dbd1fb466ec9a85", null ],
+    [ "OUT_OF_DISK", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba460ab1c417385f611a941bc38050e82d", null ],
+    [ "ALREADY_IN_DIRECTORY", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba1952a091b24b63468a7889d89b016efa", null ],
+    [ "INEXIST_FILE_ERROR", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba3ac6071ee21de5bea8a25c3204d638e7", null ],
+    [ "INEXIST_DIRECTORY_ERROR", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba4a7ec7021e694aa55e04c91ddf28d943", null ],
+    [ "NOSPACE_IN_DIRECTORY", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bab104a9e6191be42e62a30e9d3755ccbe", null ],
+    [ "NOT_A_FILE", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55baf245cb34d832adeb27684bab69d502a1", null ],
+    [ "NOT_A_DIRECTORY", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bad355c94481681c6aadae70651ae9be9f", null ],
+    [ "DIRECTORY_NOT_EMPTY", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba3d769051335b6ef710cd84957c328690", null ],
+    [ "INVALID_COUNTER", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba7f4b0a1ae69be1a111f69b3acbaf4689", null ],
+    [ "INVALID_SEMAPHORE_ID", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba90d0cffc0793d30d069ad8370d8af836", null ],
+    [ "INVALID_LOCK_ID", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bac2b9659e0e9d3e032bc6abc57009193e", null ],
+    [ "INVALID_CONDITION_ID", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55babb5db322bb6a963ef096100229ab7fb0", null ],
+    [ "INVALID_FILE_ID", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55badd2319fa701f7c4d15fefac8d4010272", null ],
+    [ "INVALID_THREAD_ID", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba93ab6e21147456c2ac6d562583b40a32", null ],
+    [ "NO_ACIA", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55badec1739b1451ebb6f81dc3099fdbc8d8", null ],
+    [ "NUMMSGERROR", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bac2bc69b4c8e6dc1dd41f2ea53aa938df", null ]
+];

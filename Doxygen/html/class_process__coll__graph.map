@@ -1,0 +1,7 @@
+<map id="Process" name="Process">
+<area shape="rect" id="node1" title="Defines the data structures to keep track of the execution environment of a user program." alt="" coords="127,184,197,211"/>
+<area shape="rect" id="node2" href="$class_process_stat.html" title="Defines statistics that concern a particular process." alt="" coords="5,95,100,121"/>
+<area shape="rect" id="node3" href="$class_open_file.html" title="Defines the data structure maintained when a file is opened." alt="" coords="125,95,199,121"/>
+<area shape="rect" id="node4" href="$class_addr_space.html" title="Defines the data structures to keep track of memory resources of executing user programs (address spa..." alt="" coords="224,95,311,121"/>
+<area shape="rect" id="node5" href="$class_translation_table.html" title="Defines the data structures used for address translation." alt="" coords="209,5,325,32"/>
+</map>

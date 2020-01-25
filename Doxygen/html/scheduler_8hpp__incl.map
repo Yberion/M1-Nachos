@@ -1,0 +1,11 @@
+<map id="kernel/scheduler.hpp" name="kernel/scheduler.hpp">
+<area shape="rect" id="node1" title="Defines the Nachos scheduler." alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="55,304,194,331"/>
+<area shape="rect" id="node3" href="$list_8hpp.html" title="Data structures to manage LISP&#45;like lists." alt="" coords="71,80,170,107"/>
+<area shape="rect" id="node4" href="$utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="183,155,296,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="263,304,327,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="123,229,201,256"/>
+<area shape="rect" id="node7" href="$sysdep_8hpp.html" title="System&#45;dependent interface." alt="" coords="328,229,471,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="451,304,513,331"/>
+<area shape="rect" id="node9" title=" " alt="" coords="361,304,427,331"/>
+</map>

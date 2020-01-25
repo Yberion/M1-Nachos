@@ -1,0 +1,4 @@
+<map id="machine/mipssim.hpp" name="machine/mipssim.hpp">
+<area shape="rect" id="node1" title="Internal data structures for simulating the MIPS instruction set. DO NOT CHANGE – part of the machine..." alt="" coords="5,5,155,32"/>
+<area shape="rect" id="node2" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="11,80,149,107"/>
+</map>

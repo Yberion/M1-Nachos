@@ -1,0 +1,4 @@
+<map id="s_mapped_file" name="s_mapped_file">
+<area shape="rect" id="node1" title="Information describing a memory&#45;mapped file." alt="" coords="5,95,111,121"/>
+<area shape="rect" id="node2" href="$class_open_file.html" title="Defines the data structure maintained when a file is opened." alt="" coords="21,5,95,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="OpenFile::SetName" name="OpenFile::SetName">
+<area shape="rect" id="node1" title="Set the file&#39;s name." alt="" coords="197,31,333,57"/>
+<area shape="rect" id="node2" href="$class_file_system.html#a606ea080a2a0fe5e3be3c3f5b8f4e7bc" title="Open a file (UNIX open)" alt="" coords="14,5,141,32"/>
+<area shape="rect" id="node3" href="$class_open_file_table.html#ab0519dd960600e61b98d524281aaa882" title=" " alt="" coords="5,56,149,83"/>
+</map>

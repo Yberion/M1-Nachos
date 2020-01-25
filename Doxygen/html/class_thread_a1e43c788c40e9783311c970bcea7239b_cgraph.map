@@ -1,0 +1,6 @@
+<map id="Thread::Finish" name="Thread::Finish">
+<area shape="rect" id="node1" title="Finish the execution of the thread, and prepare its deallocation." alt="" coords="5,31,109,57"/>
+<area shape="rect" id="node2" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="175,5,243,32"/>
+<area shape="rect" id="node4" href="$class_thread.html#a187a4c1e62087511b69068220840244a" title="Put the thread to sleep and relinquish the processor." alt="" coords="157,56,260,83"/>
+<area shape="rect" id="node3" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="308,5,424,32"/>
+</map>
