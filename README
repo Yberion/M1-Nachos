@@ -1,6 +1,6 @@
 This directory contains the source code and documentation
 of the Nachos instructional operating system. Nachos was
-designed by the University of Berkeley (see kernel/copyright.h
+designed by the University of Berkeley (see kernel/copyright.hpp
 for copyright information). This version of Nachos is a modified
 version of Nachos made at the university of Rennes.
 

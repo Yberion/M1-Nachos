@@ -3,7 +3,7 @@
 
  Sections should be aligned on page boundaries. Here an alignement of
  at least 0x2000 is selected, thus supporting pages up to 8KB
- large. See addrspace.cc for details.
+ large. See addrspace.cpp for details.
 */
 
 ENTRY(__start)

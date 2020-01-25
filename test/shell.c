@@ -3,12 +3,12 @@
 //
 //  Copyright (c) 1999-2000 INSA de Rennes.
 //  All rights reserved.  
-//  See copyright_insa.h for copyright notice and limitation 
+//  See copyright_insa.hpp for copyright notice and limitation 
 //  of liability and disclaimer of warranty provisions.
 */
 
 // Nachos system calls
-#include "userlib/libnachos.h"
+#include "userlib/libnachos.hpp"
 
 int
 main()

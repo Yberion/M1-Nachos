@@ -20,7 +20,7 @@ LDFLAGS  = $(HOST_LDFLAGS)
 %.a:
 	$(AR) rcv $@ $^
 
-%.o: %.cc
+%.o: %.cpp
 	$(GXX) $(CFLAGS) -c $<
 
 %.o: %.c
@@ -43,7 +43,7 @@ LDFLAGS  = $(HOST_LDFLAGS)
 		| sed '\''s/\($*\)\.o[ :]*/\1.o $@ : /g'\'' > $@; \
 		[ -s $@ ] || rm -f $@'
 
-.%.d: %.cc
+.%.d: %.cpp
 	@echo Generating dependencies for $<
 	@$(SHELL) -ec '$(GXX) -M $(CFLAGS) $< \
 		| sed '\''s/\($*\)\.o[ :]*/\1.o $@ : /g'\'' > $@; \
