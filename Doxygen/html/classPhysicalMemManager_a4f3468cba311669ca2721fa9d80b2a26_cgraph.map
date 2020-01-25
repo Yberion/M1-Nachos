@@ -1,6 +1,0 @@
-<map id="PhysicalMemManager::ChangeOwner" name="PhysicalMemManager::ChangeOwner">
-<area shape="rect" id="node1" title="Frees the page and deletes the existing page mapping." alt="" coords="5,23,156,65"/>
-<area shape="rect" id="node2" href="$classThread.html#ade294fd013100034bebd745d8ffb1f94" title="Returns the process owner." alt="" coords="224,5,399,32"/>
-<area shape="rect" id="node3" href="$classProcessStat.html#acbaa82f6a60394aca2db1e7e179a2a71" title=" " alt="" coords="204,56,419,83"/>
-<area shape="rect" id="node4" href="$classStatistics.html#a8994065e3484986acd4db5eb2cb8e993" title="prints collected statistics, including process statistics" alt="" coords="467,56,632,83"/>
-</map>

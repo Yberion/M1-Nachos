@@ -1,5 +1,0 @@
-<map id="SwapManager::GetFreePage" name="SwapManager::GetFreePage">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,195,57"/>
-<area shape="rect" id="node2" href="$classBitMap.html#ae3eb006c755440ae830bf220457dbbc7" title="De&#45;allocate bitmap." alt="" coords="243,5,343,32"/>
-<area shape="rect" id="node3" href="$classBitMap.html#af5a945ba7b79e92a5a1bb0db24ecf26a" title="Clear the &quot;nth&quot; bit." alt="" coords="245,56,341,83"/>
-</map>

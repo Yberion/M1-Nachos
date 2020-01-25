@@ -1,8 +1,0 @@
-<map id="close" name="close">
-<area shape="rect" id="node1" title=" " alt="" coords="344,84,397,111"/>
-<area shape="rect" id="node2" href="$syscall_8h.html#abc9a1b79cab26614a450956d95ef4034" title="Close a file. Abort on error." alt="" coords="221,56,275,83"/>
-<area shape="rect" id="node5" href="$sysdep_8hpp.html#a0f43cc86f59a90746979f53a452a4e0a" title="Close the IPC connection." alt="" coords="200,111,296,137"/>
-<area shape="rect" id="node3" href="$classConsole.html#a32e8c79c8579b1b076e53848c540d4e7" title="Destructor. Clean up console emulation." alt="" coords="13,5,145,32"/>
-<area shape="rect" id="node4" href="$classDisk.html#a77518c808f3f5d9e902a55942542c337" title=" " alt="" coords="33,56,124,83"/>
-<area shape="rect" id="node6" href="$classACIA__sysdep.html#a528339ef137a3442a513630b1762b362" title=" " alt="" coords="5,107,152,149"/>
-</map>

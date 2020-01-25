@@ -1,4 +1,0 @@
-<map id="machine/mipssim.hpp" name="machine/mipssim.hpp">
-<area shape="rect" id="node1" title="Internal data structures for simulating the MIPS instruction set. DO NOT CHANGE – part of the machine..." alt="" coords="5,5,155,32"/>
-<area shape="rect" id="node2" href="$mipssim_8cpp.html" title="simulate a MIPS R2/3000 processor" alt="" coords="5,80,155,107"/>
-</map>

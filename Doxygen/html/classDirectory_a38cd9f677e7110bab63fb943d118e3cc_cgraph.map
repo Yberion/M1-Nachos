@@ -1,4 +1,0 @@
-<map id="Directory::Remove" name="Directory::Remove">
-<area shape="rect" id="node1" title="Remove a file from the directory." alt="" coords="5,5,133,32"/>
-<area shape="rect" id="node2" href="$classDirectory.html#abab8ff05c1dedadbaac7b44730eeb5a4" title="Find the index into the directory table corresponding to &quot;name&quot;." alt="" coords="181,5,320,32"/>
-</map>

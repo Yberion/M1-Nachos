@@ -1,5 +1,0 @@
-<map id="DriverConsole::GetAChar" name="DriverConsole::GetAChar">
-<area shape="rect" id="node1" title="Send a char to the console device." alt="" coords="320,5,487,32"/>
-<area shape="rect" id="node2" href="$drvConsole_8hpp.html#a0050b14775abe9c8ee3b3fb27e6ea37f" title=" " alt="" coords="181,5,272,32"/>
-<area shape="rect" id="node3" href="$classMachine.html#ad5958275a54dbc299b71ecdba7da0604" title=" " alt="" coords="5,5,133,32"/>
-</map>

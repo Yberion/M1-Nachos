@@ -1,7 +1,0 @@
-<map id="DummyInterruptEm" name="DummyInterruptEm">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,140,57"/>
-<area shape="rect" id="node2" href="$classACIA__sysdep.html#a7f6f7599ca58468142463a52f58b708b" title=" " alt="" coords="188,31,364,57"/>
-<area shape="rect" id="node3" href="$classDriverACIA.html#a0671ce4d557e36ffd97c56c1b414c37c" title="Emission interrupt handler. Used in the ACIA Interrupt mode only." alt="" coords="412,5,581,32"/>
-<area shape="rect" id="node4" href="$sysdep_8cpp.html#a91f029286166c36bd971120b2ec5e2cd" title=" " alt="" coords="443,56,550,83"/>
-<area shape="rect" id="node5" href="$sysdep_8cpp.html#a7628288e75059dd3641c94ee2442c78a" title="Initialize a UNIX socket address – magical!" alt="" coords="629,56,744,83"/>
-</map>

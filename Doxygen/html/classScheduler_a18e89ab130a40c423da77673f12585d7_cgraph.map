@@ -1,7 +1,0 @@
-<map id="Scheduler::ReadyToRun" name="Scheduler::ReadyToRun">
-<area shape="rect" id="node1" title="Inserts a thread in the ready list." alt="" coords="5,56,168,83"/>
-<area shape="rect" id="node2" href="$classList.html#a3d4805c0e563fd485273fc90a4b69e94" title=" " alt="" coords="231,5,325,32"/>
-<area shape="rect" id="node3" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="244,56,312,83"/>
-<area shape="rect" id="node5" href="$classThread.html#a83fedc586ce3718a4a2322f497dcfe2d" title="Returns the thread name." alt="" coords="216,107,340,133"/>
-<area shape="rect" id="node4" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="388,56,504,83"/>
-</map>

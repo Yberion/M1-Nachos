@@ -1,7 +1,0 @@
-<map id="filesys/directory.hpp" name="filesys/directory.hpp">
-<area shape="rect" id="node1" title="Data structures to manage a UNIX&#45;like directory of file names." alt="" coords="236,5,375,32"/>
-<area shape="rect" id="node2" href="$directory_8cpp.html" title="Routines to manage a directory of file names." alt="" coords="5,80,144,107"/>
-<area shape="rect" id="node3" href="$filesys_8cpp.html" title="Routines to manage the overall operation of the file system." alt="" coords="168,80,293,107"/>
-<area shape="rect" id="node4" href="$oftable_8cpp.html" title="Routines for managing the open file table." alt="" coords="318,80,445,107"/>
-<area shape="rect" id="node5" href="$config_8cpp.html" title="Routines for setting up the Nachos hardware and software confuguration." alt="" coords="469,80,585,107"/>
-</map>

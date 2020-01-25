@@ -1,8 +1,0 @@
-<map id="Disk::ComputeLatency" name="Disk::ComputeLatency">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,160,108"/>
-<area shape="rect" id="node2" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="238,5,306,32"/>
-<area shape="rect" id="node4" href="$classStatistics.html#a77aec82b7adb8d795c850db96c82f5d8" title=" " alt="" coords="384,107,547,133"/>
-<area shape="rect" id="node5" href="$classDisk.html#abf14ace693df2b08e1187045305e81a5" title="time to get to the new track" alt="" coords="214,107,330,133"/>
-<area shape="rect" id="node6" href="$classDisk.html#abecdf19e160925b1bc9b4542c90de2ac" title=" " alt="" coords="208,157,336,184"/>
-<area shape="rect" id="node3" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="407,5,523,32"/>
-</map>

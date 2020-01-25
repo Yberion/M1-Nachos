@@ -1,4 +1,0 @@
-<map id="ACIA" name="ACIA">
-<area shape="rect" id="node1" title="Defines an ACIA (Asynchronous Communication Interface Adapter) device. An ACIA is an asynchronous dev..." alt="" coords="5,5,161,244"/>
-<area shape="rect" id="node2" href="$classACIA__sysdep.html" title="This class is used to simulate an Asynchronous Communicating Interface Adapter on top of Unix sockets..." alt="" coords="19,307,148,472"/>
-</map>

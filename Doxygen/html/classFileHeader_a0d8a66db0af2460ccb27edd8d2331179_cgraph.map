@@ -1,5 +1,0 @@
-<map id="FileHeader::Deallocate" name="FileHeader::Deallocate">
-<area shape="rect" id="node1" title="De&#45;allocate this file&#39;s." alt="" coords="5,31,159,57"/>
-<area shape="rect" id="node2" href="$classBitMap.html#aee4445b4d2079c96f5c87896717569d2" title="Set the &quot;nth&quot; bit." alt="" coords="207,5,308,32"/>
-<area shape="rect" id="node3" href="$classBitMap.html#af5a945ba7b79e92a5a1bb0db24ecf26a" title="Clear the &quot;nth&quot; bit." alt="" coords="209,56,305,83"/>
-</map>

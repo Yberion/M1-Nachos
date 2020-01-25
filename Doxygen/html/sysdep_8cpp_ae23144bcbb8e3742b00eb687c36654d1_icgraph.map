@@ -1,8 +1,0 @@
-<map id="rand" name="rand">
-<area shape="rect" id="node1" title=" " alt="" coords="825,5,872,32"/>
-<area shape="rect" id="node2" href="$sysdep_8hpp.html#aac8c6c00a0e52489ecf8e8a6d9eba228" title="Return a pseudo&#45;random number." alt="" coords="707,5,777,32"/>
-<area shape="rect" id="node3" href="$classTimer.html#a2846bc4b6ef4ad61e3de987aee4d85ab" title="called internally when the hardware timer generates an interrupt" alt="" coords="481,5,659,32"/>
-<area shape="rect" id="node4" href="$classTimer.html#ad6f578a6b75f1073e7c6919cf8a507ee" title=" " alt="" coords="5,5,100,32"/>
-<area shape="rect" id="node5" href="$classTimer.html#ad0198c93d207f2f303b3c5ff5cfd8ef4" title=" " alt="" coords="295,31,433,57"/>
-<area shape="rect" id="node6" href="$timer_8cpp.html#a00014cca1225d8151135f9c5847b3638" title="dummy function because C++ does not allow pointers to member functions" alt="" coords="148,31,247,57"/>
-</map>

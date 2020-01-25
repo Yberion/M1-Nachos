@@ -1,4 +1,0 @@
-<map id="BitMap::Print" name="BitMap::Print">
-<area shape="rect" id="node1" title="Return the number of clear bits." alt="" coords="5,5,104,32"/>
-<area shape="rect" id="node2" href="$classBitMap.html#af5a945ba7b79e92a5a1bb0db24ecf26a" title="Clear the &quot;nth&quot; bit." alt="" coords="152,5,248,32"/>
-</map>

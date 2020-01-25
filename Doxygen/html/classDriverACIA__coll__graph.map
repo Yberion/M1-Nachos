@@ -1,5 +1,0 @@
-<map id="DriverACIA" name="DriverACIA">
-<area shape="rect" id="node1" title="Defines an ACIA (Asynchronous Communication Interface Adapter) device driver." alt="" coords="5,564,140,744"/>
-<area shape="rect" id="node2" href="$classSemaphore.html" title="Defines the &quot;semaphore&quot; synchronization tool." alt="" coords="15,321,131,487"/>
-<area shape="rect" id="node3" href="$classList.html" title="Definition of a generic single&#45;linked &quot;list&quot;." alt="" coords="9,5,136,259"/>
-</map>

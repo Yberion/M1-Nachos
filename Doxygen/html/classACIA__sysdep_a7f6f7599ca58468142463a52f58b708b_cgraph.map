@@ -1,6 +1,0 @@
-<map id="ACIA_sysdep::InterruptEm" name="ACIA_sysdep::InterruptEm">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,181,57"/>
-<area shape="rect" id="node2" href="$classDriverACIA.html#a0671ce4d557e36ffd97c56c1b414c37c" title="Emission interrupt handler. Used in the ACIA Interrupt mode only." alt="" coords="229,5,399,32"/>
-<area shape="rect" id="node3" href="$sysdep_8cpp.html#a91f029286166c36bd971120b2ec5e2cd" title=" " alt="" coords="261,56,367,83"/>
-<area shape="rect" id="node4" href="$sysdep_8cpp.html#a7628288e75059dd3641c94ee2442c78a" title="Initialize a UNIX socket address – magical!" alt="" coords="447,56,561,83"/>
-</map>

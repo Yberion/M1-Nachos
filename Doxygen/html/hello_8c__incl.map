@@ -1,6 +1,0 @@
-<map id="test/hello.c" name="test/hello.c">
-<area shape="rect" id="node1" title=" " alt="" coords="31,5,118,32"/>
-<area shape="rect" id="node2" href="$syscall_8h.html" title="Nachos system call interface." alt="" coords="17,155,133,181"/>
-<area shape="rect" id="node4" href="$libnachos_8h.html" title="Function structures for programs." alt="" coords="61,80,192,107"/>
-<area shape="rect" id="node3" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="5,229,144,256"/>
-</map>

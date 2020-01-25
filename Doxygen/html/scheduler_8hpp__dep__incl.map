@@ -1,7 +1,0 @@
-<map id="kernel/scheduler.hpp" name="kernel/scheduler.hpp">
-<area shape="rect" id="node1" title="Defines the Nachos scheduler." alt="" coords="236,5,379,32"/>
-<area shape="rect" id="node2" href="$scheduler_8cpp.html" title="Routines to choose the next thread to run, and to dispatch to that thread." alt="" coords="5,80,148,107"/>
-<area shape="rect" id="node3" href="$synch_8cpp.html" title="Routines for synchronizing threads." alt="" coords="172,80,293,107"/>
-<area shape="rect" id="node4" href="$system_8cpp.html" title="Nachos initialization and cleanup routines." alt="" coords="317,80,447,107"/>
-<area shape="rect" id="node5" href="$thread_8cpp.html" title="Routines to manage threads." alt="" coords="471,80,594,107"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="threadCreate" name="threadCreate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,101,57"/>
-<area shape="rect" id="node2" href="$syscall_8h.html#a82946deb47c7fa10fa9a0127253eb430" title=" " alt="" coords="151,5,235,32"/>
-<area shape="rect" id="node3" href="$libnachos_8c.html#ad807e03ef298a0b49710adfd78f5ec47" title=" " alt="" coords="149,56,236,83"/>
-<area shape="rect" id="node4" href="$sysdep_8cpp.html#a8b9ef9330856c5a5a02f2d3ef0497e04" title="Quit without dropping core." alt="" coords="284,56,329,83"/>
-</map>
