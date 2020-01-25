@@ -54,7 +54,7 @@ src.ps:
 	for d in kernel filesys drivers utility vm machine \
 	  userlib test perso ; do \
 	  [ -d $$d ] && \
-	  f=`echo $$f $$d/*.h $$d/*.cpp $$d/*.c $$d/*.s $$d/*.lds` ; \
+	  f=`echo $$f $$d/*.hpp $$d/*.cpp $$d/*.c $$d/*.s $$d/*.lds` ; \
 	done ; \
 	$(A2PS) -o $@ $$f
 

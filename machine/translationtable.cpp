@@ -1,4 +1,4 @@
-/*! \file translationtable..cc
+/*! \file translationtable.cpp
 // \brief Data structures for address translation
 //
 // DO NOT CHANGE -- part of the machine emulation
