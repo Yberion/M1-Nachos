@@ -9,7 +9,7 @@
 #ifndef CONFIG_CPP
 #define CONFIG_CPP
 
-#include <stdio.h>
+#include <cstdio>
 #include "machine/machine.hpp"
 #include "utility/config.hpp"
 #include "utility/utility.hpp"

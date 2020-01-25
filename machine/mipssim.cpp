@@ -10,7 +10,7 @@
 // Copyright (c) 1992-1993 The Regents of the University of California.
 // All rights reserved.  See copyright.hpp for copyright notice and limitation 
 // of liability and disclaimer of warranty provisions.
-#include <math.h>   // For emulating floating point MIPS instructions
+#include <cmath>   // For emulating floating point MIPS instructions
 #include "machine/machine.hpp"
 #include "machine/mipssim.hpp"
 #include "kernel/system.hpp"

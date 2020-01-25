@@ -13,8 +13,8 @@
  */
 
 // Nachos system calls
-#include "userlib/syscall.h"
-#include "userlib/libnachos.h"
+#include "userlib/syscall.hpp"
+#include "userlib/libnachos.hpp"
 
 // Table to be sorted
 #define NUM 30

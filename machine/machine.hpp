@@ -22,7 +22,7 @@
 #define MACHINE_H
 
 // Integer sizes (such that MIPS integers are 32-bit values)
-#include <stdint.h>
+#include <cstdint>
 
 #include "machine/disk.hpp"
 #include "kernel/copyright.hpp"

@@ -6,7 +6,7 @@
 #ifndef NACHOS_ELF32_H
 #define NACHOS_ELF32_H
 
-#include <stdint.h>
+#include <cstdint>
 typedef uint32_t Elf32_Addr;
 typedef uint32_t Elf32_Word;
 typedef uint16_t Elf32_Half;

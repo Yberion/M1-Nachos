@@ -10,7 +10,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#include <stdio.h>
+#include <cstdio>
 #include "machine/translationtable.hpp"
 #include "filesys/filesys.hpp"
 

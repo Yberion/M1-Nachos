@@ -11,7 +11,7 @@
  //  of liability and disclaimer of warranty provisions.
  */
 
-#include <string.h>
+#include <cstring>
 #include "kernel/msgerror.hpp"
 #include "kernel/system.hpp"
 #include "utility/bitmap.hpp"

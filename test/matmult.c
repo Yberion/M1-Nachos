@@ -12,7 +12,7 @@
  //  of liability and disclaimer of warranty provisions.
  */
 
-#include "userlib/syscall.h"
+#include "userlib/syscall.hpp"
 
 #define Dim 	10	/* sum total of the arrays doesn't fit in 
 			 * physical memory 

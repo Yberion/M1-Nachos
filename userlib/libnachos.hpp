@@ -1,4 +1,4 @@
-/*! \file libnachos.h
+/*! \file libnachos.hpp
  \brief Function structures for programs
 
  Libnachos proposes several 'libc-like' functions
@@ -17,7 +17,7 @@
  of liability and disclaimer of warranty provisions.
  */
 
-#include "userlib/syscall.h"
+#include "userlib/syscall.hpp"
 
 typedef void (*VoidNoArgFunctionPtr)();
 typedef unsigned int size_t;

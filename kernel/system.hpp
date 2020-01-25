@@ -9,8 +9,8 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 #include <map>
 using namespace std;
 

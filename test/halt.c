@@ -9,7 +9,7 @@
  */
 
 // Nachos system calls
-#include "userlib/syscall.h"
+#include "userlib/syscall.hpp"
 
 int main()
 {

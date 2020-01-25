@@ -13,7 +13,7 @@
 // this seems to be dependent on how the compiler is configured.
 // if you have problems with va_start, try both of these alternatives
 
-#include <stdarg.h>
+#include <cstdarg>
 
 static char *enableFlags = NULL; // controls which DEBUG messages are printed
 

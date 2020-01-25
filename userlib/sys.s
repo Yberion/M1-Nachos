@@ -11,7 +11,7 @@
  */
 
 #define IN_ASM
-#include "userlib/syscall.h"
+#include "userlib/syscall.hpp"
 
 	 // Equivalent to ".text", but with a different name, in order
 	 // to be correctly handled by the ldscript
