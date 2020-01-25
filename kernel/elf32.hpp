@@ -1,8 +1,8 @@
 /*! \file  elf32.hpp 
-    \brief Data structures pertaining to the ELF32 1.1 file format
-    specification
-  
-*/
+ \brief Data structures pertaining to the ELF32 1.1 file format
+ specification
+
+ */
 #ifndef NACHOS_ELF32_H
 #define NACHOS_ELF32_H
 
@@ -11,34 +11,35 @@ typedef uint32_t Elf32_Addr;
 typedef uint32_t Elf32_Word;
 typedef uint16_t Elf32_Half;
 typedef uint32_t Elf32_Off;
-typedef int32_t  Elf32_Sword;
+typedef int32_t Elf32_Sword;
 /* Old code, before making it more portable
-typedef unsigned long  Elf32_Addr;
-typedef unsigned long  Elf32_Word;
-typedef unsigned short Elf32_Half;
-typedef unsigned long  Elf32_Off;
-typedef signed long    Elf32_Sword;
-*/
+ typedef unsigned long  Elf32_Addr;
+ typedef unsigned long  Elf32_Word;
+ typedef unsigned short Elf32_Half;
+ typedef unsigned long  Elf32_Off;
+ typedef signed long    Elf32_Sword;
+ */
 
 #define EI_NIDENT 16
 
 //! ELF file header (only used fields are commented)
-typedef struct {
-  unsigned char       e_ident[EI_NIDENT]; //!< Identification of the file.
-                                          //!< Starts with '0x7f 'E' 'L' 'F'
-  Elf32_Half          e_type;             //!< File type
-  Elf32_Half          e_machine;          //!< Architecture (here EM_MIPS)
-  Elf32_Word          e_version;          //!< Object file version
-  Elf32_Addr          e_entry;            //!< Address of the entry point
-  Elf32_Off           e_phoff;            //!< Offset of the program header table
-  Elf32_Off           e_shoff;            //!< Offset of the section header table
-  Elf32_Word          e_flags;            
-  Elf32_Half          e_ehsize;           //!< Header size (bytes) 
-  Elf32_Half          e_phentsize;       
-  Elf32_Half          e_phnum;       
-  Elf32_Half          e_shentsize;  
-  Elf32_Half          e_shnum; 
-  Elf32_Half          e_shstrndx; 
+typedef struct
+{
+    unsigned char e_ident[EI_NIDENT]; //!< Identification of the file.
+                                      //!< Starts with '0x7f 'E' 'L' 'F'
+    Elf32_Half e_type; //!< File type
+    Elf32_Half e_machine; //!< Architecture (here EM_MIPS)
+    Elf32_Word e_version; //!< Object file version
+    Elf32_Addr e_entry; //!< Address of the entry point
+    Elf32_Off e_phoff; //!< Offset of the program header table
+    Elf32_Off e_shoff; //!< Offset of the section header table
+    Elf32_Word e_flags;
+    Elf32_Half e_ehsize; //!< Header size (bytes)
+    Elf32_Half e_phentsize;
+    Elf32_Half e_phnum;
+    Elf32_Half e_shentsize;
+    Elf32_Half e_shnum;
+    Elf32_Half e_shstrndx;
 } Elf32_Ehdr;
 
 /* e_ident offsets */
@@ -85,15 +86,16 @@ typedef struct {
 #define EV_CURRENT 1 /* current version */
 
 //! Program header
-typedef struct {
-  Elf32_Word    p_type;
-  Elf32_Off     p_offset;
-  Elf32_Addr    p_vaddr;
-  Elf32_Addr    p_paddr;
-  Elf32_Word    p_filesz;
-  Elf32_Word    p_memsz;
-  Elf32_Word    p_flags;
-  Elf32_Word    p_align;
+typedef struct
+{
+    Elf32_Word p_type;
+    Elf32_Off p_offset;
+    Elf32_Addr p_vaddr;
+    Elf32_Addr p_paddr;
+    Elf32_Word p_filesz;
+    Elf32_Word p_memsz;
+    Elf32_Word p_flags;
+    Elf32_Word p_align;
 } Elf32_Phdr;
 
 /* Reserved section table indexes */
@@ -106,17 +108,18 @@ typedef struct {
 #define SHN_HIRESERVE   0xffff
 
 //! Section header (only used fields are commented)
-typedef struct {
-  Elf32_Word    sh_name;   //!< Section name (index in string table)
-  Elf32_Word    sh_type;   //!< Section type (see flags below)
-  Elf32_Word    sh_flags;
-  Elf32_Addr    sh_addr;   //!< Section virtual address
-  Elf32_Off     sh_offset; //!< Section offset in file
-  Elf32_Word    sh_size;   //!< Section size (bytes)
-  Elf32_Word    sh_link;
-  Elf32_Word    sh_info;
-  Elf32_Word    sh_addralign;
-  Elf32_Word    sh_entsize;
+typedef struct
+{
+    Elf32_Word sh_name; //!< Section name (index in string table)
+    Elf32_Word sh_type; //!< Section type (see flags below)
+    Elf32_Word sh_flags;
+    Elf32_Addr sh_addr; //!< Section virtual address
+    Elf32_Off sh_offset; //!< Section offset in file
+    Elf32_Word sh_size; //!< Section size (bytes)
+    Elf32_Word sh_link;
+    Elf32_Word sh_info;
+    Elf32_Word sh_addralign;
+    Elf32_Word sh_entsize;
 } Elf32_Shdr;
 
 /* section type */

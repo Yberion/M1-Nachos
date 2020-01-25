@@ -1,30 +1,30 @@
 /*! \file libnachos.h
-    \brief Function structures for programs 
-   
-  	Libnachos proposes several 'libc-like' functions
-	for:
-  		Input-Output operations,
-  		String operations,
-  		Memory operations,
-        System calls are defined in kernel/syscalls.hpp
+ \brief Function structures for programs
 
-	Nachos-libc functions are prefixed by 'n' to avoid
-	any confusion with standard libc functions.
-  
-    Copyright (c) 1999-2000 INSA de Rennes.
-    All rights reserved.  
-    See copyright_insa.hpp for copyright notice and limitation 
-    of liability and disclaimer of warranty provisions.
-*/
+ Libnachos proposes several 'libc-like' functions
+ for:
+ Input-Output operations,
+ String operations,
+ Memory operations,
+ System calls are defined in kernel/syscalls.hpp
+
+ Nachos-libc functions are prefixed by 'n' to avoid
+ any confusion with standard libc functions.
+
+ Copyright (c) 1999-2000 INSA de Rennes.
+ All rights reserved.
+ See copyright_insa.hpp for copyright notice and limitation
+ of liability and disclaimer of warranty provisions.
+ */
 
 #include "userlib/syscall.h"
 
-typedef void (*VoidNoArgFunctionPtr)(); 
+typedef void (*VoidNoArgFunctionPtr)();
 typedef unsigned int size_t;
 
 // Thread management
 // ----------------------------
-ThreadId threadCreate(char * debug_name, VoidNoArgFunctionPtr func);
+ThreadId threadCreate(char *debug_name, VoidNoArgFunctionPtr func);
 
 // Input/Output operations :
 // ------------------------------------
@@ -33,7 +33,7 @@ ThreadId threadCreate(char * debug_name, VoidNoArgFunctionPtr func);
 void n_printf(const char *format, ...);
 
 // Format <buff> (of max length <len>) according to the format <format>
-int n_snprintf(char * buff, int len, const char *format, ...);
+int n_snprintf(char *buff, int len, const char *format, ...);
 
 // Read an integer on the standard input
 int n_read_int(void);

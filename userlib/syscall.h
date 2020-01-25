@@ -1,17 +1,17 @@
 /*! \file syscall.h 
-    \brief Nachos system call interface.  
-  
-   These are Nachos kernel operations
-   that can be invoked from user programs, by trapping to the kernel
-   via the "syscall" instruction.
-  
-   This file is included by user programs and by the Nachos kernel.
-  
-   Each of these is invoked by a user program by simply calling the 
-   procedure; an assembly language stub stuffs the system call code
-   into a register, and traps to the kernel.  The kernel procedures
-   are then invoked in the Nachos kernel, after appropriate error checking, 
-   from the system call entry point in exception.cpp.
+ \brief Nachos system call interface.
+
+ These are Nachos kernel operations
+ that can be invoked from user programs, by trapping to the kernel
+ via the "syscall" instruction.
+
+ This file is included by user programs and by the Nachos kernel.
+
+ Each of these is invoked by a user program by simply calling the
+ procedure; an assembly language stub stuffs the system call code
+ into a register, and traps to the kernel.  The kernel procedures
+ are then invoked in the Nachos kernel, after appropriate error checking,
+ from the system call entry point in exception.cpp.
  */
 
 /*
@@ -72,26 +72,26 @@
  */
 
 /* Stop Nachos, and print out performance stats */
-void Halt();		
- 
+void Halt();
 
 /* Return the time spent running Nachos */
 
 /*! \brief Defines the Nachos basic time unit */
-typedef struct {
-  long seconds;
-  long nanos;
+typedef struct
+{
+    long seconds;
+    long nanos;
 } Nachos_Time;
 void SysTime(Nachos_Time *t);
 
 /* Address space control operations: Exit, Exec, and Join */
 
 /* This user program is done (status = 0 means exited normally). */
-void Exit(int status);	
+void Exit(int status);
 
 /* A unique identifier for a thread executed within a user program */
-typedef int ThreadId;	
- 
+typedef int ThreadId;
+
 /* Run the executable, stored in the Nachos file "name", and return the 
  * master thread identifier
  */
@@ -100,8 +100,8 @@ ThreadId Exec(char *name);
 /* Create a new thread in the current process
  * Return thread identifier
  */
-ThreadId newThread(char * debug_name, int func, int arg);
- 
+ThreadId newThread(char *debug_name, int func, int arg);
+
 /* Only return once the the thread "id" has finished. 
  */
 int Join(ThreadId id);
@@ -109,10 +109,10 @@ int Join(ThreadId id);
 /* Yield the CPU to another runnable thread, whether in this address space 
  * or not. 
  */
-void Yield();		
+void Yield();
 
 /*! Print the last error message with the personalized one "mess" */
-void PError(char *mess); 
+void PError(char *mess);
 
 /* File system operations: Create, Open, Read, Write, Seek, Close
  * These functions are patterned after UNIX -- files represent
@@ -122,9 +122,9 @@ void PError(char *mess);
  * note that the Nachos file system has a stub implementation, which
  * will work for the purposes of testing out these routines.
  */
- 
+
 /* A unique identifier for an open Nachos file. */
-typedef int OpenFileId;	
+typedef int OpenFileId;
 
 /* when an address space starts up, it has two open files, representing 
  * keyboard input and display output (in UNIX terms, stdin and stdout).
@@ -133,9 +133,9 @@ typedef int OpenFileId;
  */
 #define CONSOLE_INPUT	0  
 #define CONSOLE_OUTPUT	1  
- 
+
 /* Create a Nachos file, with "name" */
-int Create(char *name,int size);
+int Create(char *name, int size);
 
 /* Open the Nachos file "name", and return an "OpenFileId" that can 
  * be used to read and write to the file.
@@ -162,38 +162,38 @@ int Close(OpenFileId id);
 #endif // SYSDEP_H
 
 /* Remove the file */
-int Remove(char* name);
+int Remove(char *name);
 
 /******************************************************************/
 /* system calls concerning directory management */
 
 /* Create a new repertory 
-   Return a negative number if an error ocurred.
-*/
-int Mkdir(char* name);
+ Return a negative number if an error ocurred.
+ */
+int Mkdir(char *name);
 
 /* Destroy a repertory, which must be empty.
-   Return a negative number if an error ocurred.
-*/
-int Rmdir(char* name);
+ Return a negative number if an error ocurred.
+ */
+int Rmdir(char *name);
 
 /* List the content of NachOS FileSystem */
 void FSList();
 
 /******************************************************************/
 /* User-level synchronization operations :  */
- 
+
 /* System calls concerning semaphores management */
 
 typedef int SemId;
 
 /* Create a semaphore, initialising it at count.
-   Return a Semid, which will enable to do operations on this
-   semaphore                                                      */
-SemId SemCreate(char * debug_name, int count);
+ Return a Semid, which will enable to do operations on this
+ semaphore                                                      */
+SemId SemCreate(char *debug_name, int count);
 
 /* Destroy a semaphore identified by sema. 
-   Return a negative number if an error occured during the destruction */
+ Return a negative number if an error occured during the destruction */
 int SemDestroy(SemId sema);
 
 /* Do the operation P() on the semaphore sema */
@@ -207,64 +207,64 @@ typedef int LockId;
 
 /* Create a lock.
  Return an identifier */
-LockId LockCreate(char * debug_name);
+LockId LockCreate(char *debug_name);
 
 /* Destroy a lock.
-   Return a negative number if an error ocurred
-   during the destruction. */
+ Return a negative number if an error ocurred
+ during the destruction. */
 int LockDestroy(LockId id);
 
 /* Do the operation Acquire on the lock id.
-   Return a negative number if an error ocurred. */
+ Return a negative number if an error ocurred. */
 int LockAcquire(LockId id);
 
 /*  Do the operation Release  on the lock id.
-   Return a negative number if an error ocurred.
-*/
+ Return a negative number if an error ocurred.
+ */
 int LockRelease(LockId id);
 
 /* System calls concerning conditions variables. */
 typedef int CondId;
 
 /* Create a new condition variable */
-CondId CondCreate(char * debug_name);
+CondId CondCreate(char *debug_name);
 
 /* Destroy a condition variable.
-   Return a negative number if an error ocurred.
-*/
+ Return a negative number if an error ocurred.
+ */
 int CondDestroy(CondId id);
 
 /* Do the operation Wait on a condition variable.
-   Returns a negative number if an error ocurred.
-*/
+ Returns a negative number if an error ocurred.
+ */
 int CondWait(CondId cond);
 
 /* Do the operation Signal on a condition variable (wake up only one thread). 
-   Return a negative number if an error ocurred.
-*/
+ Return a negative number if an error ocurred.
+ */
 int CondSignal(CondId cond);
 
 /* Do the operation Signal on a condition variable (wake up all threads). 
-   Return a negative number if an error ocurred.
-*/
+ Return a negative number if an error ocurred.
+ */
 int CondBroadcast(CondId cond);
 
 /******************************************************************/
 /* System calls concerning serial port and console */
 
 /* Send the message on the serial communication link.
-   Returns the number of bytes successfully sent.
-*/
+ Returns the number of bytes successfully sent.
+ */
 int TtySend(char *mess);
 
 /* Wait for a message comming from the serial communication link.
-   The length of the buffer where the bytes will be copied is given as a parameter.
-   Returns the number of characters actually received.
-*/
-int TtyReceive(char *mess,int length);
+ The length of the buffer where the bytes will be copied is given as a parameter.
+ Returns the number of characters actually received.
+ */
+int TtyReceive(char *mess, int length);
 
 /* Map an opened file in memory. Size is the size to be mapped in bytes.
-*/
+ */
 int Mmap(OpenFileId f, int size);
 
 #endif // IN_ASM

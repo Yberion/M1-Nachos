@@ -5,12 +5,12 @@
  *
  *    Ideally, we could read the unsorted array off of the file system,
  *	and store the result back to the file system!
-//
-//  Copyright (c) 1999-2000 INSA de Rennes.
-//  All rights reserved.  
-//  See copyright_insa.hpp for copyright notice and limitation 
-//  of liability and disclaimer of warranty provisions.
-*/
+ //
+ //  Copyright (c) 1999-2000 INSA de Rennes.
+ //  All rights reserved.
+ //  See copyright_insa.hpp for copyright notice and limitation
+ //  of liability and disclaimer of warranty provisions.
+ */
 
 // Nachos system calls
 #include "userlib/syscall.h"
@@ -18,43 +18,45 @@
 
 // Table to be sorted
 #define NUM 30
-int A[NUM];	
+int A[NUM];
 
-int
-main()
+int main()
 {
     int i, j, key;
 
-    Write("Start sort\n",11,CONSOLE_OUTPUT);
-    
+    Write("Start sort\n", 11, CONSOLE_OUTPUT);
+
     /* first initialize the array, in reverse sorted order */
-    for (i = 0; i < NUM; i++)		
+    for (i = 0; i < NUM; i++)
         A[i] = NUM - i;
 
-    for (i = 0; i < NUM; i++) {
-      n_printf("%d ",A[i]);
+    for (i = 0; i < NUM; i++)
+    {
+        n_printf("%d ", A[i]);
     }
     n_printf("\n");
-    
 
     /* then sort! */
-    for (j=1;j<NUM;j++) {
-      key = A[j];
-      i = j - 1;
-      while (i>= 0 && A[i] > key) {
-	A[i+1] = A[i];
-	i--;
-      }
-      A[i+1] = key;
+    for (j = 1; j < NUM; j++)
+    {
+        key = A[j];
+        i = j - 1;
+        while (i >= 0 && A[i] > key)
+        {
+            A[i + 1] = A[i];
+            i--;
+        }
+        A[i + 1] = key;
     }
 
-    for (i = 0; i < NUM; i++) {
-      n_printf("%d ",A[i]);
+    for (i = 0; i < NUM; i++)
+    {
+        n_printf("%d ", A[i]);
     }
     n_printf("\n");
 
-    Write("End sort\n",9,CONSOLE_OUTPUT);
-    Exit(A[0]);		/* and then we're done -- should be 0! */
+    Write("End sort\n", 9, CONSOLE_OUTPUT);
+    Exit(A[0]); /* and then we're done -- should be 0! */
 
     return 0;
 }

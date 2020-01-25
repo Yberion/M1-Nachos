@@ -1,20 +1,20 @@
 //-------------------------------------------------------------------------
 /*! \file ACIA_sysdep.cpp
-    \brief Routines to simulate the system dependant part of an ACIA device.
-   
-    Routines to simulate interrupts when the input data register is full
-    and when the output data register is empty and to execute the associated 
-    handler if working mode is Interrupt mode.
-    If current mode is Busy Waiting mode, data and state registers are also
-    modified but handlers aren't call.    
+ \brief Routines to simulate the system dependant part of an ACIA device.
 
-    DO NOT CHANGE -- part of the machine emulation
+ Routines to simulate interrupts when the input data register is full
+ and when the output data register is empty and to execute the associated
+ handler if working mode is Interrupt mode.
+ If current mode is Busy Waiting mode, data and state registers are also
+ modified but handlers aren't call.
 
-    Copyright (c) 1999-2000 INSA de Rennes.
-    All rights reserved.  
-    See copyright_insa.hpp for copyright notice and limitation 
-    of liability and disclaimer of warranty provisions.
-*/
+ DO NOT CHANGE -- part of the machine emulation
+
+ Copyright (c) 1999-2000 INSA de Rennes.
+ All rights reserved.
+ See copyright_insa.hpp for copyright notice and limitation
+ of liability and disclaimer of warranty provisions.
+ */
 //------------------------------------------------------------------------- 
 #include <strings.h>
 #include "machine/interrupt.hpp"
@@ -24,16 +24,16 @@
 #include "machine/ACIA_sysdep.hpp"
 
 //! Dummy functions because C++ is weird about pointers to member function
-static void DummyInterruptRec (int64_t arg)
+static void DummyInterruptRec(int64_t arg)
 {
-  ACIA_sysdep *ACIA_s = (ACIA_sysdep *)arg;
-  ACIA_s->InterruptRec();
+    ACIA_sysdep *ACIA_s = (ACIA_sysdep*)arg;
+    ACIA_s->InterruptRec();
 }
 
-static void DummyInterruptEm (int64_t arg)
+static void DummyInterruptEm(int64_t arg)
 {
-  ACIA_sysdep *ACIA_s = (ACIA_sysdep *)arg;
-  ACIA_s->InterruptEm();
+    ACIA_sysdep *ACIA_s = (ACIA_sysdep*)arg;
+    ACIA_s->InterruptEm();
 }
 
 //------------------------------------------------------------------------
@@ -44,27 +44,28 @@ static void DummyInterruptEm (int64_t arg)
 //------------------------------------------------------------------------
 ACIA_sysdep::ACIA_sysdep(ACIA *iface, Machine *m)
 {
-  // 'interface' is a pointer to the associated ACIA object.
-  interface = iface;
+    // 'interface' is a pointer to the associated ACIA object.
+    interface = iface;
 
-  // Open a socket and assign a name to it.
-  sock = OpenSocket();
-  AssignNameToSocket(g_cfg->TargetMachineName,sock);
-  
-  bcopy(g_cfg->TargetMachineName,sockName,strlen(g_cfg->TargetMachineName)+1);
+    // Open a socket and assign a name to it.
+    sock = OpenSocket();
+    AssignNameToSocket(g_cfg->TargetMachineName, sock);
 
-  // Start checking for incoming char.
-  m->interrupt->Schedule(DummyInterruptRec,(int64_t)this,
-      nano_to_cycles(CHECK_TIME,g_cfg->ProcessorFrequency),ACIA_RECEIVE_INT);
-};
+    bcopy(g_cfg->TargetMachineName, sockName, strlen(g_cfg->TargetMachineName) + 1);
+
+    // Start checking for incoming char.
+    m->interrupt->Schedule(DummyInterruptRec, (int64_t)this, nano_to_cycles(CHECK_TIME, g_cfg->ProcessorFrequency), ACIA_RECEIVE_INT);
+}
+;
 
 //------------------------------------------------------------------------
 /** Deallocates it and close the socket. */
 //------------------------------------------------------------------------
 ACIA_sysdep::~ACIA_sysdep()
 {
-  CloseSocket(sock);
-};
+    CloseSocket(sock);
+}
+;
 
 //------------------------------------------------------------------------
 /** Check if there is an incoming char. 
@@ -76,76 +77,70 @@ ACIA_sysdep::~ACIA_sysdep()
  * in all the cases.
  */
 //------------------------------------------------------------------------
-void 
-ACIA_sysdep::InterruptRec()
+void ACIA_sysdep::InterruptRec()
 {
-  int received;
+    int received;
 
-  // Schedule a interrupt for next polling.
-  g_machine->interrupt->Schedule(DummyInterruptRec,(int64_t)this,
-     nano_to_cycles(CHECK_TIME,g_cfg->ProcessorFrequency),ACIA_RECEIVE_INT);
+    // Schedule a interrupt for next polling.
+    g_machine->interrupt->Schedule(DummyInterruptRec, (int64_t)this, nano_to_cycles(CHECK_TIME, g_cfg->ProcessorFrequency), ACIA_RECEIVE_INT);
 
-  // Check if a char had been threw through the socket
-  // Try to read a char from the socket.
-  received = ReadFromSocket(sock,&(interface->inputRegister),1);
-  
+    // Check if a char had been threw through the socket
+    // Try to read a char from the socket.
+    received = ReadFromSocket(sock, &(interface->inputRegister), 1);
 
-  // If this operation successed... 
-  if (received!=-1)
+    // If this operation successed...
+    if (received != -1)
     {
-      // Input register becomes FULL.
-      interface->inputStateRegister = FULL;
+        // Input register becomes FULL.
+        interface->inputStateRegister = FULL;
 
-      // In interrupt mode and reception interrups are allowed, execute the reception handler.
-      if (((interface->mode) & REC_INTERRUPT) != 0)
-	g_acia_driver->InterruptReceive();
+        // In interrupt mode and reception interrups are allowed, execute the reception handler.
+        if (((interface->mode) & REC_INTERRUPT) != 0)
+            g_acia_driver->InterruptReceive();
     }
-}; 
+}
+;
 
 //------------------------------------------------------------------------
 /**  Send a char through the socket and drain the output register.  In
  * Interrupt mode, execute the emission handler.
- */ 
+ */
 //------------------------------------------------------------------------
-void 
-ACIA_sysdep::InterruptEm()
+void ACIA_sysdep::InterruptEm()
 {
-  // Send the char.
-  SendToSocket(sock,&(interface->outputRegister),1,sockName);
-  // Drain the output register.
-  interface->outputRegister = 0;
-  interface->outputStateRegister = EMPTY;
-  
-  // If send interrupts ara allowed, execute the send interrupt handler
-  if (((interface->mode) & SEND_INTERRUPT) != 0)
-    g_acia_driver->InterruptSend();
-};		
+    // Send the char.
+    SendToSocket(sock, &(interface->outputRegister), 1, sockName);
+    // Drain the output register.
+    interface->outputRegister = 0;
+    interface->outputStateRegister = EMPTY;
 
+    // If send interrupts ara allowed, execute the send interrupt handler
+    if (((interface->mode) & SEND_INTERRUPT) != 0)
+        g_acia_driver->InterruptSend();
+}
+;
 
 //------------------------------------------------------------------------
 /** Schedules an interrupt to simulate 
  * the output register dumping.
  */
 //------------------------------------------------------------------------
-void
-ACIA_sysdep::SendChar()
+void ACIA_sysdep::SendChar()
 {
-  interface->outputStateRegister = FULL;
-  g_machine->interrupt->Schedule(DummyInterruptEm,(int64_t)this,
-    nano_to_cycles(SEND_TIME,g_cfg->ProcessorFrequency),ACIA_SEND_INT);
-};
-
+    interface->outputStateRegister = FULL;
+    g_machine->interrupt->Schedule(DummyInterruptEm, (int64_t)this, nano_to_cycles(SEND_TIME, g_cfg->ProcessorFrequency), ACIA_SEND_INT);
+}
+;
 
 //------------------------------------------------------------------------
 /** Simulate the input register draining because it must be clear just after
  * a read operation.
  */
 //------------------------------------------------------------------------
-void 
-ACIA_sysdep::Drain()
+void ACIA_sysdep::Drain()
 {
-  interface->inputRegister = 0;
-  interface->inputStateRegister = EMPTY;
-};
-
+    interface->inputRegister = 0;
+    interface->inputStateRegister = EMPTY;
+}
+;
 

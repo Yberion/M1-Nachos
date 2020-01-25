@@ -1,16 +1,15 @@
 /*! \file sysdep.hpp 
-   \brief System-dependent interface
-  
-        Nachos uses the routines defined
-  	here, rather than directly calling the UNIX library functions, to
-  	simplify porting between versions of UNIX, and even to
-  	other systems, such as MSDOS and the Macintosh.
+ \brief System-dependent interface
+
+ Nachos uses the routines defined
+ here, rather than directly calling the UNIX library functions, to
+ simplify porting between versions of UNIX, and even to
+ other systems, such as MSDOS and the Macintosh.
 
  Copyright (c) 1992-1993 The Regents of the University of California.
  All rights reserved.  See copyright.hpp for copyright notice and limitation 
  of liability and disclaimer of warranty provisions.
-*/
-
+ */
 
 #ifndef SYSDEP_H
 #define SYSDEP_H
@@ -26,14 +25,14 @@
   (int8_t*)(((((unsigned long)val)-1) & (~(((unsigned long)boundary)-1))) + ((unsigned long)boundary))
 
 /* Check file to see if there are any characters to be read.
-// If no characters in the file, return without waiting.
-*/
+ // If no characters in the file, return without waiting.
+ */
 
 extern bool PollFile(int fd);
 
 /* File operations: open/read/write/lseek/close, and check for error
-// For simulating the disk and the console devices.
-*/
+ // For simulating the disk and the console devices.
+ */
 
 extern int OpenForWrite(char *name);
 extern int OpenForReadWrite(char *name, bool crashOnError);
@@ -66,16 +65,17 @@ extern void RandomInit(unsigned seed);
 extern int Random();
 
 /* Allocate, de-allocate an array, such that de-referencing
-// just beyond either end of the array will cause an error
-*/
+ // just beyond either end of the array will cause an error
+ */
 
-extern int8_t*AllocBoundedArray(size_t size);
+extern int8_t* AllocBoundedArray(size_t size);
 extern void DeallocBoundedArray(int8_t *p, size_t size);
 
 /* Other C library routines that are used by Nachos.
-// These are assumed to be portable, so we don't include a wrapper.
-*/
-extern "C" {
+ // These are assumed to be portable, so we don't include a wrapper.
+ */
+extern "C"
+{
 #include <stdlib.h>  // atoi, atof, abs
 #include <stdio.h>   // for printf, fprintf
 #include <string.h>  // for DEBUG, etc.
