@@ -1,4 +1,5 @@
 <map id="s_mapped_file" name="s_mapped_file">
-<area shape="rect" id="node1" title="Information describing a memory&#45;mapped file." alt="" coords="5,95,111,121"/>
-<area shape="rect" id="node2" href="$class_open_file.html" title="Defines the data structure maintained when a file is opened." alt="" coords="21,5,95,32"/>
+<area shape="rect" id="node1" title="Information describing a memory&#45;mapped file." alt="" coords="25,769,133,861"/>
+<area shape="rect" id="node2" href="$classOpenFile.html" title="Defines the data structure maintained when a file is opened." alt="" coords="16,424,141,707"/>
+<area shape="rect" id="node3" href="$classFileHeader.html" title="Defines a file header in the Nachos file system." alt="" coords="5,5,152,361"/>
 </map>

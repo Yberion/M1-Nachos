@@ -1,4 +1,0 @@
-<map id="MMU" name="MMU">
-<area shape="rect" id="node1" title="Defines a MMU &#45; Memory Management Unit." alt="" coords="37,95,90,121"/>
-<area shape="rect" id="node2" href="$class_translation_table.html" title="Defines the data structures used for address translation." alt="" coords="5,5,121,32"/>
-</map>

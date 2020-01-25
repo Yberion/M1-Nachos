@@ -42,7 +42,7 @@ public:
     void Print();
 
 protected:
-    //! Queue of threads that are ready to run, but not running.
+    //!< Queue of threads that are ready to run, but not running.
     Listint *readyList;
 };
 

@@ -13,9 +13,9 @@
 <area shape="rect" id="node28" title=" " alt="" coords="321,155,404,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="839,229,905,256"/>
 <area shape="rect" id="node5" href="$disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="387,677,511,704"/>
-<area shape="rect" id="node16" href="$translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="195,453,383,480"/>
+<area shape="rect" id="node16" href="$translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="195,453,383,480"/>
 <area shape="rect" id="node22" href="$mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="530,229,659,256"/>
-<area shape="rect" id="node23" href="$_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="684,229,815,256"/>
+<area shape="rect" id="node23" href="$ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="684,229,815,256"/>
 <area shape="rect" id="node24" href="$interrupt_8hpp.html" title="Data structures to emulate low&#45;level interrupt hardware." alt="" coords="875,603,1021,629"/>
 <area shape="rect" id="node8" title=" " alt="" coords="243,901,307,928"/>
 <area shape="rect" id="node9" title=" " alt="" coords="313,827,391,853"/>

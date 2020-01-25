@@ -1,0 +1,4 @@
+<map id="Directory::Find" name="Directory::Find">
+<area shape="rect" id="node1" title="Find the sector number of the FileHeader for file: &quot;name&quot;." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$classDirectory.html#abab8ff05c1dedadbaac7b44730eeb5a4" title="Find the index into the directory table corresponding to &quot;name&quot;." alt="" coords="160,5,299,32"/>
+</map>

@@ -1,9 +1,0 @@
-<map id="Interrupt::SetStatus" name="Interrupt::SetStatus">
-<area shape="rect" id="node1" title="and return previous setting." alt="" coords="360,56,495,83"/>
-<area shape="rect" id="node2" href="$class_driver_console.html#a7ca6fd9d7adf8fe0701bc96b6d2e068d" title=" " alt="" coords="145,5,312,32"/>
-<area shape="rect" id="node4" href="$class_driver_console.html#ae066669b5fc7532ecca449a12dead3be" title=" " alt="" coords="146,56,311,83"/>
-<area shape="rect" id="node6" href="$class_thread.html#adbc2bfb172d2eff4b46882aade9eeb8a" title="Relinquish the CPU if any other thread is runnable." alt="" coords="179,107,278,133"/>
-<area shape="rect" id="node3" href="$drv_console_8hpp.html#a0050b14775abe9c8ee3b3fb27e6ea37f" title=" " alt="" coords="6,5,97,32"/>
-<area shape="rect" id="node5" href="$drv_console_8hpp.html#a7f63a9837150e7fb0f7aae4b0504bd67" title=" " alt="" coords="7,56,96,83"/>
-<area shape="rect" id="node7" href="$class_thread.html#a42dd69262be8fb110887085ea1f02bc3" title="Wait for another thread to finish its execution." alt="" coords="5,107,97,133"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="TranslationTable::getMaxNumPages" name="TranslationTable::getMaxNumPages">
-<area shape="rect" id="node1" title=" " alt="" coords="548,23,715,65"/>
-<area shape="rect" id="node2" href="$class_m_m_u.html#aa2ddea5dcd1648aba21ac1a75c79dc25" title="translation couldn&#39;t be completed." alt="" coords="385,31,500,57"/>
-<area shape="rect" id="node3" href="$class_m_m_u.html#a28a50bd03688bc05aa15f93e4abf61a7" title="memory (at addr). Return FALSE if a" alt="" coords="217,5,337,32"/>
-<area shape="rect" id="node5" href="$class_m_m_u.html#a60227cf48e6778a4c66d8a13fd2f1539" title=" " alt="" coords="216,56,337,83"/>
-<area shape="rect" id="node4" href="$class_machine.html#ad70a015685c6e4bf705e4939551774aa" title="Return the execution time of the instr (cycle)" alt="" coords="5,5,168,32"/>
-</map>

@@ -84,10 +84,10 @@ public:
 
 private:
 
-    /** Disk containing the swap area */
+    //!< Disk containing the swap area
     DriverDisk *swap_disk;
 
-    /** Bitmap used to know if sectors in the swap area are free or busy */
+    //!< Bitmap used to know if sectors in the swap area are free or busy
     BitMap *page_flags;
 
     /** Returns the number of a free page in the swap area

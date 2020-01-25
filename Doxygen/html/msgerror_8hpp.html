@@ -102,7 +102,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="filesys_8cpp.html" title="Routines to manage the overall operation of the file system." alt="" coords="168,80,293,107"/>
 <area shape="rect" href="fsmisc_8cpp.html" title="Miscellaneous routines for the Nachos file system." alt="" coords="318,80,445,107"/>
 <area shape="rect" href="oftable_8cpp.html" title="Routines for managing the open file table." alt="" coords="469,80,595,107"/>
-<area shape="rect" href="openfile_8cpp.html" title="Routines to manage an open Nachos file" alt="" coords="619,80,751,107"/>
+<area shape="rect" href="openfile_8cpp.html" title="Routines to manage an open Nachos file." alt="" coords="619,80,751,107"/>
 <area shape="rect" href="addrspace_8cpp.html" title="Routines to manage address spaces (executing user programs)." alt="" coords="776,80,923,107"/>
 <area shape="rect" href="exception_8cpp.html" title="Entry point into the Nachos kernel ." alt="" coords="947,80,1090,107"/>
 <area shape="rect" href="main_8cpp.html" title="Bootstrap code to initialize the operating system kernel." alt="" coords="1115,80,1229,107"/>
@@ -117,54 +117,67 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_syscall_error.html">SyscallError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a structure to store syscall error messages.  <a href="class_syscall_error.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSyscallError.html">SyscallError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a structure to store syscall error messages.  <a href="classSyscallError.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8fe83ac76edc595f6b98cd4a4127aed5"><td class="memItemLeft" align="right" valign="top"><a id="a8fe83ac76edc595f6b98cd4a4127aed5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ERROR</b>&#160;&#160;&#160;-1</td></tr>
+<tr class="memitem:a8fe83ac76edc595f6b98cd4a4127aed5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msgerror_8hpp.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>&#160;&#160;&#160;-1</td></tr>
 <tr class="separator:a8fe83ac76edc595f6b98cd4a4127aed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<b>NO_ERROR</b> = 0, 
-<b>INC_ERROR</b>, 
-<b>OPENFILE_ERROR</b>, 
-<b>EXEC_FILE_FORMAT_ERROR</b>, 
+&#160;&#160;<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55babf350750d0d4fabd8954c0f1e9bbae94">NO_ERROR</a> = 0, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55baf7c8308349c38c092e85f6c8fad6c97c">INC_ERROR</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bab372d42bd9d4b67815c1921788016e9c">OPENFILE_ERROR</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bafca494167d62eafcbc6d37c1d75fcad6">EXEC_FILE_FORMAT_ERROR</a>, 
 <br />
-&#160;&#160;<b>OUT_OF_MEMORY</b>, 
-<b>OUT_OF_DISK</b>, 
-<b>ALREADY_IN_DIRECTORY</b>, 
-<b>INEXIST_FILE_ERROR</b>, 
+&#160;&#160;<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bac9a7e95f8dd5507c2dbd1fb466ec9a85">OUT_OF_MEMORY</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba460ab1c417385f611a941bc38050e82d">OUT_OF_DISK</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba1952a091b24b63468a7889d89b016efa">ALREADY_IN_DIRECTORY</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba3ac6071ee21de5bea8a25c3204d638e7">INEXIST_FILE_ERROR</a>, 
 <br />
-&#160;&#160;<b>INEXIST_DIRECTORY_ERROR</b>, 
-<b>NOSPACE_IN_DIRECTORY</b>, 
-<b>NOT_A_FILE</b>, 
-<b>NOT_A_DIRECTORY</b>, 
+&#160;&#160;<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba4a7ec7021e694aa55e04c91ddf28d943">INEXIST_DIRECTORY_ERROR</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bab104a9e6191be42e62a30e9d3755ccbe">NOSPACE_IN_DIRECTORY</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55baf245cb34d832adeb27684bab69d502a1">NOT_A_FILE</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bad355c94481681c6aadae70651ae9be9f">NOT_A_DIRECTORY</a>, 
 <br />
-&#160;&#160;<b>DIRECTORY_NOT_EMPTY</b>, 
-<b>INVALID_COUNTER</b>, 
-<b>INVALID_SEMAPHORE_ID</b>, 
-<b>INVALID_LOCK_ID</b>, 
+&#160;&#160;<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba3d769051335b6ef710cd84957c328690">DIRECTORY_NOT_EMPTY</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba7f4b0a1ae69be1a111f69b3acbaf4689">INVALID_COUNTER</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba90d0cffc0793d30d069ad8370d8af836">INVALID_SEMAPHORE_ID</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bac2b9659e0e9d3e032bc6abc57009193e">INVALID_LOCK_ID</a>, 
 <br />
-&#160;&#160;<b>INVALID_CONDITION_ID</b>, 
-<b>INVALID_FILE_ID</b>, 
-<b>INVALID_THREAD_ID</b>, 
-<b>NO_ACIA</b>, 
+&#160;&#160;<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55babb5db322bb6a963ef096100229ab7fb0">INVALID_CONDITION_ID</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55badd2319fa701f7c4d15fefac8d4010272">INVALID_FILE_ID</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba93ab6e21147456c2ac6d562583b40a32">INVALID_THREAD_ID</a>, 
+<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55badec1739b1451ebb6f81dc3099fdbc8d8">NO_ACIA</a>, 
 <br />
-&#160;&#160;<b>NUMMSGERROR</b>
+&#160;&#160;<a class="el" href="msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bac2bc69b4c8e6dc1dd41f2ea53aa938df">NUMMSGERROR</a>
 <br />
  }</td></tr>
 <tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines the data structure to store error messages during a syscall process. </p>
-<p>Copyright (c) 1999-2000 INSA de Rennes. All rights reserved. <br  />
- See copyright_insa.hpp for copyright notice and limitation of liability and disclaimer of warranty provisions. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<p>Copyright (c) 1999-2000 INSA de Rennes. All rights reserved. See copyright_insa.hpp for copyright notice and limitation of liability and disclaimer of warranty provisions. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a8fe83ac76edc595f6b98cd4a4127aed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe83ac76edc595f6b98cd4a4127aed5">&#9670;&nbsp;</a></span>ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
@@ -176,7 +189,30 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_list.html" title="Definition of a generic single-linked &quot;list&quot;.">List</a> of error message numbers (see their meaning in <a class="el" href="msgerror_8cpp.html" title="Data structure to store the last syscall error message.">msgerror.cpp</a>) </p>
+<p><a class="el" href="classList.html" title="Definition of a generic single-linked &quot;list&quot;.">List</a> of error message numbers (see their meaning in <a class="el" href="msgerror_8cpp.html" title="Data structure to store the last syscall error message.">msgerror.cpp</a>) </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55babf350750d0d4fabd8954c0f1e9bbae94"></a>NO_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf7c8308349c38c092e85f6c8fad6c97c"></a>INC_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bab372d42bd9d4b67815c1921788016e9c"></a>OPENFILE_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bafca494167d62eafcbc6d37c1d75fcad6"></a>EXEC_FILE_FORMAT_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac9a7e95f8dd5507c2dbd1fb466ec9a85"></a>OUT_OF_MEMORY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba460ab1c417385f611a941bc38050e82d"></a>OUT_OF_DISK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1952a091b24b63468a7889d89b016efa"></a>ALREADY_IN_DIRECTORY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba3ac6071ee21de5bea8a25c3204d638e7"></a>INEXIST_FILE_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba4a7ec7021e694aa55e04c91ddf28d943"></a>INEXIST_DIRECTORY_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bab104a9e6191be42e62a30e9d3755ccbe"></a>NOSPACE_IN_DIRECTORY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf245cb34d832adeb27684bab69d502a1"></a>NOT_A_FILE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bad355c94481681c6aadae70651ae9be9f"></a>NOT_A_DIRECTORY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba3d769051335b6ef710cd84957c328690"></a>DIRECTORY_NOT_EMPTY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba7f4b0a1ae69be1a111f69b3acbaf4689"></a>INVALID_COUNTER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba90d0cffc0793d30d069ad8370d8af836"></a>INVALID_SEMAPHORE_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac2b9659e0e9d3e032bc6abc57009193e"></a>INVALID_LOCK_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55babb5db322bb6a963ef096100229ab7fb0"></a>INVALID_CONDITION_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55badd2319fa701f7c4d15fefac8d4010272"></a>INVALID_FILE_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba93ab6e21147456c2ac6d562583b40a32"></a>INVALID_THREAD_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55badec1739b1451ebb6f81dc3099fdbc8d8"></a>NO_ACIA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac2bc69b4c8e6dc1dd41f2ea53aa938df"></a>NUMMSGERROR&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>

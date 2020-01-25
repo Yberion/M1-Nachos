@@ -93,7 +93,7 @@ public:
 
 private:
 
-    /** File descriptor of the configuration file */
+    //!< File descriptor of the configuration file
     FILE *cfg;
 
 };

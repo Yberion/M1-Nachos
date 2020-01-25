@@ -1,4 +1,28 @@
 var searchData=
 [
-  ['opcode_1012',['opCode',['../class_instruction.html#af63528444729d52b9b2e566f32681a25',1,'Instruction::opCode()'],['../struct_op_info.html#ae9879a2920b1ee78b2c25985eed94db9',1,'OpInfo::opCode()']]]
+  ['name_1738',['name',['../classDirectoryEntry.html#a70e6f5a6c980e4468e9b6ac290d70337',1,'DirectoryEntry::name()'],['../classOpenFileTableEntry.html#a22c0cbe0af82b41e37c15623912cb1c2',1,'OpenFileTableEntry::name()'],['../classOpenFile.html#a8df073bef217507f97f8fa923cdf5c57',1,'OpenFile::name()'],['../classProcess.html#a8b19410748c356fd15ef59a6b6574358',1,'Process::name()'],['../classSemaphore.html#abacd94dfabb321408c2b36f570ff3249',1,'Semaphore::name()'],['../classLock.html#aac2ad412d7f5f3ee27496a152eb7f4c6',1,'Lock::name()'],['../classCondition.html#a39531f1955c611cfa1904cda81cd02d7',1,'Condition::name()'],['../classThread.html#a32541d9a8d903bab44aafc14921d18c6',1,'Thread::name()'],['../classProcessStat.html#a57b3ac1e52ef7f20409917321e3bf119',1,'ProcessStat::name()']]],
+  ['nanos_1739',['nanos',['../structNachos__Time.html#a63c617de354b8045bf1c152c586254d5',1,'Nachos_Time']]],
+  ['nb_5fmapped_5ffiles_1740',['nb_mapped_files',['../classAddrSpace.html#a8cc6be4f6bc1db60e6b3560c525c0461',1,'AddrSpace']]],
+  ['nbcopy_1741',['NbCopy',['../classConfig.html#a8a5833ba309745904cc207c339a384ca',1,'Config']]],
+  ['nbentry_1742',['nbentry',['../classOpenFileTable.html#a78e62f56dadf6aaf623377dea1504d8e',1,'OpenFileTable']]],
+  ['next_1743',['next',['../classListElement.html#a063a4107b8334640fa1192c358de1da0',1,'ListElement']]],
+  ['numbits_1744',['numBits',['../classBitMap.html#ac13f86735997991d4a42a82904fdd92c',1,'BitMap']]],
+  ['numbytes_1745',['numBytes',['../classFileHeader.html#a8ce2c3a2c0eb628a60120acecf8a225b',1,'FileHeader']]],
+  ['numconsolecharsread_1746',['numConsoleCharsRead',['../classProcessStat.html#a9fbc091511cd02f2022672b6bbf651ea',1,'ProcessStat']]],
+  ['numconsolecharswritten_1747',['numConsoleCharsWritten',['../classProcessStat.html#a8d6fbbd4ef3094534c26ca2dceba20d8',1,'ProcessStat']]],
+  ['numdirect_1748',['NumDirect',['../classConfig.html#a661ad1b3979399c45fb92171359f7a04',1,'Config']]],
+  ['numdirentries_1749',['NumDirEntries',['../classConfig.html#a9733c063b146685b2e51a180f21b963c',1,'Config']]],
+  ['numdiskreads_1750',['numDiskReads',['../classProcessStat.html#a08fd663c244f5bb23f99bb0e2516a345',1,'ProcessStat']]],
+  ['numdiskwrites_1751',['numDiskWrites',['../classProcessStat.html#ae1b5f849bd315ba026c0f849c322c3a4',1,'ProcessStat']]],
+  ['numheadersectors_1752',['numHeaderSectors',['../classFileHeader.html#a683ba393dd1f337a4c5643693db43b52',1,'FileHeader']]],
+  ['numinstruction_1753',['numInstruction',['../classProcessStat.html#a0e1a306e0f3980760e925a9f38ee248c',1,'ProcessStat']]],
+  ['nummemoryaccess_1754',['numMemoryAccess',['../classProcessStat.html#a0ace4c1d5cc45534cd3240dc8cd66454',1,'ProcessStat']]],
+  ['numpagefaults_1755',['numPageFaults',['../classProcessStat.html#a6495bc18b4b6cb7d978157ff41306598',1,'ProcessStat']]],
+  ['numphyspages_1756',['NumPhysPages',['../classConfig.html#a3398f180ac1e0f80f76ba36fe7ffddb4',1,'Config']]],
+  ['numportdist_1757',['NumPortDist',['../classConfig.html#ad26080a6862e28512665eaedc298880e',1,'Config']]],
+  ['numportloc_1758',['NumPortLoc',['../classConfig.html#ab3721570210cc27a819e9718bb69e90d',1,'Config']]],
+  ['numsectors_1759',['numSectors',['../classFileHeader.html#ab18c90cd87cf858a00b65bc7023cc28e',1,'FileHeader']]],
+  ['numthread_1760',['numthread',['../classOpenFileTableEntry.html#ad0297859d25a0d9ed6146e0817df422a',1,'OpenFileTableEntry']]],
+  ['numthreads_1761',['numThreads',['../classProcess.html#a810439de18dfeef8641750dec2003b9d',1,'Process']]],
+  ['numwords_1762',['numWords',['../classBitMap.html#ae9ad600ac1b5845b31f03224b2635aab',1,'BitMap']]]
 ];

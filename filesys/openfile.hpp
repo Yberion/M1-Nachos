@@ -76,8 +76,7 @@ private:
     int fSector; //!< The file's first sector
 
 public:
-    //! Object type, for validity checks during system calls (must be the first public field)
-    ObjectType type;
+    ObjectType type; //<! Object type, for validity checks during system calls (must be the first public field)
 };
 
 #endif // OPENFILE_H

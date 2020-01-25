@@ -4,7 +4,7 @@
 <area shape="rect" id="node3" href="$filesys_8cpp.html" title="Routines to manage the overall operation of the file system." alt="" coords="168,80,293,107"/>
 <area shape="rect" id="node4" href="$fsmisc_8cpp.html" title="Miscellaneous routines for the Nachos file system." alt="" coords="318,80,445,107"/>
 <area shape="rect" id="node5" href="$oftable_8cpp.html" title="Routines for managing the open file table." alt="" coords="469,80,595,107"/>
-<area shape="rect" id="node6" href="$openfile_8cpp.html" title="Routines to manage an open Nachos file" alt="" coords="619,80,751,107"/>
+<area shape="rect" id="node6" href="$openfile_8cpp.html" title="Routines to manage an open Nachos file." alt="" coords="619,80,751,107"/>
 <area shape="rect" id="node7" href="$addrspace_8cpp.html" title="Routines to manage address spaces (executing user programs)." alt="" coords="776,80,923,107"/>
 <area shape="rect" id="node8" href="$exception_8cpp.html" title="Entry point into the Nachos kernel ." alt="" coords="947,80,1090,107"/>
 <area shape="rect" id="node9" href="$main_8cpp.html" title="Bootstrap code to initialize the operating system kernel." alt="" coords="1115,80,1229,107"/>

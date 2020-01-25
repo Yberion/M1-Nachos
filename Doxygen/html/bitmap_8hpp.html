@@ -124,11 +124,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="filesys_8cpp.html" title="Routines to manage the overall operation of the file system." alt="" coords="232,229,358,256"/>
 <area shape="rect" href="oftable_8cpp.html" title="Routines for managing the open file table." alt="" coords="760,229,886,256"/>
 <area shape="rect" href="bitmap_8cpp.html" title="Routines to manage a bitmap." alt="" coords="920,80,1041,107"/>
-<area shape="rect" href="swap_manager_8cpp.html" title="Routines of the swap manager." alt="" coords="1066,80,1212,107"/>
+<area shape="rect" href="swapManager_8cpp.html" title="Routines of the swap manager." alt="" coords="1066,80,1212,107"/>
 <area shape="rect" href="directory_8cpp.html" title="Routines to manage a directory of file names." alt="" coords="30,155,168,181"/>
 <area shape="rect" href="filehdr_8cpp.html" title="Routines for managing the disk file header." alt="" coords="192,155,315,181"/>
 <area shape="rect" href="oftable_8hpp.html" title="Data structure used to synchronize operations on files." alt="" coords="390,155,517,181"/>
-<area shape="rect" href="openfile_8cpp.html" title="Routines to manage an open Nachos file" alt="" coords="541,155,673,181"/>
+<area shape="rect" href="openfile_8cpp.html" title="Routines to manage an open Nachos file." alt="" coords="541,155,673,181"/>
 <area shape="rect" href="addrspace_8cpp.html" title="Routines to manage address spaces (executing user programs)." alt="" coords="698,155,844,181"/>
 <area shape="rect" href="exception_8cpp.html" title="Entry point into the Nachos kernel ." alt="" coords="382,229,525,256"/>
 <area shape="rect" href="system_8cpp.html" title="Nachos initialization and cleanup routines." alt="" coords="549,229,678,256"/>
@@ -139,27 +139,53 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bit_map.html">BitMap</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a "bitmap" &ndash; an array of bits.  <a href="class_bit_map.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitMap.html">BitMap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a "bitmap" &ndash; an array of bits.  <a href="classBitMap.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac54bd5b32c8baefaf13608a9296a7564"><td class="memItemLeft" align="right" valign="top"><a id="ac54bd5b32c8baefaf13608a9296a7564"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BITS_IN_BYTE</b>&#160;&#160;&#160;8</td></tr>
+<tr class="memitem:ac54bd5b32c8baefaf13608a9296a7564"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap_8hpp.html#ac54bd5b32c8baefaf13608a9296a7564">BITS_IN_BYTE</a>&#160;&#160;&#160;8</td></tr>
 <tr class="separator:ac54bd5b32c8baefaf13608a9296a7564"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0fdbf6c760ea9433bc7e94c9a775399"><td class="memItemLeft" align="right" valign="top"><a id="ab0fdbf6c760ea9433bc7e94c9a775399"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BITS_IN_WORD</b>&#160;&#160;&#160;32</td></tr>
+<tr class="memitem:ab0fdbf6c760ea9433bc7e94c9a775399"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap_8hpp.html#ab0fdbf6c760ea9433bc7e94c9a775399">BITS_IN_WORD</a>&#160;&#160;&#160;32</td></tr>
 <tr class="separator:ab0fdbf6c760ea9433bc7e94c9a775399"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data structures defining a bitmap. </p>
-<pre class="fragment">An array of bits each of which
-</pre><p> can be either on or off.</p>
+<p>An array of bits each of which can be either on or off.</p>
 <p>Represented as an array of unsigned integers, on which we do modulo arithmetic to find the bit we are interested in.</p>
 <p>The bitmap can be parameterized with with the number of bits being managed.</p>
 <p>Copyright (c) 1992-1993 The Regents of the University of California. All rights reserved. See <a class="el" href="copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992-1993 The Regents of the University of California....">copyright.hpp</a> for copyright notice and limitation of liability and disclaimer of warranty provisions. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ac54bd5b32c8baefaf13608a9296a7564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54bd5b32c8baefaf13608a9296a7564">&#9670;&nbsp;</a></span>BITS_IN_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BITS_IN_BYTE&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0fdbf6c760ea9433bc7e94c9a775399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fdbf6c760ea9433bc7e94c9a775399">&#9670;&nbsp;</a></span>BITS_IN_WORD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BITS_IN_WORD&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

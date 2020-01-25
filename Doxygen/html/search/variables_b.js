@@ -1,13 +1,20 @@
 var searchData=
 [
-  ['name_1002',['name',['../class_directory_entry.html#a70e6f5a6c980e4468e9b6ac290d70337',1,'DirectoryEntry::name()'],['../class_open_file_table_entry.html#a22c0cbe0af82b41e37c15623912cb1c2',1,'OpenFileTableEntry::name()'],['../class_thread.html#a32541d9a8d903bab44aafc14921d18c6',1,'Thread::name()']]],
-  ['nbcopy_1003',['NbCopy',['../class_config.html#a8a5833ba309745904cc207c339a384ca',1,'Config']]],
-  ['next_1004',['next',['../class_list_element.html#a063a4107b8334640fa1192c358de1da0',1,'ListElement']]],
-  ['numdirect_1005',['NumDirect',['../class_config.html#a661ad1b3979399c45fb92171359f7a04',1,'Config']]],
-  ['numdirentries_1006',['NumDirEntries',['../class_config.html#a9733c063b146685b2e51a180f21b963c',1,'Config']]],
-  ['numphyspages_1007',['NumPhysPages',['../class_config.html#a3398f180ac1e0f80f76ba36fe7ffddb4',1,'Config']]],
-  ['numportdist_1008',['NumPortDist',['../class_config.html#ad26080a6862e28512665eaedc298880e',1,'Config']]],
-  ['numportloc_1009',['NumPortLoc',['../class_config.html#ab3721570210cc27a819e9718bb69e90d',1,'Config']]],
-  ['numthread_1010',['numthread',['../class_open_file_table_entry.html#ad0297859d25a0d9ed6146e0817df422a',1,'OpenFileTableEntry']]],
-  ['numthreads_1011',['numThreads',['../class_process.html#a810439de18dfeef8641750dec2003b9d',1,'Process']]]
+  ['m_1721',['M',['../classPageTableEntry.html#afa3d6d17b073d890dd42c3d2980bc142',1,'PageTableEntry']]],
+  ['magicnumber_1722',['MagicNumber',['../classConfig.html#ad5fa09c1a13bb21d0346964dd5528cdf',1,'Config']]],
+  ['magicsize_1723',['MagicSize',['../classConfig.html#ab7310f2f634fc3fe5cc30df08b5e9ba7',1,'Config']]],
+  ['mainmemory_1724',['mainMemory',['../classMachine.html#a07cbf6544fe46ae72a7fc37e0db71993',1,'Machine']]],
+  ['makedir_1725',['MakeDir',['../classConfig.html#aea74bdd333932b3de613641e50dde05f',1,'Config']]],
+  ['map_1726',['map',['../classBitMap.html#aaead652d4937378391587036e4853260',1,'BitMap']]],
+  ['mapped_5ffiles_1727',['mapped_files',['../classAddrSpace.html#a9eef6e4e265004d36d6ae5eefa4a0670',1,'AddrSpace']]],
+  ['maxfilenamesize_1728',['MaxFileNameSize',['../classConfig.html#ae68a68c355f110c8eb614820b7dd3782',1,'Config']]],
+  ['maxfilesize_1729',['MaxFileSize',['../classConfig.html#ac7c14799c0d1cf1aa42bcaf715276dd4',1,'Config']]],
+  ['maxnumpages_1730',['maxNumPages',['../classTranslationTable.html#ab75afe6982ba893f1889da67f446372f',1,'TranslationTable']]],
+  ['maxvirtpages_1731',['MaxVirtPages',['../classConfig.html#af07a20635da0fd6676291ed30573e855',1,'Config']]],
+  ['mips_5fendianess_1732',['mips_endianess',['../system_8cpp.html#adaf0e053beca3d82030608413c3448d8',1,'mips_endianess():&#160;system.cpp'],['../system_8hpp.html#adaf0e053beca3d82030608413c3448d8',1,'mips_endianess():&#160;system.cpp']]],
+  ['mmu_1733',['mmu',['../classMachine.html#a7d27a9b68f4b10a801169190790177ea',1,'Machine']]],
+  ['mode_1734',['mode',['../classACIA.html#a8bc50317f28cef3dcd1690d98f9441a9',1,'ACIA']]],
+  ['msgs_1735',['msgs',['../classSyscallError.html#a30f89737e9856a2d6e8b082b899def63',1,'SyscallError']]],
+  ['mutexget_1736',['mutexget',['../classDriverConsole.html#a7a40a84546b609fdcebf2828a108f3b1',1,'DriverConsole']]],
+  ['mutexput_1737',['mutexput',['../classDriverConsole.html#a82403313bbbeb80ee95c4e24ebf02731',1,'DriverConsole']]]
 ];

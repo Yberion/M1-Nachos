@@ -9,14 +9,14 @@
 <area shape="rect" id="node25" href="$synch_8hpp.html" title="Data structures for synchronizing threads." alt="" coords="1171,155,1293,181"/>
 <area shape="rect" id="node28" href="$addrspace_8hpp.html" title="Data structures to keep track of the memory resources of executing user programs (address spaces)." alt="" coords="707,453,853,480"/>
 <area shape="rect" id="node30" href="$filehdr_8hpp.html" title="Data structures for managing a disk file header." alt="" coords="195,453,317,480"/>
-<area shape="rect" id="node32" href="$phys_mem_8hpp.html" title="Data structures for the physical page management." alt="" coords="890,80,1014,107"/>
+<area shape="rect" id="node32" href="$physMem_8hpp.html" title="Data structures for the physical page management." alt="" coords="890,80,1014,107"/>
 <area shape="rect" id="node34" href="$elf32_8hpp.html" title="Data structures pertaining to the ELF32 1.1 file format specification." alt="" coords="94,229,207,256"/>
 <area shape="rect" id="node3" title=" " alt="" coords="145,379,210,405"/>
 <area shape="rect" id="node4" href="$disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="291,603,415,629"/>
 <area shape="rect" id="node5" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="723,1051,861,1077"/>
-<area shape="rect" id="node15" href="$translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="626,677,814,704"/>
+<area shape="rect" id="node15" href="$translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="626,677,814,704"/>
 <area shape="rect" id="node21" href="$mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="387,379,517,405"/>
-<area shape="rect" id="node22" href="$_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="541,379,672,405"/>
+<area shape="rect" id="node22" href="$ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="541,379,672,405"/>
 <area shape="rect" id="node23" href="$interrupt_8hpp.html" title="Data structures to emulate low&#45;level interrupt hardware." alt="" coords="623,752,769,779"/>
 <area shape="rect" id="node6" href="$utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="1133,901,1246,928"/>
 <area shape="rect" id="node7" title=" " alt="" coords="1583,1051,1647,1077"/>
@@ -32,5 +32,5 @@
 <area shape="rect" id="node27" href="$process_8hpp.html" title="A process keeps track of the resources used by a running Nachos program." alt="" coords="1155,304,1287,331"/>
 <area shape="rect" id="node29" title=" " alt="" coords="1048,304,1131,331"/>
 <area shape="rect" id="node31" href="$bitmap_8hpp.html" title="Data structures defining a bitmap." alt="" coords="622,528,743,555"/>
-<area shape="rect" id="node33" href="$swap_manager_8hpp.html" title="Data structures for the swap mamager." alt="" coords="848,155,995,181"/>
+<area shape="rect" id="node33" href="$swapManager_8hpp.html" title="Data structures for the swap mamager." alt="" coords="848,155,995,181"/>
 </map>

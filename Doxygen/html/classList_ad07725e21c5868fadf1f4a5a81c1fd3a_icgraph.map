@@ -1,0 +1,50 @@
+<map id="List::IsEmpty" name="List::IsEmpty">
+<area shape="rect" id="node1" title=" " alt="" coords="2723,684,2821,711"/>
+<area shape="rect" id="node2" href="$classList.html#a3d4805c0e563fd485273fc90a4b69e94" title=" " alt="" coords="2521,355,2655,381"/>
+<area shape="rect" id="node3" href="$classInterrupt.html#ab5adc6b35b5820fe525d8fcdf6229273" title=" " alt="" coords="2311,380,2453,407"/>
+<area shape="rect" id="node32" href="$classPhysicalMemManager.html#af06e533da57302ee434aee7a6e3b93a3" title="Print the contents of a page." alt="" coords="2112,533,2263,574"/>
+<area shape="rect" id="node35" href="$classList.html#a8cf5a283a4782ac19fcf00e6ac6a594f" title=" " alt="" coords="2519,557,2657,584"/>
+<area shape="rect" id="node36" href="$classStatistics.html#ade67669fb1436e69a215a780b1ade63e" title=" " alt="" coords="2532,456,2644,483"/>
+<area shape="rect" id="node40" href="$classList.html#a76887f875727e3e97e866e840d3051ad" title=" " alt="" coords="2523,608,2653,635"/>
+<area shape="rect" id="node41" href="$classList.html#a7c94145ed3ab4115dd2a87e25eeadc91" title=" " alt="" coords="2509,659,2667,685"/>
+<area shape="rect" id="node42" href="$classList.html#a87dc423c0664829bad9f39e79ccb1165" title=" " alt="" coords="2501,709,2675,736"/>
+<area shape="rect" id="node43" href="$classCondition.html#ab42f6d2dfb2d0de4bed4ed5032d4a8fc" title="Deallocate the condition." alt="" coords="2515,760,2661,787"/>
+<area shape="rect" id="node44" href="$classInterrupt.html#af33f88b80cf574d64f2fc3dae725b19b" title="initialize the interrupt simulation" alt="" coords="2522,811,2654,837"/>
+<area shape="rect" id="node45" href="$classLock.html#a7ab6d9485c8665bb3643710432882971" title="Delete a lock." alt="" coords="2541,861,2635,888"/>
+<area shape="rect" id="node46" href="$classPhysicalMemManager.html#a6605d109b70a5aec31702c36aeeb0aa5" title="initialize the memory manager" alt="" coords="2505,913,2671,954"/>
+<area shape="rect" id="node47" href="$classSemaphore.html#a633658a6fde276bffc912028725c6ade" title="Delete semaphore." alt="" coords="2503,979,2673,1005"/>
+<area shape="rect" id="node48" href="$classStatistics.html#ab68ede75479e44d5c35b78ec1284065b" title="initialyses everything to zero" alt="" coords="2514,1029,2662,1056"/>
+<area shape="rect" id="node4" href="$classInterrupt.html#ace54aece18806bae3614ebf9cc8c2991" title=" " alt="" coords="1928,435,2025,461"/>
+<area shape="rect" id="node19" href="$classInterrupt.html#a0c0405e4a84e84876f23fbdc3125b28c" title=" " alt="" coords="2125,207,2250,233"/>
+<area shape="rect" id="node5" href="$classThread.html#a187a4c1e62087511b69068220840244a" title="Put the thread to sleep and relinquish the processor." alt="" coords="1707,435,1809,461"/>
+<area shape="rect" id="node6" href="$classThread.html#a1e43c788c40e9783311c970bcea7239b" title="Finish the execution of the thread, and prepare its deallocation." alt="" coords="1523,435,1627,461"/>
+<area shape="rect" id="node7" href="$machine_8hpp.html#af31c84fcf9811fc72614abc2be3b5a44" title="Entry point into Nachos to handle user system calls and exceptions." alt="" coords="1349,283,1473,309"/>
+<area shape="rect" id="node18" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="1385,384,1436,411"/>
+<area shape="rect" id="node8" href="$classMachine.html#a0d6f63790c0568437b100171f61fd77f" title="Do a pending delayed load (modifying a reg)" alt="" coords="1128,460,1299,487"/>
+<area shape="rect" id="node9" href="$classMachine.html#ad70a015685c6e4bf705e4939551774aa" title=" " alt="" coords="585,396,748,423"/>
+<area shape="rect" id="node13" href="$classMMU.html#a28a50bd03688bc05aa15f93e4abf61a7" title=" " alt="" coords="797,320,917,347"/>
+<area shape="rect" id="node16" href="$classMMU.html#aa2ddea5dcd1648aba21ac1a75c79dc25" title=" " alt="" coords="965,435,1080,461"/>
+<area shape="rect" id="node17" href="$classMMU.html#a60227cf48e6778a4c66d8a13fd2f1539" title=" " alt="" coords="796,416,917,443"/>
+<area shape="rect" id="node10" href="$classMachine.html#a83444e06eb7a7c163a1b9c87a7062d43" title="Destructor. De&#45;allocate the data structures." alt="" coords="435,93,537,120"/>
+<area shape="rect" id="node11" href="$thread_8cpp.html#a014c1a99794f74ed079b0dde1f7efe8d" title=" " alt="" coords="240,68,387,95"/>
+<area shape="rect" id="node12" href="$classThread.html#ad6d5edb1a6d2a9effbb442883fc5b866" title="Sets&#45;up the thread simulator context : fills it with the appropriate." alt="" coords="5,68,192,95"/>
+<area shape="rect" id="node14" href="$exception_8cpp.html#a2f3d05f12e27c15623b3d6a0e3813677" title=" " alt="" coords="607,193,727,220"/>
+<area shape="rect" id="node15" href="$exception_8cpp.html#a467d8e83c5db03566d20ee929c7d7c1f" title=" " alt="" coords="609,257,724,284"/>
+<area shape="rect" id="node20" href="$classACIA.html#aa4403e0ff09a5830d31b5df1e887c021" title=" " alt="" coords="1895,181,2058,208"/>
+<area shape="rect" id="node21" href="$classACIA.html#a3ca71970fd89cff052b7e3dae8a013e5" title=" " alt="" coords="1889,232,2064,259"/>
+<area shape="rect" id="node22" href="$classInterrupt.html#a37cb8eeb7f715ff79ca3a7038bda3b04" title="de&#45;allocate data structures" alt="" coords="1909,131,2044,157"/>
+<area shape="rect" id="node23" href="$classDriverConsole.html#a7ca6fd9d7adf8fe0701bc96b6d2e068d" title="Send a char to the console device." alt="" coords="1675,144,1841,171"/>
+<area shape="rect" id="node26" href="$system_8hpp.html#a98f8ef9313691be2823b678050cf41ae" title="called before anything else" alt="" coords="1723,333,1793,360"/>
+<area shape="rect" id="node27" href="$classDriverConsole.html#ae066669b5fc7532ecca449a12dead3be" title="Receive e char from the console." alt="" coords="1675,195,1841,221"/>
+<area shape="rect" id="node29" href="$classThread.html#adbc2bfb172d2eff4b46882aade9eeb8a" title="Relinquish the CPU if any other thread is runnable." alt="" coords="1709,271,1807,297"/>
+<area shape="rect" id="node31" href="$classThread.html#a37d9edd3a1a776cbc27dedff949c9726" title="Deallocate a Thread." alt="" coords="1700,93,1816,120"/>
+<area shape="rect" id="node24" href="$drvConsole_8hpp.html#a0050b14775abe9c8ee3b3fb27e6ea37f" title=" " alt="" coords="1529,131,1620,157"/>
+<area shape="rect" id="node25" href="$classMachine.html#ad5958275a54dbc299b71ecdba7da0604" title=" " alt="" coords="1347,156,1475,183"/>
+<area shape="rect" id="node28" href="$drvConsole_8hpp.html#a7f63a9837150e7fb0f7aae4b0504bd67" title=" " alt="" coords="1530,181,1619,208"/>
+<area shape="rect" id="node30" href="$classThread.html#a42dd69262be8fb110887085ea1f02bc3" title="Wait for another thread to finish its execution." alt="" coords="1529,232,1621,259"/>
+<area shape="rect" id="node33" href="$classAddrSpace.html#acd3d2a68587b04ed5740e87895613821" title=" " alt="" coords="1897,587,2056,613"/>
+<area shape="rect" id="node34" href="$classAddrSpace.html#aad9c7caf4271badbf81367093e75f61e" title=" " alt="" coords="1889,536,2064,563"/>
+<area shape="rect" id="node37" href="$system_8hpp.html#ae89a123aad1c66a76c398b7af216aae4" title="Nachos is done." alt="" coords="2347,456,2417,483"/>
+<area shape="rect" id="node38" href="$system_8cpp.html#a4af81c878bd333a4a634387d7cca04ad" title=" " alt="" coords="2143,431,2231,457"/>
+<area shape="rect" id="node39" href="$classInterrupt.html#a0bf066222bb39da494919f08098217a5" title="The ready queue is empty, roll simulated time forward until the next interrupt." alt="" coords="2137,481,2237,508"/>
+</map>

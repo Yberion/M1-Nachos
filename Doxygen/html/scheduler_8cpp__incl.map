@@ -19,9 +19,9 @@
 <area shape="rect" id="node29" title=" " alt="" coords="1032,155,1115,181"/>
 <area shape="rect" id="node16" title=" " alt="" coords="1033,229,1098,256"/>
 <area shape="rect" id="node17" href="$disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="1150,677,1274,704"/>
-<area shape="rect" id="node20" href="$translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="633,528,821,555"/>
+<area shape="rect" id="node20" href="$translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="633,528,821,555"/>
 <area shape="rect" id="node23" href="$mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="1122,229,1251,256"/>
-<area shape="rect" id="node24" href="$_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="1276,229,1407,256"/>
+<area shape="rect" id="node24" href="$ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="1276,229,1407,256"/>
 <area shape="rect" id="node25" href="$interrupt_8hpp.html" title="Data structures to emulate low&#45;level interrupt hardware." alt="" coords="1099,603,1245,629"/>
 <area shape="rect" id="node19" href="$config_8hpp.html" title="Data structures for setting up the Nachos hardware and software configuration." alt="" coords="559,304,675,331"/>
 <area shape="rect" id="node21" href="$filesys_8hpp.html" title="Data structures to represent the Nachos file system." alt="" coords="528,379,653,405"/>

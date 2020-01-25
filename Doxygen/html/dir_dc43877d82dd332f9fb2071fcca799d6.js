@@ -10,17 +10,17 @@ var dir_dc43877d82dd332f9fb2071fcca799d6 =
     [ "msgerror.hpp", "msgerror_8hpp.html", "msgerror_8hpp" ],
     [ "process.cpp", "process_8cpp.html", null ],
     [ "process.hpp", "process_8hpp.html", [
-      [ "Process", "class_process.html", "class_process" ]
+      [ "Process", "classProcess.html", "classProcess" ]
     ] ],
     [ "scheduler.cpp", "scheduler_8cpp.html", null ],
     [ "scheduler.hpp", "scheduler_8hpp.html", [
-      [ "Scheduler", "class_scheduler.html", "class_scheduler" ]
+      [ "Scheduler", "classScheduler.html", "classScheduler" ]
     ] ],
     [ "synch.cpp", "synch_8cpp.html", null ],
     [ "synch.hpp", "synch_8hpp.html", [
-      [ "Semaphore", "class_semaphore.html", "class_semaphore" ],
-      [ "Lock", "class_lock.html", "class_lock" ],
-      [ "Condition", "class_condition.html", "class_condition" ]
+      [ "Semaphore", "classSemaphore.html", "classSemaphore" ],
+      [ "Lock", "classLock.html", "classLock" ],
+      [ "Condition", "classCondition.html", "classCondition" ]
     ] ],
     [ "system.cpp", "system_8cpp.html", "system_8cpp" ],
     [ "system.hpp", "system_8hpp.html", "system_8hpp" ],

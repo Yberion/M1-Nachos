@@ -131,83 +131,69 @@ public:
 class Machine
 {
 public:
-    Machine(bool debug); //!<  Constructor. Initialize the MIPS machine
-    //!<  for running user programs
-    ~Machine(); //!<  Destructor. De-allocate the data structures
+    Machine(bool debug); //!  Constructor. Initialize the MIPS machine for running user programs
+    ~Machine(); //!  Destructor. De-allocate the data structures
 
-// Routines callable by the Nachos kernel
-    void Run(); //!< Run a user program
+    void Run(); //! Routines callable by the Nachos kernel Run a user program
 
-    int32_t ReadIntRegister(int num); //!< Read the contents of an Integer CPU register
+    int32_t ReadIntRegister(int num); //! Read the contents of an Integer CPU register
 
-    void WriteIntRegister(int num, int32_t value);
-    //!< Store a value into an Integer CPU register
+    void WriteIntRegister(int num, int32_t value); //! Store a value into an Integer CPU register
 
-    int32_t ReadFPRegister(int num); //!< Read the contents of a floating point register
+    int32_t ReadFPRegister(int num); //! Read the contents of a floating point register
 
-    void WriteFPRegister(int num, int32_t value);
-    //!< store a value into a floating point register
+    void WriteFPRegister(int num, int32_t value); //! store a value into a floating point register
 
-    int8_t ReadCC(void); //!< Read floating point code condition register
-    void WriteCC(int8_t cc); //!< Write floating point code condition register
+    int8_t ReadCC(void); //! Read floating point code condition register
+    void WriteCC(int8_t cc); //! Write floating point code condition register
 
+    //! idle, kernel, user
     MachineStatus GetStatus()
     {
         return status;
-    } //!< idle, kernel, user
+    }
+
+    //! set the status of the machine (see MachineStatus)
     void SetStatus(MachineStatus st)
     {
         status = st;
     }
 
-// Routines internal to the machine simulation -- DO NOT call these 
+    // Routines internal to the machine simulation -- DO NOT call these
 
-    int OneInstruction(Instruction *instr);
-    //!< Run one instruction of a user program.
-    //!< Return the execution time of the instr (cycle)
-    void DelayedLoad(int nextReg, int nextVal);
-    //!< Do a pending delayed load (modifying a reg)
+    int OneInstruction(Instruction *instr); //! Run one instruction of a user program. Return the execution time of the instr (cycle)
+    void DelayedLoad(int nextReg, int nextVal); //! Do a pending delayed load (modifying a reg)
 
-    void RaiseException(ExceptionType which, int badVAddr);
-    //!< Trap to the Nachos kernel, because of a
-    //!< system call or other exception.
+    void RaiseException(ExceptionType which, int badVAddr); //! Trap to the Nachos kernel, because of a system call or other exception.
 
-    void Debugger(); //!< Invoke the user program debugger
-    void DumpState(); //!< Print the user CPU and memory state
+    void Debugger(); //! Invoke the user program debugger
+    void DumpState(); //! Print the user CPU and memory state
 
     // Data structures -- all of these are accessible to Nachos kernel code.
     // "public" for convenience.
     //
     // Note that *all* communication between the user program and the kernel
     // are in terms of these data structures.
-
     int32_t int_registers[NUM_INT_REGS]; //!< CPU Integer registers, for executing user programs
 
     int32_t float_registers[NUM_FP_REGS]; //!< Floating point general purpose registers
 
-    int8_t cc; /*!< Condition code. Note that
-     since only MIPS I FP instrs are implemented */
+    int8_t cc; //!< Condition code. Note that since only MIPS I FP instrs are implemented
 
-    int8_t *mainMemory; /*!< Physical memory to store user program,
-     code and data, while executing
-     */
+    int8_t *mainMemory; //!< Physical memory to store user program, code and data, while executing
 
-    MMU *mmu; /*!< Machine memory management unit */
-    ACIA *acia; /*!< ACIA Hardware */
-    Interrupt *interrupt; /*!< Interrupt management */
-    Disk *disk; /*!< Raw disk device (hardware) */
-    Disk *diskSwap; /*!< Swap raw disk device (hardware) */
-    Console *console; /*!< Console */
+    MMU *mmu; //!< Machine memory management unit
+    ACIA *acia; //!< ACIA Hardware
+    Interrupt *interrupt; //!< Interrupt management
+    Disk *disk; //!< Raw disk device (hardware)
+    Disk *diskSwap; //!< Swap raw disk device (hardware)
+    Console *console; //!< Console
 
 private:
     MachineStatus status; //!< idle, kernel mode, user mode
 
-    bool singleStep; /*!< Drop back into the debugger after each
-     simulated instruction
-     */
-    Time runUntilTime; /*!< Drop back into the debugger when simulated
-     time reaches this value
-     */
+    bool singleStep; //!< Drop back into the debugger after each simulated instruction
+    Time runUntilTime; //!< Drop back into the debugger when simulated time reaches this value
 };
 
 //! Entry point into Nachos to handle user system calls and exceptions.

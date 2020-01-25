@@ -1,5 +1,0 @@
-<map id="List::Mapcar" name="List::Mapcar">
-<area shape="rect" id="node1" title=" " alt="" coords="196,31,291,57"/>
-<area shape="rect" id="node2" href="$class_interrupt.html#a8f9a7ddd0f250de0dcd45fa5bfd80c11" title="Print interrupt state." alt="" coords="5,5,148,32"/>
-<area shape="rect" id="node3" href="$class_scheduler.html#ae82d9a7b506449c5a32d29b81e536076" title="Print contents of ready list." alt="" coords="19,56,134,83"/>
-</map>

@@ -1,7 +1,7 @@
 var interrupt_8hpp =
 [
-    [ "PendingInterrupt", "class_pending_interrupt.html", "class_pending_interrupt" ],
-    [ "Interrupt", "class_interrupt.html", "class_interrupt" ],
+    [ "PendingInterrupt", "classPendingInterrupt.html", "classPendingInterrupt" ],
+    [ "Interrupt", "classInterrupt.html", "classInterrupt" ],
     [ "IntStatus", "interrupt_8hpp.html#a9a61b6bd5154e67f1a6a0b1f2d4ac202", [
       [ "INTERRUPTS_OFF", "interrupt_8hpp.html#a9a61b6bd5154e67f1a6a0b1f2d4ac202aa4ef6f79ba8f5fc9a64a136ef9aed50f", null ],
       [ "INTERRUPTS_ON", "interrupt_8hpp.html#a9a61b6bd5154e67f1a6a0b1f2d4ac202aef5e0518574d8177015678092f010bde", null ]

@@ -34,28 +34,25 @@ class Lock;
 class DriverDisk
 {
 public:
+    //! Constructor. Initializes the disk driver by initializing the raw Disk.
     DriverDisk(char *sem_name, char *lock_name, Disk *theDisk);
-    // Constructor. Initializes the disk
-    // driver by initializing the raw Disk.
-    ~DriverDisk(); // Destructor. De-allocate the driver data
 
+    //! Destructor. De-allocate the driver data
+    ~DriverDisk();
+
+    //! Read a disk sector, returning only once the data is actually read.
     void ReadSector(int sectorNumber, char *data);
-    // Read/write a disk sector, returning
-    // only once the data is actually read
-    // or written.
+
+    //! write a disk sector, returning only once the data is actually written.
     void WriteSector(int sectorNumber, char *data);
 
-    void RequestDone(); // Called by the disk device interrupt
-    // handler, to signal that the
-    // current disk operation is complete.
+    //! Called by the disk device interrupt handler, to signal that the current disk operation is complete.
+    void RequestDone();
 
 private:
-    Semaphore *semaphore; /*!< To synchronize requesting thread
-     with the interrupt handler
-     */
-    Lock *lock; /*!< Mutual exclusion on the disk device
-     */
-    Disk *disk; /* The disk */
+    Semaphore *semaphore; //!< To synchronize requesting thread with the interrupt handler
+    Lock *lock; //!< Mutual exclusion on the disk device
+    Disk *disk; //!< The disk
 };
 
 void DiskRequestDone();

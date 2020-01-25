@@ -24,7 +24,7 @@ public:
 
     ~PageFaultManager();
 
-    ExceptionType PageFault(uint32_t virtualPage); //!< Page faut handler
+    ExceptionType PageFault(uint32_t virtualPage); //! Page faut handler
 };
 
 #endif // PFM_H

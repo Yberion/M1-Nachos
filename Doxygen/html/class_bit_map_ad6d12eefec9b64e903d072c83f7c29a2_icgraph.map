@@ -1,9 +1,0 @@
-<map id="BitMap::FetchFrom" name="BitMap::FetchFrom">
-<area shape="rect" id="node1" title=" " alt="" coords="571,56,705,83"/>
-<area shape="rect" id="node2" href="$class_file_system.html#aaf76918c6f0d24bc72aaa84625adfddf" title="List all the files in the file system." alt="" coords="401,5,518,32"/>
-<area shape="rect" id="node3" href="$class_open_file.html#ad4b5d26a169a7c22e6f27c1693adb1aa" title=" " alt="" coords="396,56,523,83"/>
-<area shape="rect" id="node6" href="$class_open_file_table_entry.html#a3db43ff60517c9949bb89a499c7304a8" title=" " alt="" coords="5,99,157,141"/>
-<area shape="rect" id="node4" href="$class_open_file.html#a2de8d2d805fef3510bfd2fdf46f683fa" title=" " alt="" coords="220,5,333,32"/>
-<area shape="rect" id="node5" href="$class_bit_map.html#a19052d41ba5a654c7e478582dffba20d" title=" " alt="" coords="211,56,343,83"/>
-<area shape="rect" id="node7" href="$class_directory.html#abf5550df42587bbc604c71441a4d12fc" title=" " alt="" coords="205,107,348,133"/>
-</map>

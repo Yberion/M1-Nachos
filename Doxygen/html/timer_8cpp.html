@@ -81,6 +81,8 @@ $(document).ready(function(){initNavTree('timer_8cpp.html',''); initResizable();
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">timer.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -107,9 +109,9 @@ Include dependency graph for timer.cpp:</div>
 <area shape="rect" title=" " alt="" coords="483,155,549,181"/>
 <area shape="rect" href="disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="202,603,326,629"/>
 <area shape="rect" href="copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="524,827,663,853"/>
-<area shape="rect" href="translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="453,379,641,405"/>
+<area shape="rect" href="translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="453,379,641,405"/>
 <area shape="rect" href="mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="174,155,303,181"/>
-<area shape="rect" href="_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="328,155,459,181"/>
+<area shape="rect" href="ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="328,155,459,181"/>
 <area shape="rect" href="interrupt_8hpp.html" title="Data structures to emulate low&#45;level interrupt hardware." alt="" coords="43,528,189,555"/>
 <area shape="rect" href="utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="605,677,718,704"/>
 <area shape="rect" title=" " alt="" coords="1147,827,1211,853"/>
@@ -124,13 +126,76 @@ Include dependency graph for timer.cpp:</div>
 <area shape="rect" href="objid_8hpp.html" title="Object identifier data structure." alt="" coords="1032,528,1141,555"/>
 </map>
 </div>
-</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a00014cca1225d8151135f9c5847b3638"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8cpp.html#a00014cca1225d8151135f9c5847b3638">TimerHandler</a> (int64_t arg)</td></tr>
+<tr class="memdesc:a00014cca1225d8151135f9c5847b3638"><td class="mdescLeft">&#160;</td><td class="mdescRight">dummy function because C++ does not allow pointers to member functions  <a href="timer_8cpp.html#a00014cca1225d8151135f9c5847b3638">More...</a><br /></td></tr>
+<tr class="separator:a00014cca1225d8151135f9c5847b3638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Routines to emulate a hardware timer device. </p>
 <p>A hardware timer generates a CPU interrupt every X milliseconds. This means it can be used for implementing time-slicing.</p>
 <p>We emulate a hardware timer by scheduling an interrupt to occur every time stats-&gt;totalTicks has increased by TIMER_TICKS.</p>
 <p>In order to introduce some randomness into time-slicing, if "doRandom" is set, then the interrupt is comes after a random number of ticks.</p>
 <p>Remember &ndash; nothing in here is part of Nachos. It is just an emulation for the hardware that Nachos is running on top of. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a00014cca1225d8151135f9c5847b3638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00014cca1225d8151135f9c5847b3638">&#9670;&nbsp;</a></span>TimerHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TimerHandler </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>dummy function because C++ does not allow pointers to member functions </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="timer_8cpp_a00014cca1225d8151135f9c5847b3638_cgraph.png" border="0" usemap="#timer_8cpp_a00014cca1225d8151135f9c5847b3638_cgraph" alt=""/></div>
+<map name="timer_8cpp_a00014cca1225d8151135f9c5847b3638_cgraph" id="timer_8cpp_a00014cca1225d8151135f9c5847b3638_cgraph">
+<area shape="rect" title="dummy function because C++ does not allow pointers to member functions" alt="" coords="5,108,104,135"/>
+<area shape="rect" href="classTimer.html#ad0198c93d207f2f303b3c5ff5cfd8ef4" title=" " alt="" coords="152,108,291,135"/>
+<area shape="rect" href="classInterrupt.html#ac403a14a9e41fa2b6dbd5c6056b87389" title="Print interrupt state." alt="" coords="362,69,493,96"/>
+<area shape="rect" href="classTimer.html#a2846bc4b6ef4ad61e3de987aee4d85ab" title="called internally when the hardware timer generates an interrupt" alt="" coords="339,145,516,172"/>
+<area shape="rect" href="utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="611,5,679,32"/>
+<area shape="rect" href="classStatistics.html#a77aec82b7adb8d795c850db96c82f5d8" title=" " alt="" coords="564,56,727,83"/>
+<area shape="rect" href="classList.html#a7c94145ed3ab4115dd2a87e25eeadc91" title=" " alt="" coords="585,107,706,133"/>
+<area shape="rect" href="utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="775,5,891,32"/>
+<area shape="rect" href="sysdep_8cpp.html#aac8c6c00a0e52489ecf8e8a6d9eba228" title="Return a pseudo&#45;random number." alt="" coords="610,157,681,184"/>
+<area shape="rect" href="sysdep_8cpp.html#ae23144bcbb8e3742b00eb687c36654d1" title=" " alt="" coords="809,157,856,184"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="timer_8cpp_a00014cca1225d8151135f9c5847b3638_icgraph.png" border="0" usemap="#timer_8cpp_a00014cca1225d8151135f9c5847b3638_icgraph" alt=""/></div>
+<map name="timer_8cpp_a00014cca1225d8151135f9c5847b3638_icgraph" id="timer_8cpp_a00014cca1225d8151135f9c5847b3638_icgraph">
+<area shape="rect" title="dummy function because C++ does not allow pointers to member functions" alt="" coords="192,56,291,83"/>
+<area shape="rect" href="classTimer.html#ad6f578a6b75f1073e7c6919cf8a507ee" title=" " alt="" coords="27,5,122,32"/>
+<area shape="rect" href="classTimer.html#ad0198c93d207f2f303b3c5ff5cfd8ef4" title=" " alt="" coords="5,56,144,83"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

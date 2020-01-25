@@ -1,0 +1,12 @@
+<map id="ConsoleReadPoll" name="ConsoleReadPoll">
+<area shape="rect" id="node1" title="Dummy function because C++ is weird about pointers to member functions." alt="" coords="5,56,127,83"/>
+<area shape="rect" id="node2" href="$classConsole.html#a099797597b7bd0b349518aac215fcb2f" title=" " alt="" coords="175,56,343,83"/>
+<area shape="rect" id="node3" href="$sysdep_8cpp.html#a6d54b43fc541aae810be164b449b331a" title=" " alt="" coords="423,5,489,32"/>
+<area shape="rect" id="node5" href="$sysdep_8cpp.html#a6140dcc97ab52a9406e6d3f5749fa43c" title="Read characters from an open file. Abort if read fails." alt="" coords="430,56,482,83"/>
+<area shape="rect" id="node6" href="$classInterrupt.html#ac403a14a9e41fa2b6dbd5c6056b87389" title="Print interrupt state." alt="" coords="391,107,521,133"/>
+<area shape="rect" id="node4" href="$classMachine.html#a9a832bbd1f8e897619e8cb3ae01282ff" title="Write floating point code condition register." alt="" coords="581,5,720,32"/>
+<area shape="rect" id="node7" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="617,56,685,83"/>
+<area shape="rect" id="node9" href="$classStatistics.html#a77aec82b7adb8d795c850db96c82f5d8" title=" " alt="" coords="569,107,732,133"/>
+<area shape="rect" id="node10" href="$classList.html#a7c94145ed3ab4115dd2a87e25eeadc91" title=" " alt="" coords="590,157,711,184"/>
+<area shape="rect" id="node8" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="780,56,896,83"/>
+</map>

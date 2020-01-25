@@ -1,7 +1,7 @@
 var machine_8hpp =
 [
-    [ "Instruction", "class_instruction.html", "class_instruction" ],
-    [ "Machine", "class_machine.html", "class_machine" ],
+    [ "Instruction", "classInstruction.html", "classInstruction" ],
+    [ "Machine", "classMachine.html", "classMachine" ],
     [ "BADVADDR_REG", "machine_8hpp.html#a92cecbbfaf35874142ad615025001383", null ],
     [ "HI_REG", "machine_8hpp.html#aa9dd7fff5e42209f9c454128bab332e1", null ],
     [ "LO_REG", "machine_8hpp.html#aa8479b3b0af20dd0cabd5f43a67a256b", null ],

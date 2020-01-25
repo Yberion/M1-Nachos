@@ -1,4 +1,7 @@
 <map id="userlib/libnachos.h" name="userlib/libnachos.h">
-<area shape="rect" id="node1" title="Function structures for programs." alt="" coords="5,5,136,32"/>
-<area shape="rect" id="node2" href="$libnachos_8c.html" title="Functions of our library, for user programs." alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node1" title="Function structures for programs." alt="" coords="147,5,278,32"/>
+<area shape="rect" id="node2" href="$hello_8c.html" title=" " alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="$shell_8c.html" title=" " alt="" coords="116,80,203,107"/>
+<area shape="rect" id="node4" href="$sort_8c.html" title=" " alt="" coords="227,80,308,107"/>
+<area shape="rect" id="node5" href="$libnachos_8c.html" title="Functions of our library, for user programs." alt="" coords="333,80,463,107"/>
 </map>

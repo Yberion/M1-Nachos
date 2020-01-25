@@ -9,12 +9,12 @@
 <area shape="rect" id="node20" href="$filesys_8hpp.html" title="Data structures to represent the Nachos file system." alt="" coords="1176,453,1301,480"/>
 <area shape="rect" id="node29" href="$scheduler_8hpp.html" title="Defines the Nachos scheduler." alt="" coords="2254,677,2397,704"/>
 <area shape="rect" id="node30" href="$msgerror_8hpp.html" title="Defines the data structure to store error messages during a syscall process." alt="" coords="979,80,1117,107"/>
-<area shape="rect" id="node31" href="$drv_console_8hpp.html" title="Data structures to export a synchronous interface to the console device." alt="" coords="398,379,549,405"/>
-<area shape="rect" id="node33" href="$drv_disk_8hpp.html" title="Data structures to export a synchronous interface to the raw disk device." alt="" coords="1947,453,2077,480"/>
-<area shape="rect" id="node34" href="$drv_a_c_i_a_8hpp.html" title="Data structures for the ACIA device driver interrupt_send and interrupt_receive are used in the intrr..." alt="" coords="726,155,861,181"/>
-<area shape="rect" id="node35" href="$swap_manager_8hpp.html" title="Data structures for the swap mamager." alt="" coords="1593,155,1740,181"/>
+<area shape="rect" id="node31" href="$drvConsole_8hpp.html" title="Data structures to export a synchronous interface to the console device." alt="" coords="398,379,549,405"/>
+<area shape="rect" id="node33" href="$drvDisk_8hpp.html" title="Data structures to export a synchronous interface to the raw disk device." alt="" coords="1947,453,2077,480"/>
+<area shape="rect" id="node34" href="$drvACIA_8hpp.html" title="Data structures for the ACIA device driver interrupt_send and interrupt_receive are used in the intrr..." alt="" coords="726,155,861,181"/>
+<area shape="rect" id="node35" href="$swapManager_8hpp.html" title="Data structures for the swap mamager." alt="" coords="1593,155,1740,181"/>
 <area shape="rect" id="node36" href="$pagefaultmanager_8hpp.html" title="Data structures for the page fault manager." alt="" coords="1643,80,1813,107"/>
-<area shape="rect" id="node37" href="$phys_mem_8hpp.html" title="Data structures for the physical page management." alt="" coords="1385,80,1509,107"/>
+<area shape="rect" id="node37" href="$physMem_8hpp.html" title="Data structures for the physical page management." alt="" coords="1385,80,1509,107"/>
 <area shape="rect" id="node38" href="$oftable_8hpp.html" title="Data structure used to synchronize operations on files." alt="" coords="1075,304,1202,331"/>
 <area shape="rect" id="node3" title=" " alt="" coords="119,976,180,1003"/>
 <area shape="rect" id="node4" title=" " alt="" coords="451,976,515,1003"/>
@@ -29,9 +29,9 @@
 <area shape="rect" id="node28" title=" " alt="" coords="827,229,909,256"/>
 <area shape="rect" id="node15" title=" " alt="" coords="1961,304,2026,331"/>
 <area shape="rect" id="node16" href="$disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="1697,528,1821,555"/>
-<area shape="rect" id="node19" href="$translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="1129,603,1317,629"/>
+<area shape="rect" id="node19" href="$translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="1129,603,1317,629"/>
 <area shape="rect" id="node22" href="$mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="1651,304,1781,331"/>
-<area shape="rect" id="node23" href="$_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="1805,304,1936,331"/>
+<area shape="rect" id="node23" href="$ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="1805,304,1936,331"/>
 <area shape="rect" id="node24" href="$interrupt_8hpp.html" title="Data structures to emulate low&#45;level interrupt hardware." alt="" coords="1813,677,1960,704"/>
 <area shape="rect" id="node21" href="$openfile_8hpp.html" title="Data structures to manipulate files." alt="" coords="1123,528,1255,555"/>
 <area shape="rect" id="node26" href="$synch_8hpp.html" title="Data structures for synchronizing threads." alt="" coords="875,528,997,555"/>

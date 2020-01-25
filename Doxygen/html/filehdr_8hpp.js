@@ -1,6 +1,6 @@
 var filehdr_8hpp =
 [
-    [ "FileHeader", "class_file_header.html", "class_file_header" ],
+    [ "FileHeader", "classFileHeader.html", "classFileHeader" ],
     [ "DatasInFirstSector", "filehdr_8hpp.html#a53a2870b7a3ca41a6ffd788e7a4290a3", null ],
     [ "DatasInSector", "filehdr_8hpp.html#a7f03607b51e725aac75c691ec571ee04", null ],
     [ "MAX_DATA_SECTORS", "filehdr_8hpp.html#a0ba33e9def2470a09c9feaab7fb1abf2", null ],

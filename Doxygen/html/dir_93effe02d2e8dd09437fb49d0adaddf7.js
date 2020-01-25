@@ -2,14 +2,15 @@ var dir_93effe02d2e8dd09437fb49d0adaddf7 =
 [
     [ "pagefaultmanager.cpp", "pagefaultmanager_8cpp.html", null ],
     [ "pagefaultmanager.hpp", "pagefaultmanager_8hpp.html", [
-      [ "PageFaultManager", "class_page_fault_manager.html", "class_page_fault_manager" ]
+      [ "PageFaultManager", "classPageFaultManager.html", "classPageFaultManager" ]
     ] ],
-    [ "physMem.cpp", "phys_mem_8cpp.html", null ],
-    [ "physMem.hpp", "phys_mem_8hpp.html", [
-      [ "PhysicalMemManager", "class_physical_mem_manager.html", "class_physical_mem_manager" ]
+    [ "physMem.cpp", "physMem_8cpp.html", null ],
+    [ "physMem.hpp", "physMem_8hpp.html", [
+      [ "PhysicalMemManager", "classPhysicalMemManager.html", "classPhysicalMemManager" ],
+      [ "tpr_c", "structPhysicalMemManager_1_1tpr__c.html", "structPhysicalMemManager_1_1tpr__c" ]
     ] ],
-    [ "swapManager.cpp", "swap_manager_8cpp.html", null ],
-    [ "swapManager.hpp", "swap_manager_8hpp.html", [
-      [ "SwapManager", "class_swap_manager.html", "class_swap_manager" ]
+    [ "swapManager.cpp", "swapManager_8cpp.html", null ],
+    [ "swapManager.hpp", "swapManager_8hpp.html", [
+      [ "SwapManager", "classSwapManager.html", "classSwapManager" ]
     ] ]
 ];

@@ -81,16 +81,13 @@ public:
 
 private:
     int fileno; //!< UNIX file number for simulated disk
-    VoidNoArgFunctionPtr handler; /*!< Interrupt handler, to be invoked
-     when any disk request finishes
-     */
+    VoidNoArgFunctionPtr handler; //!< Interrupt handler, to be invoked when any disk request finishes
     bool active; //!< Is a disk operation in progress?
     int lastSector; //!< The previous disk request
-    Time bufferInit; //!< When the track buffer started
-    //!< being loaded
+    Time bufferInit; //!< When the track buffer started being loaded
 
-    int TimeToSeek(int newSector, int *rotate); // time to get to the new track
-    int ModuloDiff(int to, Time from); // # sectors between to and from
+    int TimeToSeek(int newSector, int *rotate); //! time to get to the new track
+    int ModuloDiff(int to, Time from); //! # sectors between to and from
     void UpdateLast(int newSector);
 };
 

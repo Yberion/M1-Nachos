@@ -29,15 +29,23 @@ class DriverConsole;
 class DriverConsole
 {
 public:
-    DriverConsole(); // Constructor. Initialize the console driver
-    ~DriverConsole(); // Destructor. Data de-allocation
-    void PutString(char *buffer, int nbcar);
-    // Write a buffer on the console
-    void GetString(char *buffer, int nbcar);
-    // Read characters from the console
+    //! Constructor. Initialize the console driver
+    DriverConsole();
 
-    void GetAChar(); // Send a char to the console device
-    void PutAChar(); // Receive e char from the console
+    //! Destructor. Data de-allocation
+    ~DriverConsole();
+
+    //! Write a buffer on the console
+    void PutString(char *buffer, int nbcar);
+
+    //! Read characters from the console
+    void GetString(char *buffer, int nbcar);
+
+    //! Send a char to the console device
+    void GetAChar();
+
+    //! Receive e char from the console
+    void PutAChar();
 
 private:
     Lock *mutexget; //!< Lock on read operations

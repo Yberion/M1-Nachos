@@ -352,8 +352,7 @@ int FileSystem::Create(char *name, int initialSize)
  //	\param name the text name of the file to be opened (NOT MODIFIED)
  */
 //----------------------------------------------------------------------
-OpenFile*
-FileSystem::Open(char *name)
+OpenFile* FileSystem::Open(char *name)
 {
     OpenFile *openFile = NULL;
     int sector, dirsector;

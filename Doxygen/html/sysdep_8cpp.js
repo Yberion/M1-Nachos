@@ -12,6 +12,7 @@ var sysdep_8cpp =
     [ "Delay", "sysdep_8cpp.html#a20cfb7568775ef01bd7c43ee8051495c", null ],
     [ "Exit", "sysdep_8cpp.html#a8b9ef9330856c5a5a02f2d3ef0497e04", null ],
     [ "getpagesize", "sysdep_8cpp.html#a638757347bd9bf886b3d442b98033cf1", null ],
+    [ "InitSocketName", "sysdep_8cpp.html#a7628288e75059dd3641c94ee2442c78a", null ],
     [ "Lseek", "sysdep_8cpp.html#a5e24d90699a8caf5d5ecf0ea461050b4", null ],
     [ "OpenForReadWrite", "sysdep_8cpp.html#ab5cb68486a40540a7a3bd380e15d36d9", null ],
     [ "OpenForWrite", "sysdep_8cpp.html#a68068d69619efab5fe029a00b5114db9", null ],

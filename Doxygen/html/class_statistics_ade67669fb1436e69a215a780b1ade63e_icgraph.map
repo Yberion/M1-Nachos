@@ -1,7 +1,0 @@
-<map id="Statistics::Print" name="Statistics::Print">
-<area shape="rect" id="node1" title=" " alt="" coords="443,31,555,57"/>
-<area shape="rect" id="node2" href="$system_8hpp.html#ae89a123aad1c66a76c398b7af216aae4" title="Nachos is done." alt="" coords="325,31,395,57"/>
-<area shape="rect" id="node3" href="$system_8cpp.html#a4af81c878bd333a4a634387d7cca04ad" title=" " alt="" coords="183,5,271,32"/>
-<area shape="rect" id="node4" href="$class_interrupt.html#a0bf066222bb39da494919f08098217a5" title="Quit and print out stats." alt="" coords="177,56,277,83"/>
-<area shape="rect" id="node5" href="$machine_8hpp.html#af31c84fcf9811fc72614abc2be3b5a44" title="Entry point into Nachos to handle user system calls and exceptions." alt="" coords="5,56,129,83"/>
-</map>

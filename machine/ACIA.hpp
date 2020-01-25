@@ -106,17 +106,17 @@ public:
     void PutChar(char);
 
 private:
-    //! Output data register (filled-in by method PutChar)
+    //!< Output data register (filled-in by method PutChar)
     char outputRegister;
-    //! Input data register (read by method GetChar)
+    //!< Input data register (read by method GetChar)
     char inputRegister;
 
-    //! Emission state register.
+    //!< Emission state register.
     RegStatus inputStateRegister;
-    //! Reception state register.
+    //!< Reception state register.
     RegStatus outputStateRegister;
 
-    //! Working mode : Interrupt or Busy Waiting mode.
+    //!< Working mode : Interrupt or Busy Waiting mode.
     int mode;
 
     /*! The class ACIA_sysdep is in charge of the system dependent parts

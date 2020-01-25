@@ -1,7 +1,0 @@
-<map id="OpenFile::IsDir" name="OpenFile::IsDir">
-<area shape="rect" id="node1" title="return true if the file is a directory" alt="" coords="363,80,471,107"/>
-<area shape="rect" id="node2" href="$class_directory.html#a2525a4455b80a1ee2648319ab257037c" title=" " alt="" coords="191,29,294,56"/>
-<area shape="rect" id="node4" href="$class_file_system.html#a606ea080a2a0fe5e3be3c3f5b8f4e7bc" title="Open a file (UNIX open)" alt="" coords="179,80,306,107"/>
-<area shape="rect" id="node5" href="$class_open_file_table.html#ab0519dd960600e61b98d524281aaa882" title=" " alt="" coords="171,131,315,157"/>
-<area shape="rect" id="node3" href="$class_file_system.html#aaf76918c6f0d24bc72aaa84625adfddf" title="List all the files in the file system." alt="" coords="5,29,123,56"/>
-</map>

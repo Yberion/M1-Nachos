@@ -1,0 +1,10 @@
+<map id="Disk::Disk" name="Disk::Disk">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,88,159"/>
+<area shape="rect" id="node2" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="169,5,237,32"/>
+<area shape="rect" id="node4" href="$sysdep_8cpp.html#a5e24d90699a8caf5d5ecf0ea461050b4" title="Change the location within an open file. Abort on error." alt="" coords="174,56,231,83"/>
+<area shape="rect" id="node5" href="$sysdep_8cpp.html#ab5cb68486a40540a7a3bd380e15d36d9" title=" " alt="" coords="136,107,269,133"/>
+<area shape="rect" id="node6" href="$sysdep_8cpp.html#a68068d69619efab5fe029a00b5114db9" title=" " alt="" coords="151,157,254,184"/>
+<area shape="rect" id="node7" href="$sysdep_8cpp.html#a6140dcc97ab52a9406e6d3f5749fa43c" title="Read characters from an open file. Abort if read fails." alt="" coords="177,208,229,235"/>
+<area shape="rect" id="node8" href="$sysdep_8cpp.html#a423758a22b76ab4ab8dce5afd92b83cd" title="Write characters to an open file. Abort if write fails." alt="" coords="165,259,240,285"/>
+<area shape="rect" id="node3" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="317,5,433,32"/>
+</map>

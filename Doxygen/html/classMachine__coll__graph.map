@@ -1,0 +1,12 @@
+<map id="Machine" name="Machine">
+<area shape="rect" id="node1" title="Defines the simulated execution hardware." alt="" coords="298,924,437,1236"/>
+<area shape="rect" id="node2" href="$classMMU.html" title="Defines a MMU &#45; Memory Management Unit." alt="" coords="173,645,276,781"/>
+<area shape="rect" id="node3" href="$classTranslationTable.html" title="Defines the data structures used for address translation." alt="" coords="157,277,306,501"/>
+<area shape="rect" id="node4" href="$classPageTableEntry.html" title="Defines an entry in a simple translation table." alt="" coords="164,5,299,200"/>
+<area shape="rect" id="node5" href="$classConsole.html" title="Defines a hardware console device." alt="" coords="301,579,434,847"/>
+<area shape="rect" id="node6" href="$classInterrupt.html" title="Defines a low level interrupt hardware." alt="" coords="11,579,137,847"/>
+<area shape="rect" id="node7" href="$classList.html" title="Definition of a generic single&#45;linked &quot;list&quot;." alt="" coords="5,263,132,516"/>
+<area shape="rect" id="node8" href="$classACIA.html" title="Defines an ACIA (Asynchronous Communication Interface Adapter) device. An ACIA is an asynchronous dev..." alt="" coords="623,593,779,832"/>
+<area shape="rect" id="node9" href="$classACIA__sysdep.html" title="This class is used to simulate an Asynchronous Communicating Interface Adapter on top of Unix sockets..." alt="" coords="673,997,803,1163"/>
+<area shape="rect" id="node10" href="$classDisk.html" title="Defines a physical disk I/O device." alt="" coords="459,586,599,839"/>
+</map>

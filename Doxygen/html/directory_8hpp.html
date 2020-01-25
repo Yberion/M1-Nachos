@@ -130,26 +130,39 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_directory_entry.html">DirectoryEntry</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a directory entry.  <a href="class_directory_entry.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDirectoryEntry.html">DirectoryEntry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a directory entry.  <a href="classDirectoryEntry.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_directory.html">Directory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a UNIX-like "directory".  <a href="class_directory.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDirectory.html">Directory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a UNIX-like "directory".  <a href="classDirectory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a7d0de7fd0e9446e55bad5e854f1615e2"><td class="memItemLeft" align="right" valign="top"><a id="a7d0de7fd0e9446e55bad5e854f1615e2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FILENAMEMAXLEN</b>&#160;&#160;&#160;80</td></tr>
+<tr class="memitem:a7d0de7fd0e9446e55bad5e854f1615e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="directory_8hpp.html#a7d0de7fd0e9446e55bad5e854f1615e2">FILENAMEMAXLEN</a>&#160;&#160;&#160;80</td></tr>
 <tr class="separator:a7d0de7fd0e9446e55bad5e854f1615e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data structures to manage a UNIX-like directory of file names. </p>
-<pre class="fragment">A directory is a table of pairs: &lt;file name, sector #&gt;,
-</pre><p> giving the name of each file in the directory, and where to find its file header (the data structure describing where to find the file's data blocks) on disk.</p>
+<p>A directory is a table of pairs: &lt;file name, sector #&gt;, giving the name of each file in the directory, and where to find its file header (the data structure describing where to find the file's data blocks) on disk.</p>
 <p>We assume mutual exclusion is provided by the caller.</p>
 <p>Copyright (c) 1992-1993 The Regents of the University of California. All rights reserved. See <a class="el" href="copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992-1993 The Regents of the University of California....">copyright.hpp</a> for copyright notice and limitation of liability and disclaimer of warranty provisions. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a7d0de7fd0e9446e55bad5e854f1615e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d0de7fd0e9446e55bad5e854f1615e2">&#9670;&nbsp;</a></span>FILENAMEMAXLEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILENAMEMAXLEN&#160;&#160;&#160;80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

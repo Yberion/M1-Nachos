@@ -1,0 +1,52 @@
+<map id="Machine::Run" name="Machine::Run">
+<area shape="rect" id="node1" title="Destructor. De&#45;allocate the data structures." alt="" coords="5,157,108,184"/>
+<area shape="rect" id="node2" href="$classMachine.html#a08d36bd75e689830c73e307e1c7f7e28" title="Trap to the Nachos kernel, because of a system call or other exception." alt="" coords="1431,56,1565,83"/>
+<area shape="rect" id="node8" href="$classMachine.html#ad70a015685c6e4bf705e4939551774aa" title=" " alt="" coords="156,1019,319,1045"/>
+<area shape="rect" id="node37" href="$classInterrupt.html#a0c0405e4a84e84876f23fbdc3125b28c" title=" " alt="" coords="1217,512,1343,539"/>
+<area shape="rect" id="node3" href="$classInterrupt.html#a8f9a7ddd0f250de0dcd45fa5bfd80c11" title="Cause a context switch on return from an interrupt handler." alt="" coords="1665,56,1807,83"/>
+<area shape="rect" id="node6" href="$classMachine.html#a4e4dee4ed66da41de9bbebb161efd06f" title="Invoke the user program debugger." alt="" coords="1664,5,1808,32"/>
+<area shape="rect" id="node7" href="$classStatistics.html#a77aec82b7adb8d795c850db96c82f5d8" title=" " alt="" coords="1655,208,1817,235"/>
+<area shape="rect" id="node4" href="$classList.html#a78ed6c19ad70cd535e3b84709e2c1f4d" title=" " alt="" coords="1877,81,1972,108"/>
+<area shape="rect" id="node5" href="$interrupt_8cpp.html#a628c1bfc50e9ffdb3082f8246023e990" title=" " alt="" coords="1877,31,1973,57"/>
+<area shape="rect" id="node9" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="1867,689,1983,716"/>
+<area shape="rect" id="node10" href="$classInstruction.html#acbdc34d695f5fa324a8418ef7a916814" title="Decode the binary representation of the instruction." alt="" coords="405,1475,539,1501"/>
+<area shape="rect" id="node11" href="$classMachine.html#a11fda0ddf1f16d8b1a06f75d1ab5b8a1" title="Run one instruction of a user program. Return the execution time of the instr (cycle)" alt="" coords="1659,335,1813,361"/>
+<area shape="rect" id="node12" href="$mipssim_8cpp.html#a08794516cd8a91c4d1708dafcd89a989" title=" " alt="" coords="429,1525,515,1552"/>
+<area shape="rect" id="node13" href="$classThread.html#a83fedc586ce3718a4a2322f497dcfe2d" title="Returns the thread name." alt="" coords="1218,563,1342,589"/>
+<area shape="rect" id="node14" href="$classThread.html#ade294fd013100034bebd745d8ffb1f94" title="Returns the process owner." alt="" coords="1411,1069,1585,1096"/>
+<area shape="rect" id="node15" href="$classProcessStat.html#a9b8ddf7bc3df341a9f46dc987368fe9e" title=" " alt="" coords="367,1576,577,1603"/>
+<area shape="rect" id="node16" href="$mipssim_8cpp.html#aced37fd50630f731c8c1b83dea978750" title=" " alt="" coords="449,1627,495,1653"/>
+<area shape="rect" id="node17" href="$classMachine.html#a0d6f63790c0568437b100171f61fd77f" title="Do a pending delayed load (modifying a reg)" alt="" coords="387,1019,557,1045"/>
+<area shape="rect" id="node23" href="$classMMU.html#a28a50bd03688bc05aa15f93e4abf61a7" title=" " alt="" coords="1021,1373,1141,1400"/>
+<area shape="rect" id="node29" href="$classMMU.html#a60227cf48e6778a4c66d8a13fd2f1539" title=" " alt="" coords="810,1221,931,1248"/>
+<area shape="rect" id="node49" href="$mipssim_8cpp.html#a3b47e04b315921b67f64caeb71e58165" title=" " alt="" coords="429,259,515,285"/>
+<area shape="rect" id="node50" href="$mipssim_8cpp.html#a1afe7dc150d01782aacc1c90fea93e0d" title="Retrieve the register number referred to in an instruction." alt="" coords="429,309,515,336"/>
+<area shape="rect" id="node18" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="1702,867,1770,893"/>
+<area shape="rect" id="node19" href="$exception_8cpp.html#a99f08ed6ac27d846d337b47e8762d90e" title="Entry point into Nachos to handle user system calls and exceptions." alt="" coords="625,867,749,893"/>
+<area shape="rect" id="node22" href="$classInterrupt.html#a0bf066222bb39da494919f08098217a5" title="The ready queue is empty, roll simulated time forward until the next interrupt." alt="" coords="821,512,921,539"/>
+<area shape="rect" id="node20" href="$classObjId.html#a7695f93d7317c66d2beabcf0ba7976dd" title=" " alt="" coords="810,816,931,843"/>
+<area shape="rect" id="node21" href="$classOpenFileTable.html#a03e66618c4c336c7292ca9496bacf27b" title=" " alt="" coords="797,917,944,944"/>
+<area shape="rect" id="node32" href="$classThread.html#adbc2bfb172d2eff4b46882aade9eeb8a" title="Relinquish the CPU if any other thread is runnable." alt="" coords="821,689,920,716"/>
+<area shape="rect" id="node24" href="$classProcessStat.html#acbaa82f6a60394aca2db1e7e179a2a71" title=" " alt="" coords="1391,1120,1605,1147"/>
+<area shape="rect" id="node26" href="$machine_8cpp.html#ae92c9de378987810550aa69b875e807f" title=" " alt="" coords="1233,1221,1327,1248"/>
+<area shape="rect" id="node27" href="$classMMU.html#aa2ddea5dcd1648aba21ac1a75c79dc25" title=" " alt="" coords="1223,1171,1337,1197"/>
+<area shape="rect" id="node28" href="$machine_8cpp.html#a8885fa023be04c6cfb42cfbfd3e46942" title=" " alt="" coords="1233,1272,1327,1299"/>
+<area shape="rect" id="node25" href="$classStatistics.html#a8994065e3484986acd4db5eb2cb8e993" title="prints collected statistics, including process statistics" alt="" coords="1653,791,1819,817"/>
+<area shape="rect" id="node30" href="$machine_8cpp.html#a5be8752c2463241cc0f26763b7d4ee03" title=" " alt="" coords="1023,1272,1139,1299"/>
+<area shape="rect" id="node31" href="$machine_8cpp.html#ac0e33220f6af970b9d93fecea248fffe" title=" " alt="" coords="1023,1323,1139,1349"/>
+<area shape="rect" id="node33" href="$classScheduler.html#a0fa7daec8d1058a8e6b5cbfbdd09555e" title="Dequeue first thread of the ready list, if any, and return thread." alt="" coords="992,613,1169,640"/>
+<area shape="rect" id="node34" href="$classScheduler.html#a18e89ab130a40c423da77673f12585d7" title="Inserts a thread in the ready list." alt="" coords="999,765,1162,792"/>
+<area shape="rect" id="node35" href="$classInterrupt.html#a37cb8eeb7f715ff79ca3a7038bda3b04" title="de&#45;allocate data structures" alt="" coords="1013,715,1148,741"/>
+<area shape="rect" id="node48" href="$classScheduler.html#a797a0a7e133b94109bbb6cf65455caf7" title="Causes a context switch to nextThread." alt="" coords="1010,664,1151,691"/>
+<area shape="rect" id="node36" href="$classInterrupt.html#ad83e8709b967745b6614ea7f75c446d7" title="Check if an interrupt is supposed to occur now." alt="" coords="1423,664,1573,691"/>
+<area shape="rect" id="node38" href="$classInterrupt.html#ab5adc6b35b5820fe525d8fcdf6229273" title=" " alt="" coords="1427,512,1569,539"/>
+<area shape="rect" id="node39" href="$classMachine.html#a9a832bbd1f8e897619e8cb3ae01282ff" title="Write floating point code condition register." alt="" coords="1667,385,1805,412"/>
+<area shape="rect" id="node42" href="$classMachine.html#ad9c1948a2dadfd2ddb7d432b2443e884" title="set the status of the machine (see MachineStatus)" alt="" coords="1667,436,1805,463"/>
+<area shape="rect" id="node46" href="$classProcessStat.html#a496418b7c1e7fd9e5f6efa38ae2d802f" title="initialises everything to zero and initialises the name of the process" alt="" coords="1399,563,1597,589"/>
+<area shape="rect" id="node47" href="$classProcessStat.html#a91c28f9b6cad27a4caec93437d269a64" title=" " alt="" coords="1407,613,1589,640"/>
+<area shape="rect" id="node40" href="$classStatistics.html#a62314e3ac0231266d1bc324f062d8d09" title=" " alt="" coords="1657,740,1815,767"/>
+<area shape="rect" id="node41" href="$classList.html#ad07725e21c5868fadf1f4a5a81c1fd3a" title=" " alt="" coords="1687,487,1785,513"/>
+<area shape="rect" id="node43" href="$classStatistics.html#a417477bec1fe7a42334d4d32b3f3d6a4" title=" " alt="" coords="1655,537,1817,564"/>
+<area shape="rect" id="node44" href="$classList.html#a7c94145ed3ab4115dd2a87e25eeadc91" title=" " alt="" coords="1675,588,1797,615"/>
+<area shape="rect" id="node45" href="$classList.html#a87dc423c0664829bad9f39e79ccb1165" title=" " alt="" coords="1669,639,1803,665"/>
+</map>

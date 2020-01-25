@@ -35,6 +35,7 @@ class DriverACIA
 private:
     char send_buffer[BUFFER_SIZE]; //!< system buffer for emission
     char receive_buffer[BUFFER_SIZE]; //!< system buffer for reception
+
     Semaphore *send_sema; //!< semaphore used to synchronize emission requests
     Semaphore *receive_sema; //!< semaphore used to synchronize reception requests
 

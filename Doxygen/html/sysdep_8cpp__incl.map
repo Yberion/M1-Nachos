@@ -18,7 +18,7 @@
 <area shape="rect" id="node33" title=" " alt="" coords="2009,80,2067,107"/>
 <area shape="rect" id="node34" title=" " alt="" coords="2091,80,2156,107"/>
 <area shape="rect" id="node35" title=" " alt="" coords="2180,80,2267,107"/>
-<area shape="rect" id="node4" href="$translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="643,379,831,405"/>
+<area shape="rect" id="node4" href="$translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="643,379,831,405"/>
 <area shape="rect" id="node11" href="$filesys_8hpp.html" title="Data structures to represent the Nachos file system." alt="" coords="858,304,983,331"/>
 <area shape="rect" id="node5" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="795,827,934,853"/>
 <area shape="rect" id="node6" href="$utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="536,677,649,704"/>
@@ -33,5 +33,5 @@
 <area shape="rect" id="node19" href="$disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="311,603,435,629"/>
 <area shape="rect" id="node20" href="$stats_8hpp.html" title="Data structures for gathering statistics about Nachos performance." alt="" coords="592,155,703,181"/>
 <area shape="rect" id="node21" href="$mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="283,155,412,181"/>
-<area shape="rect" id="node22" href="$_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="437,155,567,181"/>
+<area shape="rect" id="node22" href="$ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="437,155,567,181"/>
 </map>

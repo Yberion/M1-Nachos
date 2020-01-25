@@ -61,7 +61,7 @@ private:
     Listint *queue; //!< threads waiting in P() for the value to be > 0
 
 public:
-    //! Object type, for validity checks during system calls (must be the first public field)
+    //!< Object type, for validity checks during system calls (must be the first public field)
     ObjectType type;
 };
 

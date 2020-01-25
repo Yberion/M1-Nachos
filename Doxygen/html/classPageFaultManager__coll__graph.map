@@ -1,0 +1,3 @@
+<map id="PageFaultManager" name="PageFaultManager">
+<area shape="rect" id="node1" title="Defines the page fault manager This object manages the page fault of the simulated MIPS processor for..." alt="" coords="5,5,164,112"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="vm/swapManager.hpp" name="vm/swapManager.hpp">
+<area shape="rect" id="node1" title="Data structures for the swap mamager." alt="" coords="371,5,518,32"/>
+<area shape="rect" id="node2" href="$physMem_8hpp.html" title="Data structures for the physical page management." alt="" coords="333,80,457,107"/>
+<area shape="rect" id="node4" href="$system_8cpp.html" title="Nachos initialization and cleanup routines." alt="" coords="5,155,135,181"/>
+<area shape="rect" id="node6" href="$pagefaultmanager_8cpp.html" title=" " alt="" coords="632,155,801,181"/>
+<area shape="rect" id="node8" href="$swapManager_8cpp.html" title="Routines of the swap manager." alt="" coords="533,80,679,107"/>
+<area shape="rect" id="node3" href="$addrspace_8cpp.html" title="Routines to manage address spaces (executing user programs)." alt="" coords="159,155,306,181"/>
+<area shape="rect" id="node5" href="$mmu_8cpp.html" title="Routines to translate virtual addresses to physical addresses." alt="" coords="331,155,460,181"/>
+<area shape="rect" id="node7" href="$physMem_8cpp.html" title="Routines for the physical page management." alt="" coords="484,155,608,181"/>
+</map>

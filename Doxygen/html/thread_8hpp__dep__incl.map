@@ -2,8 +2,8 @@
 <area shape="rect" id="node1" title="Data structures for managing threads." alt="" coords="2436,5,2559,32"/>
 <area shape="rect" id="node2" href="$synch_8hpp.html" title="Data structures for synchronizing threads." alt="" coords="1293,80,1414,107"/>
 <area shape="rect" id="node8" href="$system_8cpp.html" title="Nachos initialization and cleanup routines." alt="" coords="1394,304,1523,331"/>
-<area shape="rect" id="node20" href="$swap_manager_8cpp.html" title="Routines of the swap manager." alt="" coords="5,229,152,256"/>
-<area shape="rect" id="node25" href="$phys_mem_8hpp.html" title="Data structures for the physical page management." alt="" coords="1931,155,2055,181"/>
+<area shape="rect" id="node20" href="$swapManager_8cpp.html" title="Routines of the swap manager." alt="" coords="5,229,152,256"/>
+<area shape="rect" id="node25" href="$physMem_8hpp.html" title="Data structures for the physical page management." alt="" coords="1931,155,2055,181"/>
 <area shape="rect" id="node27" href="$pagefaultmanager_8cpp.html" title=" " alt="" coords="2273,229,2442,256"/>
 <area shape="rect" id="node30" href="$thread_8cpp.html" title="Routines to manage threads." alt="" coords="2236,155,2359,181"/>
 <area shape="rect" id="node31" href="$fsmisc_8cpp.html" title="Miscellaneous routines for the Nachos file system." alt="" coords="2485,80,2611,107"/>
@@ -13,27 +13,27 @@
 <area shape="rect" id="node35" href="$interrupt_8cpp.html" title="Routines to simulate hardware interrupts." alt="" coords="3091,80,3237,107"/>
 <area shape="rect" id="node36" href="$mipssim_8cpp.html" title="simulate a MIPS R2/3000 processor" alt="" coords="3261,80,3411,107"/>
 <area shape="rect" id="node37" href="$translationtable_8cpp.html" title="Data structures for address translation." alt="" coords="3435,80,3623,107"/>
-<area shape="rect" id="node3" href="$drv_a_c_i_a_8cpp.html" title="Routines of the ACIA device driver." alt="" coords="1286,229,1421,256"/>
+<area shape="rect" id="node3" href="$drvACIA_8cpp.html" title="Routines of the ACIA device driver." alt="" coords="1286,229,1421,256"/>
 <area shape="rect" id="node4" href="$process_8hpp.html" title="A process keeps track of the resources used by a running Nachos program." alt="" coords="2079,155,2211,181"/>
-<area shape="rect" id="node6" href="$drv_a_c_i_a_8hpp.html" title="Data structures for the ACIA device driver interrupt_send and interrupt_receive are used in the intrr..." alt="" coords="1391,155,1526,181"/>
+<area shape="rect" id="node6" href="$drvACIA_8hpp.html" title="Data structures for the ACIA device driver interrupt_send and interrupt_receive are used in the intrr..." alt="" coords="1391,155,1526,181"/>
 <area shape="rect" id="node7" href="$exception_8cpp.html" title="Entry point into the Nachos kernel ." alt="" coords="1134,304,1277,331"/>
 <area shape="rect" id="node10" href="$console_8hpp.html" title="Data structures to simulate the behavior of a terminal." alt="" coords="1065,155,1210,181"/>
-<area shape="rect" id="node11" href="$drv_console_8hpp.html" title="Data structures to export a synchronous interface to the console device." alt="" coords="838,229,989,256"/>
-<area shape="rect" id="node16" href="$drv_disk_8hpp.html" title="Data structures to export a synchronous interface to the raw disk device." alt="" coords="612,155,743,181"/>
+<area shape="rect" id="node11" href="$drvConsole_8hpp.html" title="Data structures to export a synchronous interface to the console device." alt="" coords="838,229,989,256"/>
+<area shape="rect" id="node16" href="$drvDisk_8hpp.html" title="Data structures to export a synchronous interface to the raw disk device." alt="" coords="612,155,743,181"/>
 <area shape="rect" id="node21" href="$oftable_8hpp.html" title="Data structure used to synchronize operations on files." alt="" coords="177,229,303,256"/>
 <area shape="rect" id="node24" href="$addrspace_8cpp.html" title="Routines to manage address spaces (executing user programs)." alt="" coords="1749,229,1896,256"/>
 <area shape="rect" id="node29" href="$synch_8cpp.html" title="Routines for synchronizing threads." alt="" coords="415,155,537,181"/>
 <area shape="rect" id="node5" href="$process_8cpp.html" title="Routines to manage processes." alt="" coords="2466,229,2598,256"/>
-<area shape="rect" id="node9" href="$_a_c_i_a__sysdep_8cpp.html" title="Routines to simulate the system dependant part of an ACIA device." alt="" coords="1547,229,1725,256"/>
+<area shape="rect" id="node9" href="$ACIA__sysdep_8cpp.html" title="Routines to simulate the system dependant part of an ACIA device." alt="" coords="1547,229,1725,256"/>
 <area shape="rect" id="node15" href="$console_8cpp.html" title="Routines to simulate a serial port to a console device." alt="" coords="1065,229,1210,256"/>
-<area shape="rect" id="node12" href="$drv_console_8cpp.html" title="Routines to synchronously access the console." alt="" coords="713,304,863,331"/>
+<area shape="rect" id="node12" href="$drvConsole_8cpp.html" title="Routines to synchronously access the console." alt="" coords="713,304,863,331"/>
 <area shape="rect" id="node13" href="$msgerror_8cpp.html" title="Data structure to store the last syscall error message." alt="" coords="887,304,1025,331"/>
 <area shape="rect" id="node14" href="$machine_8cpp.html" title="Routines to simulate the execution of user programs." alt="" coords="531,304,680,331"/>
-<area shape="rect" id="node17" href="$drv_disk_8cpp.html" title="Routines to synchronously access the disk." alt="" coords="536,229,667,256"/>
+<area shape="rect" id="node17" href="$drvDisk_8cpp.html" title="Routines to synchronously access the disk." alt="" coords="536,229,667,256"/>
 <area shape="rect" id="node18" href="$filehdr_8cpp.html" title="Routines for managing the disk file header." alt="" coords="691,229,813,256"/>
-<area shape="rect" id="node19" href="$openfile_8cpp.html" title="Routines to manage an open Nachos file" alt="" coords="379,229,511,256"/>
+<area shape="rect" id="node19" href="$openfile_8cpp.html" title="Routines to manage an open Nachos file." alt="" coords="379,229,511,256"/>
 <area shape="rect" id="node22" href="$filesys_8cpp.html" title="Routines to manage the overall operation of the file system." alt="" coords="103,304,228,331"/>
 <area shape="rect" id="node23" href="$oftable_8cpp.html" title="Routines for managing the open file table." alt="" coords="253,304,379,331"/>
 <area shape="rect" id="node26" href="$mmu_8cpp.html" title="Routines to translate virtual addresses to physical addresses." alt="" coords="2119,229,2249,256"/>
-<area shape="rect" id="node28" href="$phys_mem_8cpp.html" title="Routines for the physical page management." alt="" coords="1971,229,2095,256"/>
+<area shape="rect" id="node28" href="$physMem_8cpp.html" title="Routines for the physical page management." alt="" coords="1971,229,2095,256"/>
 </map>

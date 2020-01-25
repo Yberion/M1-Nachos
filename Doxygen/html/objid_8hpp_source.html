@@ -96,37 +96,54 @@ $(document).ready(function(){initNavTree('objid_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_obj_id.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_obj_id.html">ObjId</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span> last_id;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  map&lt;const int32_t,void *&gt; ids;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">//----------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">// ObjId::ObjId</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span>  <span class="comment">//----------------------------------------------------------------------  </span></div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_obj_id.html#aad3d714ee57757ed3754a58edc9ad4a9">   55</a></span>&#160;  <a class="code" href="class_obj_id.html#aad3d714ee57757ed3754a58edc9ad4a9">ObjId</a>() {last_id = 3; <span class="comment">/* 0, 1 and 2 used for file descriptors */</span>}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  ~<a class="code" href="class_obj_id.html">ObjId</a>() {ids.clear();};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  int32_t AddObject(<span class="keywordtype">void</span> *ptr) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    int32_t res = last_id++;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ids[res] = ptr;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> *SearchObject(int32_t <span class="keywordtype">id</span>) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> ids[id];</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">void</span> RemoveObject(int32_t <span class="keywordtype">id</span>) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ids.erase(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // OBJID_H</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classObjId.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classObjId.html">ObjId</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classObjId.html#ad2ed3f5ce6757596c645ede16bc383cf">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classObjId.html#ad2ed3f5ce6757596c645ede16bc383cf">last_id</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classObjId.html#a8c60fa925b3a0aa34fdbee53533e26c9">   38</a></span>&#160;    map&lt;const int32_t, void*&gt; <a class="code" href="classObjId.html#a8c60fa925b3a0aa34fdbee53533e26c9">ids</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// ObjId::ObjId</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"></span>    <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classObjId.html#aad3d714ee57757ed3754a58edc9ad4a9">   56</a></span>&#160;    <a class="code" href="classObjId.html#aad3d714ee57757ed3754a58edc9ad4a9">ObjId</a>()</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        last_id = 3; <span class="comment">/* 0, 1 and 2 used for file descriptors */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classObjId.html#a0f8792b2ba744a32a60f61e6d7f00c41">   60</a></span>&#160;    <a class="code" href="classObjId.html#a0f8792b2ba744a32a60f61e6d7f00c41">~ObjId</a>()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        ids.clear();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classObjId.html#a7695f93d7317c66d2beabcf0ba7976dd">   65</a></span>&#160;    int32_t <a class="code" href="classObjId.html#a7695f93d7317c66d2beabcf0ba7976dd">AddObject</a>(<span class="keywordtype">void</span> *ptr)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        int32_t res = last_id++;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        ids[res] = ptr;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classObjId.html#ab9bd5ffeb6c5dec3054bc2355b9c64a2">   71</a></span>&#160;    <span class="keywordtype">void</span>* <a class="code" href="classObjId.html#ab9bd5ffeb6c5dec3054bc2355b9c64a2">SearchObject</a>(int32_t <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> ids[id];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classObjId.html#a34b538263df6e2494b2f9d054aac5618">   75</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classObjId.html#a34b538263df6e2494b2f9d054aac5618">RemoveObject</a>(int32_t <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        ids.erase(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif // OBJID_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_obj_id_html"><div class="ttname"><a href="class_obj_id.html">ObjId</a></div><div class="ttdoc">Definition of object identifiers.</div><div class="ttdef"><b>Definition:</b> objid.hpp:34</div></div>
-<div class="ttc" id="aclass_obj_id_html_aad3d714ee57757ed3754a58edc9ad4a9"><div class="ttname"><a href="class_obj_id.html#aad3d714ee57757ed3754a58edc9ad4a9">ObjId::ObjId</a></div><div class="ttdeci">ObjId()</div><div class="ttdef"><b>Definition:</b> objid.hpp:55</div></div>
+<div class="ttc" id="aclassObjId_html_a7695f93d7317c66d2beabcf0ba7976dd"><div class="ttname"><a href="classObjId.html#a7695f93d7317c66d2beabcf0ba7976dd">ObjId::AddObject</a></div><div class="ttdeci">int32_t AddObject(void *ptr)</div><div class="ttdef"><b>Definition:</b> objid.hpp:65</div></div>
+<div class="ttc" id="aclassObjId_html_ab9bd5ffeb6c5dec3054bc2355b9c64a2"><div class="ttname"><a href="classObjId.html#ab9bd5ffeb6c5dec3054bc2355b9c64a2">ObjId::SearchObject</a></div><div class="ttdeci">void * SearchObject(int32_t id)</div><div class="ttdef"><b>Definition:</b> objid.hpp:71</div></div>
+<div class="ttc" id="aclassObjId_html"><div class="ttname"><a href="classObjId.html">ObjId</a></div><div class="ttdoc">Definition of object identifiers.</div><div class="ttdef"><b>Definition:</b> objid.hpp:34</div></div>
+<div class="ttc" id="aclassObjId_html_a0f8792b2ba744a32a60f61e6d7f00c41"><div class="ttname"><a href="classObjId.html#a0f8792b2ba744a32a60f61e6d7f00c41">ObjId::~ObjId</a></div><div class="ttdeci">~ObjId()</div><div class="ttdef"><b>Definition:</b> objid.hpp:60</div></div>
 <div class="ttc" id="alist_8hpp_html"><div class="ttname"><a href="list_8hpp.html">list.hpp</a></div><div class="ttdoc">Data structures to manage LISP-like lists.</div></div>
+<div class="ttc" id="aclassObjId_html_aad3d714ee57757ed3754a58edc9ad4a9"><div class="ttname"><a href="classObjId.html#aad3d714ee57757ed3754a58edc9ad4a9">ObjId::ObjId</a></div><div class="ttdeci">ObjId()</div><div class="ttdef"><b>Definition:</b> objid.hpp:56</div></div>
+<div class="ttc" id="aclassObjId_html_ad2ed3f5ce6757596c645ede16bc383cf"><div class="ttname"><a href="classObjId.html#ad2ed3f5ce6757596c645ede16bc383cf">ObjId::last_id</a></div><div class="ttdeci">int last_id</div><div class="ttdef"><b>Definition:</b> objid.hpp:37</div></div>
+<div class="ttc" id="aclassObjId_html_a8c60fa925b3a0aa34fdbee53533e26c9"><div class="ttname"><a href="classObjId.html#a8c60fa925b3a0aa34fdbee53533e26c9">ObjId::ids</a></div><div class="ttdeci">map&lt; const int32_t, void * &gt; ids</div><div class="ttdef"><b>Definition:</b> objid.hpp:38</div></div>
 <div class="ttc" id="acopyright_8hpp_html"><div class="ttname"><a href="copyright_8hpp.html">copyright.hpp</a></div><div class="ttdoc">Nachos copyright notice Copyright (c) 1992-1993 The Regents of the University of California....</div></div>
 <div class="ttc" id="autility_8hpp_html"><div class="ttname"><a href="utility_8hpp.html">utility.hpp</a></div><div class="ttdoc">Miscellaneous useful definitions, including debugging routines.</div></div>
+<div class="ttc" id="aclassObjId_html_a34b538263df6e2494b2f9d054aac5618"><div class="ttname"><a href="classObjId.html#a34b538263df6e2494b2f9d054aac5618">ObjId::RemoveObject</a></div><div class="ttdeci">void RemoveObject(int32_t id)</div><div class="ttdef"><b>Definition:</b> objid.hpp:75</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -82,7 +82,8 @@ $(document).ready(function(){initNavTree('addrspace_8cpp.html',''); initResizabl
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">addrspace.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -98,7 +99,7 @@ $(document).ready(function(){initNavTree('addrspace_8cpp.html',''); initResizabl
 <code>#include &quot;<a class="el" href="filesys_8hpp_source.html">filesys/filesys.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="filehdr_8hpp_source.html">filesys/filehdr.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="openfile_8hpp_source.html">filesys/openfile.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="phys_mem_8hpp_source.html">vm/physMem.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="physMem_8hpp_source.html">vm/physMem.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="elf32_8hpp_source.html">kernel/elf32.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="addrspace_8hpp_source.html">kernel/addrspace.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -116,14 +117,14 @@ Include dependency graph for addrspace.cpp:</div>
 <area shape="rect" href="synch_8hpp.html" title="Data structures for synchronizing threads." alt="" coords="1171,155,1293,181"/>
 <area shape="rect" href="addrspace_8hpp.html" title="Data structures to keep track of the memory resources of executing user programs (address spaces)." alt="" coords="707,453,853,480"/>
 <area shape="rect" href="filehdr_8hpp.html" title="Data structures for managing a disk file header." alt="" coords="195,453,317,480"/>
-<area shape="rect" href="phys_mem_8hpp.html" title="Data structures for the physical page management." alt="" coords="890,80,1014,107"/>
+<area shape="rect" href="physMem_8hpp.html" title="Data structures for the physical page management." alt="" coords="890,80,1014,107"/>
 <area shape="rect" href="elf32_8hpp.html" title="Data structures pertaining to the ELF32 1.1 file format specification." alt="" coords="94,229,207,256"/>
 <area shape="rect" title=" " alt="" coords="145,379,210,405"/>
 <area shape="rect" href="disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="291,603,415,629"/>
 <area shape="rect" href="copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="723,1051,861,1077"/>
-<area shape="rect" href="translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="626,677,814,704"/>
+<area shape="rect" href="translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="626,677,814,704"/>
 <area shape="rect" href="mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="387,379,517,405"/>
-<area shape="rect" href="_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="541,379,672,405"/>
+<area shape="rect" href="ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="541,379,672,405"/>
 <area shape="rect" href="interrupt_8hpp.html" title="Data structures to emulate low&#45;level interrupt hardware." alt="" coords="623,752,769,779"/>
 <area shape="rect" href="utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="1133,901,1246,928"/>
 <area shape="rect" title=" " alt="" coords="1583,1051,1647,1077"/>
@@ -139,21 +140,27 @@ Include dependency graph for addrspace.cpp:</div>
 <area shape="rect" href="process_8hpp.html" title="A process keeps track of the resources used by a running Nachos program." alt="" coords="1155,304,1287,331"/>
 <area shape="rect" title=" " alt="" coords="1048,304,1131,331"/>
 <area shape="rect" href="bitmap_8hpp.html" title="Data structures defining a bitmap." alt="" coords="622,528,743,555"/>
-<area shape="rect" href="swap_manager_8hpp.html" title="Data structures for the swap mamager." alt="" coords="848,155,995,181"/>
+<area shape="rect" href="swapManager_8hpp.html" title="Data structures for the swap mamager." alt="" coords="848,155,995,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:af85d7b62f0bc6ec93dd9f42cde29a660"><td class="memItemLeft" align="right" valign="top"><a id="af85d7b62f0bc6ec93dd9f42cde29a660"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LONG2HOST</b>(var)&#160;&#160;&#160;var = WordToHost(var)</td></tr>
+<tr class="memitem:af85d7b62f0bc6ec93dd9f42cde29a660"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="addrspace_8cpp.html#af85d7b62f0bc6ec93dd9f42cde29a660">LONG2HOST</a>(var)&#160;&#160;&#160;var = <a class="el" href="machine_8hpp.html#a8885fa023be04c6cfb42cfbfd3e46942">WordToHost</a>(var)</td></tr>
 <tr class="separator:af85d7b62f0bc6ec93dd9f42cde29a660"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a461a3408a5cecbaa314c8e5d5d9f2efa"><td class="memItemLeft" align="right" valign="top"><a id="a461a3408a5cecbaa314c8e5d5d9f2efa"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHORT2HOST</b>(var)&#160;&#160;&#160;var = ShortToHost(var)</td></tr>
+<tr class="memitem:a461a3408a5cecbaa314c8e5d5d9f2efa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="addrspace_8cpp.html#a461a3408a5cecbaa314c8e5d5d9f2efa">SHORT2HOST</a>(var)&#160;&#160;&#160;var = <a class="el" href="machine_8hpp.html#ae92c9de378987810550aa69b875e807f">ShortToHost</a>(var)</td></tr>
 <tr class="separator:a461a3408a5cecbaa314c8e5d5d9f2efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a09c586b9f450f3e54035cc503db727"><td class="memItemLeft" align="right" valign="top"><a id="a7a09c586b9f450f3e54035cc503db727"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STACK_BLANK_LEN</b>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:a7a09c586b9f450f3e54035cc503db727"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="addrspace_8cpp.html#a7a09c586b9f450f3e54035cc503db727">STACK_BLANK_LEN</a>&#160;&#160;&#160;4</td></tr>
 <tr class="separator:a7a09c586b9f450f3e54035cc503db727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae3d9f3a345138e4240d1a7a488431c6e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="addrspace_8cpp.html#ae3d9f3a345138e4240d1a7a488431c6e">CheckELFHeader</a> (<a class="el" href="structElf32__Ehdr.html">Elf32_Ehdr</a> *ehdr, int *err)</td></tr>
+<tr class="separator:ae3d9f3a345138e4240d1a7a488431c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88610204956a7adab5918fcc249c6a6b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="addrspace_8cpp.html#a88610204956a7adab5918fcc249c6a6b">SwapELFSectionHeader</a> (<a class="el" href="structElf32__Shdr.html">Elf32_Shdr</a> *shdr)</td></tr>
+<tr class="separator:a88610204956a7adab5918fcc249c6a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2c8897bfe3727c069e2548941153fa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="addrspace_8cpp.html#a5c2c8897bfe3727c069e2548941153fa">SwapELFHeader</a> (<a class="el" href="structElf32__Ehdr.html">Elf32_Ehdr</a> *ehdr)</td></tr>
+<tr class="separator:a5c2c8897bfe3727c069e2548941153fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Routines to manage address spaces (executing user programs). </p>
@@ -167,7 +174,194 @@ Macros</h2></td></tr>
 <li>by calling the appropriate system call in another program (Exec)</li>
 <li>by typing the program name in the Nachos shell </li>
 </ul>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="af85d7b62f0bc6ec93dd9f42cde29a660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85d7b62f0bc6ec93dd9f42cde29a660">&#9670;&nbsp;</a></span>LONG2HOST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LONG2HOST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">var</td><td>)</td>
+          <td>&#160;&#160;&#160;var = <a class="el" href="machine_8hpp.html#a8885fa023be04c6cfb42cfbfd3e46942">WordToHost</a>(var)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a461a3408a5cecbaa314c8e5d5d9f2efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a461a3408a5cecbaa314c8e5d5d9f2efa">&#9670;&nbsp;</a></span>SHORT2HOST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHORT2HOST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">var</td><td>)</td>
+          <td>&#160;&#160;&#160;var = <a class="el" href="machine_8hpp.html#ae92c9de378987810550aa69b875e807f">ShortToHost</a>(var)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a09c586b9f450f3e54035cc503db727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a09c586b9f450f3e54035cc503db727">&#9670;&nbsp;</a></span>STACK_BLANK_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STACK_BLANK_LEN&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ae3d9f3a345138e4240d1a7a488431c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d9f3a345138e4240d1a7a488431c6e">&#9670;&nbsp;</a></span>CheckELFHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CheckELFHeader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structElf32__Ehdr.html">Elf32_Ehdr</a> *&#160;</td>
+          <td class="paramname"><em>elfHdr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check the ELF header found in the executable file is correct</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shdr</td><td>pointer to ELF header </td></tr>
+    <tr><td class="paramname">err</td><td>error code (NO_ERROR if everything is correct) </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="addrspace_8cpp_ae3d9f3a345138e4240d1a7a488431c6e_cgraph.png" border="0" usemap="#addrspace_8cpp_ae3d9f3a345138e4240d1a7a488431c6e_cgraph" alt=""/></div>
+<map name="addrspace_8cpp_ae3d9f3a345138e4240d1a7a488431c6e_cgraph" id="addrspace_8cpp_ae3d9f3a345138e4240d1a7a488431c6e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" href="addrspace_8cpp.html#a5c2c8897bfe3727c069e2548941153fa" title=" " alt="" coords="177,5,296,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="addrspace_8cpp_ae3d9f3a345138e4240d1a7a488431c6e_icgraph.png" border="0" usemap="#addrspace_8cpp_ae3d9f3a345138e4240d1a7a488431c6e_icgraph" alt=""/></div>
+<map name="addrspace_8cpp_ae3d9f3a345138e4240d1a7a488431c6e_icgraph" id="addrspace_8cpp_ae3d9f3a345138e4240d1a7a488431c6e_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,336,32"/>
+<area shape="rect" href="classAddrSpace.html#acd3d2a68587b04ed5740e87895613821" title=" " alt="" coords="5,5,164,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5c2c8897bfe3727c069e2548941153fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c2c8897bfe3727c069e2548941153fa">&#9670;&nbsp;</a></span>SwapELFHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SwapELFHeader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structElf32__Ehdr.html">Elf32_Ehdr</a> *&#160;</td>
+          <td class="paramname"><em>ehdr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Do little endian to big endian conversion on the bytes in the object file header, in case the file was generated on a little endian machine, and we're now running on a big endian machine. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="addrspace_8cpp_a5c2c8897bfe3727c069e2548941153fa_icgraph.png" border="0" usemap="#addrspace_8cpp_a5c2c8897bfe3727c069e2548941153fa_icgraph" alt=""/></div>
+<map name="addrspace_8cpp_a5c2c8897bfe3727c069e2548941153fa_icgraph" id="addrspace_8cpp_a5c2c8897bfe3727c069e2548941153fa_icgraph">
+<area shape="rect" title=" " alt="" coords="384,5,503,32"/>
+<area shape="rect" href="addrspace_8cpp.html#ae3d9f3a345138e4240d1a7a488431c6e" title=" " alt="" coords="212,5,336,32"/>
+<area shape="rect" href="classAddrSpace.html#acd3d2a68587b04ed5740e87895613821" title=" " alt="" coords="5,5,164,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a88610204956a7adab5918fcc249c6a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88610204956a7adab5918fcc249c6a6b">&#9670;&nbsp;</a></span>SwapELFSectionHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SwapELFSectionHeader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structElf32__Shdr.html">Elf32_Shdr</a> *&#160;</td>
+          <td class="paramname"><em>shdr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Do little endian to big endian conversion on the bytes in the section header, in case the file was generated on a little endian machine, and we're now running on a big endian machine. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="addrspace_8cpp_a88610204956a7adab5918fcc249c6a6b_icgraph.png" border="0" usemap="#addrspace_8cpp_a88610204956a7adab5918fcc249c6a6b_icgraph" alt=""/></div>
+<map name="addrspace_8cpp_a88610204956a7adab5918fcc249c6a6b_icgraph" id="addrspace_8cpp_a88610204956a7adab5918fcc249c6a6b_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,375,32"/>
+<area shape="rect" href="classAddrSpace.html#acd3d2a68587b04ed5740e87895613821" title=" " alt="" coords="5,5,164,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

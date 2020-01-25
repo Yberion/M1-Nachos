@@ -1,8 +1,8 @@
 var elf32_8hpp =
 [
-    [ "Elf32_Ehdr", "struct_elf32___ehdr.html", "struct_elf32___ehdr" ],
-    [ "Elf32_Phdr", "struct_elf32___phdr.html", "struct_elf32___phdr" ],
-    [ "Elf32_Shdr", "struct_elf32___shdr.html", "struct_elf32___shdr" ],
+    [ "Elf32_Ehdr", "structElf32__Ehdr.html", "structElf32__Ehdr" ],
+    [ "Elf32_Phdr", "structElf32__Phdr.html", "structElf32__Phdr" ],
+    [ "Elf32_Shdr", "structElf32__Shdr.html", "structElf32__Shdr" ],
     [ "EI_CLASS", "elf32_8hpp.html#a5b508cacf6662e4bc0e98ffe1eb61636", null ],
     [ "EI_DATA", "elf32_8hpp.html#a79c714b4bf89638ff576e163d7d2144f", null ],
     [ "EI_MAG0", "elf32_8hpp.html#aba717f40a418b0d99c2efd4cdab4f54f", null ],

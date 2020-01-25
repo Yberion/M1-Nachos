@@ -114,6 +114,21 @@ private:
     //* Code start address, found in the ELF file
     int32_t CodeStartAddress;
 
+    //!< (Heavyweight) process using this address space
+    Process *process;
+
+    //!< List of memory-mapped files
+    int nb_mapped_files;
+
+    t_mapped_files mapped_files;
+
+    /*!< Number of the next virtual page to be allocated.
+     Virtual addresses allocated in a very simple manner : an
+     allocation will simply increment this address by
+     the size of the allocated object (there are no complex
+     malloc/free functions implemented yet) */
+    int freePageId;
+
     /**  Allocate numPages virtual pages in the current address space
      //
      //    \param numPages the number of contiguous virtual pages to allocate
@@ -121,20 +136,6 @@ private:
      //      area, or -1 when not enough virtual space is available
      */
     int Alloc(int numPages);
-
-    /** Number of the next virtual page to be allocated.
-     Virtual addresses allocated in a very simple manner : an
-     allocation will simply increment this address by
-     the size of the allocated object (there are no complex
-     malloc/free functions implemented yet) */
-    int freePageId;
-
-    /*! (Heavyweight) process using this address space */
-    Process *process;
-
-    /*! List of memory-mapped files */
-    int nb_mapped_files;
-    t_mapped_files mapped_files;
 };
 
 #endif // ADDRSPACE_H

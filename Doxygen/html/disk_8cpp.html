@@ -81,6 +81,8 @@ $(document).ready(function(){initNavTree('disk_8cpp.html',''); initResizable(); 
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">disk.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -110,9 +112,9 @@ Include dependency graph for disk.cpp:</div>
 <area shape="rect" href="thread_8hpp.html" title="Data structures for managing threads." alt="" coords="955,80,1077,107"/>
 <area shape="rect" title=" " alt="" coords="454,229,519,256"/>
 <area shape="rect" href="copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="807,901,945,928"/>
-<area shape="rect" href="translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="750,528,938,555"/>
+<area shape="rect" href="translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="750,528,938,555"/>
 <area shape="rect" href="mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="145,229,274,256"/>
-<area shape="rect" href="_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="299,229,429,256"/>
+<area shape="rect" href="ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="299,229,429,256"/>
 <area shape="rect" href="utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="1214,752,1327,779"/>
 <area shape="rect" title=" " alt="" coords="1535,901,1599,928"/>
 <area shape="rect" title=" " alt="" coords="1231,827,1310,853"/>
@@ -130,11 +132,206 @@ Include dependency graph for disk.cpp:</div>
 <area shape="rect" href="addrspace_8hpp.html" title="Data structures to keep track of the memory resources of executing user programs (address spaces)." alt="" coords="897,379,1044,405"/>
 </map>
 </div>
-</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a03b355bcf0d41c1fdeb1c69fb067fc1a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disk_8cpp.html#a03b355bcf0d41c1fdeb1c69fb067fc1a">DiskDone</a> (int64_t arg)</td></tr>
+<tr class="memdesc:a03b355bcf0d41c1fdeb1c69fb067fc1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">dummy procedure because we can't take a pointer of a member function  <a href="disk_8cpp.html#a03b355bcf0d41c1fdeb1c69fb067fc1a">More...</a><br /></td></tr>
+<tr class="separator:a03b355bcf0d41c1fdeb1c69fb067fc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f97a10c00c77d969f5ec6423403b6cc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="disk_8cpp.html#a3f97a10c00c77d969f5ec6423403b6cc">PrintSector</a> (bool writing, int sector, char *data)</td></tr>
+<tr class="memdesc:a3f97a10c00c77d969f5ec6423403b6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump the data in a disk read/write request, for debugging only.  <a href="disk_8cpp.html#a3f97a10c00c77d969f5ec6423403b6cc">More...</a><br /></td></tr>
+<tr class="separator:a3f97a10c00c77d969f5ec6423403b6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Routines to simulate a physical disk device;. </p>
 <p>Reading and writing to the disk is simulated as reading and writing to a UNIX file. See <a class="el" href="disk_8hpp.html" title="Data structures to emulate a physical disk.">disk.hpp</a> for details about the behavior of disks (and therefore about the behavior of this simulation).</p>
-<p><a class="el" href="class_disk.html" title="Defines a physical disk I/O device.">Disk</a> operations are asynchronous, so we have to invoke an interrupt handler when the simulated operation completes. </p>
-</div></div><!-- contents -->
+<p><a class="el" href="classDisk.html" title="Defines a physical disk I/O device.">Disk</a> operations are asynchronous, so we have to invoke an interrupt handler when the simulated operation completes. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a03b355bcf0d41c1fdeb1c69fb067fc1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b355bcf0d41c1fdeb1c69fb067fc1a">&#9670;&nbsp;</a></span>DiskDone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void DiskDone </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>dummy procedure because we can't take a pointer of a member function </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="disk_8cpp_a03b355bcf0d41c1fdeb1c69fb067fc1a_icgraph.png" border="0" usemap="#disk_8cpp_a03b355bcf0d41c1fdeb1c69fb067fc1a_icgraph" alt=""/></div>
+<map name="disk_8cpp_a03b355bcf0d41c1fdeb1c69fb067fc1a_icgraph" id="disk_8cpp_a03b355bcf0d41c1fdeb1c69fb067fc1a_icgraph">
+<area shape="rect" title="dummy procedure because we can&#39;t take a pointer of a member function" alt="" coords="3192,972,3271,999"/>
+<area shape="rect" href="classDisk.html#a8b51a82d4f2fd009335d0c591ae11042" title=" " alt="" coords="3009,947,3144,974"/>
+<area shape="rect" href="classDisk.html#aec33797c6480a8c919fc7d340c316abe" title=" " alt="" coords="3009,998,3144,1024"/>
+<area shape="rect" href="classDriverDisk.html#a2e93ba9a36bba4e8b3eeb43f877b2395" title="Read a disk sector, returning only once the data is actually read." alt="" coords="2805,947,2961,974"/>
+<area shape="rect" href="classFileHeader.html#aa85564cee98fc9592df08cc5e4a2efc6" title="Initialize file header from disk." alt="" coords="2340,1200,2495,1227"/>
+<area shape="rect" href="classSwapManager.html#a0934e61240a5ace841499321bf0889af" title=" " alt="" coords="2563,947,2757,974"/>
+<area shape="rect" href="classFileHeader.html#a57b661cda2c4d51ee06cc29e7ea0a0c0" title="Print the contents of the file." alt="" coords="2358,1327,2477,1354"/>
+<area shape="rect" href="classOpenFile.html#a0af8cd52ec71a2ad407039cebee2ef3d" title=" " alt="" coords="2597,719,2723,746"/>
+<area shape="rect" href="classOpenFile.html#a89136ac6b54013a413398f9496d39963" title=" " alt="" coords="2132,1226,2267,1252"/>
+<area shape="rect" href="classFileSystem.html#aebaf06661b1879a62afefa5abe99f21e" title="List all the files and their contents." alt="" coords="1946,1251,2069,1278"/>
+<area shape="rect" href="classDirectory.html#a40c728221c5557e4fc181c4091c6fcff" title="Verbose print of the contents of the directory – all the file names and their contents." alt="" coords="2145,1378,2254,1404"/>
+<area shape="rect" href="classFileSystem.html#a52e69a068c68c6c84f02c80fd4c5389e" title="Delete a file (UNIX unlink)" alt="" coords="1735,491,1878,518"/>
+<area shape="rect" href="classFileSystem.html#ae5cbf7822080d1c9bb606b5d74dd4ee5" title="Delete a directory." alt="" coords="1741,719,1872,746"/>
+<area shape="rect" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="1383,618,1434,644"/>
+<area shape="rect" href="classFileSystem.html#a12d63294322b37e934edd03ff614b95a" title=" " alt="" coords="1725,922,1888,948"/>
+<area shape="rect" href="classOpenFileTable.html#a004541913ef8deb24d571c20d2020175" title="remove the file from the file system" alt="" coords="1519,415,1677,442"/>
+<area shape="rect" href="machine_8hpp.html#af31c84fcf9811fc72614abc2be3b5a44" title="Entry point into Nachos to handle user system calls and exceptions." alt="" coords="1347,440,1471,467"/>
+<area shape="rect" href="classMachine.html#a0d6f63790c0568437b100171f61fd77f" title="Do a pending delayed load (modifying a reg)" alt="" coords="1128,339,1299,366"/>
+<area shape="rect" href="classMachine.html#ad70a015685c6e4bf705e4939551774aa" title=" " alt="" coords="585,288,748,315"/>
+<area shape="rect" href="classMMU.html#a28a50bd03688bc05aa15f93e4abf61a7" title=" " alt="" coords="797,415,917,442"/>
+<area shape="rect" href="classMMU.html#aa2ddea5dcd1648aba21ac1a75c79dc25" title=" " alt="" coords="965,339,1080,366"/>
+<area shape="rect" href="classMMU.html#a60227cf48e6778a4c66d8a13fd2f1539" title=" " alt="" coords="796,288,917,315"/>
+<area shape="rect" href="classMachine.html#a83444e06eb7a7c163a1b9c87a7062d43" title="Destructor. De&#45;allocate the data structures." alt="" coords="435,288,537,315"/>
+<area shape="rect" href="thread_8cpp.html#a014c1a99794f74ed079b0dde1f7efe8d" title=" " alt="" coords="240,288,387,315"/>
+<area shape="rect" href="classThread.html#ad6d5edb1a6d2a9effbb442883fc5b866" title="Sets&#45;up the thread simulator context : fills it with the appropriate." alt="" coords="5,288,192,315"/>
+<area shape="rect" href="exception_8cpp.html#a2f3d05f12e27c15623b3d6a0e3813677" title=" " alt="" coords="607,454,727,480"/>
+<area shape="rect" href="exception_8cpp.html#a467d8e83c5db03566d20ee929c7d7c1f" title=" " alt="" coords="609,542,724,568"/>
+<area shape="rect" href="classAddrSpace.html#acd3d2a68587b04ed5740e87895613821" title=" " alt="" coords="2338,694,2497,720"/>
+<area shape="rect" href="classBitMap.html#ad6d12eefec9b64e903d072c83f7c29a2" title="Print contents of bitmap." alt="" coords="2350,744,2485,771"/>
+<area shape="rect" href="classOpenFile.html#ad4b5d26a169a7c22e6f27c1693adb1aa" title=" " alt="" coords="2136,922,2263,948"/>
+<area shape="rect" href="classDirectory.html#a36ed455b21bbd9a66ffe8ec689ff7c73" title="Init directory contents from disk." alt="" coords="2127,339,2272,366"/>
+<area shape="rect" href="classOpenFile.html#af87bf2b0b15fa3501dada45a1a284bf4" title=" " alt="" coords="1751,60,1863,87"/>
+<area shape="rect" href="classFileSystem.html#ac789d58815881d7f193d86085b0f54aa" title="Create a file (UNIX creat)" alt="" coords="1739,555,1874,582"/>
+<area shape="rect" href="classFileSystem.html#aaf76918c6f0d24bc72aaa84625adfddf" title="List all the files in the file system." alt="" coords="1748,111,1865,138"/>
+<area shape="rect" href="classFileSystem.html#a9b4f11a12aed939e691edd6d591a8fcf" title="Create a new directory." alt="" coords="1743,871,1871,898"/>
+<area shape="rect" href="classOpenFileTableEntry.html#a3db43ff60517c9949bb89a499c7304a8" title=" " alt="" coords="1731,805,1883,846"/>
+<area shape="rect" href="main_8cpp.html#a8e00c17571a60a78f108e1b56b300e1f" title=" " alt="" coords="1572,618,1624,644"/>
+<area shape="rect" href="classOpenFile.html#a2de8d2d805fef3510bfd2fdf46f683fa" title=" " alt="" coords="1750,972,1863,999"/>
+<area shape="rect" href="classBitMap.html#a19052d41ba5a654c7e478582dffba20d" title="fetch contents from disk" alt="" coords="1941,871,2073,898"/>
+<area shape="rect" href="classDirectory.html#abf5550df42587bbc604c71441a4d12fc" title="Write modifications to directory contents back to disk." alt="" coords="1936,770,2079,796"/>
+<area shape="rect" href="filesys_8hpp.html#a562c4a58dde9f8b0a25dc482e23d9dc4" title=" " alt="" coords="1976,364,2039,391"/>
+<area shape="rect" href="classFileSystem.html#a606ea080a2a0fe5e3be3c3f5b8f4e7bc" title="Open a file (UNIX open)" alt="" coords="1743,364,1870,391"/>
+<area shape="rect" href="classOpenFileTable.html#ab0519dd960600e61b98d524281aaa882" title=" " alt="" coords="1735,162,1879,188"/>
+<area shape="rect" href="classDirectory.html#a2525a4455b80a1ee2648319ab257037c" title="Print the names of all the files in the directory." alt="" coords="1956,111,2059,138"/>
+<area shape="rect" href="main_8cpp.html#a42300b7160fd87b4a003e05cfa902ae4" title=" " alt="" coords="1573,263,1623,290"/>
+<area shape="rect" href="classProcess.html#acc8b64d45800f641a937ca447f080d10" title=" " alt="" coords="1535,364,1661,391"/>
+<area shape="rect" href="classDriverDisk.html#a74426214379e50aa0d8a7b19084887ee" title="write a disk sector, returning only once the data is actually written." alt="" coords="2581,998,2739,1024"/>
+<area shape="rect" href="classSwapManager.html#a35b5428181fe6bbb69f2cdfe9df13546" title=" " alt="" coords="2320,1023,2515,1050"/>
+<area shape="rect" href="classFileHeader.html#ab896cc7dd7274e3f8072da2c7d9beee8" title="Write modifications to file header back to disk." alt="" coords="2341,972,2494,999"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f97a10c00c77d969f5ec6423403b6cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f97a10c00c77d969f5ec6423403b6cc">&#9670;&nbsp;</a></span>PrintSector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void PrintSector </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>writing</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dump the data in a disk read/write request, for debugging only. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="disk_8cpp_a3f97a10c00c77d969f5ec6423403b6cc_icgraph.png" border="0" usemap="#disk_8cpp_a3f97a10c00c77d969f5ec6423403b6cc_icgraph" alt=""/></div>
+<map name="disk_8cpp_a3f97a10c00c77d969f5ec6423403b6cc_icgraph" id="disk_8cpp_a3f97a10c00c77d969f5ec6423403b6cc_icgraph">
+<area shape="rect" title="Dump the data in a disk read/write request, for debugging only." alt="" coords="3192,972,3279,999"/>
+<area shape="rect" href="classDisk.html#a8b51a82d4f2fd009335d0c591ae11042" title=" " alt="" coords="3009,947,3144,974"/>
+<area shape="rect" href="classDisk.html#aec33797c6480a8c919fc7d340c316abe" title=" " alt="" coords="3009,998,3144,1024"/>
+<area shape="rect" href="classDriverDisk.html#a2e93ba9a36bba4e8b3eeb43f877b2395" title="Read a disk sector, returning only once the data is actually read." alt="" coords="2805,947,2961,974"/>
+<area shape="rect" href="classFileHeader.html#aa85564cee98fc9592df08cc5e4a2efc6" title="Initialize file header from disk." alt="" coords="2340,1200,2495,1227"/>
+<area shape="rect" href="classSwapManager.html#a0934e61240a5ace841499321bf0889af" title=" " alt="" coords="2563,947,2757,974"/>
+<area shape="rect" href="classFileHeader.html#a57b661cda2c4d51ee06cc29e7ea0a0c0" title="Print the contents of the file." alt="" coords="2358,1327,2477,1354"/>
+<area shape="rect" href="classOpenFile.html#a0af8cd52ec71a2ad407039cebee2ef3d" title=" " alt="" coords="2597,719,2723,746"/>
+<area shape="rect" href="classOpenFile.html#a89136ac6b54013a413398f9496d39963" title=" " alt="" coords="2132,1226,2267,1252"/>
+<area shape="rect" href="classFileSystem.html#aebaf06661b1879a62afefa5abe99f21e" title="List all the files and their contents." alt="" coords="1946,1251,2069,1278"/>
+<area shape="rect" href="classDirectory.html#a40c728221c5557e4fc181c4091c6fcff" title="Verbose print of the contents of the directory – all the file names and their contents." alt="" coords="2145,1378,2254,1404"/>
+<area shape="rect" href="classFileSystem.html#a52e69a068c68c6c84f02c80fd4c5389e" title="Delete a file (UNIX unlink)" alt="" coords="1735,491,1878,518"/>
+<area shape="rect" href="classFileSystem.html#ae5cbf7822080d1c9bb606b5d74dd4ee5" title="Delete a directory." alt="" coords="1741,719,1872,746"/>
+<area shape="rect" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="1383,618,1434,644"/>
+<area shape="rect" href="classFileSystem.html#a12d63294322b37e934edd03ff614b95a" title=" " alt="" coords="1725,922,1888,948"/>
+<area shape="rect" href="classOpenFileTable.html#a004541913ef8deb24d571c20d2020175" title="remove the file from the file system" alt="" coords="1519,415,1677,442"/>
+<area shape="rect" href="machine_8hpp.html#af31c84fcf9811fc72614abc2be3b5a44" title="Entry point into Nachos to handle user system calls and exceptions." alt="" coords="1347,440,1471,467"/>
+<area shape="rect" href="classMachine.html#a0d6f63790c0568437b100171f61fd77f" title="Do a pending delayed load (modifying a reg)" alt="" coords="1128,339,1299,366"/>
+<area shape="rect" href="classMachine.html#ad70a015685c6e4bf705e4939551774aa" title=" " alt="" coords="585,288,748,315"/>
+<area shape="rect" href="classMMU.html#a28a50bd03688bc05aa15f93e4abf61a7" title=" " alt="" coords="797,415,917,442"/>
+<area shape="rect" href="classMMU.html#aa2ddea5dcd1648aba21ac1a75c79dc25" title=" " alt="" coords="965,339,1080,366"/>
+<area shape="rect" href="classMMU.html#a60227cf48e6778a4c66d8a13fd2f1539" title=" " alt="" coords="796,288,917,315"/>
+<area shape="rect" href="classMachine.html#a83444e06eb7a7c163a1b9c87a7062d43" title="Destructor. De&#45;allocate the data structures." alt="" coords="435,288,537,315"/>
+<area shape="rect" href="thread_8cpp.html#a014c1a99794f74ed079b0dde1f7efe8d" title=" " alt="" coords="240,288,387,315"/>
+<area shape="rect" href="classThread.html#ad6d5edb1a6d2a9effbb442883fc5b866" title="Sets&#45;up the thread simulator context : fills it with the appropriate." alt="" coords="5,288,192,315"/>
+<area shape="rect" href="exception_8cpp.html#a2f3d05f12e27c15623b3d6a0e3813677" title=" " alt="" coords="607,454,727,480"/>
+<area shape="rect" href="exception_8cpp.html#a467d8e83c5db03566d20ee929c7d7c1f" title=" " alt="" coords="609,542,724,568"/>
+<area shape="rect" href="classAddrSpace.html#acd3d2a68587b04ed5740e87895613821" title=" " alt="" coords="2338,694,2497,720"/>
+<area shape="rect" href="classBitMap.html#ad6d12eefec9b64e903d072c83f7c29a2" title="Print contents of bitmap." alt="" coords="2350,744,2485,771"/>
+<area shape="rect" href="classOpenFile.html#ad4b5d26a169a7c22e6f27c1693adb1aa" title=" " alt="" coords="2136,922,2263,948"/>
+<area shape="rect" href="classDirectory.html#a36ed455b21bbd9a66ffe8ec689ff7c73" title="Init directory contents from disk." alt="" coords="2127,339,2272,366"/>
+<area shape="rect" href="classOpenFile.html#af87bf2b0b15fa3501dada45a1a284bf4" title=" " alt="" coords="1751,60,1863,87"/>
+<area shape="rect" href="classFileSystem.html#ac789d58815881d7f193d86085b0f54aa" title="Create a file (UNIX creat)" alt="" coords="1739,555,1874,582"/>
+<area shape="rect" href="classFileSystem.html#aaf76918c6f0d24bc72aaa84625adfddf" title="List all the files in the file system." alt="" coords="1748,111,1865,138"/>
+<area shape="rect" href="classFileSystem.html#a9b4f11a12aed939e691edd6d591a8fcf" title="Create a new directory." alt="" coords="1743,871,1871,898"/>
+<area shape="rect" href="classOpenFileTableEntry.html#a3db43ff60517c9949bb89a499c7304a8" title=" " alt="" coords="1731,805,1883,846"/>
+<area shape="rect" href="main_8cpp.html#a8e00c17571a60a78f108e1b56b300e1f" title=" " alt="" coords="1572,618,1624,644"/>
+<area shape="rect" href="classOpenFile.html#a2de8d2d805fef3510bfd2fdf46f683fa" title=" " alt="" coords="1750,972,1863,999"/>
+<area shape="rect" href="classBitMap.html#a19052d41ba5a654c7e478582dffba20d" title="fetch contents from disk" alt="" coords="1941,871,2073,898"/>
+<area shape="rect" href="classDirectory.html#abf5550df42587bbc604c71441a4d12fc" title="Write modifications to directory contents back to disk." alt="" coords="1936,770,2079,796"/>
+<area shape="rect" href="filesys_8hpp.html#a562c4a58dde9f8b0a25dc482e23d9dc4" title=" " alt="" coords="1976,364,2039,391"/>
+<area shape="rect" href="classFileSystem.html#a606ea080a2a0fe5e3be3c3f5b8f4e7bc" title="Open a file (UNIX open)" alt="" coords="1743,364,1870,391"/>
+<area shape="rect" href="classOpenFileTable.html#ab0519dd960600e61b98d524281aaa882" title=" " alt="" coords="1735,162,1879,188"/>
+<area shape="rect" href="classDirectory.html#a2525a4455b80a1ee2648319ab257037c" title="Print the names of all the files in the directory." alt="" coords="1956,111,2059,138"/>
+<area shape="rect" href="main_8cpp.html#a42300b7160fd87b4a003e05cfa902ae4" title=" " alt="" coords="1573,263,1623,290"/>
+<area shape="rect" href="classProcess.html#acc8b64d45800f641a937ca447f080d10" title=" " alt="" coords="1535,364,1661,391"/>
+<area shape="rect" href="classDriverDisk.html#a74426214379e50aa0d8a7b19084887ee" title="write a disk sector, returning only once the data is actually written." alt="" coords="2581,998,2739,1024"/>
+<area shape="rect" href="classSwapManager.html#a35b5428181fe6bbb69f2cdfe9df13546" title=" " alt="" coords="2320,1023,2515,1050"/>
+<area shape="rect" href="classFileHeader.html#ab896cc7dd7274e3f8072da2c7d9beee8" title="Write modifications to file header back to disk." alt="" coords="2341,972,2494,999"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

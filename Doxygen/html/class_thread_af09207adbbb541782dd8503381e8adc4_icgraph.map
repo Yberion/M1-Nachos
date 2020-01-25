@@ -1,4 +1,0 @@
-<map id="Thread::RestoreProcessorState" name="Thread::RestoreProcessorState">
-<area shape="rect" id="node1" title="Restore the processor registers." alt="" coords="195,5,368,47"/>
-<area shape="rect" id="node2" href="$class_scheduler.html#a797a0a7e133b94109bbb6cf65455caf7" title="Causes a context switch to nextThread." alt="" coords="5,13,147,39"/>
-</map>

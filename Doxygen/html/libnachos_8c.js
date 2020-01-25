@@ -16,6 +16,8 @@ var libnachos_8c =
     [ "n_strlen", "libnachos_8c.html#aa38f1b4bbfdfc6028915f074326c6cc8", null ],
     [ "n_tolower", "libnachos_8c.html#ac427311e5e70728cdff324a24ccd280a", null ],
     [ "n_toupper", "libnachos_8c.html#aed5d799e56965d177d1e46fddd2dd6aa", null ],
+    [ "n_vsnprintf", "libnachos_8c.html#a94b2ac5c0ac4efc8738db0d9a7527860", null ],
     [ "poupou", "libnachos_8c.html#a3304cb53f81858c06d86fdd91c04e9e8", null ],
-    [ "threadCreate", "libnachos_8c.html#ab331a6a6cc1f299015e848ab25180f4f", null ]
+    [ "threadCreate", "libnachos_8c.html#ab331a6a6cc1f299015e848ab25180f4f", null ],
+    [ "threadStart", "libnachos_8c.html#ad807e03ef298a0b49710adfd78f5ec47", null ]
 ];

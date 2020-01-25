@@ -1,9 +1,0 @@
-<map id="DriverConsole::PutString" name="DriverConsole::PutString">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,168,108"/>
-<area shape="rect" id="node2" href="$class_lock.html#ad4c4699fd1ab73f3927b10edc01c54db" title="Acquire a lock (atomic operation)" alt="" coords="227,5,329,32"/>
-<area shape="rect" id="node3" href="$class_semaphore.html#a4fee22da0205e3c704b08beaa17e0e7a" title=" " alt="" coords="225,56,331,83"/>
-<area shape="rect" id="node4" href="$class_console.html#af4828702d63f7f144e8d17395471b59f" title=" " alt="" coords="216,107,340,133"/>
-<area shape="rect" id="node7" href="$class_lock.html#a5ca005b84272e56c2bf447056ee9217c" title="Release a lock (atomic operation)" alt="" coords="225,157,331,184"/>
-<area shape="rect" id="node5" href="$class_interrupt.html#ac403a14a9e41fa2b6dbd5c6056b87389" title="by the hardware device simulators." alt="" coords="388,81,519,108"/>
-<area shape="rect" id="node6" href="$sysdep_8cpp.html#a423758a22b76ab4ab8dce5afd92b83cd" title="Write characters to an open file. Abort if write fails." alt="" coords="416,132,491,159"/>
-</map>

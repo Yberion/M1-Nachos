@@ -33,12 +33,8 @@ class DirectoryEntry
 {
 public:
     bool inUse; //!< Is this directory entry in use?
-    int sector; /*!< Location on disk to find the
-     FileHeader for this file
-     */
-    char name[FILENAMEMAXLEN + 1]; /*!< Text name for file, with +1 for
-     the trailing '\0'
-     */
+    int sector; //!< Location on disk to find the FileHeader for this file
+    char name[FILENAMEMAXLEN + 1]; //!< Text name for file, with +1 for the trailing '\0'
 };
 
 /*!\brief Defines a UNIX-like "directory". 
@@ -51,40 +47,44 @@ public:
  // FetchFrom/WriteBack operations shuffle the directory information
  // from/to disk.
  */
-
 class Directory
 {
 public:
-    Directory(int size); // Initialize an empty directory
-    // with space for "size" files
+    //! Initialize an empty directory with space for "size" files
+    Directory(int size);
 
-    ~Directory(); // De-allocate the directory
+    //! De-allocate the directory
+    ~Directory();
 
-    void FetchFrom(OpenFile *file); // Init directory contents from disk
-    void WriteBack(OpenFile *file); // Write modifications to
-    // directory contents back to disk
+    //! Init directory contents from disk
+    void FetchFrom(OpenFile *file);
 
-    int Find(char *name); // Find the sector number of the
-    // FileHeader for file: "name"
+    //! Write modifications to directory contents back to disk
+    void WriteBack(OpenFile *file);
 
-    int Add(char *name, int newSector); // Add a file name into the directory
+    //! Find the sector number of the FileHeader for file: "name"
+    int Find(char *name);
 
-    int Remove(char *name); // Remove a file from the directory
+    //! Add a file name into the directory
+    int Add(char *name, int newSector);
 
-    void List(char*, int); // Print the names of all the files
-    // in the directory
+    //! Remove a file from the directory
+    int Remove(char *name);
 
-    void Print(); // Verbose print of the contents
-    //  of the directory -- all the file
-    //   names and their contents.
+    //! Print the names of all the files in the directory
+    void List(char*, int);
+
+    //! Verbose print of the contents of the directory -- all the file names and their contents.
+    void Print();
+
+    //! Tests if a directory is empty.
     bool empty();
 private:
     int tableSize; //!< Number of directory entries
-    DirectoryEntry *table; /*!< Table of pairs:
-     <file name, file header location>
-     */
-    int FindIndex(char *name); // Find the index into the directory
-    //   table corresponding to "name"
+    DirectoryEntry *table; //!< Table of pairs: <file name, file header location>
+
+    //! Find the index into the directory table corresponding to "name"
+    int FindIndex(char *name);
 };
 
 #endif // DIRECTORY_H

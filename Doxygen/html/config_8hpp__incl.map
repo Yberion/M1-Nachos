@@ -1,7 +1,7 @@
 <map id="utility/config.hpp" name="utility/config.hpp">
 <area shape="rect" id="node1" title="Data structures for setting up the Nachos hardware and software configuration." alt="" coords="565,5,681,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="724,603,785,629"/>
-<area shape="rect" id="node3" href="$translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="529,379,717,405"/>
+<area shape="rect" id="node3" href="$translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="529,379,717,405"/>
 <area shape="rect" id="node10" href="$filesys_8hpp.html" title="Data structures to represent the Nachos file system." alt="" coords="264,80,389,107"/>
 <area shape="rect" id="node4" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="160,603,299,629"/>
 <area shape="rect" id="node5" href="$utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="354,453,467,480"/>

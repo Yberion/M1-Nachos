@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['m_993',['M',['../class_page_table_entry.html#afa3d6d17b073d890dd42c3d2980bc142',1,'PageTableEntry']]],
-  ['magicnumber_994',['MagicNumber',['../class_config.html#ad5fa09c1a13bb21d0346964dd5528cdf',1,'Config']]],
-  ['magicsize_995',['MagicSize',['../class_config.html#ab7310f2f634fc3fe5cc30df08b5e9ba7',1,'Config']]],
-  ['mainmemory_996',['mainMemory',['../class_machine.html#a07cbf6544fe46ae72a7fc37e0db71993',1,'Machine']]],
-  ['makedir_997',['MakeDir',['../class_config.html#aea74bdd333932b3de613641e50dde05f',1,'Config']]],
-  ['maxfilenamesize_998',['MaxFileNameSize',['../class_config.html#ae68a68c355f110c8eb614820b7dd3782',1,'Config']]],
-  ['maxfilesize_999',['MaxFileSize',['../class_config.html#ac7c14799c0d1cf1aa42bcaf715276dd4',1,'Config']]],
-  ['maxvirtpages_1000',['MaxVirtPages',['../class_config.html#af07a20635da0fd6676291ed30573e855',1,'Config']]],
-  ['mmu_1001',['mmu',['../class_machine.html#a7d27a9b68f4b10a801169190790177ea',1,'Machine']]]
+  ['last_1713',['last',['../classList.html#aabcec34b87428e9f518437aaa99449a2',1,'List']]],
+  ['last_5fid_1714',['last_id',['../classObjId.html#ad2ed3f5ce6757596c645ede16bc383cf',1,'ObjId']]],
+  ['lasterror_1715',['lastError',['../classSyscallError.html#a803925f3b7f42989c1a987d5166f77e5',1,'SyscallError']]],
+  ['lastsector_1716',['lastSector',['../classDisk.html#a09339a72e2d38a32238934f0ae2ae1bb',1,'Disk']]],
+  ['level_1717',['level',['../classInterrupt.html#a558467f06f3d1945f63726738b93191e',1,'Interrupt']]],
+  ['listdir_1718',['ListDir',['../classConfig.html#a9f58a8793976f48a695f742a3aaf1dbf',1,'Config']]],
+  ['lock_1719',['lock',['../classDriverDisk.html#abe1043f09602296df03e98c32a13f8b1',1,'DriverDisk::lock()'],['../classOpenFileTableEntry.html#ac4c5d30c536236d9f3c4855957c051e3',1,'OpenFileTableEntry::lock()']]],
+  ['locked_1720',['locked',['../structPhysicalMemManager_1_1tpr__c.html#ac1f951ab3d780930bee1c9c01a3333e1',1,'PhysicalMemManager::tpr_c']]]
 ];

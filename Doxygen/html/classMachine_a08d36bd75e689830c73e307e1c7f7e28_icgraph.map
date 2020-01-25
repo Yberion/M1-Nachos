@@ -1,0 +1,6 @@
+<map id="Machine::Debugger" name="Machine::Debugger">
+<area shape="rect" id="node1" title="Trap to the Nachos kernel, because of a system call or other exception." alt="" coords="585,5,720,32"/>
+<area shape="rect" id="node2" href="$classMachine.html#a83444e06eb7a7c163a1b9c87a7062d43" title="Destructor. De&#45;allocate the data structures." alt="" coords="435,5,537,32"/>
+<area shape="rect" id="node3" href="$thread_8cpp.html#a014c1a99794f74ed079b0dde1f7efe8d" title=" " alt="" coords="240,5,387,32"/>
+<area shape="rect" id="node4" href="$classThread.html#ad6d5edb1a6d2a9effbb442883fc5b866" title="Sets&#45;up the thread simulator context : fills it with the appropriate." alt="" coords="5,5,192,32"/>
+</map>

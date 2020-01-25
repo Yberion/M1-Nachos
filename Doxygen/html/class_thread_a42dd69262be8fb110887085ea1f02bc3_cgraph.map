@@ -1,6 +1,0 @@
-<map id="Thread::Join" name="Thread::Join">
-<area shape="rect" id="node1" title="Wait for another thread to finish its execution." alt="" coords="5,31,97,57"/>
-<area shape="rect" id="node2" href="$class_list.html#a76887f875727e3e97e866e840d3051ad" title=" " alt="" coords="149,5,241,32"/>
-<area shape="rect" id="node3" href="$class_thread.html#adbc2bfb172d2eff4b46882aade9eeb8a" title="Relinquish the CPU if any other thread is runnable." alt="" coords="145,56,244,83"/>
-<area shape="rect" id="node4" href="$class_interrupt.html#a37cb8eeb7f715ff79ca3a7038bda3b04" title="and return previous setting." alt="" coords="292,56,427,83"/>
-</map>

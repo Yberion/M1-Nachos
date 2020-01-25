@@ -11,6 +11,6 @@ var dir_386a01e8c60160d2cb79aec927decd2f =
     [ "oftable.hpp", "oftable_8hpp.html", "oftable_8hpp" ],
     [ "openfile.cpp", "openfile_8cpp.html", null ],
     [ "openfile.hpp", "openfile_8hpp.html", [
-      [ "OpenFile", "class_open_file.html", "class_open_file" ]
+      [ "OpenFile", "classOpenFile.html", "classOpenFile" ]
     ] ]
 ];

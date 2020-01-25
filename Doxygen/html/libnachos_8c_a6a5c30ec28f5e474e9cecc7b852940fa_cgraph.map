@@ -1,4 +1,5 @@
 <map id="n_read_int" name="n_read_int">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,88,32"/>
-<area shape="rect" id="node2" href="$sysdep_8cpp.html#a6140dcc97ab52a9406e6d3f5749fa43c" title="Read characters from an open file. Abort if read fails." alt="" coords="136,5,188,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,88,57"/>
+<area shape="rect" id="node2" href="$libnachos_8c.html#a96fcb0bb050679b5471dbff5c0736a5d" title=" " alt="" coords="136,5,193,32"/>
+<area shape="rect" id="node3" href="$sysdep_8cpp.html#a6140dcc97ab52a9406e6d3f5749fa43c" title="Read characters from an open file. Abort if read fails." alt="" coords="139,56,191,83"/>
 </map>

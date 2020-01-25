@@ -1,6 +1,6 @@
 <map id="machine/translationtable.cpp" name="machine/translationtable.cpp">
 <area shape="rect" id="node1" title="Data structures for address translation." alt="" coords="871,5,1059,32"/>
-<area shape="rect" id="node2" href="$translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="483,379,671,405"/>
+<area shape="rect" id="node2" href="$translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="483,379,671,405"/>
 <area shape="rect" id="node10" href="$system_8hpp.html" title="Global variables used in Nachos." alt="" coords="1350,528,1479,555"/>
 <area shape="rect" id="node14" href="$thread_8hpp.html" title="Data structures for managing threads." alt="" coords="1007,80,1129,107"/>
 <area shape="rect" id="node19" href="$config_8hpp.html" title="Data structures for setting up the Nachos hardware and software configuration." alt="" coords="802,304,918,331"/>
@@ -21,7 +21,7 @@
 <area shape="rect" id="node16" title=" " alt="" coords="505,229,570,256"/>
 <area shape="rect" id="node17" href="$disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="702,677,826,704"/>
 <area shape="rect" id="node22" href="$mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="145,229,274,256"/>
-<area shape="rect" id="node23" href="$_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="299,229,429,256"/>
+<area shape="rect" id="node23" href="$ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="299,229,429,256"/>
 <area shape="rect" id="node24" href="$interrupt_8hpp.html" title="Data structures to emulate low&#45;level interrupt hardware." alt="" coords="388,603,535,629"/>
 <area shape="rect" id="node20" href="$filesys_8hpp.html" title="Data structures to represent the Nachos file system." alt="" coords="797,379,923,405"/>
 <area shape="rect" id="node21" href="$openfile_8hpp.html" title="Data structures to manipulate files." alt="" coords="1025,453,1157,480"/>

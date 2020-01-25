@@ -1,0 +1,8 @@
+<map id="Machine::Debugger" name="Machine::Debugger">
+<area shape="rect" id="node1" title="Trap to the Nachos kernel, because of a system call or other exception." alt="" coords="5,81,140,108"/>
+<area shape="rect" id="node2" href="$classInterrupt.html#a8f9a7ddd0f250de0dcd45fa5bfd80c11" title="Cause a context switch on return from an interrupt handler." alt="" coords="198,31,341,57"/>
+<area shape="rect" id="node5" href="$classMachine.html#a4e4dee4ed66da41de9bbebb161efd06f" title="Invoke the user program debugger." alt="" coords="197,81,341,108"/>
+<area shape="rect" id="node6" href="$classStatistics.html#a77aec82b7adb8d795c850db96c82f5d8" title=" " alt="" coords="188,132,351,159"/>
+<area shape="rect" id="node3" href="$classList.html#a78ed6c19ad70cd535e3b84709e2c1f4d" title=" " alt="" coords="399,5,494,32"/>
+<area shape="rect" id="node4" href="$interrupt_8cpp.html#a628c1bfc50e9ffdb3082f8246023e990" title=" " alt="" coords="399,56,495,83"/>
+</map>

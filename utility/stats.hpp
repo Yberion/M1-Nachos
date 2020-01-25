@@ -31,27 +31,29 @@ private:
     Time idleTicks; //!< Time spent idle (no thread to run)
 
 public:
-    Statistics(); // initialyses everything to zero
-    ~Statistics(); // de-allocate the list
-    ProcessStat* NewProcStat(char *name); /* create a new ProcessStat, link it to allStatistics
+    Statistics(); //! initialyses everything to zero
+    ~Statistics(); //! de-allocate the list
+    ProcessStat* NewProcStat(char *name); /*! create a new ProcessStat, link it to allStatistics
      and return a pointer on it. It is called by the
      method which create a new process */
 
-    void Print(); /* prints collected statistics, including
-     process statistics
-     */
+    void Print(); //! prints collected statistics, including process statistics
+
     void incrTotalTicks(Time val)
     {
         totalTicks += val;
     }
+
     void setTotalTicks(Time val)
     {
         totalTicks = val;
     }
+
     Time getTotalTicks(void)
     {
         return totalTicks;
     }
+
     void incrIdleTicks(Time val)
     {
         idleTicks += val;
@@ -80,47 +82,57 @@ private:
     int numMemoryAccess; //!< number of Memory accesses
     int numPageFaults; //!< number of virtual memory page faults
 public:
-    ProcessStat(char *name); /* initialises everything to zero and
-     initialises the name of the process */
+    ProcessStat(char *name); //! initialises everything to zero and initialises the name of the process
     void incrSystemTicks(Time val);
     void incrUserTicks(Time val);
+
     Time getUserTime(void)
     {
         return userTicks;
     }
+
     Time getSystemTime(void)
     {
         return systemTicks;
     }
+
     void incrMemoryAccess(void);
+
     void incrPageFault(void)
     {
         numPageFaults++;
     }
+
     void incrNumCharWritten(void)
     {
         numConsoleCharsWritten++;
     }
+
     void incrNumCharRead(void)
     {
         numConsoleCharsRead++;
     }
+
     void incrNumDiskReads(void)
     {
         numDiskReads++;
     }
+
     void incrNumDiskWrites(void)
     {
         numDiskWrites++;
     }
+
     void incrNumInstruction(void)
     {
         numInstruction++;
     }
+
     int getNumInstruction(void)
     {
         return numInstruction;
     }
+
     void Print(void);
 };
 

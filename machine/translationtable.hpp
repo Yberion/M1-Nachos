@@ -36,11 +36,11 @@ public:
     TranslationTable();
     ~TranslationTable();
 
-    int getMaxNumPages(); //!< Get the maximum number of pages
-                          //!< that can be translated by this translation table
+    int getMaxNumPages(); /*! Get the maximum number of pages
+                              that can be translated by this translation table
+                              Methods to get/set specific fields of a page table
+                              entry corresponding to a particular virtual page*/
 
-                          // Methods to get/set specific fields of a page table
-                          // entry corresponding to a particular virtual page
     void setPhysicalPage(int virtualPage, int physicalPage);
     int getPhysicalPage(int virtualPage);
 
@@ -99,15 +99,15 @@ public:
      physical mem: page is considered unmapped */
     PageTableEntry();
 
-    /*! If this bit isn't set, then the page is not in physical
+    /*!< If this bit isn't set, then the page is not in physical
      memory. */
     bool valid;
 
-    /*! If bit U is set, the page has been referenced recently.
+    /*!< If bit U is set, the page has been referenced recently.
      This bit is set by hardware (MMU) and reset by software (page replacement) */
     bool U;
 
-    /*! If bit M is set, the copy of the page in RAM is modified and should be
+    /*!< If bit M is set, the copy of the page in RAM is modified and should be
      copied back to disk if evicted. This bit is set by hardware (MMU) and reset
      by software when the page is copied back to disk */
     bool M;
@@ -120,21 +120,21 @@ public:
     bool readAllowed; /*!< Allows program to read the page contents */
     bool writeAllowed; /*!< Allows program to modify the page contents */
 
-    /*! The page number in real memory (relative to the
+    /*!< The page number in real memory (relative to the
      start of "mainMemory"). Relevant when valid is true only ! */
     int physicalPage;
 
-    /*! If this bit is set, the page must be load from swap.
+    /*!< If this bit is set, the page must be load from swap.
      If not, the page must be load from executable file.*/
     bool swap;
 
-    /*! Depending on the 'swap' bit:
+    /*!< Depending on the 'swap' bit:
      - swap == true : location, in terms of <b>PAGES</b>, in the swap
      - swap == false: location, in terms of <b>BYTES</b>, from the beginning
      of the executable file, or -1 for anonymous mapping */
     int addrDisk;
 
-    /*! This bit is set by the system every time the
+    /*!< This bit is set by the system every time the
      page is occupied in a input-output.  */
     bool io;
 };

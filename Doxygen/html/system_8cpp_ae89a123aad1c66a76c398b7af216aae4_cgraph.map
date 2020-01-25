@@ -1,4 +1,8 @@
 <map id="Cleanup" name="Cleanup">
-<area shape="rect" id="node1" title="Nachos is done." alt="" coords="5,5,75,32"/>
-<area shape="rect" id="node2" href="$class_statistics.html#ade67669fb1436e69a215a780b1ade63e" title=" " alt="" coords="123,5,235,32"/>
+<area shape="rect" id="node1" title="Nachos is done." alt="" coords="5,81,75,108"/>
+<area shape="rect" id="node2" href="$classStatistics.html#ade67669fb1436e69a215a780b1ade63e" title=" " alt="" coords="123,81,235,108"/>
+<area shape="rect" id="node3" href="$classList.html#a3d4805c0e563fd485273fc90a4b69e94" title=" " alt="" coords="303,5,397,32"/>
+<area shape="rect" id="node4" href="$classList.html#ad07725e21c5868fadf1f4a5a81c1fd3a" title=" " alt="" coords="301,56,399,83"/>
+<area shape="rect" id="node5" href="$classProcessStat.html#a8c64c1951933e8f75b20a913226bf437" title=" " alt="" coords="285,107,415,133"/>
+<area shape="rect" id="node6" href="$classList.html#a87dc423c0664829bad9f39e79ccb1165" title=" " alt="" coords="283,157,417,184"/>
 </map>

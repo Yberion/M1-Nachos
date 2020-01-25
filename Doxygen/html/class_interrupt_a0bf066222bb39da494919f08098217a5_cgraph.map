@@ -1,6 +1,0 @@
-<map id="Interrupt::Halt" name="Interrupt::Halt">
-<area shape="rect" id="node1" title="Quit and print out stats." alt="" coords="5,31,105,57"/>
-<area shape="rect" id="node2" href="$system_8cpp.html#ae89a123aad1c66a76c398b7af216aae4" title="Nachos is done." alt="" coords="153,5,223,32"/>
-<area shape="rect" id="node4" href="$sysdep_8cpp.html#a8b9ef9330856c5a5a02f2d3ef0497e04" title="Quit without dropping core." alt="" coords="165,56,211,83"/>
-<area shape="rect" id="node3" href="$class_statistics.html#ade67669fb1436e69a215a780b1ade63e" title=" " alt="" coords="271,5,383,32"/>
-</map>

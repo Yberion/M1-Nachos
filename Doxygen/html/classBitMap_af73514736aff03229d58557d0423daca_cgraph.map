@@ -1,0 +1,4 @@
+<map id="BitMap::NumClear" name="BitMap::NumClear">
+<area shape="rect" id="node1" title="Return the # of a clear bit, and as a side effect, set the bit. If no bits are clear,..." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$classBitMap.html#af5a945ba7b79e92a5a1bb0db24ecf26a" title="Clear the &quot;nth&quot; bit." alt="" coords="181,5,277,32"/>
+</map>

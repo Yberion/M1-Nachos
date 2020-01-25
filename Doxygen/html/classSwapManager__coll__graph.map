@@ -1,0 +1,20 @@
+<map id="SwapManager" name="SwapManager">
+<area shape="rect" id="node1" title="Implements the swap manager." alt="" coords="716,2107,867,2272"/>
+<area shape="rect" id="node2" href="$classDriverDisk.html" title="Defines a &quot;synchronous&quot; disk abstraction." alt="" coords="645,1857,765,1993"/>
+<area shape="rect" id="node3" href="$classSemaphore.html" title="Defines the &quot;semaphore&quot; synchronization tool." alt="" coords="647,1533,763,1699"/>
+<area shape="rect" id="node4" href="$classList.html" title="Definition of a generic single&#45;linked &quot;list&quot;." alt="" coords="641,1173,768,1427"/>
+<area shape="rect" id="node5" href="$classLock.html" title="Defines the &quot;lock&quot; synchronization tool." alt="" coords="448,1526,623,1706"/>
+<area shape="rect" id="node6" href="$classThread.html" title="Data structures for managing threads" alt="" coords="199,1173,357,1427"/>
+<area shape="rect" id="node7" href="$structsimulatorContextT.html" title="Defines the context of the Nachos simulator." alt="" coords="5,945,132,1052"/>
+<area shape="rect" id="node8" href="$classProcess.html" title="Defines the data structures to keep track of the execution environment of a user program." alt="" coords="377,938,483,1059"/>
+<area shape="rect" id="node12" href="$classAddrSpace.html" title="Defines the data structures to keep track of memory resources of executing user programs (address spa..." alt="" coords="451,1203,617,1397"/>
+<area shape="rect" id="node9" href="$classProcessStat.html" title="Defines statistics that concern a particular process." alt="" coords="334,424,513,824"/>
+<area shape="rect" id="node10" href="$classOpenFile.html" title="Defines the data structure maintained when a file is opened." alt="" coords="537,483,662,765"/>
+<area shape="rect" id="node15" href="$structs__mapped__file.html" title="Information describing a memory&#45;mapped file." alt="" coords="545,953,653,1045"/>
+<area shape="rect" id="node11" href="$classFileHeader.html" title="Defines a file header in the Nachos file system." alt="" coords="526,5,673,361"/>
+<area shape="rect" id="node13" href="$classTranslationTable.html" title="Defines the data structures used for address translation." alt="" coords="679,887,829,1111"/>
+<area shape="rect" id="node14" href="$classPageTableEntry.html" title="Defines an entry in a simple translation table." alt="" coords="687,527,821,721"/>
+<area shape="rect" id="node16" href="$structthreadContextT.html" title="Defines the thread context (MIPS virtual machine)" alt="" coords="157,945,271,1052"/>
+<area shape="rect" id="node17" href="$classDisk.html" title="Defines a physical disk I/O device." alt="" coords="787,1489,927,1743"/>
+<area shape="rect" id="node18" href="$classBitMap.html" title="Defines a &quot;bitmap&quot; – an array of bits." alt="" coords="789,1805,895,2044"/>
+</map>

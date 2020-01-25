@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nachos_5ftime_554',['Nachos_Time',['../struct_nachos___time.html',1,'']]]
+  ['nachos_5ftime_1128',['Nachos_Time',['../structNachos__Time.html',1,'']]]
 ];

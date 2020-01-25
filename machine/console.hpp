@@ -102,20 +102,12 @@ public:
 
 private:
     bool intState; //!< Interrupt status
-
     int readFileNo; //!< UNIX file emulating the keyboard
     int writeFileNo; //!< UNIX file emulating the display
-    VoidNoArgFunctionPtr writeHandler; /*!< Interrupt handler to call when the PutChar I/O completes
-     */
-
-    VoidNoArgFunctionPtr readHandler; /*!< Interrupt handler to call when a character arrives from the keyboard
-     */
-
-    bool putBusy; /*!< Is a PutChar operation in progress? If so, you can't do another one!
-     */
-    char incoming; /*!< Contains the character to be read,
-     if there is one available. Otherwise contains EOF.
-     */
+    VoidNoArgFunctionPtr writeHandler; //!< Interrupt handler to call when the PutChar I/O completes
+    VoidNoArgFunctionPtr readHandler; //!< Interrupt handler to call when a character arrives from the keyboard
+    bool putBusy; //!< Is a PutChar operation in progress? If so, you can't do another one!
+    char incoming; //!< Contains the character to be read, if there is one available. Otherwise contains EOF.
 };
 
 #endif // CONSOLE_H

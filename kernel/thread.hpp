@@ -111,30 +111,26 @@ public:
     //! Restore Nachos simulator state.
     void RestoreSimulatorState();
 
+    //! Returns the thread name
     char* GetName()
     {
         return (name);
     }
+
+    //! Returns the process owner
     Process* GetProcessOwner()
     {
         return process;
     }
 
 protected:
-    //! Thread name (for debugging)
-    char *name;
-
-    //! Main resource container the thread is running in.
-    Process *process;
-
-    //! MIPS simulator context
-    simulatorContextT simulator_context;
-
-    //! Thread context
-    threadContextT thread_context;
+    char *name; //!< Thread name (for debugging)
+    Process *process; //!< Main resource container the thread is running in.
+    simulatorContextT simulator_context; //!< MIPS simulator context
+    threadContextT thread_context; //!< Thread context
 
 public:
-    //! signature to make sure the thread is in the correct state
+    //!< signature to make sure the thread is in the correct state
     ObjectType type;
 
     int stackPointer;

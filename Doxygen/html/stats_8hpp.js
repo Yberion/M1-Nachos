@@ -1,7 +1,7 @@
 var stats_8hpp =
 [
-    [ "Statistics", "class_statistics.html", "class_statistics" ],
-    [ "ProcessStat", "class_process_stat.html", "class_process_stat" ],
+    [ "Statistics", "classStatistics.html", "classStatistics" ],
+    [ "ProcessStat", "classProcessStat.html", "classProcessStat" ],
     [ "CHECK_TIME", "stats_8hpp.html#ab7908aa07cc0dbc8bb780036c96fac20", null ],
     [ "CONSOLE_TIME", "stats_8hpp.html#a59e5e928aa67f29e4dfcf00e2ee3218c", null ],
     [ "MEMORY_TICKS", "stats_8hpp.html#afbdc368cabf8f945a58eff9041f8a987", null ],

@@ -1,7 +1,7 @@
 var mipssim_8hpp =
 [
-    [ "OpInfo", "struct_op_info.html", "struct_op_info" ],
-    [ "OpString", "struct_op_string.html", "struct_op_string" ],
+    [ "OpInfo", "structOpInfo.html", "structOpInfo" ],
+    [ "OpString", "structOpString.html", "structOpString" ],
     [ "BCOND", "mipssim_8hpp.html#af0b52792b441e1569ec4bb77feb11db7", null ],
     [ "COP1", "mipssim_8hpp.html#a3085efaccd02d54682d488d167e81bda", null ],
     [ "IFMT", "mipssim_8hpp.html#a23e85f2f4a195620db3d32f4248726a0", null ],
@@ -155,5 +155,10 @@ var mipssim_8hpp =
       [ "FT", "mipssim_8hpp.html#a35f0a6888bd1c2e56754f97c77a534b9a543fa68483c0294206bd3deb683b7144", null ],
       [ "FD", "mipssim_8hpp.html#a35f0a6888bd1c2e56754f97c77a534b9af6cb3036978c564d260f5016cac04f85", null ],
       [ "EXTRA", "mipssim_8hpp.html#a35f0a6888bd1c2e56754f97c77a534b9affb2fb86309c5c698e319b5b6dd8ab3a", null ]
-    ] ]
+    ] ],
+    [ "cop1DTable", "mipssim_8hpp.html#ae1b4b4cf94dd13eb554c95e05f0e2064", null ],
+    [ "cop1STable", "mipssim_8hpp.html#ad1789af8a6ae4123fb7c39f5e412c0eb", null ],
+    [ "opStrings", "mipssim_8hpp.html#a20ecd9a13ea27b52985f7f35d35f7184", null ],
+    [ "opTable", "mipssim_8hpp.html#a5448e59b29d727cb244546a0a50166cf", null ],
+    [ "specialTable", "mipssim_8hpp.html#a397461901d4b4911b6be840b5d4237d8", null ]
 ];

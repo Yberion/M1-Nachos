@@ -74,7 +74,8 @@ public:
 private:
     OpenFileTableEntry *table[NBOFTENTRY]; //!< the list of open files
     int nbentry; //!< the number of the next valid entry in the table
-    int findl(char *name); // find a file in the table
+    //! find a file in the table
+    int findl(char *name);
 };
 
 #endif // FS_OFT

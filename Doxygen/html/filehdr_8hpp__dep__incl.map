@@ -4,7 +4,7 @@
 <area shape="rect" id="node3" href="$filehdr_8cpp.html" title="Routines for managing the disk file header." alt="" coords="168,80,291,107"/>
 <area shape="rect" id="node4" href="$filesys_8cpp.html" title="Routines to manage the overall operation of the file system." alt="" coords="216,155,341,181"/>
 <area shape="rect" id="node5" href="$oftable_8hpp.html" title="Data structure used to synchronize operations on files." alt="" coords="366,80,493,107"/>
-<area shape="rect" id="node9" href="$openfile_8cpp.html" title="Routines to manage an open Nachos file" alt="" coords="517,80,649,107"/>
+<area shape="rect" id="node9" href="$openfile_8cpp.html" title="Routines to manage an open Nachos file." alt="" coords="517,80,649,107"/>
 <area shape="rect" id="node10" href="$addrspace_8cpp.html" title="Routines to manage address spaces (executing user programs)." alt="" coords="673,80,820,107"/>
 <area shape="rect" id="node6" href="$oftable_8cpp.html" title="Routines for managing the open file table." alt="" coords="366,155,493,181"/>
 <area shape="rect" id="node7" href="$exception_8cpp.html" title="Entry point into the Nachos kernel ." alt="" coords="517,155,659,181"/>

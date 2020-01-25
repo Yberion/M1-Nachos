@@ -1,0 +1,4 @@
+<map id="OpenFile" name="OpenFile">
+<area shape="rect" id="node1" title="Defines the data structure maintained when a file is opened." alt="" coords="16,424,141,707"/>
+<area shape="rect" id="node2" href="$classFileHeader.html" title="Defines a file header in the Nachos file system." alt="" coords="5,5,152,361"/>
+</map>

@@ -90,8 +90,7 @@ $(document).ready(function(){initNavTree('filehdr_8hpp.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
-<p>Data structures for managing a disk file header. <br  />
-  
+<p>Data structures for managing a disk file header.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="copyright_8hpp_source.html">kernel/copyright.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="disk_8hpp_source.html">machine/disk.hpp</a>&quot;</code><br />
@@ -128,7 +127,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="filehdr_8cpp.html" title="Routines for managing the disk file header." alt="" coords="168,80,291,107"/>
 <area shape="rect" href="filesys_8cpp.html" title="Routines to manage the overall operation of the file system." alt="" coords="216,155,341,181"/>
 <area shape="rect" href="oftable_8hpp.html" title="Data structure used to synchronize operations on files." alt="" coords="366,80,493,107"/>
-<area shape="rect" href="openfile_8cpp.html" title="Routines to manage an open Nachos file" alt="" coords="517,80,649,107"/>
+<area shape="rect" href="openfile_8cpp.html" title="Routines to manage an open Nachos file." alt="" coords="517,80,649,107"/>
 <area shape="rect" href="addrspace_8cpp.html" title="Routines to manage address spaces (executing user programs)." alt="" coords="673,80,820,107"/>
 <area shape="rect" href="oftable_8cpp.html" title="Routines for managing the open file table." alt="" coords="366,155,493,181"/>
 <area shape="rect" href="exception_8cpp.html" title="Entry point into the Nachos kernel ." alt="" coords="517,155,659,181"/>
@@ -140,46 +139,148 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_header.html">FileHeader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a file header in the Nachos file system.  <a href="class_file_header.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileHeader.html">FileHeader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a file header in the Nachos file system.  <a href="classFileHeader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a53a2870b7a3ca41a6ffd788e7a4290a3"><td class="memItemLeft" align="right" valign="top"><a id="a53a2870b7a3ca41a6ffd788e7a4290a3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DatasInFirstSector</b>&#160;&#160;&#160;((int)((<a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize - 5*sizeof(int)) / sizeof(int)))</td></tr>
+<tr class="memitem:a53a2870b7a3ca41a6ffd788e7a4290a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#a53a2870b7a3ca41a6ffd788e7a4290a3">DatasInFirstSector</a>&#160;&#160;&#160;((int)((<a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize - 5*sizeof(int)) / sizeof(int)))</td></tr>
 <tr class="separator:a53a2870b7a3ca41a6ffd788e7a4290a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f03607b51e725aac75c691ec571ee04"><td class="memItemLeft" align="right" valign="top"><a id="a7f03607b51e725aac75c691ec571ee04"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DatasInSector</b>&#160;&#160;&#160;((int)((<a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize - 1*sizeof(int)) / sizeof(int)))</td></tr>
+<tr class="memitem:a7f03607b51e725aac75c691ec571ee04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#a7f03607b51e725aac75c691ec571ee04">DatasInSector</a>&#160;&#160;&#160;((int)((<a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize - 1*sizeof(int)) / sizeof(int)))</td></tr>
 <tr class="separator:a7f03607b51e725aac75c691ec571ee04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb8b88eb63a39144134f502d6e437a46"><td class="memItemLeft" align="right" valign="top"><a id="acb8b88eb63a39144134f502d6e437a46"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>NextHeaderSector</b>(hdrSector)&#160;&#160;&#160;(((int*)(hdrSector))[(<a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize / sizeof(int)) - 1])</td></tr>
+<tr class="memitem:acb8b88eb63a39144134f502d6e437a46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#acb8b88eb63a39144134f502d6e437a46">NextHeaderSector</a>(hdrSector)&#160;&#160;&#160;(((int*)(hdrSector))[(<a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize / sizeof(int)) - 1])</td></tr>
 <tr class="separator:acb8b88eb63a39144134f502d6e437a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a526438ef41b0a0feb54f5ea55f92a198"><td class="memItemLeft" align="right" valign="top"><a id="a526438ef41b0a0feb54f5ea55f92a198"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#a526438ef41b0a0feb54f5ea55f92a198">MAX_HEADER_SECTORS</a>&#160;&#160;&#160;32</td></tr>
-<tr class="memdesc:a526438ef41b0a0feb54f5ea55f92a198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of header sectors in a file. <br /></td></tr>
+<tr class="memitem:a526438ef41b0a0feb54f5ea55f92a198"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#a526438ef41b0a0feb54f5ea55f92a198">MAX_HEADER_SECTORS</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memdesc:a526438ef41b0a0feb54f5ea55f92a198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of header sectors in a file.  <a href="filehdr_8hpp.html#a526438ef41b0a0feb54f5ea55f92a198">More...</a><br /></td></tr>
 <tr class="separator:a526438ef41b0a0feb54f5ea55f92a198"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ba33e9def2470a09c9feaab7fb1abf2"><td class="memItemLeft" align="right" valign="top"><a id="a0ba33e9def2470a09c9feaab7fb1abf2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#a0ba33e9def2470a09c9feaab7fb1abf2">MAX_DATA_SECTORS</a>&#160;&#160;&#160;((int)((<a class="el" href="filehdr_8hpp.html#a526438ef41b0a0feb54f5ea55f92a198">MAX_HEADER_SECTORS</a>-1)*DatasInSector + DatasInFirstSector))</td></tr>
-<tr class="memdesc:a0ba33e9def2470a09c9feaab7fb1abf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of data sectors in a file. <br /></td></tr>
+<tr class="memitem:a0ba33e9def2470a09c9feaab7fb1abf2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#a0ba33e9def2470a09c9feaab7fb1abf2">MAX_DATA_SECTORS</a>&#160;&#160;&#160;((int)((<a class="el" href="filehdr_8hpp.html#a526438ef41b0a0feb54f5ea55f92a198">MAX_HEADER_SECTORS</a>-1)*<a class="el" href="filehdr_8hpp.html#a7f03607b51e725aac75c691ec571ee04">DatasInSector</a> + <a class="el" href="filehdr_8hpp.html#a53a2870b7a3ca41a6ffd788e7a4290a3">DatasInFirstSector</a>))</td></tr>
+<tr class="memdesc:a0ba33e9def2470a09c9feaab7fb1abf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of data sectors in a file.  <a href="filehdr_8hpp.html#a0ba33e9def2470a09c9feaab7fb1abf2">More...</a><br /></td></tr>
 <tr class="separator:a0ba33e9def2470a09c9feaab7fb1abf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35bb1accedaeec75330d2830605d0875"><td class="memItemLeft" align="right" valign="top"><a id="a35bb1accedaeec75330d2830605d0875"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_FILE_LENGTH</b>&#160;&#160;&#160;((int)((<a class="el" href="filehdr_8hpp.html#a0ba33e9def2470a09c9feaab7fb1abf2">MAX_DATA_SECTORS</a>) * <a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize))</td></tr>
+<tr class="memitem:a35bb1accedaeec75330d2830605d0875"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#a35bb1accedaeec75330d2830605d0875">MAX_FILE_LENGTH</a>&#160;&#160;&#160;((int)((<a class="el" href="filehdr_8hpp.html#a0ba33e9def2470a09c9feaab7fb1abf2">MAX_DATA_SECTORS</a>) * <a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize))</td></tr>
 <tr class="separator:a35bb1accedaeec75330d2830605d0875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:adc8380c1eb66b71d11bf34259be8f656"><td class="memItemLeft" align="right" valign="top"><a id="adc8380c1eb66b71d11bf34259be8f656"></a>
-<a class="el" href="class_config.html">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a></td></tr>
-<tr class="memdesc:adc8380c1eb66b71d11bf34259be8f656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration of Nachos. <br /></td></tr>
+<tr class="memitem:adc8380c1eb66b71d11bf34259be8f656"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConfig.html">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filehdr_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a></td></tr>
+<tr class="memdesc:adc8380c1eb66b71d11bf34259be8f656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration of Nachos.  <a href="filehdr_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">More...</a><br /></td></tr>
 <tr class="separator:adc8380c1eb66b71d11bf34259be8f656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Data structures for managing a disk file header. <br  />
- </p>
+<div class="textblock"><p>Data structures for managing a disk file header. </p>
 <p>A file header describes where on disk to find the data in a file, along with other information about the file (for instance, its length, owner, etc.)</p>
 <p>Copyright (c) 1992-1993 The Regents of the University of California. All rights reserved. See <a class="el" href="copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992-1993 The Regents of the University of California....">copyright.hpp</a> for copyright notice and limitation of liability and disclaimer of warranty provisions. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a53a2870b7a3ca41a6ffd788e7a4290a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a2870b7a3ca41a6ffd788e7a4290a3">&#9670;&nbsp;</a></span>DatasInFirstSector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DatasInFirstSector&#160;&#160;&#160;((int)((<a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize - 5*sizeof(int)) / sizeof(int)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f03607b51e725aac75c691ec571ee04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f03607b51e725aac75c691ec571ee04">&#9670;&nbsp;</a></span>DatasInSector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DatasInSector&#160;&#160;&#160;((int)((<a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize - 1*sizeof(int)) / sizeof(int)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ba33e9def2470a09c9feaab7fb1abf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba33e9def2470a09c9feaab7fb1abf2">&#9670;&nbsp;</a></span>MAX_DATA_SECTORS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_DATA_SECTORS&#160;&#160;&#160;((int)((<a class="el" href="filehdr_8hpp.html#a526438ef41b0a0feb54f5ea55f92a198">MAX_HEADER_SECTORS</a>-1)*<a class="el" href="filehdr_8hpp.html#a7f03607b51e725aac75c691ec571ee04">DatasInSector</a> + <a class="el" href="filehdr_8hpp.html#a53a2870b7a3ca41a6ffd788e7a4290a3">DatasInFirstSector</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of data sectors in a file. </p>
+
+</div>
+</div>
+<a id="a35bb1accedaeec75330d2830605d0875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35bb1accedaeec75330d2830605d0875">&#9670;&nbsp;</a></span>MAX_FILE_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_FILE_LENGTH&#160;&#160;&#160;((int)((<a class="el" href="filehdr_8hpp.html#a0ba33e9def2470a09c9feaab7fb1abf2">MAX_DATA_SECTORS</a>) * <a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a526438ef41b0a0feb54f5ea55f92a198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526438ef41b0a0feb54f5ea55f92a198">&#9670;&nbsp;</a></span>MAX_HEADER_SECTORS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_HEADER_SECTORS&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of header sectors in a file. </p>
+
+</div>
+</div>
+<a id="acb8b88eb63a39144134f502d6e437a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb8b88eb63a39144134f502d6e437a46">&#9670;&nbsp;</a></span>NextHeaderSector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NextHeaderSector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">hdrSector</td><td>)</td>
+          <td>&#160;&#160;&#160;(((int*)(hdrSector))[(<a class="el" href="system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656">g_cfg</a>-&gt;SectorSize / sizeof(int)) - 1])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="adc8380c1eb66b71d11bf34259be8f656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc8380c1eb66b71d11bf34259be8f656">&#9670;&nbsp;</a></span>g_cfg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classConfig.html">Config</a>* g_cfg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration of Nachos. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

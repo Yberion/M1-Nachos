@@ -37,18 +37,18 @@ class PhysicalMemManager;
 class PhysicalMemManager
 {
 public:
-    PhysicalMemManager(); //!< initialize the memory manager
-    ~PhysicalMemManager(); //!< de-allocate the page_flags bitmap
+    PhysicalMemManager(); //! initialize the memory manager
+    ~PhysicalMemManager(); //! de-allocate the page_flags bitmap
 
-    int AddPhysicalToVirtualMapping(AddrSpace *owner, int vp); //!< Finds a new page and adds a new page mapping
-    void RemovePhysicalToVirtualMapping(long numPage); //!< Frees the page and deletes the existing page mapping
-    void ChangeOwner(long numPage, Thread *owner); //!< Change the page owner
-    void UnlockPage(long numPage); //!< Unlock physical page
-    void Print(void); //!< Print the contents of a page
+    int AddPhysicalToVirtualMapping(AddrSpace *owner, int vp); //! Finds a new page and adds a new page mapping
+    void RemovePhysicalToVirtualMapping(long numPage); //! Frees the page and deletes the existing page mapping
+    void ChangeOwner(long numPage, Thread *owner); //! Change the page owner
+    void UnlockPage(long numPage); //! Unlock physical page
+    void Print(void); //! Print the contents of a page
 
 private:
-    int FindFreePage(); //!< Return a free page if there is one
-    int EvictPage(); //!< Return a free page when there is none
+    int FindFreePage(); //! Return a free page if there is one
+    int EvictPage(); //! Return a free page when there is none
 
     /*! \brief Describes the allocation of physical pages. Bits U (used/referenced) and M
      (modified/dirty) are in the page table entry and are directly set by the MMU hardware */
@@ -66,8 +66,7 @@ private:
 
     int i_clock; //!< Index for clock_algorithm
 
-    friend class AddrSpace;
-    //!< Direct access to page table for programm loading
+    friend class AddrSpace; //!< Direct access to page table for programm loading
 };
 
 #endif // __MEM_H

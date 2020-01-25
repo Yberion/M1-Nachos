@@ -1,6 +1,6 @@
 var syscall_8h =
 [
-    [ "Nachos_Time", "struct_nachos___time.html", "struct_nachos___time" ],
+    [ "Nachos_Time", "structNachos__Time.html", "structNachos__Time" ],
     [ "CONSOLE_INPUT", "syscall_8h.html#a8afe34aea85ea6eab312cb9ebe9e602f", null ],
     [ "CONSOLE_OUTPUT", "syscall_8h.html#a1e8c115b224f66b48db38b23affe9f37", null ],
     [ "SC_CLOSE", "syscall_8h.html#aac1c8d1bb6b5cf0c1e35050b22caa536", null ],

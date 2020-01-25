@@ -1,4 +1,0 @@
-<map id="Thread::Sleep" name="Thread::Sleep">
-<area shape="rect" id="node1" title="Put the thread to sleep and relinquish the processor." alt="" coords="157,5,260,32"/>
-<area shape="rect" id="node2" href="$class_thread.html#a1e43c788c40e9783311c970bcea7239b" title="Finish the execution of the thread, and prepare its deallocation." alt="" coords="5,5,109,32"/>
-</map>

@@ -1,6 +1,6 @@
 var msgerror_8hpp =
 [
-    [ "SyscallError", "class_syscall_error.html", "class_syscall_error" ],
+    [ "SyscallError", "classSyscallError.html", "classSyscallError" ],
     [ "ERROR", "msgerror_8hpp.html#a8fe83ac76edc595f6b98cd4a4127aed5", null ],
     [ "NO_ERROR", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55babf350750d0d4fabd8954c0f1e9bbae94", null ],
     [ "INC_ERROR", "msgerror_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55baf7c8308349c38c092e85f6c8fad6c97c", null ],

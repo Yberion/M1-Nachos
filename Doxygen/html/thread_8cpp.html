@@ -89,8 +89,7 @@ $(document).ready(function(){initNavTree('thread_8cpp.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p>Routines to manage threads. <br  />
-  
+<p>Routines to manage threads.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="thread_8hpp_source.html">kernel/thread.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="msgerror_8hpp_source.html">kernel/msgerror.hpp</a>&quot;</code><br />
@@ -115,9 +114,9 @@ Include dependency graph for thread.cpp:</div>
 <area shape="rect" title=" " alt="" coords="321,155,404,181"/>
 <area shape="rect" title=" " alt="" coords="839,229,905,256"/>
 <area shape="rect" href="disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="387,677,511,704"/>
-<area shape="rect" href="translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="195,453,383,480"/>
+<area shape="rect" href="translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="195,453,383,480"/>
 <area shape="rect" href="mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="530,229,659,256"/>
-<area shape="rect" href="_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="684,229,815,256"/>
+<area shape="rect" href="ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="684,229,815,256"/>
 <area shape="rect" href="interrupt_8hpp.html" title="Data structures to emulate low&#45;level interrupt hardware." alt="" coords="875,603,1021,629"/>
 <area shape="rect" title=" " alt="" coords="243,901,307,928"/>
 <area shape="rect" title=" " alt="" coords="313,827,391,853"/>
@@ -136,24 +135,20 @@ Include dependency graph for thread.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa680857f13d6415e29d334df9065a47c"><td class="memItemLeft" align="right" valign="top"><a id="aa680857f13d6415e29d334df9065a47c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>UNSIGNED_LONG_AT_ADDR</b>(addr)&#160;&#160;&#160;(*((unsigned long int*)(addr)))</td></tr>
+<tr class="memitem:aa680857f13d6415e29d334df9065a47c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8cpp.html#aa680857f13d6415e29d334df9065a47c">UNSIGNED_LONG_AT_ADDR</a>(addr)&#160;&#160;&#160;(*((unsigned long int*)(addr)))</td></tr>
 <tr class="separator:aa680857f13d6415e29d334df9065a47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c802087854b2fb13dc7fcb4a5aed206"><td class="memItemLeft" align="right" valign="top"><a id="a8c802087854b2fb13dc7fcb4a5aed206"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STACK_FENCEPOST</b>&#160;&#160;&#160;0xdeadbeef</td></tr>
+<tr class="memitem:a8c802087854b2fb13dc7fcb4a5aed206"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8cpp.html#a8c802087854b2fb13dc7fcb4a5aed206">STACK_FENCEPOST</a>&#160;&#160;&#160;0xdeadbeef</td></tr>
 <tr class="separator:a8c802087854b2fb13dc7fcb4a5aed206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4a08099b807fecd46f1bc5964ef06d8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8cpp.html#a4a08099b807fecd46f1bc5964ef06d8e">ThreadPrint</a> (long arg)</td></tr>
 <tr class="separator:a4a08099b807fecd46f1bc5964ef06d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a014c1a99794f74ed079b0dde1f7efe8d"><td class="memItemLeft" align="right" valign="top"><a id="a014c1a99794f74ed079b0dde1f7efe8d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>StartThreadExecution</b> (void)</td></tr>
+<tr class="memitem:a014c1a99794f74ed079b0dde1f7efe8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread_8cpp.html#a014c1a99794f74ed079b0dde1f7efe8d">StartThreadExecution</a> (void)</td></tr>
 <tr class="separator:a014c1a99794f74ed079b0dde1f7efe8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Routines to manage threads. <br  />
- </p>
+<div class="textblock"><p>Routines to manage threads. </p>
 <p>There are four main operations:</p><ul>
 <li>Constructor : create an inactive thread</li>
 <li>Start : bind the thread to a process, and prepare it to be dispatched on the CPU</li>
@@ -161,7 +156,124 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>StartThreadExecution<
 <li>Yield : relinquish control over the CPU to another ready thread</li>
 <li>Sleep : relinquish control over the CPU, but thread is now blocked. In other words, it will not run again, until explicitly put back on the ready queue. </li>
 </ul>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a8c802087854b2fb13dc7fcb4a5aed206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c802087854b2fb13dc7fcb4a5aed206">&#9670;&nbsp;</a></span>STACK_FENCEPOST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STACK_FENCEPOST&#160;&#160;&#160;0xdeadbeef</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa680857f13d6415e29d334df9065a47c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa680857f13d6415e29d334df9065a47c">&#9670;&nbsp;</a></span>UNSIGNED_LONG_AT_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNSIGNED_LONG_AT_ADDR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr</td><td>)</td>
+          <td>&#160;&#160;&#160;(*((unsigned long int*)(addr)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a014c1a99794f74ed079b0dde1f7efe8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a014c1a99794f74ed079b0dde1f7efe8d">&#9670;&nbsp;</a></span>StartThreadExecution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StartThreadExecution </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="thread_8cpp_a014c1a99794f74ed079b0dde1f7efe8d_cgraph.png" border="0" usemap="#thread_8cpp_a014c1a99794f74ed079b0dde1f7efe8d_cgraph" alt=""/></div>
+<map name="thread_8cpp_a014c1a99794f74ed079b0dde1f7efe8d_cgraph" id="thread_8cpp_a014c1a99794f74ed079b0dde1f7efe8d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,1083,152,1109"/>
+<area shape="rect" href="classMachine.html#a83444e06eb7a7c163a1b9c87a7062d43" title="Destructor. De&#45;allocate the data structures." alt="" coords="200,993,303,1020"/>
+<area shape="rect" href="classInterrupt.html#a37cb8eeb7f715ff79ca3a7038bda3b04" title="de&#45;allocate data structures" alt="" coords="1183,968,1317,995"/>
+<area shape="rect" href="classMachine.html#a08d36bd75e689830c73e307e1c7f7e28" title="Trap to the Nachos kernel, because of a system call or other exception." alt="" coords="1600,56,1735,83"/>
+<area shape="rect" href="classMachine.html#ad70a015685c6e4bf705e4939551774aa" title=" " alt="" coords="351,867,513,893"/>
+<area shape="rect" href="classInterrupt.html#a0c0405e4a84e84876f23fbdc3125b28c" title=" " alt="" coords="1387,968,1512,995"/>
+<area shape="rect" href="classInterrupt.html#a8f9a7ddd0f250de0dcd45fa5bfd80c11" title="Cause a context switch on return from an interrupt handler." alt="" coords="1834,56,1977,83"/>
+<area shape="rect" href="classMachine.html#a4e4dee4ed66da41de9bbebb161efd06f" title="Invoke the user program debugger." alt="" coords="1833,5,1977,32"/>
+<area shape="rect" href="classStatistics.html#a77aec82b7adb8d795c850db96c82f5d8" title=" " alt="" coords="1824,208,1987,235"/>
+<area shape="rect" href="classList.html#a78ed6c19ad70cd535e3b84709e2c1f4d" title=" " alt="" coords="2047,81,2141,108"/>
+<area shape="rect" href="interrupt_8cpp.html#a628c1bfc50e9ffdb3082f8246023e990" title=" " alt="" coords="2046,31,2142,57"/>
+<area shape="rect" href="utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="2036,613,2152,640"/>
+<area shape="rect" href="classInstruction.html#acbdc34d695f5fa324a8418ef7a916814" title="Decode the binary representation of the instruction." alt="" coords="599,968,734,995"/>
+<area shape="rect" href="classMachine.html#a11fda0ddf1f16d8b1a06f75d1ab5b8a1" title="Run one instruction of a user program. Return the execution time of the instr (cycle)" alt="" coords="1828,360,1983,387"/>
+<area shape="rect" href="mipssim_8cpp.html#a08794516cd8a91c4d1708dafcd89a989" title=" " alt="" coords="624,1019,709,1045"/>
+<area shape="rect" href="classThread.html#a83fedc586ce3718a4a2322f497dcfe2d" title="Returns the thread name." alt="" coords="1387,664,1511,691"/>
+<area shape="rect" href="classThread.html#ade294fd013100034bebd745d8ffb1f94" title="Returns the process owner." alt="" coords="1580,1257,1755,1284"/>
+<area shape="rect" href="classProcessStat.html#a9b8ddf7bc3df341a9f46dc987368fe9e" title=" " alt="" coords="561,1069,772,1096"/>
+<area shape="rect" href="mipssim_8cpp.html#aced37fd50630f731c8c1b83dea978750" title=" " alt="" coords="643,664,690,691"/>
+<area shape="rect" href="classMachine.html#a0d6f63790c0568437b100171f61fd77f" title="Do a pending delayed load (modifying a reg)" alt="" coords="581,816,752,843"/>
+<area shape="rect" href="classMMU.html#a28a50bd03688bc05aa15f93e4abf61a7" title=" " alt="" coords="1190,1272,1310,1299"/>
+<area shape="rect" href="classMMU.html#a60227cf48e6778a4c66d8a13fd2f1539" title=" " alt="" coords="992,1120,1113,1147"/>
+<area shape="rect" href="mipssim_8cpp.html#a3b47e04b315921b67f64caeb71e58165" title=" " alt="" coords="624,715,709,741"/>
+<area shape="rect" href="mipssim_8cpp.html#a1afe7dc150d01782aacc1c90fea93e0d" title="Retrieve the register number referred to in an instruction." alt="" coords="623,765,710,792"/>
+<area shape="rect" href="utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="1871,613,1939,640"/>
+<area shape="rect" href="exception_8cpp.html#a99f08ed6ac27d846d337b47e8762d90e" title="Entry point into Nachos to handle user system calls and exceptions." alt="" coords="820,791,944,817"/>
+<area shape="rect" href="classInterrupt.html#a0bf066222bb39da494919f08098217a5" title="The ready queue is empty, roll simulated time forward until the next interrupt." alt="" coords="1003,411,1103,437"/>
+<area shape="rect" href="classObjId.html#a7695f93d7317c66d2beabcf0ba7976dd" title=" " alt="" coords="992,816,1113,843"/>
+<area shape="rect" href="classThread.html#adbc2bfb172d2eff4b46882aade9eeb8a" title="Relinquish the CPU if any other thread is runnable." alt="" coords="1003,689,1102,716"/>
+<area shape="rect" href="classProcessStat.html#acbaa82f6a60394aca2db1e7e179a2a71" title=" " alt="" coords="1560,1336,1775,1363"/>
+<area shape="rect" href="machine_8cpp.html#ae92c9de378987810550aa69b875e807f" title=" " alt="" coords="1402,1221,1497,1248"/>
+<area shape="rect" href="classMMU.html#aa2ddea5dcd1648aba21ac1a75c79dc25" title=" " alt="" coords="1392,1323,1507,1349"/>
+<area shape="rect" href="machine_8cpp.html#a8885fa023be04c6cfb42cfbfd3e46942" title=" " alt="" coords="1402,1171,1497,1197"/>
+<area shape="rect" href="classStatistics.html#a8994065e3484986acd4db5eb2cb8e993" title="prints collected statistics, including process statistics" alt="" coords="1823,1164,1988,1191"/>
+<area shape="rect" href="machine_8cpp.html#a5be8752c2463241cc0f26763b7d4ee03" title=" " alt="" coords="1192,1221,1308,1248"/>
+<area shape="rect" href="machine_8cpp.html#ac0e33220f6af970b9d93fecea248fffe" title=" " alt="" coords="1192,1171,1308,1197"/>
+<area shape="rect" href="classScheduler.html#a0fa7daec8d1058a8e6b5cbfbdd09555e" title="Dequeue first thread of the ready list, if any, and return thread." alt="" coords="1161,715,1339,741"/>
+<area shape="rect" href="classScheduler.html#a18e89ab130a40c423da77673f12585d7" title="Inserts a thread in the ready list." alt="" coords="1169,613,1331,640"/>
+<area shape="rect" href="classScheduler.html#a797a0a7e133b94109bbb6cf65455caf7" title="Causes a context switch to nextThread." alt="" coords="1179,512,1321,539"/>
+<area shape="rect" href="classInterrupt.html#ad83e8709b967745b6614ea7f75c446d7" title="Check if an interrupt is supposed to occur now." alt="" coords="1592,816,1743,843"/>
+<area shape="rect" href="classInterrupt.html#ab5adc6b35b5820fe525d8fcdf6229273" title=" " alt="" coords="1596,968,1739,995"/>
+<area shape="rect" href="classMachine.html#a9a832bbd1f8e897619e8cb3ae01282ff" title="Write floating point code condition register." alt="" coords="1836,1113,1975,1140"/>
+<area shape="rect" href="classMachine.html#ad9c1948a2dadfd2ddb7d432b2443e884" title="set the status of the machine (see MachineStatus)" alt="" coords="1837,759,1974,785"/>
+<area shape="rect" href="classProcessStat.html#a496418b7c1e7fd9e5f6efa38ae2d802f" title="initialises everything to zero and initialises the name of the process" alt="" coords="1568,1099,1767,1125"/>
+<area shape="rect" href="classProcessStat.html#a91c28f9b6cad27a4caec93437d269a64" title=" " alt="" coords="1577,1161,1758,1188"/>
+<area shape="rect" href="classStatistics.html#a62314e3ac0231266d1bc324f062d8d09" title=" " alt="" coords="1827,911,1984,937"/>
+<area shape="rect" href="classList.html#ad07725e21c5868fadf1f4a5a81c1fd3a" title=" " alt="" coords="1856,961,1955,988"/>
+<area shape="rect" href="classStatistics.html#a417477bec1fe7a42334d4d32b3f3d6a4" title=" " alt="" coords="1824,1012,1987,1039"/>
+<area shape="rect" href="classList.html#a7c94145ed3ab4115dd2a87e25eeadc91" title=" " alt="" coords="1845,1063,1966,1089"/>
+<area shape="rect" href="classList.html#a87dc423c0664829bad9f39e79ccb1165" title=" " alt="" coords="1838,809,1973,836"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="thread_8cpp_a014c1a99794f74ed079b0dde1f7efe8d_icgraph.png" border="0" usemap="#thread_8cpp_a014c1a99794f74ed079b0dde1f7efe8d_icgraph" alt=""/></div>
+<map name="thread_8cpp_a014c1a99794f74ed079b0dde1f7efe8d_icgraph" id="thread_8cpp_a014c1a99794f74ed079b0dde1f7efe8d_icgraph">
+<area shape="rect" title=" " alt="" coords="240,5,387,32"/>
+<area shape="rect" href="classThread.html#ad6d5edb1a6d2a9effbb442883fc5b866" title="Sets&#45;up the thread simulator context : fills it with the appropriate." alt="" coords="5,5,192,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a4a08099b807fecd46f1bc5964ef06d8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a08099b807fecd46f1bc5964ef06d8e">&#9670;&nbsp;</a></span>ThreadPrint()</h2>
 
@@ -178,6 +290,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>StartThreadExecution<
       </table>
 </div><div class="memdoc">
 <p>Dummy function because C++ does not allow a pointer to a member function. So in order to do this, we create a dummy C function (which we can pass a pointer to), that then simply calls the member function. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="thread_8cpp_a4a08099b807fecd46f1bc5964ef06d8e_cgraph.png" border="0" usemap="#thread_8cpp_a4a08099b807fecd46f1bc5964ef06d8e_cgraph" alt=""/></div>
+<map name="thread_8cpp_a4a08099b807fecd46f1bc5964ef06d8e_cgraph" id="thread_8cpp_a4a08099b807fecd46f1bc5964ef06d8e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,93,32"/>
+<area shape="rect" href="classThread.html#a83fedc586ce3718a4a2322f497dcfe2d" title="Returns the thread name." alt="" coords="141,5,265,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="thread_8cpp_a4a08099b807fecd46f1bc5964ef06d8e_icgraph.png" border="0" usemap="#thread_8cpp_a4a08099b807fecd46f1bc5964ef06d8e_icgraph" alt=""/></div>
+<map name="thread_8cpp_a4a08099b807fecd46f1bc5964ef06d8e_icgraph" id="thread_8cpp_a4a08099b807fecd46f1bc5964ef06d8e_icgraph">
+<area shape="rect" title=" " alt="" coords="168,5,256,32"/>
+<area shape="rect" href="classScheduler.html#ae82d9a7b506449c5a32d29b81e536076" title="Print contents of ready list." alt="" coords="5,5,120,32"/>
+</map>
+</div>
 
 </div>
 </div>

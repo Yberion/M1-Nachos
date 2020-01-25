@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['pagefaultmanager_561',['PageFaultManager',['../class_page_fault_manager.html',1,'']]],
-  ['pagetableentry_562',['PageTableEntry',['../class_page_table_entry.html',1,'']]],
-  ['pendinginterrupt_563',['PendingInterrupt',['../class_pending_interrupt.html',1,'']]],
-  ['physicalmemmanager_564',['PhysicalMemManager',['../class_physical_mem_manager.html',1,'']]],
-  ['process_565',['Process',['../class_process.html',1,'']]],
-  ['processstat_566',['ProcessStat',['../class_process_stat.html',1,'']]]
+  ['pagefaultmanager_1135',['PageFaultManager',['../classPageFaultManager.html',1,'']]],
+  ['pagetableentry_1136',['PageTableEntry',['../classPageTableEntry.html',1,'']]],
+  ['pendinginterrupt_1137',['PendingInterrupt',['../classPendingInterrupt.html',1,'']]],
+  ['physicalmemmanager_1138',['PhysicalMemManager',['../classPhysicalMemManager.html',1,'']]],
+  ['process_1139',['Process',['../classProcess.html',1,'']]],
+  ['processstat_1140',['ProcessStat',['../classProcessStat.html',1,'']]]
 ];

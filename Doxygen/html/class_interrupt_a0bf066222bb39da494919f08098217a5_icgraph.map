@@ -1,4 +1,0 @@
-<map id="Interrupt::Halt" name="Interrupt::Halt">
-<area shape="rect" id="node1" title="Quit and print out stats." alt="" coords="177,5,277,32"/>
-<area shape="rect" id="node2" href="$machine_8hpp.html#af31c84fcf9811fc72614abc2be3b5a44" title="Entry point into Nachos to handle user system calls and exceptions." alt="" coords="5,5,129,32"/>
-</map>

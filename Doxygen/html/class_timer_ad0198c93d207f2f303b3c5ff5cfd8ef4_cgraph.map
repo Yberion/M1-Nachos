@@ -1,4 +1,0 @@
-<map id="Timer::TimerExpired" name="Timer::TimerExpired">
-<area shape="rect" id="node1" title="timer generates an interrupt" alt="" coords="5,5,144,32"/>
-<area shape="rect" id="node2" href="$class_interrupt.html#ac403a14a9e41fa2b6dbd5c6056b87389" title="by the hardware device simulators." alt="" coords="192,5,323,32"/>
-</map>

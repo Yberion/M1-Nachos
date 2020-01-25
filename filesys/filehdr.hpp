@@ -101,7 +101,6 @@ extern Config *g_cfg;
 class FileHeader
 {
 public:
-
     FileHeader(void); // Initialize the header (made empty)
     ~FileHeader(void); // Deallocate the file header
 
@@ -116,12 +115,9 @@ public:
     //<! data blocks
 
     void FetchFrom(int sectorNumber); //!< Initialize file header from disk
-    void WriteBack(int sectorNumber); //!< Write modifications to file header
-    //!< back to disk
+    void WriteBack(int sectorNumber); //!< Write modifications to file header back to disk
 
-    int ByteToSector(int offset); //!< Convert a byte offset into the file
-    //!< to the disk sector containing
-    //!< the byte
+    int ByteToSector(int offset); //!< Convert a byte offset into the file to the disk sector containing the byte
 
     int FileLength(); //!< Return the length of the file
     //!< in bytes
@@ -135,16 +131,12 @@ public:
     void SetFile(); //!< Mark this header as a file header
     void SetDir(); //!< Mark this header as a directory header
 private:
-    int isdir;
+    int isdir; //!< isdir
     int numBytes; //!< Number of bytes in the file
     int numSectors; //!< Number of data sectors in the file
-    int *dataSectors; /*!< Disk sector numbers for each data
-     block in the file
-     */
+    int *dataSectors; //!< Disk sector numbers for each data block in the file
     int numHeaderSectors; //!< number of sectors used for the header
-    int headerSectors[MAX_HEADER_SECTORS]; /*!< Disk sectors numbers for each header
-     block of the file
-     */
+    int headerSectors[MAX_HEADER_SECTORS]; //!< Disk sectors numbers for each header block of the file
 };
 
 #endif // FILEHDR_H

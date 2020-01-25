@@ -1,0 +1,12 @@
+<map id="Scheduler::SwitchTo" name="Scheduler::SwitchTo">
+<area shape="rect" id="node1" title="Causes a context switch to nextThread." alt="" coords="5,187,147,213"/>
+<area shape="rect" id="node2" href="$classThread.html#afa6657ff14b9c6866eadd85ea32c9147" title="Check if a thread has overflowed its stack." alt="" coords="211,5,365,32"/>
+<area shape="rect" id="node3" href="$utility_8cpp.html#af1c6878736cbd9e1b531898d8951d613" title=" " alt="" coords="254,56,322,83"/>
+<area shape="rect" id="node5" href="$classThread.html#a83fedc586ce3718a4a2322f497dcfe2d" title="Returns the thread name." alt="" coords="226,107,350,133"/>
+<area shape="rect" id="node6" href="$classStatistics.html#a77aec82b7adb8d795c850db96c82f5d8" title=" " alt="" coords="207,157,369,184"/>
+<area shape="rect" id="node7" href="$classThread.html#af09207adbbb541782dd8503381e8adc4" title="Restore the processor registers." alt="" coords="201,209,375,250"/>
+<area shape="rect" id="node8" href="$classThread.html#ada543e25dfd39c097fef1e9301796d2a" title="Restore Nachos simulator state." alt="" coords="203,274,373,315"/>
+<area shape="rect" id="node9" href="$classThread.html#ab4ce2840f1ceb22b52c1caef28c0cc02" title="Save the processor registers." alt="" coords="195,340,381,367"/>
+<area shape="rect" id="node10" href="$classThread.html#a947490a4557c1eef2e741a0c8ce5bfb0" title="Save the state of the Nachos simulator." alt="" coords="197,391,379,417"/>
+<area shape="rect" id="node4" href="$utility_8cpp.html#a79c7d1acabdb48f6f6a80ec0abf7cf89" title=" " alt="" coords="429,56,545,83"/>
+</map>

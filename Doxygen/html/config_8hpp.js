@@ -1,6 +1,6 @@
 var config_8hpp =
 [
-    [ "Config", "class_config.html", "class_config" ],
+    [ "Config", "classConfig.html", "classConfig" ],
     [ "ACIA_BUSY_WAITING", "config_8hpp.html#afb2592fc45f35e4287c9a27159cfe1d0", null ],
     [ "ACIA_INTERRUPT", "config_8hpp.html#a0d79eec71869ff08d76c561529e1aba9", null ],
     [ "ACIA_NONE", "config_8hpp.html#a511f9f369ebce4a823e623081f7c135a", null ],

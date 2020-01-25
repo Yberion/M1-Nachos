@@ -66,12 +66,8 @@ public:
     int Rmdir(char*); //!< Delete a directory
 
 private:
-    OpenFile *freeMapFile; /*!< Bit map of free disk blocks,
-     represented as a file
-     */
-    OpenFile *directoryFile; /*!< "Root" directory -- list of
-     file names, represented as a file
-     */
+    OpenFile *freeMapFile; //!< Bit map of free disk blocks, represented as a file
+    OpenFile *directoryFile; //!< "Root" directory -- list of file names, represented as a file
 };
 
 #endif // FS_H

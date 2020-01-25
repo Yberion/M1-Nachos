@@ -1,4 +1,22 @@
 var searchData=
 [
-  ['handler_984',['handler',['../class_pending_interrupt.html#a4e39241c89b2e3040286333e9f83ea7d',1,'PendingInterrupt']]]
+  ['g_5facia_5fdriver_1670',['g_acia_driver',['../system_8cpp.html#ab602abd0f996f274c15d323bbc11b409',1,'g_acia_driver():&#160;system.cpp'],['../system_8hpp.html#ab602abd0f996f274c15d323bbc11b409',1,'g_acia_driver():&#160;system.cpp']]],
+  ['g_5falive_1671',['g_alive',['../system_8cpp.html#a4c3b6f3e8fe99cf5e155415bafc703fb',1,'g_alive():&#160;system.cpp'],['../system_8hpp.html#a4c3b6f3e8fe99cf5e155415bafc703fb',1,'g_alive():&#160;system.cpp']]],
+  ['g_5fcfg_1672',['g_cfg',['../filehdr_8hpp.html#adc8380c1eb66b71d11bf34259be8f656',1,'g_cfg():&#160;system.cpp'],['../system_8cpp.html#adc8380c1eb66b71d11bf34259be8f656',1,'g_cfg():&#160;system.cpp'],['../system_8hpp.html#adc8380c1eb66b71d11bf34259be8f656',1,'g_cfg():&#160;system.cpp']]],
+  ['g_5fconsole_5fdriver_1673',['g_console_driver',['../system_8cpp.html#a7a4d1436080439e8dc57f8618d71cd8d',1,'g_console_driver():&#160;system.cpp'],['../system_8hpp.html#a7a4d1436080439e8dc57f8618d71cd8d',1,'g_console_driver():&#160;system.cpp']]],
+  ['g_5fcurrent_5fthread_1674',['g_current_thread',['../system_8cpp.html#a6392a305550e8978d88f1f2e224de58e',1,'g_current_thread():&#160;system.cpp'],['../system_8hpp.html#a6392a305550e8978d88f1f2e224de58e',1,'g_current_thread():&#160;system.cpp']]],
+  ['g_5fdisk_5fdriver_1675',['g_disk_driver',['../system_8cpp.html#aa31f46fa314f5947e9b36923180a787f',1,'g_disk_driver():&#160;system.cpp'],['../system_8hpp.html#aa31f46fa314f5947e9b36923180a787f',1,'g_disk_driver():&#160;system.cpp']]],
+  ['g_5ffile_5fsystem_1676',['g_file_system',['../system_8cpp.html#a6e03b0b1e6d9b6f58f742a5a0209a615',1,'g_file_system():&#160;system.cpp'],['../system_8hpp.html#a6e03b0b1e6d9b6f58f742a5a0209a615',1,'g_file_system():&#160;system.cpp']]],
+  ['g_5fmachine_1677',['g_machine',['../system_8cpp.html#ad2de8580d28934370d742d9cee69fca2',1,'g_machine():&#160;system.cpp'],['../system_8hpp.html#ad2de8580d28934370d742d9cee69fca2',1,'g_machine():&#160;system.cpp']]],
+  ['g_5fobject_5fids_1678',['g_object_ids',['../system_8cpp.html#adaa528d061ffbfd77520bdfd92c5dbfe',1,'g_object_ids():&#160;system.cpp'],['../system_8hpp.html#adaa528d061ffbfd77520bdfd92c5dbfe',1,'g_object_ids():&#160;system.cpp']]],
+  ['g_5fopen_5ffile_5ftable_1679',['g_open_file_table',['../system_8cpp.html#a08e73ecf83b5706f16b04d9e65d5ad2f',1,'g_open_file_table():&#160;system.cpp'],['../system_8hpp.html#a08e73ecf83b5706f16b04d9e65d5ad2f',1,'g_open_file_table():&#160;system.cpp']]],
+  ['g_5fpage_5ffault_5fmanager_1680',['g_page_fault_manager',['../system_8cpp.html#a52ec5e726d8fe786711c62ed5f92772a',1,'g_page_fault_manager():&#160;system.cpp'],['../system_8hpp.html#a52ec5e726d8fe786711c62ed5f92772a',1,'g_page_fault_manager():&#160;system.cpp']]],
+  ['g_5fphysical_5fmem_5fmanager_1681',['g_physical_mem_manager',['../system_8cpp.html#a48179840dcfd3a6f63263fc48268d7df',1,'g_physical_mem_manager():&#160;system.cpp'],['../system_8hpp.html#a48179840dcfd3a6f63263fc48268d7df',1,'g_physical_mem_manager():&#160;system.cpp']]],
+  ['g_5fscheduler_1682',['g_scheduler',['../system_8cpp.html#a047288028d20fccc23e8026ced24adb4',1,'g_scheduler():&#160;system.cpp'],['../system_8hpp.html#a047288028d20fccc23e8026ced24adb4',1,'g_scheduler():&#160;system.cpp']]],
+  ['g_5fstats_1683',['g_stats',['../system_8cpp.html#a95d655322dffb2f1956b8c969e24c716',1,'g_stats():&#160;system.cpp'],['../system_8hpp.html#a95d655322dffb2f1956b8c969e24c716',1,'g_stats():&#160;system.cpp']]],
+  ['g_5fswap_5fdisk_5fdriver_1684',['g_swap_disk_driver',['../system_8cpp.html#a4808da095abc602c25ce2f589fd9e64e',1,'g_swap_disk_driver():&#160;system.cpp'],['../system_8hpp.html#a4808da095abc602c25ce2f589fd9e64e',1,'g_swap_disk_driver():&#160;system.cpp']]],
+  ['g_5fswap_5fmanager_1685',['g_swap_manager',['../system_8cpp.html#a8b9549fc2aa01fae9009d1ab4619a7e8',1,'g_swap_manager():&#160;system.cpp'],['../system_8hpp.html#a8b9549fc2aa01fae9009d1ab4619a7e8',1,'g_swap_manager():&#160;system.cpp']]],
+  ['g_5fsyscall_5ferror_1686',['g_syscall_error',['../system_8cpp.html#a212f136648f46b51881a321e866d543e',1,'g_syscall_error():&#160;system.cpp'],['../system_8hpp.html#a212f136648f46b51881a321e866d543e',1,'g_syscall_error():&#160;system.cpp']]],
+  ['g_5fthread_5fto_5fbe_5fdestroyed_1687',['g_thread_to_be_destroyed',['../system_8cpp.html#af80ca52b09206dcf109a4ec7161aafd1',1,'g_thread_to_be_destroyed():&#160;system.cpp'],['../system_8hpp.html#af80ca52b09206dcf109a4ec7161aafd1',1,'g_thread_to_be_destroyed():&#160;system.cpp']]],
+  ['get_1688',['get',['../classDriverConsole.html#a547903a8537885b5b327dcfdc3083e68',1,'DriverConsole']]]
 ];

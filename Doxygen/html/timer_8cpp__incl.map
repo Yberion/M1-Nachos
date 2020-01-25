@@ -8,9 +8,9 @@
 <area shape="rect" id="node3" title=" " alt="" coords="483,155,549,181"/>
 <area shape="rect" id="node4" href="$disk_8hpp.html" title="Data structures to emulate a physical disk." alt="" coords="202,603,326,629"/>
 <area shape="rect" id="node5" href="$copyright_8hpp.html" title="Nachos copyright notice Copyright (c) 1992&#45;1993 The Regents of the University of California...." alt="" coords="524,827,663,853"/>
-<area shape="rect" id="node15" href="$translationtable_8hpp.html" title="Data structures for managing address translation" alt="" coords="453,379,641,405"/>
+<area shape="rect" id="node15" href="$translationtable_8hpp.html" title="Data structures for managing address translation." alt="" coords="453,379,641,405"/>
 <area shape="rect" id="node21" href="$mmu_8hpp.html" title="Data structures for the MMU (Memory Management Unit)" alt="" coords="174,155,303,181"/>
-<area shape="rect" id="node22" href="$_a_c_i_a_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="328,155,459,181"/>
+<area shape="rect" id="node22" href="$ACIA_8hpp.html" title="Data Structures to emulate an ACIA device." alt="" coords="328,155,459,181"/>
 <area shape="rect" id="node23" href="$interrupt_8hpp.html" title="Data structures to emulate low&#45;level interrupt hardware." alt="" coords="43,528,189,555"/>
 <area shape="rect" id="node6" href="$utility_8hpp.html" title="Miscellaneous useful definitions, including debugging routines." alt="" coords="605,677,718,704"/>
 <area shape="rect" id="node7" title=" " alt="" coords="1147,827,1211,853"/>

@@ -41,15 +41,17 @@ public:
     int numThreads; /*!< Number of threads attached
      to this process */
 
-    ProcessStat *stat; /*!< Statistics concerning this
-     process */
+	/*!< Statistics concerning this process */
+    ProcessStat *stat; 
 
+	//!< Returns the process name
     char* getName()
     {
         return (name);
-    } /*!< Returns the process name */
+    } 
 
 private:
+    //!< Process name
     char *name;
 };
 

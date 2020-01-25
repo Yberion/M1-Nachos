@@ -1,0 +1,10 @@
+<map id="Interrupt::Halt" name="Interrupt::Halt">
+<area shape="rect" id="node1" title="The ready queue is empty, roll simulated time forward until the next interrupt." alt="" coords="5,107,105,133"/>
+<area shape="rect" id="node2" href="$system_8cpp.html#ae89a123aad1c66a76c398b7af216aae4" title="Nachos is done." alt="" coords="153,81,223,108"/>
+<area shape="rect" id="node8" href="$sysdep_8cpp.html#a8b9ef9330856c5a5a02f2d3ef0497e04" title="Quit without dropping core." alt="" coords="165,132,211,159"/>
+<area shape="rect" id="node3" href="$classStatistics.html#ade67669fb1436e69a215a780b1ade63e" title=" " alt="" coords="271,81,383,108"/>
+<area shape="rect" id="node4" href="$classList.html#a3d4805c0e563fd485273fc90a4b69e94" title=" " alt="" coords="451,5,545,32"/>
+<area shape="rect" id="node5" href="$classList.html#ad07725e21c5868fadf1f4a5a81c1fd3a" title=" " alt="" coords="449,56,547,83"/>
+<area shape="rect" id="node6" href="$classProcessStat.html#a8c64c1951933e8f75b20a913226bf437" title=" " alt="" coords="433,107,563,133"/>
+<area shape="rect" id="node7" href="$classList.html#a87dc423c0664829bad9f39e79ccb1165" title=" " alt="" coords="431,157,565,184"/>
+</map>
