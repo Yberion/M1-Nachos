@@ -7,8 +7,8 @@
 //  of liability and disclaimer of warranty provisions.
  */
 
-#include "userlib/syscall.hpp"
-#include "userlib/libnachos.hpp"
+#include "userlib/syscall.h"
+#include "userlib/libnachos.h"
 
 int
 main()

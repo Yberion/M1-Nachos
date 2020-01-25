@@ -8,7 +8,7 @@
 */
 
 // Nachos system calls
-#include "userlib/libnachos.hpp"
+#include "userlib/libnachos.h"
 
 int
 main()

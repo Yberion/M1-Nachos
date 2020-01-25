@@ -1,4 +1,4 @@
-/*! \file syscall.hpp 
+/*! \file syscall.h 
     \brief Nachos system call interface.  
   
    These are Nachos kernel operations

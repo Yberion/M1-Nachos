@@ -11,7 +11,7 @@
 //  of liability and disclaimer of warranty provisions.
  */
 
-#include "libnachos.hpp"
+#include "libnachos.h"
 #include <stdarg.h>
 #include <stdint.h>
 

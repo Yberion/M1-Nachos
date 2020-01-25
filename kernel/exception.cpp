@@ -22,7 +22,7 @@
 #include "machine/machine.hpp"
 #include "kernel/msgerror.hpp"
 #include "kernel/system.hpp"
-#include "userlib/syscall.hpp"
+#include "userlib/syscall.h"
 #include "kernel/synch.hpp"
 #include "drivers/drvACIA.hpp"
 #include "drivers/drvConsole.hpp"
