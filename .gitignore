@@ -3,6 +3,7 @@ nachos
 SWAPDISK
 .vs
 .project
-.o
-.a
+*.o
+*.a
+*.d
 Doxygen/
