@@ -11,9 +11,9 @@
  //  of liability and disclaimer of warranty provisions.
  */
 
-#include "libnachos.hpp"
-#include <cstdarg>
-#include <cstdint>
+#include "libnachos.h"
+#include <stdarg.h>
+#include <stdint-gcc.h>
 
 //----------------------------------------------------------------------
 // threadStart()

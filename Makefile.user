@@ -7,6 +7,7 @@ USERLIB = $(TOPDIR)/userlib
 
 AS  = $(MIPS_AS) -c
 GCC = $(MIPS_GCC)
+GXX = $(MIPS_GXX)
 LD  = $(MIPS_LD)
 
 INCPATH += -I$(TOPDIR) -I$(USERLIB)
@@ -21,6 +22,9 @@ LDFLAGS  = $(MIPS_LDFLAGS) -T $(TOPDIR)/userlib/ldscript.lds
 
 %.o: %.c
 	$(GCC) $(CFLAGS) -c $<
+	
+%.o: %.cpp
+	$(GXX) $(CPPFLAGS) -c $<
 
 %.o: %.s
 	$(AS) $(ASFLAGS) -c $<
@@ -35,6 +39,12 @@ LDFLAGS  = $(MIPS_LDFLAGS) -T $(TOPDIR)/userlib/ldscript.lds
 .%.d: %.c
 	@echo Generating dependencies for $<
 	@$(SHELL) -ec '$(GCC) -M $(CFLAGS) $< \
+		| sed '\''s/\($*\)\.o[ :]*/\1.o $@ : /g'\'' > $@; \
+		[ -s $@ ] || rm -f $@'
+		
+.%.d: %.cpp
+	@echo Generating dependencies for $<
+	@$(SHELL) -ec '$(GXX) -M $(CPPFLAGS) $< \
 		| sed '\''s/\($*\)\.o[ :]*/\1.o $@ : /g'\'' > $@; \
 		[ -s $@ ] || rm -f $@'
 

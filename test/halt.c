@@ -9,12 +9,12 @@
  */
 
 // Nachos system calls
-#include "userlib/syscall.hpp"
+#include "userlib/syscall.h"
 
 int main()
 {
     // Halt Nachos
-    Halt();
+    //Halt();
     /* not reached */
     return 0;
 }
