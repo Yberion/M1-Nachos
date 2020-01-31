@@ -76,8 +76,19 @@ Semaphore::~Semaphore()
 //----------------------------------------------------------------------
 void Semaphore::P()
 {
-    printf("**** Warning: method Semaphore::P is not implemented yet\n");
-    exit(-1);
+    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+
+    if (value > 0)
+    {
+        value--;
+    }
+    else
+    {
+        queue->Append(g_current_thread);
+        g_current_thread->Sleep();
+    }
+
+    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
 }
 
 //----------------------------------------------------------------------
@@ -90,8 +101,17 @@ void Semaphore::P()
 //----------------------------------------------------------------------
 void Semaphore::V()
 {
-    printf("**** Warning: method Semaphore::V is not implemented yet\n");
-    exit(-1);
+    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+
+    value++;
+
+    if (!queue->IsEmpty())
+    {
+        Thread *tmp = (Thread*)queue->Remove();
+        g_scheduler->ReadyToRun(tmp);
+    }
+
+    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
 }
 
 //----------------------------------------------------------------------
@@ -138,8 +158,20 @@ Lock::~Lock()
 //----------------------------------------------------------------------
 void Lock::Acquire()
 {
-    printf("**** Warning: method Lock::Acquire is not implemented yet\n");
-    exit(-1);
+    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+
+    if (free == true)
+    {
+        free = false;
+        owner = g_current_thread;
+    }
+    else
+    {
+        sleepqueue->Append((void*)g_current_thread);
+        g_current_thread->Sleep();
+    }
+
+    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
 }
 
 //----------------------------------------------------------------------
@@ -153,8 +185,23 @@ void Lock::Acquire()
 //----------------------------------------------------------------------
 void Lock::Release()
 {
-    printf("**** Warning: method Lock::Release is not implemented yet\n");
-    exit(-1);
+    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+
+        if (free == false)
+        {
+            if (!sleepqueue->IsEmpty())
+            {
+                owner = (Thread*)sleepqueue->Remove();
+                g_scheduler->ReadyToRun(owner);
+            }
+            else
+            {
+                free = true;
+                owner = nullptr;
+            }
+        }
+
+        g_machine->interrupt->SetStatus(INTERRUPTS_ON);
 }
 
 //----------------------------------------------------------------------

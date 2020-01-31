@@ -6,7 +6,7 @@ include $(TOPDIR)/Makefile.config
 USERLIB = $(TOPDIR)/userlib
 
 AS  = $(MIPS_AS) -c
-GCC = $(MIPS_GCC)
+GCC = $(MIPS_GCC) -mxgot
 GXX = $(MIPS_GXX)
 LD  = $(MIPS_LD)
 
