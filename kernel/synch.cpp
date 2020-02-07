@@ -20,7 +20,6 @@
 // Copyright (c) 1992-1993 The Regents of the University of California.
 // All rights reserved.  See copyright.hpp for copyright notice and limitation 
 // of liability and disclaimer of warranty provisions.
-
 #include "kernel/system.hpp"
 #include "kernel/scheduler.hpp"
 #include "kernel/synch.hpp"
@@ -84,7 +83,7 @@ void Semaphore::P()
     }
     else
     {
-        queue->Append(g_current_thread);
+        queue->Append((void*)g_current_thread);
         g_current_thread->Sleep();
     }
 
@@ -187,21 +186,21 @@ void Lock::Release()
 {
     g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
-        if (free == false)
+    if (free == false)
+    {
+        if (!sleepqueue->IsEmpty())
         {
-            if (!sleepqueue->IsEmpty())
-            {
-                owner = (Thread*)sleepqueue->Remove();
-                g_scheduler->ReadyToRun(owner);
-            }
-            else
-            {
-                free = true;
-                owner = nullptr;
-            }
+            owner = (Thread*)sleepqueue->Remove();
+            g_scheduler->ReadyToRun(owner);
         }
+        else
+        {
+            free = true;
+            owner = nullptr;
+        }
+    }
 
-        g_machine->interrupt->SetStatus(INTERRUPTS_ON);
+    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
 }
 
 //----------------------------------------------------------------------
@@ -251,8 +250,12 @@ Condition::~Condition()
 //----------------------------------------------------------------------
 void Condition::Wait()
 {
-    printf("**** Warning: method Condition::Wait is not implemented yet\n");
-    exit(-1);
+    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+
+    waitqueue->Append((void*)g_current_thread);
+    g_current_thread->Sleep();
+
+    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
 }
 
 //----------------------------------------------------------------------
@@ -263,8 +266,17 @@ void Condition::Wait()
 //----------------------------------------------------------------------
 void Condition::Signal()
 {
-    printf("**** Warning: method Condition::Signal is not implemented yet\n");
-    exit(-1);
+    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+
+    if (waitqueue->IsEmpty())
+    {
+        return;
+    }
+
+    Thread* tmp = (Thread*)waitqueue->Remove();
+    g_scheduler->ReadyToRun(tmp);
+
+    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
 }
 
 //----------------------------------------------------------------------
@@ -275,6 +287,12 @@ void Condition::Signal()
 //----------------------------------------------------------------------
 void Condition::Broadcast()
 {
-    printf("**** Warning: method Condition::Broadcast is not implemented yet\n");
-    exit(-1);
+    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+
+    for (void* thread : waitqueue)
+    {
+        g_scheduler->ReadyToRun((Thread*)thread);
+    }
+
+    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
 }

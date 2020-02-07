@@ -106,7 +106,6 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
 
     switch (exceptiontype)
     {
-
         case NO_EXCEPTION:
             printf("Nachos internal error, a NoException exception is raised ...\n");
             g_machine->interrupt->Halt(0);
@@ -118,11 +117,9 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
             // -------------
             switch (type)
             {
-
                 char msg[MAXSTRLEN]; // Argument for the PError system call
 
                 // You will find below all Nachos system calls ...
-
             case SC_HALT:
                 // The halt system call. Stops Nachos.
                 DEBUG('e', "Shutdown, initiated by user program.\n");
@@ -136,10 +133,8 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
                 DEBUG('e', "Systime call, initiated by user program.\n");
                 int addr = g_machine->ReadIntRegister(4);
                 uint64_t tick = g_stats->getTotalTicks();
-                uint32_t seconds = (uint32_t)
-                cycle_to_sec(tick,g_cfg->ProcessorFrequency);
-                uint32_t nanos = (uint32_t)
-                cycle_to_nano(tick,g_cfg->ProcessorFrequency);
+                uint32_t seconds = (uint32_t)cycle_to_sec(tick, g_cfg->ProcessorFrequency);
+                uint32_t nanos = (uint32_t)cycle_to_nano(tick, g_cfg->ProcessorFrequency);
                 g_machine->mmu->WriteMem(addr, sizeof(uint32_t), seconds);
                 g_machine->mmu->WriteMem(addr + 4, sizeof(uint32_t), nanos);
                 g_syscall_error->SetMsg("", NO_ERROR);
@@ -677,6 +672,189 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
                 {
                     g_machine->WriteIntRegister(2, ERROR);
                     g_syscall_error->SetMsg("", NO_ACIA);
+                }
+                break;
+            }
+            case SC_SEM_CREATE:
+            {
+                DEBUG('e', "Semaphore: creation.\n");
+
+                int addr;
+                int sizep;
+
+                addr = g_machine->ReadIntRegister(4);
+                sizep = GetLengthParam(addr);
+
+                char name[sizep];
+
+                GetStringParam(addr, name, sizep);
+
+                int count = g_machine->ReadIntRegister(5);
+
+                Semaphore *semaphore = new Semaphore(name, count);
+
+                int32_t semID;
+                semID = g_object_ids->AddObject(semaphore);
+
+                g_machine->WriteIntRegister(2, semID);
+
+                break;
+            }
+            case SC_SEM_DESTROY:
+            {
+                DEBUG('e', "Semaphore: destroy.\n");
+
+                int semId = g_machine->ReadIntRegister(4);
+
+                Semaphore *semaphore = (Semaphore*)g_object_ids->SearchObject(semId);
+
+                if (semaphore != nullptr && semaphore->type == SEMAPHORE_TYPE)
+                {
+                    g_object_ids->RemoveObject(semId);
+
+                    delete semaphore;
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_SEMAPHORE_ID);
+                }
+
+                break;
+            }
+            case SC_P:
+            {
+                DEBUG('e', "Semaphore: P().\n");
+
+                int semId = g_machine->ReadIntRegister(4);
+
+                Semaphore *semaphore = (Semaphore*)g_object_ids->SearchObject(semId);
+
+                if (semaphore != nullptr && semaphore->type == SEMAPHORE_TYPE)
+                {
+                    semaphore->P();
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                    g_syscall_error->SetMsg("", NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_SEMAPHORE_ID);
+                }
+                break;
+            }
+            case SC_V:
+            {
+                DEBUG('e', "Semaphore: V().\n");
+
+                int semId = g_machine->ReadIntRegister(4);
+
+                Semaphore *semaphore = (Semaphore*)g_object_ids->SearchObject(semId);
+
+                if (semaphore != nullptr && semaphore->type == SEMAPHORE_TYPE)
+                {
+                    semaphore->V();
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_SEMAPHORE_ID);
+                }
+                break;
+            }
+            case SC_LOCK_CREATE:
+            {
+                DEBUG('e', "Lock: creation.\n");
+
+                int addr;
+                int sizep;
+
+                addr = g_machine->ReadIntRegister(4);
+                sizep = GetLengthParam(addr);
+
+                char name[sizep];
+
+                GetStringParam(addr, name, sizep);
+
+                Lock *lock = new Lock(name);
+
+                int32_t lockID;
+                lockID = g_object_ids->AddObject(lock);
+
+                g_machine->WriteIntRegister(2, lockID);
+
+                break;
+            }
+            case SC_LOCK_DESTROY:
+            {
+                DEBUG('e', "Lock: destroy.\n");
+
+                int lockId = g_machine->ReadIntRegister(4);
+
+                Lock *lock = (Lock*)g_object_ids->SearchObject(lockId);
+
+                if (lock != nullptr && lock->type == LOCK_TYPE)
+                {
+                    g_object_ids->RemoveObject(lockId);
+
+                    delete lock;
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_LOCK_ID);
+                }
+
+                break;
+            }
+            case SC_LOCK_ACQUIRE:
+            {
+                DEBUG('e', "Lock: Acquire().\n");
+
+                int lockId = g_machine->ReadIntRegister(4);
+
+                Lock *lock = (Lock*)g_object_ids->SearchObject(lockId);
+
+                if (lock != nullptr && lock->type == LOCK_TYPE)
+                {
+                    lock->Acquire();
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                    g_syscall_error->SetMsg("", NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_LOCK_ID);
+                }
+                break;
+            }
+            case SC_LOCK_RELEASE:
+            {
+                DEBUG('e', "Lock: Release().\n");
+
+                int lockId = g_machine->ReadIntRegister(4);
+
+                Lock *lock = (Lock*)g_object_ids->SearchObject(lockId);
+
+                if (lock != nullptr && lock->type == LOCK_TYPE)
+                {
+                    lock->Release();
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                    g_syscall_error->SetMsg("", NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_LOCK_ID);
                 }
                 break;
             }

@@ -47,8 +47,9 @@
 #define SC_SEM_DESTROY   16
 #define SC_LOCK_CREATE	 17 
 #define SC_LOCK_DESTROY	 18 
-#define SC_LOCK_ACQUIRE	 19 
+#define SC_LOCK_ACQUIRE	 19
 #define SC_LOCK_RELEASE	 20 
+// TODO: Lock finished, COND next
 #define SC_COND_CREATE	 21 
 #define SC_COND_DESTROY	 22 
 #define SC_COND_WAIT	 23 
