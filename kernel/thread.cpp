@@ -100,8 +100,13 @@ Thread::~Thread()
 int Thread::Start(Process *owner, int32_t func, int arg)
 {
     ASSERT(process == NULL);
-    printf("**** Warning: method Thread::Start is not implemented yet\n");
-    exit(-1);
+    ASSERT(owner != NULL);
+
+    stackPointer = owner->addrspace->StackAllocate();
+
+    //TODO: FINIR
+
+    process = owner;
 }
 
 //----------------------------------------------------------------------

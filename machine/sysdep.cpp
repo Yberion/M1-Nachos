@@ -401,8 +401,7 @@ int Random()
  //	\param size amount of useful space needed (in bytes)
  */
 //----------------------------------------------------------------------
-int8_t*
-AllocBoundedArray(size_t size)
+int8_t* AllocBoundedArray(size_t size)
 {
     int8_t *ptr = new int8_t[size];
     return ptr;
