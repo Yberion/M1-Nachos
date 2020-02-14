@@ -342,8 +342,22 @@ void Thread::Sleep()
 //----------------------------------------------------------------------
 void Thread::SaveProcessorState()
 {
-    printf("**** Warning: method Thread::SaveProcessorState is not implemented yet\n");
-    exit(-1);
+    ASSERT(this == g_current_thread);
+    ASSERT(g_machine->interrupt->GetStatus() == INTERRUPTS_OFF);
+
+    DEBUG('t', "Save context thread \"%s\"\n", GetName());
+
+    for (unsigned int i = 0; i < NUM_INT_REGS; ++i)
+    {
+        thread_context.int_registers[i] = g_machine->int_registers[i];
+    }
+
+    for (unsigned int i = 0; i < NUM_FP_REGS; ++i)
+    {
+        thread_context.float_registers[i] = g_machine->float_registers[i];
+    }
+
+    thread_context.cc = g_machine->cc;
 }
 
 //----------------------------------------------------------------------
@@ -353,8 +367,22 @@ void Thread::SaveProcessorState()
 //----------------------------------------------------------------------
 void Thread::RestoreProcessorState()
 {
-    printf("**** Warning: method Thread::RestoreProcessorState is not implemented yet\n");
-    exit(-1);
+    ASSERT(this == g_current_thread);
+    ASSERT(g_machine->interrupt->GetStatus() == INTERRUPTS_OFF);
+
+    DEBUG('t', "Restore context thread \"%s\"\n", GetName());
+
+    for (unsigned int i = 0; i < NUM_INT_REGS; ++i)
+    {
+        g_machine->int_registers[i] = thread_context.int_registers[i];
+    }
+
+    for (unsigned int i = 0; i < NUM_FP_REGS; ++i)
+    {
+        g_machine->float_registers[i] = thread_context.float_registers[i];
+    }
+
+    g_machine->cc = thread_context.cc;
 }
 
 //----------------------------------------------------------------------
