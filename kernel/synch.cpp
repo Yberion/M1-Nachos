@@ -289,9 +289,11 @@ void Condition::Broadcast()
 {
     g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
-    for (void* thread : waitqueue)
+    Thread* tmp = nullptr;
+
+    while ((tmp = (Thread*)waitqueue->Remove()) != nullptr)
     {
-        g_scheduler->ReadyToRun((Thread*)thread);
+        g_scheduler->ReadyToRun(tmp);
     }
 
     g_machine->interrupt->SetStatus(INTERRUPTS_ON);

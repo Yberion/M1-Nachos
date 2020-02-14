@@ -99,7 +99,6 @@ static void GetStringParam(int addr, char *dest, int maxlen)
 //----------------------------------------------------------------------
 void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
 {
-
     // Get the content of the r2 register (system call number in case
     // of a system call
     int type = g_machine->ReadIntRegister(2);
@@ -604,7 +603,6 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
                 }
                 break;
             }
-
             case SC_FSLIST:
             {
                 // The FSList system call
@@ -644,7 +642,6 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
                 }
                 break;
             }
-
             case SC_TTY_RECEIVE:
             {
                 // the TtyReceive system call
@@ -679,22 +676,18 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
             {
                 DEBUG('e', "Semaphore: creation.\n");
 
-                int addr;
-                int sizep;
+                int32_t addr = g_machine->ReadIntRegister(4);
+                int32_t sizep = GetLengthParam(addr);
 
-                addr = g_machine->ReadIntRegister(4);
-                sizep = GetLengthParam(addr);
-
-                char name[sizep];
+                char name[sizep] = { 0 };
 
                 GetStringParam(addr, name, sizep);
 
-                int count = g_machine->ReadIntRegister(5);
+                int32_t count = g_machine->ReadIntRegister(5);
 
                 Semaphore *semaphore = new Semaphore(name, count);
 
-                int32_t semID;
-                semID = g_object_ids->AddObject(semaphore);
+                int32_t semID = g_object_ids->AddObject(semaphore);
 
                 g_machine->WriteIntRegister(2, semID);
 
@@ -704,7 +697,7 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
             {
                 DEBUG('e', "Semaphore: destroy.\n");
 
-                int semId = g_machine->ReadIntRegister(4);
+                int32_t semId = g_machine->ReadIntRegister(4);
 
                 Semaphore *semaphore = (Semaphore*)g_object_ids->SearchObject(semId);
 
@@ -728,7 +721,7 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
             {
                 DEBUG('e', "Semaphore: P().\n");
 
-                int semId = g_machine->ReadIntRegister(4);
+                int32_t semId = g_machine->ReadIntRegister(4);
 
                 Semaphore *semaphore = (Semaphore*)g_object_ids->SearchObject(semId);
 
@@ -750,7 +743,7 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
             {
                 DEBUG('e', "Semaphore: V().\n");
 
-                int semId = g_machine->ReadIntRegister(4);
+                int32_t semId = g_machine->ReadIntRegister(4);
 
                 Semaphore *semaphore = (Semaphore*)g_object_ids->SearchObject(semId);
 
@@ -771,22 +764,18 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
             {
                 DEBUG('e', "Lock: creation.\n");
 
-                int addr;
-                int sizep;
+                int32_t addr = g_machine->ReadIntRegister(4);
+                int32_t sizep = GetLengthParam(addr);
 
-                addr = g_machine->ReadIntRegister(4);
-                sizep = GetLengthParam(addr);
-
-                char name[sizep];
+                char name[sizep] = { 0 };
 
                 GetStringParam(addr, name, sizep);
 
                 Lock *lock = new Lock(name);
 
-                int32_t lockID;
-                lockID = g_object_ids->AddObject(lock);
+                int32_t lockId = g_object_ids->AddObject(lock);
 
-                g_machine->WriteIntRegister(2, lockID);
+                g_machine->WriteIntRegister(2, lockId);
 
                 break;
             }
@@ -794,7 +783,7 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
             {
                 DEBUG('e', "Lock: destroy.\n");
 
-                int lockId = g_machine->ReadIntRegister(4);
+                int32_t lockId = g_machine->ReadIntRegister(4);
 
                 Lock *lock = (Lock*)g_object_ids->SearchObject(lockId);
 
@@ -818,7 +807,7 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
             {
                 DEBUG('e', "Lock: Acquire().\n");
 
-                int lockId = g_machine->ReadIntRegister(4);
+                int32_t lockId = g_machine->ReadIntRegister(4);
 
                 Lock *lock = (Lock*)g_object_ids->SearchObject(lockId);
 
@@ -840,7 +829,7 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
             {
                 DEBUG('e', "Lock: Release().\n");
 
-                int lockId = g_machine->ReadIntRegister(4);
+                int32_t lockId = g_machine->ReadIntRegister(4);
 
                 Lock *lock = (Lock*)g_object_ids->SearchObject(lockId);
 
@@ -858,7 +847,115 @@ void ExceptionHandler(ExceptionType exceptiontype, int vaddr)
                 }
                 break;
             }
+            case SC_COND_CREATE:
+            {
+                DEBUG('e', "Condition: creation.\n");
 
+                int32_t addr = g_machine->ReadIntRegister(4);
+                int32_t sizep = GetLengthParam(addr);
+
+                char name[sizep] = { 0 };
+
+                GetStringParam(addr, name, sizep);
+
+                Condition *condition = new Condition(name);
+
+                int32_t condId = g_object_ids->AddObject(condition);
+
+                g_machine->WriteIntRegister(2, condId);
+
+                break;
+            }
+            case SC_COND_DESTROY:
+            {
+                DEBUG('e', "Condition: destroy.\n");
+
+                int32_t condId = g_machine->ReadIntRegister(4);
+
+                Condition *condition = (Condition*)g_object_ids->SearchObject(condId);
+
+                if (condition != nullptr && condition->type == CONDITION_TYPE)
+                {
+                    g_object_ids->RemoveObject(condId);
+
+                    delete condition;
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_CONDITION_ID);
+                }
+
+                break;
+            }
+            case SC_COND_WAIT:
+            {
+                DEBUG('e', "Condition: Wait().\n");
+
+                int32_t condId = g_machine->ReadIntRegister(4);
+
+                Condition *condition = (Condition*)g_object_ids->SearchObject(condId);
+
+                if (condition != nullptr && condition->type == CONDITION_TYPE)
+                {
+                    condition->Wait();
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                    g_syscall_error->SetMsg("", NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_CONDITION_ID);
+                }
+                break;
+            }
+            case SC_COND_SIGNAL:
+            {
+                DEBUG('e', "Condition: Signal().\n");
+
+                int32_t condId = g_machine->ReadIntRegister(4);
+
+                Condition *condition = (Condition*)g_object_ids->SearchObject(condId);
+
+                if (condition != nullptr && condition->type == CONDITION_TYPE)
+                {
+                    condition->Signal();
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                    g_syscall_error->SetMsg("", NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_CONDITION_ID);
+                }
+                break;
+            }
+            case SC_COND_BROADCAST:
+            {
+                DEBUG('e', "Condition: Signal().\n");
+
+                int32_t condId = g_machine->ReadIntRegister(4);
+
+                Condition *condition = (Condition*)g_object_ids->SearchObject(condId);
+
+                if (condition != nullptr && condition->type == CONDITION_TYPE)
+                {
+                    condition->Broadcast();
+
+                    g_machine->WriteIntRegister(2, NO_ERROR);
+                    g_syscall_error->SetMsg("", NO_ERROR);
+                }
+                else
+                {
+                    g_machine->WriteIntRegister(2, ERROR);
+                    g_syscall_error->SetMsg("", INVALID_CONDITION_ID);
+                }
+                break;
+            }
             default:
                 printf("Invalid system call number : %d\n", type);
                 exit(ERROR);

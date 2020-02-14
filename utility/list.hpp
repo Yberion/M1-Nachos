@@ -188,7 +188,7 @@ public:
         for (ListElement<Priority> *ptr = first; ptr != NULL; ptr = ptr->next)
         {
             DEBUG('l', "In mapcar, about to invoke %x(%x)\n", func, ptr->item);
-            (*func)((int64_t)ptr->item);
+            func((int64_t)ptr->item);
         }
     }
     ;
