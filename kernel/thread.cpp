@@ -40,6 +40,7 @@ Thread::Thread(const char *threadName)
 
     // No process owner yet
     process = NULL;
+    stackPointer = 0;
 }
 
 //----------------------------------------------------------------------
@@ -101,12 +102,24 @@ int Thread::Start(Process *owner, int32_t func, int arg)
 {
     ASSERT(process == NULL);
     ASSERT(owner != NULL);
+    //TODO: A valider
 
     stackPointer = owner->addrspace->StackAllocate();
 
-    //TODO: FINIR
+    int stack_size = g_cfg->UserStackSize + SIMULATORSTACKSIZE;
+
+    int8_t* stack_base = AllocBoundedArray(stack_size);
+    InitSimulatorContext(stack_base, stack_size);
+
+    InitThreadContext(func, stackPointer, arg);
+
+    g_alive->Append(this);
+    g_scheduler->ReadyToRun(this);
+
+    owner->numThreads++;
 
     process = owner;
+    return NO_ERROR;
 }
 
 //----------------------------------------------------------------------
@@ -252,6 +265,8 @@ void Thread::Finish()
 {
 
     DEBUG('t', "Finishing thread \"%s\"\n", GetName());
+
+    g_thread_to_be_destroyed = this;
 
     printf("**** Warning: method Thread::Finish is not fully implemented yet\n");
 
