@@ -54,7 +54,6 @@
 #define SC_COND_WAIT	 23
 #define SC_COND_SIGNAL	 24
 #define SC_COND_BROADCAST 25
-// TODO:
 #define SC_TTY_SEND	 26
 #define SC_TTY_RECEIVE	 27
 #define SC_MKDIR	 28

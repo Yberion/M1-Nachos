@@ -102,23 +102,25 @@ int Thread::Start(Process *owner, int32_t func, int arg)
 {
     ASSERT(process == NULL);
     ASSERT(owner != NULL);
-    //TODO: A valider
+
+    DEBUG('d', "Start thread \"%s\"\n", GetName());
+
+    process = owner;
 
     stackPointer = owner->addrspace->StackAllocate();
 
-    int stack_size = g_cfg->UserStackSize + SIMULATORSTACKSIZE;
+    //int stack_size = g_cfg->UserStackSize + SIMULATORSTACKSIZE;
 
-    int8_t* stack_base = AllocBoundedArray(stack_size);
-    InitSimulatorContext(stack_base, stack_size);
+    int8_t* stack_base = AllocBoundedArray(SIMULATORSTACKSIZE);
+    InitSimulatorContext(stack_base, SIMULATORSTACKSIZE);
 
     InitThreadContext(func, stackPointer, arg);
+
+    owner->numThreads++;
 
     g_alive->Append(this);
     g_scheduler->ReadyToRun(this);
 
-    owner->numThreads++;
-
-    process = owner;
     return NO_ERROR;
 }
 
@@ -263,16 +265,18 @@ void Thread::CheckOverflow()
 //----------------------------------------------------------------------
 void Thread::Finish()
 {
-
     DEBUG('t', "Finishing thread \"%s\"\n", GetName());
+
+    IntStatus oldStatus = g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
     g_thread_to_be_destroyed = this;
 
-    printf("**** Warning: method Thread::Finish is not fully implemented yet\n");
+    process->numThreads--;
 
     // Go to sleep
     Sleep(); // invokes SWITCH
 
+    g_machine->interrupt->SetStatus(oldStatus);
 }
 
 //----------------------------------------------------------------------
@@ -362,7 +366,7 @@ void Thread::Sleep()
 //----------------------------------------------------------------------
 void Thread::SaveProcessorState()
 {
-    ASSERT(this == g_current_thread);
+    //ASSERT(this == g_current_thread);
     ASSERT(g_machine->interrupt->GetStatus() == INTERRUPTS_OFF);
 
     DEBUG('t', "Save context thread \"%s\"\n", GetName());
@@ -387,7 +391,7 @@ void Thread::SaveProcessorState()
 //----------------------------------------------------------------------
 void Thread::RestoreProcessorState()
 {
-    ASSERT(this == g_current_thread);
+    //ASSERT(this == g_current_thread);
     ASSERT(g_machine->interrupt->GetStatus() == INTERRUPTS_OFF);
 
     DEBUG('t', "Restore context thread \"%s\"\n", GetName());

@@ -75,19 +75,17 @@ Semaphore::~Semaphore()
 //----------------------------------------------------------------------
 void Semaphore::P()
 {
-    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+    IntStatus oldStatus = g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
-    if (value > 0)
-    {
-        value--;
-    }
-    else
+    value--;
+
+    if (value < 0)
     {
         queue->Append((void*)g_current_thread);
         g_current_thread->Sleep();
     }
 
-    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
+    g_machine->interrupt->SetStatus(oldStatus);
 }
 
 //----------------------------------------------------------------------
@@ -100,7 +98,7 @@ void Semaphore::P()
 //----------------------------------------------------------------------
 void Semaphore::V()
 {
-    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+    IntStatus oldStatus = g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
     value++;
 
@@ -110,7 +108,7 @@ void Semaphore::V()
         g_scheduler->ReadyToRun(tmp);
     }
 
-    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
+    g_machine->interrupt->SetStatus(oldStatus);
 }
 
 //----------------------------------------------------------------------
@@ -157,7 +155,7 @@ Lock::~Lock()
 //----------------------------------------------------------------------
 void Lock::Acquire()
 {
-    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+    IntStatus oldStatus = g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
     if (free == true)
     {
@@ -170,7 +168,7 @@ void Lock::Acquire()
         g_current_thread->Sleep();
     }
 
-    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
+    g_machine->interrupt->SetStatus(oldStatus);
 }
 
 //----------------------------------------------------------------------
@@ -184,7 +182,7 @@ void Lock::Acquire()
 //----------------------------------------------------------------------
 void Lock::Release()
 {
-    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+    IntStatus oldStatus = g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
     if (free == false)
     {
@@ -200,7 +198,7 @@ void Lock::Release()
         }
     }
 
-    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
+    g_machine->interrupt->SetStatus(oldStatus);
 }
 
 //----------------------------------------------------------------------
@@ -250,12 +248,12 @@ Condition::~Condition()
 //----------------------------------------------------------------------
 void Condition::Wait()
 {
-    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+    IntStatus oldStatus = g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
     waitqueue->Append((void*)g_current_thread);
     g_current_thread->Sleep();
 
-    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
+    g_machine->interrupt->SetStatus(oldStatus);
 }
 
 //----------------------------------------------------------------------
@@ -266,7 +264,7 @@ void Condition::Wait()
 //----------------------------------------------------------------------
 void Condition::Signal()
 {
-    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+    IntStatus oldStatus = g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
     if (waitqueue->IsEmpty())
     {
@@ -276,7 +274,7 @@ void Condition::Signal()
     Thread* tmp = (Thread*)waitqueue->Remove();
     g_scheduler->ReadyToRun(tmp);
 
-    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
+    g_machine->interrupt->SetStatus(oldStatus);
 }
 
 //----------------------------------------------------------------------
@@ -287,7 +285,7 @@ void Condition::Signal()
 //----------------------------------------------------------------------
 void Condition::Broadcast()
 {
-    g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
+    IntStatus oldStatus = g_machine->interrupt->SetStatus(INTERRUPTS_OFF);
 
     Thread* tmp = nullptr;
 
@@ -296,5 +294,5 @@ void Condition::Broadcast()
         g_scheduler->ReadyToRun(tmp);
     }
 
-    g_machine->interrupt->SetStatus(INTERRUPTS_ON);
+    g_machine->interrupt->SetStatus(oldStatus);
 }
