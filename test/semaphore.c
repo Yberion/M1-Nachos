@@ -24,18 +24,18 @@ int main()
 	n_printf("\n\n\n** Starting semaphore test **\n\n");
 	n_printf("\n");
 	
-	semaphore = SemCreate("Semaphore 1", 0);
-
+	//semaphore = SemCreate("Semaphore 1", 0);
+    
 	ThreadId thread_1 = threadCreate("thread0", thread1_fun);
-	ThreadId thread_2 = threadCreate("thread1", thread2_fun);
-	ThreadId thread_3 = threadCreate("thread2", thread3_fun);
+	//ThreadId thread_2 = threadCreate("thread1", thread2_fun);
+	//ThreadId thread_3 = threadCreate("thread2", thread3_fun);
 
 
-	Join(thread_1);
-	Join(thread_2);
-	Join(thread_3);
+	//Join(thread_1);
+	//Join(thread_2);
+	//Join(thread_3);
 
-	SemDestroy(semaphore);
+	//SemDestroy(semaphore);
 
 	n_printf("\n\n** Ending semaphore test **\n\n\n");
 
