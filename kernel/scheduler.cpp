@@ -118,6 +118,12 @@ void Scheduler::SwitchTo(Thread *nextThread)
     // before now (for example, in Thread::Finish()), because up to this
     // point, we were still running on the old thread's stack!
 
+    if (g_thread_to_be_destroyed != nullptr)
+    {
+        delete g_thread_to_be_destroyed;
+
+        g_thread_to_be_destroyed = nullptr;
+    }
 }
 
 //----------------------------------------------------------------------
