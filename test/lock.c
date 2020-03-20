@@ -26,7 +26,7 @@ int main()
     n_printf("\n\n\n** Starting lock test **\n\n");
     n_printf("\n");
 
-    lock = LockCreate("Lock 1", 0);
+    lock = LockCreate("Lock 1");
     
     ThreadId thread_1 = threadCreate("thread1", thread1_fun);
     ThreadId thread_2 = threadCreate("thread2", thread2_fun);
