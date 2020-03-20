@@ -271,7 +271,7 @@ void Thread::Finish()
 
     g_thread_to_be_destroyed = this;
 
-    process->numThreads--;
+    g_alive->RemoveItem(this);
 
     // Go to sleep
     Sleep(); // invokes SWITCH
