@@ -107,7 +107,8 @@ ThreadId newThread(char *debug_name, int func, int arg);
 int Join(ThreadId id);
 
 /* Yield the CPU to another runnable thread, whether in this address space 
- * or not. 
+ * or not.
+ * Met le thread appelant en queue de file
  */
 void Yield();
 
