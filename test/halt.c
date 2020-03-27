@@ -14,7 +14,7 @@
 int main()
 {
     // Halt Nachos
-    //Halt();
+    Halt();
     /* not reached */
     return 0;
 }

@@ -36,21 +36,24 @@ private:
     char send_buffer[BUFFER_SIZE]; //!< system buffer for emission
     char receive_buffer[BUFFER_SIZE]; //!< system buffer for reception
 
-    Semaphore *send_sema; //!< semaphore used to synchronize emission requests
-    Semaphore *receive_sema; //!< semaphore used to synchronize reception requests
+    Semaphore *semaphore_send; //!< semaphore used to synchronize emission requests
+    Semaphore *semaphore_receive; //!< semaphore used to synchronize reception requests
 
-    int ind_send; //!< index in the emission buffer
-    int ind_rec; //!< index in the reception buffer
+    Lock *lock_send; //!< lock to be sure there is only one thread working in busy waiting mode when sending
+    Lock *lock_receive; //!< lock to be sure there is only one thread working in busy waiting mode when receiving
+
+    int index_send; //!< index in the emission buffer
+    int index_receive; //!< index in the reception buffer
 
 public:
     //! Constructor. Driver initialization.
     DriverACIA();
 
     //! Send a message through the ACIA
-    int TtySend(char *buff);
+    int TtySend(char *buffer);
 
     //! Receive a message using the ACIA
-    int TtyReceive(char *buff, int lg);
+    int TtyReceive(char *buffer, int length);
 
     //! Emission interrupt handler. Used in the ACIA Interrupt mode only
     void InterruptSend();

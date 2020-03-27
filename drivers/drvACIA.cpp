@@ -30,14 +30,42 @@
  Initialize the ACIA driver. In the ACIA Interrupt mode,
  initialize the reception index and semaphores and allow
  reception and emission interrupts.
- In the ACIA Busy Waiting mode, simply inittialize the ACIA
- working mode and create the semaphore.
+ In the ACIA Busy Waiting mode, simply initialize the ACIA
+ working mode and create the semaphores.
  */
 //-------------------------------------------------------------------------
 DriverACIA::DriverACIA()
 {
-    printf("**** Warning: contructor of the ACIA driver not implemented yet\n");
-    exit(-1);
+    DEBUG('d', "Creating ACIA driver\n");
+
+    switch (g_cfg->ACIA)
+    {
+        case ACIA_BUSY_WAITING:
+        {
+            g_machine->acia->SetWorkingMode(BUSY_WAITING);
+            break;
+        }
+        case ACIA_INTERRUPT:
+        {
+            g_machine->acia->SetWorkingMode(SEND_INTERRUPT | REC_INTERRUPT);
+            break;
+        }
+        default:
+            DEBUG('d', "Error: wrong ACIA mode (need ACIA_BUSY_WAITING, ACIA_INTERRUPT, ...)\n");
+            break;
+    }
+
+    send_buffer[BUFFER_SIZE] = { 0 };
+    receive_buffer[BUFFER_SIZE] = { 0 };
+
+    semaphore_send = new Semaphore("send_semaphore driver ACIA", 1);
+    semaphore_receive = new Semaphore("receive_semaphore driver ACIA", 0);
+
+    lock_send = new Lock("lock_send driver ACIA");
+    lock_receive = new Lock("lock_receive driver ACIA");
+
+    index_send = 0;
+    index_receive = 0;
 }
 
 //-------------------------------------------------------------------------
@@ -45,24 +73,66 @@ DriverACIA::DriverACIA()
 /*! Routine to send a message through the ACIA (Busy Waiting or Interrupt mode)
  */
 //-------------------------------------------------------------------------
-int DriverACIA::TtySend(char *buff)
+int DriverACIA::TtySend(char *buffer)
 {
-    printf("**** Warning: method Tty_Send of the ACIA driver not implemented yet\n");
-    exit(-1);
-    return 0;
+    DEBUG('d', "Using TtySend(char *buffer) with the message: %s\n", buffer);
+
+    int i = -1;
+
+    do
+    {
+        while(g_machine->acia->GetOutputStateReg() == EMPTY)
+        {
+            ++i;
+
+            lock_send->Acquire();
+            g_machine->acia->PutChar(buffer[i]);
+            lock_send->Release();
+        }
+    } while (buffer[i] != '\0');
+
+    DEBUG('d', "Using TtySend(char *buffer) sent %d chars\n", i);
+
+    return i;
 }
 
 //-------------------------------------------------------------------------
-// DriverACIA::TtyReceive(char* buff,int length)
-/*! Routine to reveive a message through the ACIA 
+// DriverACIA::TtyReceive(char* buff, int length)
+/*! Routine to receive a message through the ACIA
  //  (Busy Waiting and Interrupt mode).
  */
 //-------------------------------------------------------------------------
-int DriverACIA::TtyReceive(char *buff, int lg)
+int DriverACIA::TtyReceive(char *buffer, int length)
 {
-    printf("**** Warning: method Tty_Receive of the ACIA driver not implemented yet\n");
-    exit(-1);
-    return 0;
+    DEBUG('d', "Using TtyReceive(char *buffer, int length) with the message: %s length %d\n", buffer, length);
+
+    bool fin = false;
+
+    int i = 0;
+
+    while (!fin)
+    {
+        while (g_machine->acia->inputStateRegister() == FULL)
+        {
+            lock_receive->Acquire();
+            buffer[i] = g_machine->acia->GetChar();
+            lock_receive->Release();
+
+            ++i;
+
+            if (buffer[i - 1] == '\0' || i >= length)
+            {
+                fin = true;
+            }
+        }
+    }
+
+    // We have a buffer of length + 1 so we can always append the null character
+    buffer[i] = '\0';
+
+    DEBUG('d', "Using TtyReceive(char *buffer, int length) sent %d chars inside the buffer that can contains up to %d chars\n", i, length);
+
+    return length;
 }
 
 //-------------------------------------------------------------------------
