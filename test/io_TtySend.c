@@ -32,7 +32,7 @@ int main(void)
 
         res = TtySend(message[i]);
 
-        n_printf("Longueur du message %d amis : %d\n", i, res);
+        n_printf("Longueur du message %d emis : %d\n", i, res);
     }
 
     n_printf("Et maintenant je sors\n");
