@@ -99,7 +99,7 @@ int DriverACIA::TtySend(char *buffer)
 //-------------------------------------------------------------------------
 // DriverACIA::TtyReceive(char* buff, int length)
 /*! Routine to receive a message through the ACIA
- //  (Busy Waiting and Interrupt mode).
+ // (Busy Waiting and Interrupt mode).
  */
 //-------------------------------------------------------------------------
 int DriverACIA::TtyReceive(char *buffer, int length)
@@ -112,7 +112,7 @@ int DriverACIA::TtyReceive(char *buffer, int length)
 
     while (!fin)
     {
-        while (g_machine->acia->inputStateRegister() == FULL)
+        while (g_machine->acia->GetInputStateReg() == FULL)
         {
             lock_receive->Acquire();
             buffer[i] = g_machine->acia->GetChar();
@@ -132,7 +132,7 @@ int DriverACIA::TtyReceive(char *buffer, int length)
 
     DEBUG('d', "Using TtyReceive(char *buffer, int length) sent %d chars inside the buffer that can contains up to %d chars\n", i, length);
 
-    return length;
+    return i;
 }
 
 //-------------------------------------------------------------------------
